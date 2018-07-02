@@ -1,4 +1,4 @@
-### Azure security, privacy, and compliance
+# Azure security, privacy, and compliance
 
 ## Target audience
 
