@@ -79,7 +79,9 @@ This whiteboard design session is designed to provide exposure to many of Micros
 **Outcome** 
 
 Analyze your customer’s needs.
-Time frame: 15 minutes 
+
+Timeframe: 15 minutes 
+
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
 1.  Meet your table participants and trainer 
 2.  Read all of the directions for steps 1–3 in the student guide 
@@ -178,7 +180,7 @@ This Infographic shows an example of a generic implementation of various securit
 
 **Outcome **
 
-Prepare to present a solution to the target customer audience in a 15-minute chalk-talk format.
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 60 minutes
 
@@ -218,7 +220,7 @@ Briefly sketch-out and propose a high-level solution that meets the customer's b
 
 10. Microsoft Intune
 
-    *Securing Sensitive Data*
+*Securing Sensitive Data*
 
 On your diagram, indicate how you would secure any sensitive data at rest and in transit with respect to the following:
 
@@ -228,7 +230,7 @@ On your diagram, indicate how you would secure any sensitive data at rest and in
 
 3.  Network, Internal, and External Communications
 
-    *Ensuring auditing and compliance*
+*Ensuring auditing and compliance*
 
 Describe how you will use Azure features to ensure the following:
 
@@ -242,7 +244,7 @@ Describe how you will use Azure features to ensure the following:
 
 5.  What tools would you setup surface audit and compliance reporting to IT Executives
 
-    *Ensuring availability and business continuity*
+*Ensuring availability and business continuity*
 
 Describe how you would ensure that the following resources would be available in the unlikely event of an attack or intentional or unintentional data loss?
 
@@ -250,7 +252,7 @@ Describe how you would ensure that the following resources would be available in
 
 2.  Azure SQL
 
-    *Ensuring protection*
+*Ensuring protection*
 
 Describe how you would secure each Azure resource from internal and external attacks
 
@@ -278,7 +280,7 @@ Prepare a 15-minute chalk-talk style presentation to the customer.
  
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
-Time frame: 30 minutes
+Timeframe: 30 minutes
 
 **Presentation** 
 
@@ -293,7 +295,7 @@ Directions:
 
 ##  Wrap-up 
 
-Time frame: 15 minutes
+Timeframe: 15 minutes
 
 Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
