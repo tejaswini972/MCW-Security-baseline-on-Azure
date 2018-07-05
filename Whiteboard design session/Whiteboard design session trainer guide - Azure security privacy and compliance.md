@@ -41,7 +41,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
     - [Step 3: Present the solution](#step-3-present-the-solution)
     - [Wrap-up](#wrap-up)
-    - [Additional References](#additional-references)
+    - [Additional references](#additional-references)
 - [Azure security, privacy, and compliance whiteboard design session trainer guide](#azure-security-privacy-and-compliance-whiteboard-design-session-trainer-guide)
     - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study-1)
     - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution-1)
@@ -199,7 +199,9 @@ This whiteboard design session is designed to provide exposure to many of Micros
 **Outcome** 
 
 Analyze your customer’s needs.
-Time frame: 15 minutes 
+
+Timeframe: 15 minutes 
+
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
 1.  Meet your table participants and trainer 
 2.  Read all of the directions for steps 1–3 in the student guide 
@@ -293,14 +295,15 @@ Jack Tradewinds, the CIO of Contoso Ltd, has heard a great deal of positive news
 
 This Infographic shows an example of a generic implementation of various security Azure technologies in action that can be used as a reference in your design:
 
-![Security and Compliance infographic This is an example of a generic implementation of various Azure security technologies. ](images/Whiteboarddesignsessiontrainerguide-Azuresecurityprivacyandcomplianceimages/media/image2.png)
+![Security and Compliance infographic This is an example of a generic implementation of various Azure security technologies.](images/Whiteboarddesignsessiontrainerguide-Azuresecurityprivacyandcomplianceimages/media/image2.png)
 
 ## Step 2: Design a proof of concept solution
 
 **Outcome** 
+
 Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format. 
 
-Time frame: 60 minutes
+Timeframe: 60 minutes
 
 **Business needs**
 
@@ -312,10 +315,9 @@ Directions: With all participants at your table, answer the following questions 
 Directions: With all participants at your table, respond to the following questions on a flip chart.
 
 1.  To whom should you present this solution? Who is your target customer audience? Who are the decision makers?
-
 2.  What customer business needs do you need to address with your solution?
 
-**Design **
+**Design**
 
 Directions: With all participants at your table, respond to the following questions on a flip chart.
 
@@ -402,7 +404,7 @@ Prepare a 15-minute chalk-talk style presentation to the customer.
  
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
-Time frame: 30 minutes
+Timeframe: 30 minutes
 
 **Presentation** 
 
@@ -418,7 +420,7 @@ Directions:
 
 ## Wrap-up 
 
-Time frame: 15 minutes
+Timeframe: 15 minutes
 
 Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
@@ -479,7 +481,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 ## Step 3: Present the solution
 
--   []{#_Toc492638974 .anchor}Determine which table will be paired with your table before Step 3 begins
+-   Determine which table will be paired with your table before Step 3 begins
 
 -   For the first round, assign one table as the presenting team and the other table as the customer
 
