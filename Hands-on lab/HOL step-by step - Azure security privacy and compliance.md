@@ -407,29 +407,29 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 ![Generate new column master key CMK\_Auto1 in Azure Key Vault paassecurity is highlighted with a green check mark at the top of the Task Summary list.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image39.png "View the task summary")
 
-a.  Select **Key vault**
+    a.  Select **Key vault**
 
-b.  Select your key vault
+    b.  Select your key vault
 
-c.  Select **Access policies**
+    c.  Select **Access policies**
 
-d.  Select **Add New**
+    d.  Select **Add New**
 
-e.  Select your account
+    e.  Select your account
 
-f.  Select **Key permissions**, and select **Select all**
+    f.  Select **Key permissions**, and select **Select all**
 
     ![Select all is selected and highlighted under Key permissions, and below that, Decrypt, Encrypt, Unwrap Key, Wrap Key, Verify, and Sign are selected and highlighted under Cryptographic Operations amid the other selected options.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image40.png "Select all")
 
-g.  Select **Secret permissions**, and select **Select all**
+    g.  Select **Secret permissions**, and select **Select all**
 
-h.  Select **Certificate permissions**, and select **Select all**
+    h.  Select **Certificate permissions**, and select **Select all**
 
-i.  Select **OK**
+    i.  Select **OK**
 
-j.  Select **Save**
+    j.  Select **Save**
 
-k.  Retry the operation
+    k.  Retry the operation
 
     ![Results is highlighted on the left side of the Always Encrypted dialog box, and at right, Performing encryption operations is selected under Summary: Task. Performing encryption operations has a green check mark and is listed as Passed under Details.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image41.png "View the task results")
 
