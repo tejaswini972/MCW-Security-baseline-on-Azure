@@ -159,7 +159,7 @@ Jack Tradewinds, the CIO of Contoso Ltd, has heard a great deal of positive news
 
 8.  Is Azure virtual networking flexible enough to meet our requirements?
 
-9.  Can Azure supplement on-premises and 3^rd^ party SIEM systems for auditing and compliance tasks?
+9.  Can Azure supplement on-premises and third-party SIEM systems for auditing and compliance tasks?
 
 10. What certifications does Azure have and can Azure hosted applications meet the US and European compliance goals?
 
@@ -178,7 +178,7 @@ This Infographic shows an example of a generic implementation of various securit
 
 ## Step 2: Design a proof of concept solution
 
-**Outcome **
+**Outcome**
 
 Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
@@ -254,7 +254,7 @@ Describe how you would ensure that the following resources would be available in
 
 *Ensuring protection*
 
-Describe how you would secure each Azure resource from internal and external attacks
+Describe how you would secure each Azure resource from internal and external attacks:
 
 1.  Ensure that admin credentials are sufficiently protected and monitored?
 
