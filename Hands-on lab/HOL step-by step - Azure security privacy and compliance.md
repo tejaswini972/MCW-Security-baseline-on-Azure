@@ -617,21 +617,21 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
 > **NOTE:** When using multiple virtual networks, you must setup a DNS server in the Azure tenant
 
-c.  Executes port scans
+    c.  Executes port scans
 
 <!-- -->
 
 6.  Run the script, and press **F5.** You should see the following (the Azure ARM Template created a default rule to block all traffic):
 
-    d.  Port scan for port 3389 (RDP) to **DB-1** and **WEB-1** is unsuccessful from the **PAW-1** machine
+    a.  Port scan for port 3389 (RDP) to **DB-1** and **WEB-1** is unsuccessful from the **PAW-1** machine
 
-    e.  The information above for port 3389 (RDP) is visible after running the script and pressing F5![The information above for port 3389 (RDP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image55.png)
+    b.  The information above for port 3389 (RDP) is visible after running the script and pressing F5![The information above for port 3389 (RDP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image55.png)
 
-    f.  Port scan for port 1433 (SQL) to **DB-1** and **WEB-1** is unsuccessful from the **PAW-1** machine. **DB-1** is running SQL Server but traffic is block at NSG and the windows firewall.
+    c.  Port scan for port 1433 (SQL) to **DB-1** and **WEB-1** is unsuccessful from the **PAW-1** machine. **DB-1** is running SQL Server but traffic is block at NSG and the windows firewall.
 
         ![The information above for port 1433 (SQL) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image56.png "View the information")
 
-    g.  Port scan for port 80 (HTTP) to **DB-1** and **WEB-1** is unsuccessful from the **PAW-1** machine, if traffic was allowed, it would always fail to **DB-1** because it is not running IIS or any other web server
+    d.  Port scan for port 80 (HTTP) to **DB-1** and **WEB-1** is unsuccessful from the **PAW-1** machine, if traffic was allowed, it would always fail to **DB-1** because it is not running IIS or any other web server
 
         ![The information above for port 80 (HTTP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image57.png)
 
@@ -661,25 +661,25 @@ c.  Executes port scans
 
 3.  Configure the web server to allow all HTTP and HTTPS connections
 
-    j.  Select **Network Security Groups**
+    a.  Select **Network Security Groups**
 
-    k.  Select **WebTrafficOnly**
+    b.  Select **WebTrafficOnly**
 
-    l.  Select **Inbound Security Rules**
+    c.  Select **Inbound Security Rules**
 
-    m.  Select **+Add**
+    d.  Select **+Add**
 
-    n.  For the **Destination port range**, enter **80,443**
+    e.  For the **Destination port range**, enter **80,443**
 
-    o.  For the **priority**, enter **100**
+    f.  For the **priority**, enter **100**
 
-    p.  Change the name to **Port\_80\_443**
+    g.  Change the name to **Port\_80\_443**
 
-    q.  Select **OK**
+    h.  Select **OK**
 
 4.  Configure both the database and web server to only allow RDP connections from the PAW machine
 
-    r.  Select **Network Security Groups.** For both the **DbTrafficOnly** and **WebTrafficOnly**, do the following:
+    a.  Select **Network Security Groups.** For both the **DbTrafficOnly** and **WebTrafficOnly**, do the following:
 
         i.  Select **Inbound Security Rules**
 
@@ -697,29 +697,29 @@ c.  Executes port scans
 
 5.  Configure all NSGs to have Diagnostic logs enabled
 
-    s.  Select **Network security groups.** For each NSG, do the following:
+    a.  Select **Network security groups.** For each NSG, do the following:
 
-        viii. In the content menu, select **Diagnostic logs**, and then select **Turn on diagnostics**
+        i. In the content menu, select **Diagnostic logs**, and then select **Turn on diagnostics**
 
             ![Diagnostics logs is selected and highlighted under Monitoring on the left side, and Turn on diagnostics is highlighted on the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image58.png "Select Turn on diagnostics")
 
-        ix. For the name, enter the NSG name and then add **Logging** to the end
+        ii. For the name, enter the NSG name and then add **Logging** to the end
 
-        x.  Check the **Send to Log Analytics** checkbox
+        iii.  Check the **Send to Log Analytics** checkbox
 
-        xi. Select **Create New Workspace.** For the name enter **azuresecurity**
+        iv. Select **Create New Workspace.** For the name enter **azuresecurity**
 
-        xii. Select your resource group
+        v. Select your resource group
 
-        xiii. Select your location (East US is preferred)
+        vi. Select your location (East US is preferred)
 
             ![+ Create New Workspace is selected on the left, and the above information is entered on the right under OMS Workspace.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image59.png "Create a new workspace")
 
-        xiv. Select **OK**, wait for the OMS workspace to be created
+        vii. Select **OK**, wait for the OMS workspace to be created
 
-        xv. Select both LOG checkboxes
+        viii. Select both LOG checkboxes
 
-        xvi. Select **Save**
+        ix. Select **Save**
 
             ![Save is highlighted at the top, and two log items are selected and highlighted below.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image60.png "Save the logs")
 
@@ -739,7 +739,7 @@ c.  Executes port scans
 
 ![The information above for port 1433 (SQL) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image62.png "View the information")
 
-c.  If IIS has been setup on WEB-1, the port scan for port 80 (HTTP) to **DB-1** is unsuccessful and **WEB-1** is successful from the **PAW-1** machine
+    c.  If IIS has been setup on WEB-1, the port scan for port 80 (HTTP) to **DB-1** is unsuccessful and **WEB-1** is successful from the **PAW-1** machine
 
     ![The information above for port 80 (HTTP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image63.png "View the information")
 
@@ -819,17 +819,17 @@ Synopsis: In this exercise, you will create custom security alerts using the Azu
 
 > **NOTE:** If you see **Try custom alert rules now**, do the following:
 
-a.  Select **Security Policy**
+    a.  Select **Security Policy**
 
-b.  Select the OMS workspace called **azuresecurity**
+    b.  Select the OMS workspace called **azuresecurity**
 
-c.  Select the **Standard** tier
+    c.  Select the **Standard** tier
 
     ![Pricing tier is selected on the left under Policy Components, and Standard tier is selected on the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image71.png "Select the Standard tier")
 
-d.  Select **Save**
+    d.  Select **Save**
 
-e.  Select **Custom Alert Rules**
+    e.  Select **Custom Alert Rules**
 
     ![Security Center is selected on the left side of the Azure portal, and Custom alert rules (Preview) is highlighted on the right under Detection.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image72.png "Select Custom Alert Rules")
 
