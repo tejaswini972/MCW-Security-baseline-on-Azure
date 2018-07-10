@@ -304,9 +304,6 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 5.  In the browser window that opens, browse to [http://localhost:portno/api/Users](http://localhost:portno/api/Users) you should see a json response that shows an unmasked SSN column
 
-**\
-**
-
 > **NOTE:** Depending on your browser, you may need to download to view the json response.
 
 ![The json response is displayed in a browser window.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image30.png "View the json response")
