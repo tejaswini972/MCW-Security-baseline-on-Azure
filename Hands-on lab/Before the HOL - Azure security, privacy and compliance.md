@@ -122,6 +122,6 @@ You should follow all steps provided *before* attending the hands-on lab
 You are now ready to complete the hands-on lab. Select a guide below to get started, or you can return to the overview page for the lab.
 
 - Complete Hands-on lab
-  - [Step-by-step guide](./HOL step-by step - Azure security privacy and compliance.md)
-  - [Unguided guide](./HOL unguided - Azure security, privacy and compliance.md)
-- Return to [Hands-on lab readme](././readme.md)
+  - [Step-by-step guide](https://github.com/Microsoft/MCW-Azure-security-privacy-and-compliance/blob/master/Hands-on%20lab/HOL%20step-by%20step%20-%20Azure%20security%20privacy%20and%20compliance.md)
+  - [Unguided guide](https://github.com/Microsoft/MCW-Azure-security-privacy-and-compliance/blob/master/Hands-on%20lab/HOL%20unguided%20-%20Azure%20security%2C%20privacy%20and%20compliance.md)
+- Return to [Hands-on lab readme](https://github.com/Microsoft/MCW-Azure-security-privacy-and-compliance/blob/master/README.md)
