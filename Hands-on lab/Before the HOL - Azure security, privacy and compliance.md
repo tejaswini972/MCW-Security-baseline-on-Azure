@@ -29,6 +29,12 @@ Duration: 30 minutes
 
 Synopsis: In this exercise, you will set up your environment for use in the rest of the hands-on lab. You should follow all the steps provided in the Before the Hands-on Lab section to prepare your environment *before* attending the workshop.
 
+## Contents
+
+- [Task 1: Download GitHub resources](#task-1-download-github-resources)
+- [Task 2: Deploy resources to Azure](#task-2-deploy-resources-to-azure)
+- [Next steps](#next-steps)
+
 ### Task 1: Download GitHub resources
 
 1.  Open a browser window to the cloud workshop GitHub repository (<https://github.com/Microsoft/MCW-Azure-Security-Privacy-and-Compliance>)
@@ -43,7 +49,7 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
     ![A set of extracted folders and files are visible in File Explorer: .vs, AzureTemplate, Database, Scripts, WebApp, README.md.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image4.png "Extract the zip file")
 
-### Task 2: Deploy resources (virtual machine, etc.) to Azure
+### Task 2: Deploy resources to Azure
 
 1.  Open your Azure Portal
 
@@ -110,3 +116,12 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 13. See Appendix A for detailed steps on creating these components without using an ARM template
 
 You should follow all steps provided *before* attending the hands-on lab
+
+## Next steps
+
+You are now ready to complete the hands-on lab. Select a guide below to get started, or you can return to the overview page for the lab.
+
+- Complete Hands-on lab
+  - [Step-by-step guide](./HOL step-by step - Azure security privacy and compliance.md)
+  - [Unguided guide](./HOL unguided - Azure security, privacy and compliance.md )
+- Return to [Hands-on lab readme](../readme.md)
