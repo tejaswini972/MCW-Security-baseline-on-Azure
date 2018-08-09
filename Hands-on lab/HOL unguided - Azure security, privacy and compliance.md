@@ -113,37 +113,9 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ## Abstract and learning objectives 
 
-This whiteboard design session is designed to provide exposure to many of Microsoft Azure's Security features. The goal is to show an end-to-end solution, leveraging many of these technologies, but not necessarily doing work in every component possible. The architecture includes:
+In this hands-on lab, you will implement many of the Azure Security Center features to secure their cloud-based Azure infrastructure (IaaS) and applications (PaaS). Specifically, you will ensure that any internet exposed resources have been properly secured and any non-required internet access disabled. Additionally, you will implement a “jump machine” for admins. with Application Security enabled to prevent admins from installing non-approved software and potentially exposing cloud resources. You will then utilize custom alerts to monitor for TCP/IP Port Scans and then fire alerts and run books based on those attacks.
 
--   Azure Virtual Machines and Networks with Network Security Groups
-
--   Virtual Private Networks (Point to Point, Site to Site)
-
--   Azure Web Apps
-
--   Azure SQL DB and corresponding security features (Threat Detection, TDE, Column Level Encryption etc.)
-
--   Azure Storage Encryption
-
--   SQL Server Virtual Machines
-
--   Azure IAM
-
--   Azure Monitor and Log Analytics
-
--   Power BI
-
--   Azure Security Center
-
--   Azure Key Vault Integrations
-
--   Microsoft Azure Active Directory
-
--   Microsoft Intune
-
--   Conditional Access controls
-
-> In this hands-on lab, attendees will implement several of the security features of Azure to help support a GDPR compliant cloud infrastructure.
+At the end of this hands-on lab, you will be better able to design and build secure cloud-based architectures, and to improve the security of existing applications hosted within Azure.
 
 ## Overview
 
