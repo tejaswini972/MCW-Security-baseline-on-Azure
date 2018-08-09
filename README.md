@@ -15,15 +15,21 @@ They are exploring a lift and shift strategy to Azure, but have a large focus on
 
 ### Workshop
 
-This workshop will guide you through an implementation of Azure Security Center and Microsoft Compliance Manager tools to ensure a secured and privacy focused Azure cloud-based architecture. 
+In this workshop, you will learn how to design an implementation of Azure Security Center and Microsoft Compliance Manager tools to ensure a secure and privacy-focused Azure cloud-based architecture.
+
+At the end of this workshop, you will be better able to secure your cloud-based applications and services, while ensuring privacy standards are followed and your architecture is compliant. 
 
 ### Whiteboard design session
 
-This whiteboard design session is designed to provide exposure to many of Microsoft Azure’s security features. The goal is to show an end-to-end solution, leveraging many of these technologies, but not necessarily doing work in every component possible.
+In this workshop, you will learn how to design an implementation of Azure Security Center and Microsoft Compliance Manager tools to ensure a secure and privacy-focused Azure cloud-based architecture.
+
+At the end of this workshop, you will be better able to secure your cloud-based applications and services, while ensuring privacy standards are followed and your architecture is compliant.
 
 ### Hands-on lab
 
-In this hands-on lab, you will implement many of the Azure Security Center features to secure their cloud-based Azure infrastructure (IaaS) and applications (Paas). Specifically, you will ensure that any internet exposed resources have been property secured and any non-required internet access disabled. Additionally you will implement a “jump machine” for admins with Application Security enabled  to prevent admins from installing non-approved software and potentially exposing cloud resources.  You will then utilize custom alerts to monitor for TCP/IP Port Scans and then fire alerts and run books based on those attacks.
+In this hands-on lab, you will implement many of the Azure Security Center features to secure their cloud-based Azure infrastructure (IaaS) and applications (PaaS). Specifically, you will ensure that any internet exposed resources have been properly secured and any non-required internet access disabled. Additionally, you will implement a “jump machine” for admins. with Application Security enabled to prevent admins from installing non-approved software and potentially exposing cloud resources. You will then utilize custom alerts to monitor for TCP/IP Port Scans and then fire alerts and run books based on those attacks.
+
+At the end of this hands-on lab, you will be better able to design and build secure cloud-based architectures, and to improve the security of existing applications hosted within Azure.
 
 ## Azure services and related products
 
@@ -43,6 +49,8 @@ In this hands-on lab, you will implement many of the Azure Security Center featu
 - Conditional Access controls
 
 ## Azure solutions
+
+Security and Management
 
 ## Related References 
 - [MCW](https://github.com/Microsoft/MCW)
