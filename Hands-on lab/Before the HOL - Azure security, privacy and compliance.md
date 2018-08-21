@@ -94,13 +94,15 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
     e.  Fill in the remaining parameters, but if you change anything, be sure to note it for future reference throughout the lab
 
+    NOTE:  User Object Id is meant to be the object id of a user that will be added as an administrator to an Azure Key Vault instance.  You can type anything here but the permission assignment with fail in the ARM template later unless it is a valid Azure Active Directory User Object Id.  You can find your object id by opening a new Azure portal window and navigating to the Azure Active Directory blade, select **Users**, search for your user account, select it, in the window you will see the **Object ID** field.  Click the copy link, then paste the value into the template object user id text box.
+
     f.  Check the **I agree to the terms and conditions stated above** checkbox
 
     g.  Select **Purchase**
 
         ![The above information is entered in the form, and I agree to the terms and conditions stated above and Purchase are selected and highlighted at the bottom.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image6.png "Fill out the form")
 
-12. The deployment will take about 15 minutes to complete. To view the progress, select the **Deployments** link.
+12. The deployment will take 15-30 minutes to complete. To view the progress, select the **Deployments** link, then select the **Microsoft.Template** deployment.
 
     ![Deployments is highlighted under Settings on the left side of the Azure portal, and Microsoft.Template is highlighted under Deployment Name on the right side.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image7.png "Select the Deployments link")
 
@@ -118,7 +120,7 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
         -   One SQL Azure Server
 
-        -   One Recovery Services vault
+        -   One Azure Key Vault
 
             ![Created items list This screenshot is a list of the items that were created, including the items listed above. ](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image8.png)
 

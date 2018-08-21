@@ -79,7 +79,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ## Abstract and learning objectives 
 
-In this hands-on lab, you will implement many of the Azure Security Center features to secure their cloud-based Azure infrastructure (IaaS) and applications (PaaS). Specifically, you will ensure that any internet exposed resources have been properly secured and any non-required internet access disabled. Additionally, you will implement a “jump machine” for admins. with Application Security enabled to prevent admins from installing non-approved software and potentially exposing cloud resources. You will then utilize custom alerts to monitor for TCP/IP Port Scans and then fire alerts and run books based on those attacks.
+In this hands-on lab, you will implement many of the Azure Security Center features to secure their cloud-based Azure infrastructure (IaaS) and applications (PaaS). Specifically, you will ensure that any internet exposed resources have been properly secured and any non-required internet access disabled. Additionally, you will implement a “jump machine” for adminsistrators with Application Security enabled to prevent those same administrators from installing non-approved software and potentially exposing cloud resources. You will then utilize custom alerts to monitor for TCP/IP Port Scans to fire alerts.
 
 At the end of this hands-on lab, you will be better able to design and build secure cloud-based architectures, and to improve the security of existing applications hosted within Azure.
 
@@ -91,11 +91,11 @@ They are migrating many of their applications via Lift and Shift to Azure and wo
 
 ## Solution architecture
 
-Contoso administrators recently learned about the Azure Security Center and have decided to implement many of its features to secure their cloud-based Azure infrastructure (IaaS) and applications (PaaS). Specifically, they want to ensure that any internet exposed resources have been property secured and any non-required internet access disabled. They also decided that implementing a "jump machine" for admins with Application Security was also important as they had admins installing non-approved software on their machines and then accessing cloud resources. They also want the ability to be alerted when TCP/IP Port Scans are detected and fire alerts based on those attacks.
+Contoso administrators recently learned about the Azure Security Center and have decided to implement many of its features to secure their cloud-based Azure infrastructure (IaaS) and applications (PaaS). Specifically, they want to ensure that any internet exposed resources have been property secured and any non-required internet access disabled. They also decided that implementing a "jump machine" for admins with Application Security was also important as they have had instances of admins installing non-approved software on their machines and then accessing cloud resources. Additionally, they want the ability to be alerted when TCP/IP Port Scans are detected and fire alerts based on those attacks.
 
 ![This diagram shows external access to Azure resources where Just In Time is utilize to lock down the Jump Machine. Azure Log Analytics is then used to monitor the deny events on the network security groups.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image2.png)
 
-The solution begins by creating a jump machine. This jump machine is used to access the virtual machines and other resources in the resource group. All other access is disabled via multiple **virtual networks**. More than one virtual network is required as having a single **virtual network** would cause all resource to be accessible based on the default currently un-customizable security group rules. Resources are organized into these virtual networks. **Azure Center Security** is utilized to do **Just-In-Time** access to the jump machine. This ensures that all access is audited to the jump machine and that only authorized IP-addressed are allowed access, this prevents random attacks on the virtual machines from bad internet actors. Additionally, applications are not allowed to be installed on the jump machine to ensure that malware never becomes an issue. Each of the virtual network and corresponding **network security groups** have logging enabled to record deny events to **Azure Logging**. These events are then monitored by a **custom alert rule** in **Azure Security Center** to fire **custom alerts** which then execute custom **Azure Runbooks**. Once the solution is in place, the **Compliance Manager** tool is utilized to ensure that all GDPR based technical and business controls are implemented and maintained to ensure GDPR compliance.
+The solution begins by creating a jump machine. This jump machine is used to access the virtual machines and other resources in the resource group. All other access is disabled via multiple **virtual networks**. More than one virtual network is required as having a single **virtual network** would cause all resource to be accessible based on the default currently un-customizable security group rules. Resources are organized into these virtual networks. **Azure Center Security** is utilized to do **Just-In-Time** access to the jump machine. This ensures that all access is audited to the jump machine and that only authorized IP-addressed are allowed access, this prevents random attacks on the virtual machines from bad internet actors. Additionally, applications are not allowed to be installed on the jump machine to ensure that malware never becomes an issue. Each of the virtual network and corresponding **network security groups** have logging enabled to record deny events to **Azure Logging**. These events are then monitored by a **custom alert rule** in **Azure Security Center** to fire **custom alerts**. Once the solution is in place, the **Compliance Manager** tool is utilized to ensure that all GDPR based technical and business controls are implemented and maintained to ensure GDPR compliance.
 
 ## Requirements
 
@@ -142,7 +142,7 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
 3.  Select the **Recommended** tab, and then check the checkbox to select all the virtual machines, and then select the **Enable JIT on 3 VMs** link
 
-> **NOTE:** It could take up to 5 minutes for new VMs to show up if you upgraded to standard tier security
+> **NOTE:** It could take up to 10 minutes for new VMs to show up if you upgraded to standard tier security.  Also note that it is possible new VMs display in the **No recommendation** tab until a backend process moves them to the **Recommended** tab.
 
 4.  In the configuration window that opens, review the settings, then select **Save**
 
@@ -158,7 +158,7 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
     ![On the Virtual machines screen, the first listed virtual machine name is selected and highlighted (paw-1), as is Request access above it.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image12.png "Request access for paw-1")
 
-3.  For each of the ports, select the **On** toggle button
+3.  For each of the ports, select the **On** toggle button, notice how the default IP settings is **My IP**
 
     ![On is highlighted under Toggle for all four of the ports listed under paw-1.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image13.png "Select on for each of the ports")
 
@@ -210,6 +210,8 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 8.  Enter the username and password used from the Azure Template deployment (**wsadmin** - **p\@ssword1rocks**)
 
+    > **NOTE:** If you changed the username and password in the ARM template deployment, use those values instead
+
     ![The information above is entered in the Connect to Server dialog box, and Connect is highlighted at the bottom.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image22.png "Sign in to the SQL Server Database Engine")
 
 9.  Select **Connect**, in the **New Firewall Rule** dialog, select **Sign In**
@@ -236,7 +238,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 17. On the **Database Settings** dialog, select **Next**
 
-> **NOTE:** If you get an error, close and re-open SQL Management Studio try the import again. If that does not work, you may need to download the latest SQL Management Studio from [here](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017). In some instances the latest version may not work, version 17.3 is known to deploy the package properly.
+> **NOTE:** If you get an error, close and re-open SQL Management Studio try the import again. If that does not work, you may need to download the latest SQL Management Studio from [here](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017). In some instances the latest version may not work, version 17.3 is known to deploy the package properly.  You should also be aware that bacpac files exported from some SQL Server instances cannot be deployed to Azure SQL Servers.  We have also included a .bak file of the Insurance database that you can use to restore from.
 
 18. Select **Finish** and the database will deploy to Azure
 
@@ -302,7 +304,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 8.  Select **Save**
 
-9.  Switch back to your InsuranceAPI solution, refresh the page, and you should see the SSN column is now masked with **xxxx**
+9.  Switch back to your InsuranceAPI solution, press **F5** to refresh the page. You should see the SSN column is now masked with **xxxx**
 
     ![The masked SSN column is highlighted in the InsuranceAPI solution.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image33.png "View the masked SSN column")
 
@@ -372,9 +374,9 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 25. Select **Finish**, and the configured will start
 
-> **NOTE:** You may receive a "wrapKey" error. If so, ensure that your account has been assigned those permissions in the Azure Key Vault.
+    > **NOTE:** You may receive a "wrapKey" error. If so, ensure that your account has been assigned those permissions in the Azure Key Vault.
 
-![Generate new column master key CMK\_Auto1 in Azure Key Vault paassecurity is highlighted with a green check mark at the top of the Task Summary list.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image39.png "View the task summary")
+    ![Generate new column master key CMK\_Auto1 in Azure Key Vault paassecurity is highlighted with a green check mark at the top of the Task Summary list.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image39.png "View the task summary")
 
     a.  Select **Key vault**
 
@@ -438,7 +440,9 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
     ![Key vaults is highlighted on the left side of the Azure portal, and CloudSecurityVault is highlighted on the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image45.png "Select your Azure Key Vault")
 
-4.  Select **Secrets**, then select **+Add**
+4.  Select **Secrets**, then select **+Generate/Import**
+
+    ![Secrets is highlighted on the left side of the Azure portal, and Generate/Import is highlighted on the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image45.1.png "Create a new secret")
 
 5.  For the **Upload Options**, select **Manual**
 
@@ -462,7 +466,7 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 ### Task 2: Create an Azure Active Directory application
 
-1.  Select **Azure Active Directory**, then select **App Registrations**
+1.  In the Azure Portal, select **Azure Active Directory**, then select **App Registrations**
 
     ![Azure Active Directory is highlighted on the left side of the Azure portal, and App registrations is highlighted on the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image48.png "Select App registrations")
 
@@ -546,7 +550,7 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 ### Task 5: Test the solution
 
-1.  Open the **web.config**, and delete the **connectionString** from the file at line 78
+1.  Open the **web.config**, and comment out or delete the **connectionString** from the file at line 78
 
 2.  Open the **global.asax.cs** file, and place a break point at line 28
 
@@ -558,7 +562,7 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
     ![The connection string to the Azure Database is visible.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image54.png "View the connection string")
 
-4.  Press **F5**, and navigate to [http://localhost:portno/api/Users](http://localhost:portno/api/Users), you should get an error. Because you encrypted the column in the previous exercies, EntityFramework is not able to retrieve the value. You would need to add the AzureKeyVaultProvider to the code in order for .NET to handle the encrypted column.
+4.  Press **F5**, and navigate to [http://localhost:portno/api/Users](http://localhost:portno/api/Users), you should get an error. Because you encrypted the column in the previous exercies, EntityFramework is not able to retrieve the value. You would need to add the [AzureKeyVaultProvider for Entity Framework](https://blogs.msdn.microsoft.com/sqlsecurity/2015/11/10/using-the-azure-key-vault-key-store-provider-for-always-encrypted/) reference to the project and then register the provider code in order for .NET to handle the encrypted column and add the "Column Encryption Setting=Enabled" to the connection string.
 
 ## Exercise 4: Securing the network
 
@@ -570,13 +574,15 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
 1.  In the Azure Portal, select **Virtual Machines**
 
-2.  Select **paw-1**, then select **Connect** (you may have to request JIT access)
+2.  Select **paw-1**, then select **Connect**.  In the dialog, select **Download RDP File**.  Open the downloaded RDP file and connect to the Virtual Machine.
 
-> **NOTE:** Default username is **wsadmin** with **p\@ssword1rocks** as password.
+    > **NOTE:** Default username is **wsadmin** with **p\@ssword1rocks** as password and you may need to request JIT Access if you have taken a break between exercises.
 
 3.  In the **PAW-1** virtual machine, open **PowerShell ISE as administrator**
 
 4.  Select File-\>Open, browse to the extracted GitHub directory and open the **\\Scripts \\PortScanner.ps1**
+
+    > **NOTE:** You would have downloaded the GitHub repo and extraced this in the setup steps.  If you did not perform those steps, perform them now. You can also choose to copy the file from your desktop to the VM.
 
 5.  Review the script. It does the following:
 
@@ -584,25 +590,25 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
     b.  Adds hosts entries for DNS
 
-> **NOTE:** When using multiple virtual networks, you must setup a DNS server in the Azure tenant
+    > **NOTE:** When using multiple virtual networks, you must setup a DNS server in the Azure tenant
 
     c.  Executes port scans
-
-<!-- -->
 
 6.  Run the script, and press **F5.** You should see the following (the Azure ARM Template created a default rule to block all traffic):
 
     a.  Port scan for port 3389 (RDP) to **DB-1** and **WEB-1** is unsuccessful from the **PAW-1** machine
 
-    b.  The information above for port 3389 (RDP) is visible after running the script and pressing F5![The information above for port 3389 (RDP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image55.png)
+    b.  The information above for port 3389 (RDP) is visible after running the script and pressing **F5**
+    
+    ![The information above for port 3389 (RDP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image55.png)
 
-    c.  Port scan for port 1433 (SQL) to **DB-1** and **WEB-1** is unsuccessful from the **PAW-1** machine. **DB-1** is running SQL Server but traffic is block at NSG and the windows firewall.
+    c.  Port scan for port 1433 (SQL) to **DB-1** and **WEB-1** is unsuccessful from the **PAW-1** machine. **DB-1** is running SQL Server but traffic is blocked at NSG and via the Windows Firewall.
 
-        ![The information above for port 1433 (SQL) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image56.png "View the information")
+    ![The information above for port 1433 (SQL) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image56.png "View the information")
 
     d.  Port scan for port 80 (HTTP) to **DB-1** and **WEB-1** is unsuccessful from the **PAW-1** machine, if traffic was allowed, it would always fail to **DB-1** because it is not running IIS or any other web server
 
-        ![The information above for port 80 (HTTP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image57.png)
+    ![The information above for port 80 (HTTP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image57.png)
 
 ### Task 2: Configure network security groups
 
@@ -624,9 +630,11 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
     g.  For the **Destination port range**, enter **1433**
 
-    h.  For the **priority**, enter **100**
+    h.  For the **Priority**, enter **100**
 
-    i.  Select **OK**
+    i.  For the **Name**, enter **Port_1433**
+
+    g.  Select **Add**
 
 3.  Configure the web server to allow all HTTP and HTTPS connections
 
@@ -640,15 +648,17 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
     e.  For the **Destination port range**, enter **80,443**
 
-    f.  For the **priority**, enter **100**
+    f.  For the **Priority**, enter **100**
 
-    g.  Change the name to **Port\_80\_443**
+    g.  Change the **Name** to **Port\_80\_443**
 
-    h.  Select **OK**
+    h.  Select **Add**
+
+    > **NOTE:** In some cases it may take up to 15 minutes for your Network Security Group to change is status from **Updating**.  You won't be able to add any other rules until it completes.
 
 4.  Configure both the database and web server to only allow RDP connections from the PAW machine
 
-    a.  Select **Network Security Groups.** For both the **DbTrafficOnly** and **WebTrafficOnly**, do the following:
+    a.  Select **Network Security Groups.** For both the **DbTrafficOnly** and **WebTrafficOnly**, do the following
 
         i.  Select **Inbound Security Rules**
 
@@ -660,9 +670,11 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
         v.  For the **Destination port range**, enter **3389**
 
-        vi. For the **priority**, enter **101**
+        vi. For the **Priority**, enter **101**
 
-        vii. Select **OK**
+        vii. For the **Name**, enter **Port_3389**
+
+        viii. Select **Add**
 
 5.  Configure all NSGs to have Diagnostic logs enabled
 
@@ -674,9 +686,9 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
         ii. For the name, enter the NSG name and then add **Logging** to the end
 
-        iii.  Check the **Send to Log Analytics** checkbox
+        iii.  Check the **Send to Log Analytics** checkbox, in the **Log Analytics** box, select **Configure**
 
-        iv. Select **Create New Workspace.** For the name enter **azuresecurity**
+        iv. For the first NSG you configure, select **Create New Workspace.** For the name enter **azuresecurity-yourinitials**.  For the remaining, simply select the new **azuresecurity-yourinitials** workspace.
 
         v. Select your resource group
 
@@ -692,6 +704,8 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
             ![Save is highlighted at the top, and two log items are selected and highlighted below.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image60.png "Save the logs")
 
+        x.  Repeat for all remaining Network Security Groups
+
 ### Task 3: Test network security group rules \#2
 
 1.  Switch back to the **PAW-1** virtual machine
@@ -700,7 +714,7 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
     a.  Port scan for port 3389 (RDP) to **DB-1** and **WEB-1** is successful from the **PAW-1** machine
 
-        ![The information above for port 3389 (RDP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image61.png "View the information")
+    ![The information above for port 3389 (RDP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image61.png "View the information")
 
     b.  Port scan for port 1433 (SQL) to **DB-1** is successful, and **WEB-1** is unsuccessful from the **PAW-1** machine
 
@@ -710,7 +724,7 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
     c.  If IIS has been setup on WEB-1, the port scan for port 80 (HTTP) to **DB-1** is unsuccessful and **WEB-1** is successful from the **PAW-1** machine
 
-    ![The information above for port 80 (HTTP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image63.png "View the information")
+![The information above for port 80 (HTTP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image63.png "View the information")
 
 ### Task 4: Install network watcher VM extension
 
@@ -760,7 +774,7 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
 9.  For the capture name, enter **databasetraffic**
 
-10. Notice the ability to save the capture file to the local machine or an Azure storage account. Ensure that the storage account is selected.
+10. Notice the ability to save the capture file to the local machine or an Azure storage account. Ensure that the resource group storage account is selected.
 
     ![In this screenshot, databasetraffic is entered in the Packet capture name box, and the Storage account check box is selected.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image70.png "Dialog box screenshot")
 
@@ -784,7 +798,7 @@ Synopsis: In this exercise, you will create custom security alerts using the Azu
 
 1.  Open the Azure Portal
 
-2.  Select **Security Center,** then select **Custom alert rules**
+2.  Select **Security Center,** then select **Custom alert rules (Preview)**
 
 > **NOTE:** If you see **Try custom alert rules now**, do the following:
 
@@ -812,25 +826,35 @@ Synopsis: In this exercise, you will create custom security alerts using the Azu
 
 5.  For the description, enter **A custom rule to detect port scans**
 
-6.  In the Search Query text box, type **search \* \| where Type != \'AzureMetric\' and OperationName == \'NetworkSecurityGroupCounters\' and type\_s == \'block\' and direction\_s == \'In\' and Resource == \'WEBTRAFFICONLY\'**
+6.  For the **Workspace**, select the **azuresecurity-yourinitials** workspace that you created for the Network Security Groups.
+
+> **NOTE**  If you do not see this workspace, you will need to ensure that the **Security Policy** blade shows the workspace and that the **Pricing Tier** has been set to **Standard**
+
+![+ The Security Policy blade showing the azuresecurity-yourinitals workspace set to Standard pricing tier.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image73.1.png "Workspace set to Standard")
+
+7.  In the Search Query text box, type:
+
+```powershell
+ search * | where Type != 'AzureMetric' and OperationName == 'NetworkSecurityGroupCounters' and type_s == 'block' and direction_s == 'In' and Resource == 'WEBTRAFFICONLY'
+ ```
 
 > **NOTE:** If you were quick going through the labs, then you may not have log data in the OMS workspace just yet that corresponds to "AzureMetric". You may need to wait 15-30 minutes before a query will execute.
->
-> **NOTE:** Please be sure that you type the query correctly. Due to this being a preview feature, you might not be able to "edit" the alert after it is created.
 
-7.  For the period, select **Over the last 1 hours**
+> **NOTE:** Please be sure that you type the query correctly. Due to this being a preview feature, you might not be able to "edit" the alert after it is created and you will need to delete the alert and recreate it.
 
-8.  For the evaluation, select **Every 5 minutes**
+8.  For the period, select **Over the last 1 hours**
+
+9.  For the evaluation, select **Every 5 minutes**
 
 > **NOTE**: This is so that our lab will run quickly and may not be appropriate for real world.
 
-9.  For the threshold, enter **50**
+10.  For the threshold, enter **50**
 
-10. For the suppress alerts, enter **60**
+11. For the suppress alerts, enter **60**
 
     ![The above information is entered in the dialog box for the new custom alert rule.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image74.png "Enter the information in the dialog box")
 
-11. Select **OK**
+12. Select **OK**
 
 ### Task 2: Investigate a custom alert
 
@@ -848,7 +872,7 @@ Synopsis: In this exercise, you will create custom security alerts using the Azu
 
     ![This is a screenshot of the Various row, which is listed under Attacked Resource.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image76.png "Select a row")
 
-5.  You will see the information about the alert that was fired, at some point you will also be able to execute investigations and playbooks against the alert instances:
+5.  You will see the information about the alert that was fired:
 
     ![This is a screen shot of an alert instance.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image77.png)
 
@@ -872,7 +896,7 @@ Synopsis: In this exercise, you will create custom security alerts using the Azu
 
     ![The information above is entered in the Create logic app dialog box.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image80.png "Enter Create logic app information")
 
-7.  Select **Create**, and the Logic Apps designer will load
+7.  Select **Create**, the **Logic Apps Designer** will load
 
 8.  Select the **Send notification email** template
 
@@ -892,7 +916,7 @@ Synopsis: In this exercise, you will create custom security alerts using the Azu
 
 12. For the email address, enter your email
 
-13. Select **Save**. You now have an email alert action based on PowerApps for your custom security alert
+13. Select **Save**. You now have an email alert action based on PowerApps for your custom security alert.
 
     ![Save is highlighted in Logic Apps Designer, and information about the custom security alert appears below.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image84.png "Save the email alert action")
 
@@ -938,41 +962,43 @@ Synopsis: In this exercise, attendees will learn to navigate the Compliance Mana
 
     ![Sign in is highlighted at the top of the Service Trust/Compliance Manager portal.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image89.jpeg "Sign in to Compliance Manager")
 
-3.  Select or sign in with your Azure AD\\Office 365 credentials
+3.  If prompted, select or sign in with your Azure AD\\Office 365 credentials
 
 4.  Select the **LAUNCH COMPLIANCE MANAGER** link
 
 5.  Select on the **+Add Assessment** link
 
-6.  For the product dropdown, select **Azure**
+6.  Select **Create a new Group**, for the name type **AzureSecurity**, select **Next**, set the **Would you like to copy the data from an existing group** toggle
+to **No**, select **Next*
 
-7.  For the certification dropdown, select **GDPR**
+7.  For the product dropdown, select **Azure**
+
+8.  For the certification dropdown, select **GDPR**
 
     ![Add a Standard Assessment dialog with Azure and GDPR selected.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image90.png)
 
-8.  Select **Add to Dashboard.** You will now see a new assessment for Azure and GDPR in progress:
+9.  Select **Add to Dashboard.** You will now see a new assessment for Azure and GDPR in progress:
 
     ![Azure GDPR assessment status that shows in progress](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image91.png)
 
-9.  Select **Azure GDPR**
+10.  Select **Azure GDPR**
 
-10. Review the various controls that you can implement:
+11. Review the various controls that you can implement:
 
-11. Scroll to the top of the web page and select **Service Trust Portal**, then scroll to the bottom of the page. Notice the two other main sections of the trust center called: **Audit Reports** and **Trust Documents.**
+![Several categories of controls are listed on the page.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image91.1.png)
 
-12. Select **Audit Reports**
+12. Scroll to the top of the web page and in the top navigation, select **Service Trust Portal**, then scroll to the bottom of the page. Notice the two other main sections of the trust center called: **Audit Reports** and **Trust Documents.**
+
+13. Select **Audit Reports**
 
     ![Four icons appear towards the bottom of the Service Trust Portal webpage, representing Track Compliance, Audit Reports, Data Protection and Privacy. VIEW REPORTS AND RESOURES is highlighted below the Audit Reports icon.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image92.png)
 
-13. Notice the various tabs that you can select from, select **FedRAMP**
+14. Notice the various tabs that you can select from, select **FedRAMP Reports**
 
-14. These are all the FedRAMP reports sorted by date that have been preformed and publicly posted for Azure customer review. Select the item displayed and briefly review the document.
+15. These are all the FedRAMP reports sorted by date that have been preformed and publicly posted for Azure customer review. Select the item displayed and briefly review the document.
 
     ![The FedRAMP Reports report type is highlighted on the Data Protection Standards and Regulatory Compliance Reports page, and Azure - FedRAMP Moderate System Security Plan v3.02 is highlighted at the bottom.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image93.png "Select the displayed FedRAMP report")
 
-15. Switch back to the Service Trust Portal web page. In the top navigation, select **Service Trust Portal**, and then select **Trust Documents** at the bottom of the page.
-
-16. These are all the various guides and white papers that describe how Azure achieves various levels of compliance
 
 ## After the hands-on lab 
 
@@ -1048,7 +1074,7 @@ Appendix A outlines the detailed steps involved in manually creating the resourc
 
 -   Create an instance of Azure SQL Server
 
-### Task 6: Create an Azure key vault
+### Task 6: Create an Azure Key Vault
 
--   Create an instance of azure key vault
+-   Create an instance of Azure Key Vault
 
