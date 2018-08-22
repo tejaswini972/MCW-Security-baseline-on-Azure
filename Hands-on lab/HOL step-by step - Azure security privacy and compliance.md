@@ -250,13 +250,13 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
     ![In SQL Management Studio, Open is selected in the File menu, and File is selected in the shortcut menu.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image27.png "Open a file")
 
-21. Browse to the extracted GitHub folder, select the **\\Database\\00\_CreateLogin.ps1** file
+21. Browse to the extracted GitHub folder, select the **\\Hands-on lab\\Database\\00\_CreateLogin.ps1** file
 
 22. Ensure that the **master** database is selected
 
 23. Run the script to create a login called **agent**
 
-24. Browse to the extracted folder, select the **\\Database\\01\_CreateUser.ps1** file
+24. Browse to the extracted folder, select the **\\Hands-on lab\\Database\\01\_CreateUser.ps1** file
 
 25. Ensure that the **Insurance** database is selected
 
@@ -432,7 +432,7 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 ### Task 1: Create an Azure Key Vault secret
 
-1.  From the extracted GitHub directory, open the **\\WebApp\\InsuranceAPI\_KeyVault\\InsuranceAPI.sln** solution
+1.  From the extracted GitHub directory, open the **\\Hands-on lab\\WebApp\\InsuranceAPI\_KeyVault\\InsuranceAPI.sln** solution
 
 2.  Switch to your Azure Portal
 
@@ -580,7 +580,7 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
 3.  In the **PAW-1** virtual machine, open **PowerShell ISE as administrator**
 
-4.  Select File-\>Open, browse to the extracted GitHub directory and open the **\\Scripts \\PortScanner.ps1**
+4.  Select File-\>Open, browse to the extracted GitHub directory and open the **\\Hands-on lab\\Scripts \\PortScanner.ps1**
 
     > **NOTE:** You would have downloaded the GitHub repo and extraced this in the setup steps.  If you did not perform those steps, perform them now. You can also choose to copy the file from your desktop to the VM.
 
