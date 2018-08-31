@@ -21,9 +21,9 @@ At the end of this workshop, you will be better able to secure your cloud-based 
 
 ### Whiteboard design session
 
-In this workshop, you will learn how to design an implementation of Azure Security Center and Microsoft Compliance Manager tools to ensure a secure and privacy-focused Azure cloud-based architecture.
+In this whiteboard design session, you will work with a group to design an end-to-end solution that leverages many of Microsoft Azure’s security features.
 
-At the end of this workshop, you will be better able to secure your cloud-based applications and services, while ensuring privacy standards are followed and your architecture is compliant.
+At the end of this session, you will be better able to design and recommend solutions that help organizations properly secure their cloud-based applications while protecting their sensitive data.
 
 ### Hands-on lab
 
