@@ -22,7 +22,7 @@ The names of manufacturers, products, or URLs are provided for informational pur
 
 Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx> are trademarks of the Microsoft group of companies. All other trademarks are the property of their respective owners.
 
-**Contnents**
+**Contents**
 
 <!-- TOC -->
 
@@ -266,6 +266,34 @@ Directions:
 5.  The Microsoft team responds to the objection
 6.  The customer team gives feedback to the Microsoft team
 7.  Tables switch roles and repeat Steps 2–6
+
+## Checklist of preferred objection handling
+
+1.  **Can Azure support the lift and shift of their web and database applications?**
+
+2.  **Admins are worried that they won't have the bandwidth to perform deployments of the corporate website and other supporting web applications.**
+
+3.  **Can Azure help contain costs for minimally used costly production and development resources?**
+
+4.  **Does Azure support the ability to allow VPN connections to specific resources?**
+
+5.  **Can Microsoft employees or government entities access our data?**
+
+6.  **How does Azure protect against threats?**
+
+7.  **Does Azure allow enough granular RBAC controls to meet our least privileged needs?**
+
+8.  **Is Azure virtual networking flexible enough to meet our requirements?**
+
+9.  **Can Azure supplement on-premises and 3rd party SIEM systems for auditing and compliance tasks?**
+
+10. **What certifications does Azure have and can Azure hosted applications meet the US and European compliance goals?**
+
+11. **Is Azure flexible enough to support data sovereignty needs and issues like those referenced in GDPR articles?**
+
+12. **How can we ensure continued SOC 1 and SOC 2 compliance?**
+
+13. **Does Azure permit penetration testing as a part of a security assessment?**
 
 ##  Wrap-up 
 

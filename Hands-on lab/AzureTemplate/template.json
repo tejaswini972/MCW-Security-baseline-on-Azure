@@ -703,7 +703,7 @@
         "typeHandlerVersion": "2.19",
         "autoUpgradeMinorVersion": true,
         "settings": {
-          "ModulesUrl": "https://github.com/givenscj/mcw-azure-security/blob/master/Scripts/Install_IIS.zip?raw=true",
+          "ModulesUrl": "https://github.com/MCW-Azure-security-privacy-and-compliance/blob/master/Hands-on%20lab/Scripts/Install_IIS.zip?raw=true",
           "ConfigurationFunction": "Install_IIS.ps1\\InstallIIS",
           "Properties": {
             "MachineName": "web-1"

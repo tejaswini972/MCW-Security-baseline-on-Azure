@@ -529,41 +529,41 @@ The primary audience is made up of the business decision makers and technology d
 
 *Ensuring auditing and compliance*
 
-    1.  Azure Security Center can be used to implement Just in Time (JIT) virtual machine access. You can also lock down VM modification using Azure IAM settings using specific users or groups with specific Azure roles assigned
+1.  Azure Security Center can be used to implement Just in Time (JIT) virtual machine access. You can also lock down VM modification using Azure IAM settings using specific users or groups with specific Azure roles assigned
 
-    2.  Ensure that admins are included in the appropriate resource administrative groups with appropriate IAM roles assigned
+2.  Ensure that admins are included in the appropriate resource administrative groups with appropriate IAM roles assigned
 
-    3.  Azure Security Center can be used to create custom alerts based on logging data from the Network Security Group rule execution
+3.  Azure Security Center can be used to create custom alerts based on logging data from the Network Security Group rule execution
 
-    4.  You can use Azure Monitor to do network testing and packet capture across virtual machines and virtual networks
+4.  You can use Azure Monitor to do network testing and packet capture across virtual machines and virtual networks
 
-    5.  Azure Monitor and Log Analytics can be leveraged to create queries across Azure event logging that will feed into PowerBI reports
+5.  Azure Monitor and Log Analytics can be leveraged to create queries across Azure event logging that will feed into PowerBI reports
 
-    6.  Auditing and Threat detection was enabled on all SQL Azure databases
+6.  Auditing and Threat detection was enabled on all SQL Azure databases
 
 *Ensuring availability and business continuity*
 
-    1.  Azure Recovery Service Vault was utilized to make backups of virtual machines
+1.  Azure Recovery Service Vault was utilized to make backups of virtual machines
 
-    2.  Azure Recovery Service Vault was utilized to make hourly log backups of SQL Azure
+2.  Azure Recovery Service Vault was utilized to make hourly log backups of SQL Azure
 
-    3.  Azure SQL geo-replication was enabled to ensure high availability and redundancy
+3.  Azure SQL geo-replication was enabled to ensure high availability and redundancy
 
 *Ensuring protection*
 
-    1.  Azure Premium features should be enabled to configure admin credentials to have Multi-factor Authentication
+1.  Azure Premium features should be enabled to configure admin credentials to have Multi-factor Authentication
 
-    2.  Azure AD Identity protection features should be enabled to ensure that if a credential is or attempting to be compromised that the information is available for alerting and reporting, that includes logons, failed logins, locked accounts, active critical issues, etc.
+2.  Azure AD Identity protection features should be enabled to ensure that if a credential is or attempting to be compromised that the information is available for alerting and reporting, that includes logons, failed logins, locked accounts, active critical issues, etc.
 
-    3.  Adaptive application controls can be enabled on all virtual machines to ensure that no software is being installed that has not been approved
+3.  Adaptive application controls can be enabled on all virtual machines to ensure that no software is being installed that has not been approved
 
-    4.  Privileged Access Workstation (PAW) virtual machine(s) will be set up as the entry point to gain access to all other virtual machines in the Azure subscription. No Access to virtual machines other than the PAW will be remote desktop enabled
+4.  Privileged Access Workstation (PAW) virtual machine(s) will be set up as the entry point to gain access to all other virtual machines in the Azure subscription. No Access to virtual machines other than the PAW will be remote desktop enabled
 
-    5.  Microsoft Intune can be used to ensure that only corporate and/or compliant devices can access Azure and Azure resources via conditional access policies
+5.  Microsoft Intune can be used to ensure that only corporate and/or compliant devices can access Azure and Azure resources via conditional access policies
 
-    6.  Additionally, the VM's in the web app and data tiers can leverage the Microsoft Antimalware extension, or partner security extensions (currently from Symantec and Trend Micro) that include antivirus, antimalware, firewalls and intrusion detection systems
+6.  Additionally, the VM's in the web app and data tiers can leverage the Microsoft Antimalware extension, or partner security extensions (currently from Symantec and Trend Micro) that include antivirus, antimalware, firewalls and intrusion detection systems
 
-    7.  All other measures Contoso has already put in place to secure PHI will continue to exist when the solution is deployed to Azure
+7.  All other measures Contoso has already put in place to secure PHI will continue to exist when the solution is deployed to Azure
 
 ## Checklist of preferred objection handling
 
