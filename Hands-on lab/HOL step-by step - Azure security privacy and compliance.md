@@ -128,17 +128,17 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
 > **NOTE:** Your subscription may not be set up with the **Standard** tier; if that is the case then do the following:
 
-    -   Select **Security Policy**.
+   -   Select **Security Policy**.
 
-    -   Expand the first node to show your subscriptions, select the subscription.
+   -   Expand the first node to show your subscriptions, select the subscription.
 
-    -   Toggle the **Inheritance** setting to **Unique**.
+   -   Toggle the **Inheritance** setting to **Unique**.
 
-    -   Select the **Standard** tier.
+   -   Select the **Standard** tier.
 
-    -   Select **Save**, note that it may take a few minutes for everything to "light up".
+   -   Select **Save**, note that it may take a few minutes for everything to "light up".
 
-    -   Select **Just in time VM access**.
+   -   Select **Just in time VM access**.
 
 3.  Select the **Recommended** tab, and then check the checkbox to select all the virtual machines, and then select the **Enable JIT on 3 VMs** link.
 
@@ -508,7 +508,7 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 2.  Select **Access Policies**.
 
-3.  Select **+****Add New**.
+3.  Select **+ Add New**.
 
     ![Access policies is selected and highlighted under Settings on the left side of your Azure Key Vault, and is +Add New is highlighted on the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image51.png "Add a new access policy")
 
@@ -534,9 +534,9 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 > **NOTE**: These already exist in the project but are provided as a reference.
 
-    a.  Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory -Version 2.16.204221202.
+   a.  Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory -Version 2.16.204221202.
 
-    b.  Install-Package Microsoft.Azure.KeyVault.
+   b.  Install-Package Microsoft.Azure.KeyVault.
 
 4.  From **Solution Explorer**, double-click the **web.config** file to open it.
 
@@ -662,47 +662,47 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
     a.  Select **Network Security Groups.** For both the **DbTrafficOnly** and **WebTrafficOnly**, do the following:
 
-       i.  Select **Inbound Security Rules**.
+        i.  Select **Inbound Security Rules**.
 
-       ii. Select **+Add**.
+        ii. Select **+Add**.
 
-       iii. For the **Source**, select **IP Addresses**.
+        iii. For the **Source**, select **IP Addresses**.
 
-       iv. For the **Source IP address**, enter **10.0.0.4**.
+        iv. For the **Source IP address**, enter **10.0.0.4**.
 
-       v.  For the **Destination port range**, enter **3389**.
+        v.  For the **Destination port range**, enter **3389**.
 
-       vi. For the **Priority**, enter **101**.
+        vi. For the **Priority**, enter **101**.
 
-       vii. For the **Name**, enter **Port_3389**.
+        vii. For the **Name**, enter **Port_3389**.
 
-       viii. Select **Add**.
+        viii. Select **Add**.
 
 5.  Configure all NSGs to have Diagnostic logs enabled.
 
     a.  Select **Network security groups.** For each NSG, do the following:
 
-       i. In the content menu, select **Diagnostic logs**, and then select **Turn on diagnostics**.
+        i. In the content menu, select **Diagnostic logs**, and then select **Turn on diagnostics**.
 
        ![Diagnostics logs is selected and highlighted under Monitoring on the left side, and Turn on diagnostics is highlighted on the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image58.png "Select Turn on diagnostics")
 
-       ii. For the name, enter the NSG name and then add **Logging** to the end.
+        ii. For the name, enter the NSG name and then add **Logging** to the end.
 
-       iii.  Check the **Send to Log Analytics** checkbox, in the **Log Analytics** box, select **Configure**.
+        iii.  Check the **Send to Log Analytics** checkbox, in the **Log Analytics** box, select **Configure**.
 
-       iv. For the first NSG you configure, select **Create New Workspace.** For the name enter **azuresecurity-yourinitials**.  For the remaining, simply select the new **azuresecurity-yourinitials** workspace.
+        iv. For the first NSG you configure, select **Create New Workspace.** For the name enter **azuresecurity-yourinitials**.  For the remaining, simply select the new **azuresecurity-yourinitials** workspace.
 
-       v. Select your resource group.
+        v. Select your resource group.
 
-       vi. Select your location (East US is preferred).
+        vi. Select your location (East US is preferred).
 
        ![+ Create New Workspace is selected on the left, and the above information is entered on the right under OMS Workspace.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image59.png "Create a new workspace")
 
-       vii. Select **OK**, wait for the OMS workspace to be created.
+        vii. Select **OK**, wait for the OMS workspace to be created.
 
-       viii. Select both LOG checkboxes.
+        viii. Select both LOG checkboxes.
 
-       ix. Select **Save**.
+        ix. Select **Save**.
 
        ![Save is highlighted at the top, and two log items are selected and highlighted below.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image60.png "Save the logs")
 
@@ -840,6 +840,7 @@ Synopsis: In this exercise, you will create custom security alerts using the Azu
 
 > **NOTE:** If you were quick going through the labs, then you may not have log data in the OMS workspace just yet that corresponds to "AzureMetric". You may need to wait 15-30 minutes before a query will execute.
 
+
 > **NOTE:** Please be sure that you type the query correctly. Due to this being a preview feature, you might not be able to "edit" the alert after it is created and you will need to delete the alert and recreate it.
 
 8.  For the period, select **Over the last 1 hours**.
@@ -894,7 +895,7 @@ Synopsis: In this exercise, you will create custom security alerts using the Azu
 
    c.  Toggle the **Log Analytics** to **On** and then select your **azuresecurity** OMS workspace.
 
-    ![The information above is entered in the Create logic app dialog box.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image80.png "Enter Create logic app information")
+   ![The information above is entered in the Create logic app dialog box.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image80.png "Enter Create logic app information")
 
 4.  Select **Create**, the **Logic Apps Designer** will load.
 
@@ -968,7 +969,7 @@ Synopsis: In this exercise, attendees will learn to navigate the Compliance Mana
 
 5.  Select on the **+Add Assessment** link.
 
-6.  Select **Create a new Group**, for the name type **AzureSecurity**, select **Next**, set the **Would you like to copy the data from an existing group** toggle to **No**, select **Next*.
+6.  Select **Create a new Group**, for the name type **AzureSecurity**, select **Next**, set the **Would you like to copy the data from an existing group** toggle to **No**, select **Next**.
 
 7.  For the product dropdown, select **Azure**.
 
