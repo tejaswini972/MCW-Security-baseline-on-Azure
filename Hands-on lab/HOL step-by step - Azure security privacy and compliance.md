@@ -101,15 +101,15 @@ The solution begins by creating a jump machine. This jump machine is used to acc
 
 1.  Microsoft Azure subscription must be pay-as-you-go or MSDN.
 
-    a.  Trial subscriptions will not work.
+-   Trial subscriptions will not work.
 
 2.  A machine with the following software installed:
 
-    b.  Visual Studio 2017
+-   Visual Studio 2017
 
-    c.  SQL Management Studio 2017
+-   SQL Management Studio 2017
 
-    d.  Power BI Desktop
+-   Power BI Desktop
 
 
 ## Exercise 1: Implementing Just-In-Time (JIT) access
@@ -1048,11 +1048,11 @@ Appendix A outlines the detailed steps involved in manually creating the resourc
 
 -   Create the following Virtual Machines:
 
--   PAW-1 -- A2 instance, Windows Server
+    -   PAW-1 -- A2 instance, Windows Server
 
--   DB-1 -- A2 instance, Windows Server with SQL Server -- be sure to open the windows firewall for port 1433 traffic
+    -   DB-1 -- A2 instance, Windows Server with SQL Server -- be sure to open the windows firewall for port 1433 traffic
 
--   WEB-1-- A2 instance, Windows Server -- Install IIS
+    -   WEB-1-- A2 instance, Windows Server -- Install IIS
 
 ### Task 4: Create network security groups
 
@@ -1063,8 +1063,6 @@ Appendix A outlines the detailed steps involved in manually creating the resourc
     -   Paw-1-nsg -- assigned to the PAW-1 nic
 
     -   WebTrafficOnly -- assigned to the WEB-1 nic
-
-<!-- -->
 
 -   For the DBTrafficOnly and WebTrafficOnly, add an incoming rule with priority 1000 that denies all traffic.
 
