@@ -135,7 +135,7 @@ The solution begins by creating a jump machine. This jump machine is used to acc
 
 1.  Microsoft Azure subscription must be pay-as-you-go or MSDN.
 
-    a.  Trial subscriptions will not work
+    a.  Trial subscriptions will not work.
 
 2.  A machine with the following software installed:
 
