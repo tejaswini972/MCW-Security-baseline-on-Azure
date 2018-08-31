@@ -78,7 +78,7 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
 8.  Select **Build your own template in the editor**
 
-9.  In the extracted folder, open the **\\Scripts\\template.json**
+9.  In the extracted folder, open the **\\Hands-on lab\\Scripts\\template.json**
 
 10. Copy and paste it into the window
 
