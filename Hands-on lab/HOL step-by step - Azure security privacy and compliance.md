@@ -128,17 +128,17 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
 > **NOTE:** Your subscription may not be set up with the **Standard** tier; if that is the case then do the following:
 
-   -   Select **Security Policy**.
+   a.  Select **Security Policy**.
 
-   -   Expand the first node to show your subscriptions, select the subscription.
+   b.  Expand the first node to show your subscriptions, select the subscription.
 
-   -   Toggle the **Inheritance** setting to **Unique**.
+   c.  Toggle the **Inheritance** setting to **Unique**.
 
-   -   Select the **Standard** tier.
+   d.  Select the **Standard** tier.
 
-   -   Select **Save**, note that it may take a few minutes for everything to "light up".
+   e.  Select **Save**, note that it may take a few minutes for everything to "light up".
 
-   -   Select **Just in time VM access**.
+   f.  Select **Just in time VM access**.
 
 3.  Select the **Recommended** tab, and then check the checkbox to select all the virtual machines, and then select the **Enable JIT on 3 VMs** link.
 
@@ -534,9 +534,9 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 > **NOTE**: These already exist in the project but are provided as a reference.
 
-   a.  Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory -Version 2.16.204221202.
+    a.  Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory -Version 2.16.204221202.
 
-   b.  Install-Package Microsoft.Azure.KeyVault.
+    b.  Install-Package Microsoft.Azure.KeyVault.
 
 4.  From **Solution Explorer**, double-click the **web.config** file to open it.
 
