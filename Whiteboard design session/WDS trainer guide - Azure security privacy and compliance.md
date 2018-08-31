@@ -487,6 +487,7 @@ The primary audience is made up of the business decision makers and technology d
 
 *Securing sensitive data*
 
+On your diagram, indicate how you would secure any sensitive data at rest and in transit with respect to the following:
 
 1.  Web Tier
 
@@ -496,9 +497,7 @@ The primary audience is made up of the business decision makers and technology d
 
     c.  The connection strings used by the Web Apps to access the database should be removed and replaced with calls to Azure Key Vault.
 
-
 2.  Database Tier
-
 
     a.  SQL Azure was setup, and the on-premises database was migrated to it.
 
@@ -518,83 +517,73 @@ The primary audience is made up of the business decision makers and technology d
 
     c.  In the case where the data collection website is hosted in Azure, the Virtual Network must be enabled for point-to-site connectivity, which requires the creation of an address space to be used in assigning IP addresses to member Web Apps as well as a Gateway. By doing so, a similar isolation to that provided by the \"front-end\" VM subnet is enabled.
 
-4.  The Azure virtual network uses industry-standard IPSEC protocol to secure all communications between the corporate VPN gateway and Azure. Additionally, communication with both should occur using TLS.
+    d.  The Azure virtual network uses industry-standard IPSEC protocol to secure all communications between the corporate VPN gateway and Azure. Additionally, communication with both should occur using TLS.
 
 *Ensuring auditing and compliance*
 
-<<<<<<< HEAD
-1.  Azure Security Center can be used to implement Just in Time (JIT) virtual machine access. You can also lock down VM modification using Azure IAM settings using specific users or groups with specific Azure roles assigned
+Describe how you will use Azure features to ensure the following:
 
-2.  Ensure that admins are included in the appropriate resource administrative groups with appropriate IAM roles assigned
+1.  How will you monitor and audit VM Access?
 
-3.  Azure Security Center can be used to create custom alerts based on logging data from the Network Security Group rule execution
+    a.  Azure Security Center can be used to implement Just in Time (JIT) virtual machine access. You can also lock down VM modification using Azure IAM settings using specific users or groups with specific Azure roles assigned
 
-4.  You can use Azure Monitor to do network testing and packet capture across virtual machines and virtual networks
+    b.  Ensure that admins are included in the appropriate resource administrative groups with appropriate IAM roles assigned
 
-5.  Azure Monitor and Log Analytics can be leveraged to create queries across Azure event logging that will feed into PowerBI reports
+2.  How will you monitor and audit network traffic across Virual networks?
 
-6.  Auditing and Threat detection was enabled on all SQL Azure databases
+    a.  Azure Security Center can be used to create custom alerts based on logging data from the Network Security Group rule execution
 
-*Ensuring availability and business continuity*
+    b.  You can use Azure Monitor to do network testing and packet capture across virtual machines and virtual networks
 
-1.  Azure Recovery Service Vault was utilized to make backups of virtual machines
+    c.  Azure Monitor and Log Analytics can be leveraged to create queries across Azure event logging that will feed into PowerBI reports
 
-2.  Azure Recovery Service Vault was utilized to make hourly log backups of SQL Azure
+3.  How will you monitor and audit Azure SQL?
 
-3.  Azure SQL geo-replication was enabled to ensure high availability and redundancy
+    a.  Auditing and Threat detection was enabled on all SQL Azure databases
 
-*Ensuring protection*
+4.  Create custom alerts and execute remediation and investigation activites on detection?
 
-1.  Azure Premium features should be enabled to configure admin credentials to have Multi-factor Authentication
-=======
-    1.  Azure Security Center can be used to implement Just in Time (JIT) virtual machine access. You can also lock down VM modification using Azure IAM settings using specific users or groups with specific Azure roles assigned.
+    a.  Azure Runbooks can be setup to execute on alerts
 
-    2.  Ensure that admins are included in the appropriate resource administrative groups with appropriate IAM roles assigned.
+5.  What tools would you setup to surface audit and compliance reporting to IT Executives?
 
-    3.  Azure Security Center can be used to create custom alerts based on logging data from the Network Security Group rule execution.
-
-    4.  You can use Azure Monitor to do network testing and packet capture across virtual machines and virtual networks.
-
-    5.  Azure Monitor and Log Analytics can be leveraged to create queries across Azure event logging that will feed into PowerBI reports.
-
-    6.  Auditing and Threat detection was enabled on all SQL Azure databases.
+    a.  Compliance Manager can be used to implement compliance activites and task assignements
 
 *Ensuring availability and business continuity*
 
-    1.  Azure Recovery Service Vault was utilized to make backups of virtual machines.
+Describe how you would ensure that the following resources would be available in the unlikely event of an attack or intentional or unintentional data loss?
 
-    2.  Azure Recovery Service Vault was utilized to make hourly log backups of SQL Azure.
+1.  Virutal Machines
 
-    3.  Azure SQL geo-replication was enabled to ensure high availability and redundancy.
+    a.  Azure Recovery Service Vault was utilized to make backups of virtual machines
+
+2.  Azure SQL
+
+    a.  Azure Recovery Service Vault was utilized to make hourly log backups of SQL Azure
+
+    b.  Azure SQL geo-replication was enabled to ensure high availability and redundancy
 
 *Ensuring protection*
 
-    1.  Azure Premium features should be enabled to configure admin credentials to have Multi-factor Authentication.
->>>>>>> 150caf3b1f2666b371a56539ad4c0f248a39fc20
+1.  Ensure that admin credentials are sufficiently protected and monitored?
 
-2.  Azure AD Identity protection features should be enabled to ensure that if a credential is or attempting to be compromised that the information is available for alerting and reporting, that includes logons, failed logins, locked accounts, active critical issues, etc.
+    a.  Azure Premium features should be enabled to configure admin credentials to have Multi-factor Authentication
 
-<<<<<<< HEAD
-3.  Adaptive application controls can be enabled on all virtual machines to ensure that no software is being installed that has not been approved
+    b.  Azure AD Identity protection features should be enabled to ensure that if a credential is or attempting to be compromised that the information is available for alerting and reporting, that includes logons, failed logins, locked accounts, active critical issues, etc.
 
-4.  Privileged Access Workstation (PAW) virtual machine(s) will be set up as the entry point to gain access to all other virtual machines in the Azure subscription. No Access to virtual machines other than the PAW will be remote desktop enabled
+2.  Prevent admins from causing intended and unintended harm to the environment such as unapproved software installs
 
-5.  Microsoft Intune can be used to ensure that only corporate and/or compliant devices can access Azure and Azure resources via conditional access policies
+    a.   Adaptive application controls can be enabled on all virtual machines to ensure that no software is being installed that has not been approved
 
-6.  Additionally, the VM's in the web app and data tiers can leverage the Microsoft Antimalware extension, or partner security extensions (currently from Symantec and Trend Micro) that include antivirus, antimalware, firewalls and intrusion detection systems
+3.  Admins access Azure resources from secured and/or compliant corporate assets and do not directly access any production Virtual Machines from the internet
 
-7.  All other measures Contoso has already put in place to secure PHI will continue to exist when the solution is deployed to Azure
-=======
-    3.  Adaptive application controls can be enabled on all virtual machines to ensure that no software is being installed that has not been approved.
+    a.  Privileged Access Workstation (PAW) virtual machine(s) will be set up as the entry point to gain access to all other virtual machines in the Azure subscription. No Access to virtual machines other than the PAW will be remote desktop enabled
 
-    4.  Privileged Access Workstation (PAW) virtual machine(s) will be set up as the entry point to gain access to all other virtual machines in the Azure subscription. No Access to virtual machines other than the PAW will be remote desktop enabled.
+    b.  Microsoft Intune can be used to ensure that only corporate and/or compliant devices can access Azure and Azure resources via conditional access policies
 
-    5.  Microsoft Intune can be used to ensure that only corporate and/or compliant devices can access Azure and Azure resources via conditional access policies.
+    c.  Additionally, the VM's in the web app and data tiers can leverage the Microsoft Antimalware extension, or partner security extensions (currently from Symantec and Trend Micro) that include antivirus, antimalware, firewalls and intrusion detection systems
 
-    6.  Additionally, the VM's in the web app and data tiers can leverage the Microsoft Antimalware extension, or partner security extensions (currently from Symantec and Trend Micro) that include antivirus, antimalware, firewalls and intrusion detection systems.
-
-    7.  All other measures Contoso has already put in place to secure PHI will continue to exist when the solution is deployed to Azure.
->>>>>>> 150caf3b1f2666b371a56539ad4c0f248a39fc20
+    d.  All other measures Contoso has already put in place to secure PHI will continue to exist when the solution is deployed to Azure
 
 ## Checklist of preferred objection handling
 
