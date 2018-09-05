@@ -9,7 +9,7 @@ Before the hands-on lab setup guide
 </div>
 
 <div class="MCWHeader3">
-May 2018
+August 2018
 </div>
 
 
@@ -23,32 +23,41 @@ The names of manufacturers, products, or URLs are provided for informational pur
 
 Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx> are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
 
+**Contents**
+
+<!-- TOC -->
+
+- [Azure security, privacy and compliance before the hands-on lab setup guide](#Azure-security,-privacy-and-compliance-before-the-hands--on-lab-setup-guide)
+    - [Requirements](#requirements)
+    - [Before the hands-on lab](#before-the-hands-on-lab)
+      - [Task 1: Download GitHub resources](#task-1-download-github-resources)
+      - [Task 2: Deploy resources to Azure](#task-2-deploy-resources-to-azure)
+      - [Next steps](#next-steps)
+
+<!-- /TOC -->
+
+# Azure security, privacy and compliance before the hands-on lab setup guide
+
 ## Requirements
 
-- Microsoft Azure subscription must be pay-as-you-go or MSDN
+1. Microsoft Azure subscription must be pay-as-you-go or MSDN
   - Trial subscriptions will not work
-- A machine with the following software installed:
+2. A machine with the following software installed:
   - Visual Studio 2017
   - SQL Management Studio 2017
   - Power BI Desktop
 
-## Before the hands-on lab setup guide 
+## Before the hands-on lab
 
 Duration: 30 minutes
 
 Synopsis: In this exercise, you will set up your environment for use in the rest of the hands-on lab. You should follow all the steps provided in the Before the Hands-on Lab section to prepare your environment *before* attending the workshop.
 
-## Contents
-
-- [Task 1: Download GitHub resources](#task-1-download-github-resources)
-- [Task 2: Deploy resources to Azure](#task-2-deploy-resources-to-azure)
-- [Next steps](#next-steps)
-
 ### Task 1: Download GitHub resources
 
-1.  Open a browser window to the cloud workshop GitHub repository (<https://github.com/Microsoft/MCW-Azure-Security-Privacy-and-Compliance>)
+1.  Open a browser window to the cloud workshop GitHub repository (<https://github.com/Microsoft/MCW-Azure-Security-Privacy-and-Compliance>).
 
-2.  Select **Clone or download**, then select **Download Zip**
+2.  Select **Clone or download**, then select **Download Zip**.
 
     ![Clone or download and Download ZIP are highlighted in this screenshot of the cloud workshop GitHub repository.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image3.png)
 
@@ -60,47 +69,49 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
 ### Task 2: Deploy resources to Azure
 
-1.  Open your Azure Portal
+1.  Open your Azure Portal.
 
-2.  Select **Resource groups**
+2.  Select **Resource groups**.
 
-3.  Select **+Add**
+3.  Select **+Add**.
 
-4.  Type a resource group name, such as **azsecurity-\[your initials or first name\]**
+4.  Type a resource group name, such as **azsecurity-\[your initials or first name\]**.
 
-5.  Select **Create**
+5.  Select **Create**.
 
-6.  Select **Refresh** to see your new resource group displayed and select it
+6.  Select **Refresh** to see your new resource group displayed and select it.
 
-7.  Select **Automation Script**, and then select **Deploy**
+7.  Select **Automation Script**, and then select **Deploy**.
 
     ![Automation script is highlighted under Settings on the left side of the Azure portal, and Deploy is highlighted on the top-right side.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image5.png "Select Deploy")
 
-8.  Select **Build your own template in the editor**
+8.  Select **Build your own template in the editor**.
 
-9.  In the extracted folder, open the **\\Scripts\\template.json**
+9.  In the extracted folder, open the **\\Hands-on lab\\Scripts\\template.json**.
 
-10. Copy and paste it into the window
+10. Copy and paste it into the window.
 
 11. Select **Save**, you will see the dialog with the input parameters. Fill out the form:
 
-    a.  Subscription: select your **subscription**
+    a.  Subscription: select your **subscription**.
 
-    b.  Resource group: Use an existing Resource group, or create a new one by entering a unique name, such as **azsecurity-\[your initials or first name\]**
+    b.  Resource group: Use an existing Resource group, or create a new one by entering a unique name, such as **azsecurity-\[your initials or first name\]**.
 
     c.  Location: Select a **location** for the Resource group. Recommend using East US, East US 2, West Central US, or West US 2.
 
-    d.  Modify the **sqlservername** to be something unique such as "azsecurity-\[your initials or first name\]"
+    d.  Modify the **sqlservername** to be something unique such as "azsecurity-\[your initials or first name\]".
 
-    e.  Fill in the remaining parameters, but if you change anything, be sure to note it for future reference throughout the lab
+    e.  Fill in the remaining parameters, but if you change anything, be sure to note it for future reference throughout the lab.
 
-    f.  Check the **I agree to the terms and conditions stated above** checkbox
+    NOTE:  User Object Id is meant to be the object id of a user that will be added as an administrator to an Azure Key Vault instance.  You can type anything here but the permission assignment with fail in the ARM template later unless it is a valid Azure Active Directory User Object Id.  You can find your object id by opening a new Azure portal window and navigating to the Azure Active Directory blade, select **Users**, search for your user account, select it, in the window you will see the **Object ID** field.  Click the copy link, then paste the value into the template object user id text box.
 
-    g.  Select **Purchase**
+    f.  Check the **I agree to the terms and conditions stated above** checkbox.
 
-        ![The above information is entered in the form, and I agree to the terms and conditions stated above and Purchase are selected and highlighted at the bottom.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image6.png "Fill out the form")
+    g.  Select **Purchase**.
 
-12. The deployment will take about 15 minutes to complete. To view the progress, select the **Deployments** link.
+    ![The above information is entered in the form, and I agree to the terms and conditions stated above and Purchase are selected and highlighted at the bottom.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image6.png "Fill out the form")
+
+12. The deployment will take 15-30 minutes to complete. To view the progress, select the **Deployments** link, then select the **Microsoft.Template** deployment.
 
     ![Deployments is highlighted under Settings on the left side of the Azure portal, and Microsoft.Template is highlighted under Deployment Name on the right side.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image7.png "Select the Deployments link")
 
@@ -118,13 +129,13 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
         -   One SQL Azure Server
 
-        -   One Recovery Services vault
+        -   One Azure Key Vault
 
-            ![Created items list This screenshot is a list of the items that were created, including the items listed above. ](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image8.png)
+    ![Created items list This screenshot is a list of the items that were created, including the items listed above. ](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image8.png)
 
-13. See Appendix A for detailed steps on creating these components without using an ARM template
+13. See Appendix A for detailed steps on creating these components without using an ARM template.
 
-You should follow all steps provided *before* attending the hands-on lab
+You should follow all steps provided *before* attending the hands-on lab.
 
 ## Next steps
 

@@ -9,7 +9,7 @@ Azure security, privacy, and compliance
 </div>
 
 <div class="MCWHeader3">
-May 2018
+August 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -22,7 +22,7 @@ The names of manufacturers, products, or URLs are provided for informational pur
 
 Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx> are trademarks of the Microsoft group of companies. All other trademarks are the property of their respective owners.
 
-**Contnents**
+**Contents**
 
 <!-- TOC -->
 
@@ -57,9 +57,9 @@ Analyze your customer’s needs.
 Timeframe: 15 minutes 
 
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
-1.  Meet your table participants and trainer 
-2.  Read all of the directions for steps 1–3 in the student guide 
-3.  As a table team, review the following customer case study
+1.  Meet your table participants and trainer .
+2.  Read all of the directions for steps 1–3 in the student guide .
+3.  As a table team, review the following customer case study.
 
 ### Customer situation
 
@@ -83,37 +83,37 @@ Jack Tradewinds, the CIO of Contoso Ltd, has heard a great deal of positive news
 
 ### Customer needs 
 
-1.  Assure data privacy and protection across all aspects of the system; in transit and at rest
+1.  Assure data privacy and protection across all aspects of the system; in transit and at rest.
 
-2.  Address issues of data sovereignty with respect to the location of sensitive data
+2.  Address issues of data sovereignty with respect to the location of sensitive data.
 
-3.  Ability to scale as the company grows and system load increases
+3.  Ability to scale as the company grows and system load increases.
 
-4.  Contain hosting and operational costs associated with running the system
+4.  Contain hosting and operational costs associated with running the system.
 
-5.  Enable method to continually review and assign legal compliance tasks to the appropriate individuals and provide a compliance reporting ability for Azure resources
+5.  Enable method to continually review and assign legal compliance tasks to the appropriate individuals and provide a compliance reporting ability for Azure resources.
 
-6.  Limit access to the corporate site to users on the Contoso domain, and continue to support VPN access
+6.  Limit access to the corporate site to users on the Contoso domain, and continue to support VPN access.
 
-7.  Extract all web applications that have configuration or embedded connection strings to a more secure implementation
+7.  Extract all web applications that have configuration or embedded connection strings to a more secure implementation.
 
-8.  Migrate current database applications to Azure PaaS solution with the appropriate data backup features implemented to prevent catastrophic data loss due to intentional or unintentional acts
+8.  Migrate current database applications to Azure PaaS solution with the appropriate data backup features implemented to prevent catastrophic data loss due to intentional or unintentional acts.
 
-9.  Implement all security best practices on the migrated databases such as encryption at rest and during transport as well as ensure that sensitive data is not exposed to non-admin database users and applications
+9.  Implement all security best practices on the migrated databases such as encryption at rest and during transport as well as ensure that sensitive data is not exposed to non-admin database users and applications.
 
-10. Ensure network segregation between Azure admin and the lift and shifted web and database tiers
+10. Ensure network segregation between Azure admin and the lift and shifted web and database tiers.
 
-11. Enable logging across all components (identity, virtual network, virtual machine, web, and database) to support an all-encompassing monitoring solution
+11. Enable logging across all components (identity, virtual network, virtual machine, web, and database) to support an all-encompassing monitoring solution.
 
-12. Ensure that Azure admins utilize best practices when accessing the Azure virtual machine resources and that all logins are logged for identity theft analysis activities
+12. Ensure that Azure admins utilize best practices when accessing the Azure virtual machine resources and that all logins are logged for identity theft analysis activities.
 
-13. Ensure ease of use by syncing appropriate admin username and passwords for on-premises and cloud resources
+13. Ensure ease of use by syncing appropriate admin username and passwords for on-premises and cloud resources.
 
-14. Ensure that only authorized users can access specific Azure resources when logged into the Azure Portal
+14. Ensure that only authorized users can access specific Azure resources when logged into the Azure Portal.
 
-15. Setup auditing such that software installs are monitored across Azure virtual machine resources
+15. Setup auditing such that software installs are monitored across Azure virtual machine resources.
 
-16. When specific security events are detected (such as a port scan), allow for the execution of actions to remediate, start the investigative process or prevent further information leakage or damage
+16. When specific security events are detected (such as a port scan), allow for the execution of actions to remediate, start the investigative process or prevent further information leakage or damage.
 
 ### Customer objections 
 
@@ -160,7 +160,7 @@ Timeframe: 60 minutes
 
 **Business needs**
 
-Directions: With all participants at your table, answer the following questions and list the answers on a flip chart.
+Directions: With all participants at your table, answer the following questions and list the answers on a flip chart:
 
 1.  To whom should you present this solution? Who is your target customer audience? Who are the decision makers?
 
@@ -214,9 +214,9 @@ Describe how you will use Azure features to ensure the following:
 
 3.  How will you monitor and audit Azure SQL?
 
-4.  Create custom alerts and execute remediation and investigation activities on detection
+4.  Create custom alerts and execute remediation and investigation activities on detection?
 
-5.  What tools would you setup surface audit and compliance reporting to IT Executives
+5.  What tools would you setup surface audit and compliance reporting to IT Executives?
 
 *Ensuring availability and business continuity*
 
@@ -230,7 +230,7 @@ Describe how you would ensure that the following resources would be available in
 
 Describe how you would secure each Azure resource from internal and external attacks:
 
-1.  Ensure that admin credentials are sufficiently protected and monitored?
+1.  Ensure that admin credentials are sufficiently protected and monitored
 
 2.  Prevent admins from causing intended and unintended harm to the environment such as unapproved software installs
 
@@ -240,11 +240,11 @@ Describe how you would secure each Azure resource from internal and external att
 
 Directions: With all participants at your table:
 
-1.  Identify any customer needs that are not addressed with the proposed solution
+1.  Identify any customer needs that are not addressed with the proposed solution.
 
-2.  Identify the benefits of your solution
+2.  Identify the benefits of your solution.
 
-3.  Determine how you will respond to the customer's objections
+3.  Determine how you will respond to the customer's objections.
 
 Prepare a 15-minute chalk-talk style presentation to the customer.
 
@@ -259,13 +259,41 @@ Timeframe: 30 minutes
 **Presentation** 
 
 Directions:
-1.  Pair with another table
-2.  One table is the Microsoft team and the other table is the customer
-3.  The Microsoft team presents their proposed solution to the customer
-4.  The customer makes one of the objections from the list of objections
-5.  The Microsoft team responds to the objection
-6.  The customer team gives feedback to the Microsoft team
-7.  Tables switch roles and repeat Steps 2–6
+1.  Pair with another table.
+2.  One table is the Microsoft team and the other table is the customer.
+3.  The Microsoft team presents their proposed solution to the customer.
+4.  The customer makes one of the objections from the list of objections.
+5.  The Microsoft team responds to the objection.
+6.  The customer team gives feedback to the Microsoft team.
+7.  Tables switch roles and repeat Steps 2–6.
+
+## Checklist of preferred objection handling
+
+1.  **Can Azure support the lift and shift of their web and database applications?**
+
+2.  **Admins are worried that they won't have the bandwidth to perform deployments of the corporate website and other supporting web applications.**
+
+3.  **Can Azure help contain costs for minimally used costly production and development resources?**
+
+4.  **Does Azure support the ability to allow VPN connections to specific resources?**
+
+5.  **Can Microsoft employees or government entities access our data?**
+
+6.  **How does Azure protect against threats?**
+
+7.  **Does Azure allow enough granular RBAC controls to meet our least privileged needs?**
+
+8.  **Is Azure virtual networking flexible enough to meet our requirements?**
+
+9.  **Can Azure supplement on-premises and 3rd party SIEM systems for auditing and compliance tasks?**
+
+10. **What certifications does Azure have and can Azure hosted applications meet the US and European compliance goals?**
+
+11. **Is Azure flexible enough to support data sovereignty needs and issues like those referenced in GDPR articles?**
+
+12. **How can we ensure continued SOC 1 and SOC 2 compliance?**
+
+13. **Does Azure permit penetration testing as a part of a security assessment?**
 
 ##  Wrap-up 
 

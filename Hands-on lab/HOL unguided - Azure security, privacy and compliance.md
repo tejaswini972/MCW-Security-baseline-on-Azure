@@ -9,7 +9,7 @@ Hands-on lab unguided
 </div>
 
 <div class="MCWHeader3">
-May 2018
+August 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -133,9 +133,9 @@ The solution begins by creating a jump machine. This jump machine is used to acc
 
 ## Requirements
 
-1.  Microsoft Azure subscription must be pay-as-you-go or MSDN
+1.  Microsoft Azure subscription must be pay-as-you-go or MSDN.
 
-    a.  Trial subscriptions will not work
+    a.  Trial subscriptions will not work.
 
 2.  A machine with the following software installed:
 
@@ -155,23 +155,23 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
 #### Tasks to Complete:
 
--   Setup the PAW-1 Virtual Machine with JIT Access
+-   Setup the PAW-1 Virtual Machine with JIT Access.
 
 #### Exit Criteria:
 
--   JIT security rules setup on NSG for PAW-1
+-   JIT security rules setup on NSG for PAW-1.
 
 ### Task 2: Perform a JIT request
 
 #### Tasks to Complete:
 
--   Submit a request to activate the JIT
+-   Submit a request to activate the JIT.
 
--   Login to the PAW-1 VM via RDP
+-   Login to the PAW-1 VM via RDP.
 
 #### Exit Criteria:
 
--   Successful login to the PAW-1 machine
+-   Successful login to the PAW-1 machine.
 
 ## Exercise 2: Securing the Web Application and Database
 
@@ -183,23 +183,23 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 #### Tasks to Complete:
 
--   Restore the Insurance.bacpac file to the Azure SQL Server setup in your Azure tenant
+-   Restore the Insurance.bacpac file to the Azure SQL Server setup in your Azure tenant.
 
--   Create a user called agent that has db\_reader access to the Insurance database
+-   Create a user called agent that has db\_reader access to the Insurance database.
 
 #### Exit Criteria:
 
--   Insurance database exists in your Azure Tenant
+-   Insurance database exists in your Azure Tenant.
 
--   The agent user can be used to connect to the database using SQL Management Studio
+-   The agent user can be used to connect to the database using SQL Management Studio.
 
 ### Task 2: Test the web application solution
 
 #### Tasks to Complete:
 
--   Open the InsuranceAPI solution
+-   Open the InsuranceAPI solution.
 
--   Modify the web.config file to point to your new Insurance database
+-   Modify the web.config file to point to your new Insurance database.
 
 #### Exit Criteria:
 
@@ -209,7 +209,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 #### Tasks to Complete:
 
--   Configure the Azure DB User table, SSN column to have data masking
+-   Configure the Azure DB User table, SSN column to have data masking.
 
 #### Exit Criteria:
 
@@ -219,11 +219,11 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 #### Tasks to Complete:
 
--   Configure the SSN column to utilize Azure Key Vault for column encryption
+-   Configure the SSN column to utilize Azure Key Vault for column encryption.
 
 #### Exit Criteria:
 
--   Execute a "select \* from User" SQL Management Query that shows the SSN column as encrypted
+-   Execute a "select \* from User" SQL Management Query that shows the SSN column as encrypted.
 
 ## Exercise 3: Migrating to Azure Key Vault
 
@@ -235,57 +235,57 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 #### Tasks to Complete:
 
--   Open the InsuranceAPI\_KeyVault solution
+-   Open the InsuranceAPI\_KeyVault solution.
 
--   Migrate the connection string to an Azure Key Vault secret
+-   Migrate the connection string to an Azure Key Vault secret.
 
 #### Exit Criteria:
 
--   Azure Key Vault secret exists with connection string
+-   Azure Key Vault secret exists with connection string.
 
 ### Task 2: Create an Azure Active Directory application
 
 #### Tasks to Complete:
 
--   Create a new Azure AD application
+-   Create a new Azure AD application.
 
 #### Exit Criteria:
 
--   A new Azure AD application exists
+-   A new Azure AD application exists.
 
 ### Task 3: Assign Azure Active Directory application permissions
 
 #### Tasks to Complete:
 
--   Assign the Azure AD application with access to the Azure Key Vault secret
+-   Assign the Azure AD application with access to the Azure Key Vault secret.
 
 #### Exit Criteria:
 
--   Azure AD application has proper permissions to gain access to key vault
+-   Azure AD application has proper permissions to gain access to key vault.
 
 ### Task 4: Install or verify nuget package
 
 #### Tasks to Complete:
 
--   Ensure that the Microsoft.IdentityModel.Clients.ActiveDirectory and Microsoft.Azure.KeyVault nuget packages exist for the project
+-   Ensure that the Microsoft.IdentityModel.Clients.ActiveDirectory and Microsoft.Azure.KeyVault nuget packages exist for the project.
 
 #### Exit Criteria:
 
--   Successful web application complied
+-   Successful web application complied.
 
 ### Task 5: Test the Solution
 
 #### Tasks to Complete:
 
--   Configure the web app to utilize an Azure AD clientId and secret to gain access to the Azure Key Vault secret for the EntityFramework ConnectionString
+-   Configure the web app to utilize an Azure AD clientId and secret to gain access to the Azure Key Vault secret for the EntityFramework ConnectionString.
 
 #### Exit Criteria:
 
--   Web Application utilizes Azure AD application to gain access token
+-   Web Application utilizes Azure AD application to gain access token.
 
--   Web Application uses access token to download the Azure Key Vault secret
+-   Web Application uses access token to download the Azure Key Vault secret.
 
--   Data is successfully displayed on the [http://localhost:portno/api/Users](http://localhost:portno/api/Users) page
+-   Data is successfully displayed on the [http://localhost:portno/api/Users](http://localhost:portno/api/Users) page.
 
 ## Exercise 4: Securing the Network
 
@@ -297,31 +297,31 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
 #### Tasks to Complete:
 
--   Connect to the PAW-1 machine over RDP
+-   Connect to the PAW-1 machine over RDP.
 
--   Using the PortScanner.ps1 file, check the allowed ports between the PAW-1, DB-1 and WEB-1 machines
+-   Using the PortScanner.ps1 file, check the allowed ports between the PAW-1, DB-1 and WEB-1 machines.
 
 #### Exit Criteria:
 
--   Understanding of current NSG environment
+-   Understanding of current NSG environment.
 
 ### Task 2: Configure network security groups
 
 #### Tasks to Complete:
 
--   Configure the DbTrafficOnly NSG to allow 1433 traffic from the WEB-1 Virtual Machine
+-   Configure the DbTrafficOnly NSG to allow 1433 traffic from the WEB-1 Virtual Machine.
 
--   Configure the WebTrafficOnly NSG to allow 80,443 traffic from any where
+-   Configure the WebTrafficOnly NSG to allow 80,443 traffic from any where.
 
--   Configure the DbTrafficOnly and WebTrafficOnly NSG to allow RDP access from the PAW-1 virtual machine
+-   Configure the DbTrafficOnly and WebTrafficOnly NSG to allow RDP access from the PAW-1 virtual machine.
 
 #### Exit Criteria:
 
--   RDP traffic can only come from the PAW-1 machine for WEB-1 and DB-1
+-   RDP traffic can only come from the PAW-1 machine for WEB-1 and DB-1.
 
--   Web Traffic is allowed to WEB-1
+-   Web Traffic is allowed to WEB-1.
 
--   SQL Traffic is allowed from WEB-1 to DB-1
+-   SQL Traffic is allowed from WEB-1 to DB-1.
 
 ### Task 3: Test network security groups \#2
 
@@ -331,41 +331,41 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
 #### Exit Criteria:
 
--   RDP traffic can only come from the PAW-1 machine for WEB-1 and DB-1
+-   RDP traffic can only come from the PAW-1 machine for WEB-1 and DB-1.
 
--   Web Traffic is allowed to WEB-1
+-   Web Traffic is allowed to WEB-1.
 
--   SQL Traffic is allowed from WEB-1 to DB-1
+-   SQL Traffic is allowed from WEB-1 to DB-1.
 
 ### Task 4: Install network watcher VM extension
 
 #### Tasks to Complete:
 
--   Install the Network Watcher VM Extension on DB-1
+-   Install the Network Watcher VM Extension on DB-1.
 
 #### Exit Criteria:
 
--   VM extension is installed successfully on DB-1
+-   VM extension is installed successfully on DB-1.
 
 ### Task 5: Setup network packet capture
 
 #### Tasks to Complete:
 
--   Setup a Network Packet Capture on DB-1
+-   Setup a Network Packet Capture on DB-1.
 
 #### Exit Criteria:
 
--   A packet capture file is saved to the storage account
+-   A packet capture file is saved to the storage account.
 
 ### Task 6: Execute a port scan
 
 #### Tasks to Complete:
 
--   Execute a port scan from PAW-1 to both WEB-1 and DB-1
+-   Execute a port scan from PAW-1 to both WEB-1 and DB-1.
 
 #### Exit Criteria:
 
--   At least 400 different ports scanned across both machines
+-   At least 400 different ports scanned across both machines.
 
 ## Exercise 5: Creating security log alerts
 
@@ -381,27 +381,27 @@ Synopsis: In this exercise, you will create custom security alerts using the Azu
 
 #### Exit Criteria:
 
--   A custom alert that picks up all blocked traffic to the WebTrafficOnly NSG
+-   A custom alert that picks up all blocked traffic to the WebTrafficOnly NSG.
 
 ### Task 2: Investigate a custom alert
 
 #### Tasks to Complete:
 
--   After an alert is fired, review it using the Azure Security Center
+-   After an alert is fired, review it using the Azure Security Center.
 
 #### Exit Criteria:
 
--   A reviewed security center alert
+-   A reviewed security center alert.
 
 ### Task 3: Create and run a playbook
 
 #### Tasks to Complete:
 
--   Create a RunBook based on the alert that will send an email on alert
+-   Create a RunBook based on the alert that will send an email on alert.
 
 #### Exit Criteria:
 
--   A custom alert that picks up all blocked traffic to the WebTrafficOnly NSG with an Email action/RunBook logic app
+-   A custom alert that picks up all blocked traffic to the WebTrafficOnly NSG with an Email action/RunBook logic app.
 
 ## Exercise 6: Creating Compliance Reports with Power BI
 
@@ -413,13 +413,13 @@ Synopsis: In this exercise, attendees will learn to navigate the Compliance Mana
 
 #### Tasks to Complete:
 
--   Export a log analytics query from the Log Analytics portal
+-   Export a log analytics query from the Log Analytics portal.
 
--   Import the query into Power BI
+-   Import the query into Power BI.
 
 #### Exit Criteria:
 
--   Power BI Desktop shows a query from log analytics
+-   Power BI Desktop shows a query from log analytics.
 
 ## Exercise 7: Using Compliance Manager
 
@@ -431,17 +431,17 @@ Synopsis: In this exercise, attendees will learn to navigate the Compliance Mana
 
 #### Tasks to Complete:
 
--   Open the Microsoft Service Trust web site
+-   Open the Microsoft Service Trust web site.
 
--   Create a new assessment for Azure and GDPR
+-   Create a new assessment for Azure and GDPR.
 
--   Find the FedRamp security assessment on the Service Trust site
+-   Find the FedRamp security assessment on the Service Trust site.
 
 #### Exit Criteria:
 
--   A new compliance assessment is created
+-   A new compliance assessment is created.
 
--   You have the FedRamp security assessment for Azure displayed on your screen
+-   You have the FedRamp security assessment for Azure displayed on your screen.
 
 ## After the Hands-on Lab 
 
@@ -453,7 +453,7 @@ In this exercise, attendees will deprovision any Azure resources that were creat
 
 1.  Using the Azure portal, navigate to the Resource group you used throughout this hands-on lab by selecting Resource groups in the left menu
 
-2.  Search for the name of your research group, and select it from the list
+2.  Search for the name of your research group, and select it from the list.
 
-3.  Select Delete in the command bar, and confirm the deletion by re-typing the Resource group name and selecting Delete
+3.  Select Delete in the command bar, and confirm the deletion by re-typing the Resource group name and selecting Delete.
 

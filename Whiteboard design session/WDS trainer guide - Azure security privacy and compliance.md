@@ -9,7 +9,7 @@ Azure security, privacy, and compliance
 </div>
 
 <div class="MCWHeader3">
-May 2018
+August 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -62,25 +62,25 @@ Thank you for taking time to support the whiteboard design sessions as a trainer
 
 An amazing trainer:
 
--   Creates a safe environment in which learning can take place
+-   Creates a safe environment in which learning can take place.
 
--   Stimulates the participant's thinking
+-   Stimulates the participant's thinking.
 
--   Involves the participant in the learning process
+-   Involves the participant in the learning process.
 
--   Manages the learning process (on time, on topic, and adjusting to benefit participants)
+-   Manages the learning process (on time, on topic, and adjusting to benefit participants).
 
--   Ensures individual participant accountability
+-   Ensures individual participant accountability.
 
--   Ties it all together for the participant
+-   Ties it all together for the participant.
 
--   Provides insight and experience into the learning process
+-   Provides insight and experience into the learning process.
 
--   Effectively leads the whiteboard design session discussion
+-   Effectively leads the whiteboard design session discussion.
 
--   Monitors quality and appropriateness of participant deliverables
+-   Monitors quality and appropriateness of participant deliverables.
 
--   Effectively leads the feedback process
+-   Effectively leads the feedback process.
 
 ## Whiteboard design session flow 
 
@@ -88,9 +88,9 @@ Each whiteboard design session uses the following flow:
 
 **Step 1: Review the customer case study (15 minutes)**
 
-Outcome: Analyze your customer's needs
+Outcome: Analyze your customer's needs.
 
--   Customer\'s background, situation, needs, and technical requirements
+-   Customer's background, situation, needs, and technical requirements
 
 -   Current customer infrastructure and architecture
 
@@ -100,13 +100,13 @@ Outcome: Analyze your customer's needs
 
 Outcome: Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
--   Determine your target customer audience
+-   Determine your target customer audience.
 
--   Determine customer's business needs to address your solution
+-   Determine customer's business needs to address your solution.
 
--   Design and diagram your solution
+-   Design and diagram your solution.
 
--   Prepare to present your solution
+-   Prepare to present your solution.
 
 **Step 3: Present the solution (30 minutes)**
 
@@ -126,15 +126,15 @@ Outcome: Present solution to your customer
 
 Before conducting your first whiteboard design session:
 
--   Read the Student guide (including the case study) and Trainer guide
+-   Read the Student guide (including the case study) and Trainer guide.
 
--   Become familiar with all key points and activities
+-   Become familiar with all key points and activities.
 
--   Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions
+-   Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions.
 
--   Before the whiteboard design session, discuss the case study to pick up more ideas
+-   Before the whiteboard design session, discuss the case study to pick up more ideas.
 
--   Make notes for later
+-   Make notes for later.
 
 ## During the whiteboard design session: Tips for an effective whiteboard design session
 
@@ -144,7 +144,7 @@ Before conducting your first whiteboard design session:
 
 When participants are doing activities, you can **look ahead to refresh your memory**.
 
--   **Adjust activity and whiteboard design session pace** as needed to allow time for presenting, feedback, and sharing
+-   **Adjust activity and whiteboard design session pace** as needed to allow time for presenting, feedback, and sharing.
 
 -   **Add examples, points, and stories** from your own experience. Think about stories you can share that help you make your points clearly and effectively.
 
@@ -177,9 +177,9 @@ Analyze your customer’s needs.
 Timeframe: 15 minutes 
 
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
-1.  Meet your table participants and trainer 
-2.  Read all of the directions for steps 1–3 in the student guide 
-3.  As a table team, review the following customer case study
+1.  Meet your table participants and trainer. 
+2.  Read all of the directions for steps 1–3 in the student guide. 
+3.  As a table team, review the following customer case study.
 
 
 ### Customer situation
@@ -204,37 +204,37 @@ Jack Tradewinds, the CIO of Contoso Ltd, has heard a great deal of positive news
 
 ### Customer needs 
 
-1.  Assure data privacy and protection across all aspects of the system; in transit and at rest
+1.  Assure data privacy and protection across all aspects of the system; in transit and at rest.
 
-2.  Address issues of data sovereignty with respect to the location of sensitive data
+2.  Address issues of data sovereignty with respect to the location of sensitive data.
 
-3.  Ability to scale as the company grows and system load increases
+3.  Ability to scale as the company grows and system load increases.
 
-4.  Contain hosting and operational costs associated with running the system
+4.  Contain hosting and operational costs associated with running the system.
 
-5.  Enable method to continually review and assign legal compliance tasks to the appropriate individuals and provide a compliance reporting ability for Azure resources
+5.  Enable method to continually review and assign legal compliance tasks to the appropriate individuals and provide a compliance reporting ability for Azure resources.
 
-6.  Limit access to the corporate site to users on the Contoso domain, and continue to support VPN access
+6.  Limit access to the corporate site to users on the Contoso domain, and continue to support VPN access.
 
-7.  Extract all web applications that have configuration or embedded connection strings to a more secure implementation
+7.  Extract all web applications that have configuration or embedded connection strings to a more secure implementation.
 
-8.  Migrate current database applications to Azure PaaS solution with the appropriate data backup features implemented to prevent catastrophic data loss due to intentional or unintentional acts
+8.  Migrate current database applications to Azure PaaS solution with the appropriate data backup features implemented to prevent catastrophic data loss due to intentional or unintentional acts.
 
-9.  Implement all security best practices on the migrated databases such as encryption at rest and during transport as well as ensure that sensitive data is not exposed to non-admin database users and applications
+9.  Implement all security best practices on the migrated databases such as encryption at rest and during transport as well as ensure that sensitive data is not exposed to non-admin database users and applications.
 
-10. Ensure network segregation between Azure admin and the lift and shifted web and database tiers
+10. Ensure network segregation between Azure admin and the lift and shifted web and database tiers.
 
-11. Enable logging across all components (identity, virtual network, virtual machine, web, and database) to support an all-encompassing monitoring solution
+11. Enable logging across all components (identity, virtual network, virtual machine, web, and database) to support an all-encompassing monitoring solution.
 
-12. Ensure that Azure admins utilize best practices when accessing the Azure virtual machine resources and that all logins are logged for identity theft analysis activities
+12. Ensure that Azure admins utilize best practices when accessing the Azure virtual machine resources and that all logins are logged for identity theft analysis activities.
 
-13. Ensure ease of use by syncing appropriate admin username and passwords for on-premises and cloud resources
+13. Ensure ease of use by syncing appropriate admin username and passwords for on-premises and cloud resources.
 
-14. Ensure that only authorized users can access specific Azure resources when logged into the Azure Portal
+14. Ensure that only authorized users can access specific Azure resources when logged into the Azure Portal.
 
-15. Setup auditing such that software installs are monitored across Azure virtual machine resources
+15. Setup auditing such that software installs are monitored across Azure virtual machine resources.
 
-16. When specific security events are detected (such as a port scan), allow for the execution of actions to remediate, start the investigative process or prevent further information leakage or damage
+16. When specific security events are detected (such as a port scan), allow for the execution of actions to remediate, start the investigative process or prevent further information leakage or damage.
 
 ### Customer objections 
 
@@ -281,19 +281,13 @@ Timeframe: 60 minutes
 
 **Business needs**
 
-Directions: With all participants at your table, answer the following questions and list the answers on a flip chart. 
+Directions: With all participants at your table, answer the following questions and list the answers on a flip chart: 
 1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers? 
-2.  What customer business needs do you need to address with your solution?
-
-**Design** 
-Directions: With all participants at your table, respond to the following questions on a flip chart.
-
-1.  To whom should you present this solution? Who is your target customer audience? Who are the decision makers?
 2.  What customer business needs do you need to address with your solution?
 
 **Design**
 
-Directions: With all participants at your table, respond to the following questions on a flip chart.
+Directions: With all participants at your table, respond to the following questions on a flip chart:
 
 *High-level architecture*
 
@@ -339,9 +333,9 @@ Describe how you will use Azure features to ensure the following:
 
 3.  How will you monitor and audit Azure SQL?
 
-4.  Create custom alerts and execute remediation and investigation activities on detection
+4.  Create custom alerts and execute remediation and investigation activities on detection?
 
-5.  What tools would you setup surface audit and compliance reporting to IT Executives
+5.  What tools would you setup surface audit and compliance reporting to IT Executives?
 
 *Ensuring availability and business continuity*
 
@@ -355,7 +349,7 @@ Describe how you would ensure that the following resources would be available in
 
 Describe how you would secure each Azure resource from internal and external attacks
 
-1.  Ensure that admin credentials are sufficiently protected and monitored?
+1.  Ensure that admin credentials are sufficiently protected and monitored
 
 2.  Prevent admins from causing intended and unintended harm to the environment such as unapproved software installs
 
@@ -365,9 +359,9 @@ Describe how you would secure each Azure resource from internal and external att
 
 Directions: With all participants at your table: 
 
-1.  Identify any customer needs that are not addressed with the proposed solution
-2.  Identify the benefits of your solution
-3.  Determine how you will respond to the customer’s objections
+1.  Identify any customer needs that are not addressed with the proposed solution.
+2.  Identify the benefits of your solution.
+3.  Determine how you will respond to the customer’s objections.
 
 Prepare a 15-minute chalk-talk style presentation to the customer. 
 
@@ -383,13 +377,13 @@ Timeframe: 30 minutes
 **Presentation** 
 
 Directions:
-1.  Pair with another table
-2.  One table is the Microsoft team and the other table is the customer
-3.  The Microsoft team presents their proposed solution to the customer
-4.  The customer makes one of the objections from the list of objections
-5.  The Microsoft team responds to the objection
-6.  The customer team gives feedback to the Microsoft team
-7.  Tables switch roles and repeat Steps 2–6
+1.  Pair with another table.
+2.  One table is the Microsoft team and the other table is the customer.
+3.  The Microsoft team presents their proposed solution to the customer.
+4.  The customer makes one of the objections from the list of objections.
+5.  The Microsoft team responds to the objection.
+6.  The customer team gives feedback to the Microsoft team.
+7.  Tables switch roles and repeat Steps 2–6.
 
 
 ## Wrap-up 
@@ -433,39 +427,39 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 ## Step 1: Review the customer case study
 
--   Check in with your table participants to introduce yourself as the trainer
+-   Check in with your table participants to introduce yourself as the trainer.
 
 -   Ask, "What questions do you have about the customer case study?"
 
--   Briefly review the steps and timeframes of the whiteboard design session
+-   Briefly review the steps and timeframes of the whiteboard design session.
 
--   Ready, set, go! Let the table participants begin
+-   Ready, set, go! Let the table participants begin.
 
 ## Step 2: Design a proof of concept solution
 
--   Check in with your tables to ensure that they are transitioning from step to step on time
+-   Check in with your tables to ensure that they are transitioning from step to step on time.
 
--   Provide some feedback on their responses to the business needs and design
+-   Provide some feedback on their responses to the business needs and design.
 
-    -   Try asking questions first that will lead the participants to discover the answers on their own
+    -   Try asking questions first that will lead the participants to discover the answers on their own.
 
--   Provide feedback for their responses to the customer's objections
+-   Provide feedback for their responses to the customer's objections.
 
-    -   Try asking questions first that will lead the participants to discover the answers on their own
+    -   Try asking questions first that will lead the participants to discover the answers on their own.
 
 ## Step 3: Present the solution
 
--   Determine which table will be paired with your table before Step 3 begins
+-   Determine which table will be paired with your table before Step 3 begins.
 
--   For the first round, assign one table as the presenting team and the other table as the customer
+-   For the first round, assign one table as the presenting team and the other table as the customer.
 
--   Have the presenting team present their solution to the customer team
+-   Have the presenting team present their solution to the customer team.
 
-    -   Have the customer team provide one objection for the presenting team to respond to
+    -   Have the customer team provide one objection for the presenting team to respond to.
 
-    -   The presentation, objections, and feedback should take no longer than 15 minutes
+    -   The presentation, objections, and feedback should take no longer than 15 minutes.
 
-    -   If needed, the trainer may also provide feedback
+    -   If needed, the trainer may also provide feedback.
 
 ## Wrap-up
 
@@ -493,6 +487,7 @@ The primary audience is made up of the business decision makers and technology d
 
 *Securing sensitive data*
 
+On your diagram, indicate how you would secure any sensitive data at rest and in transit with respect to the following:
 
 1.  Web Tier
 
@@ -502,9 +497,7 @@ The primary audience is made up of the business decision makers and technology d
 
     c.  The connection strings used by the Web Apps to access the database should be removed and replaced with calls to Azure Key Vault.
 
-
 2.  Database Tier
-
 
     a.  SQL Azure was setup, and the on-premises database was migrated to it.
 
@@ -512,58 +505,85 @@ The primary audience is made up of the business decision makers and technology d
 
     c.  For highly sensitive fields, Column Level Encryption (CLE) was enabled using Azure Key Vault to protect fields having sensitive data from users who have the ability to view the contents of the table but have no need to read the sensitive data.
 
-    d.  For other reporting users, data masking was implemented to allow partial viewing of sensitive data
+    d.  For other reporting users, data masking was implemented to allow partial viewing of sensitive data.
 
-    e.  The SQL Azure server\'s virtual network was configured only to allow SQL traffic from the web and reporting applications with logging enabled
+    e.  The SQL Azure server\'s virtual network was configured only to allow SQL traffic from the web and reporting applications with logging enabled.
 
 3.  Network, Internal and External Communications
-
 
     a.  With the websites hosted in Azure VM\'s, the Azure VMs are joined to an isolated virtual network with VPN access enabled from the corporate site (via Site-to-Site configuration).
 
     b.  The application tiers are separated by virtual networks and subnets\-- the website VM\'s are placed within a \"front-end\" subnet within the Virtual Network, and the SQL Database VMs are placed in a \"back-end\" subnet. This separation helps to create a security boundary that can be leveraged by firewalls and intrusion detection systems to more easily detect suspicious traffic, and to quickly quarantine traffic from the websites front-end to the back-end database should a breach be detected.
 
-    c.  In the case where the data collection website is hosted in Azure, the Virtual Network must be enabled for point-to-site connectivity, which requires the creation of an address space to be used in assigning IP addresses to member Web Apps as well as a Gateway. By doing so, a similar isolation to that provided by the \"front-end\" VM subnet is enabled
+    c.  In the case where the data collection website is hosted in Azure, the Virtual Network must be enabled for point-to-site connectivity, which requires the creation of an address space to be used in assigning IP addresses to member Web Apps as well as a Gateway. By doing so, a similar isolation to that provided by the \"front-end\" VM subnet is enabled.
 
-4.  The Azure virtual network uses industry-standard IPSEC protocol to secure all communications between the corporate VPN gateway and Azure. Additionally, communication with both should occur using TLS
+    d.  The Azure virtual network uses industry-standard IPSEC protocol to secure all communications between the corporate VPN gateway and Azure. Additionally, communication with both should occur using TLS.
 
 *Ensuring auditing and compliance*
 
-    1.  Azure Security Center can be used to implement Just in Time (JIT) virtual machine access. You can also lock down VM modification using Azure IAM settings using specific users or groups with specific Azure roles assigned
+Describe how you will use Azure features to ensure the following:
 
-    2.  Ensure that admins are included in the appropriate resource administrative groups with appropriate IAM roles assigned
+1.  How will you monitor and audit VM Access?
 
-    3.  Azure Security Center can be used to create custom alerts based on logging data from the Network Security Group rule execution
+    a.  Azure Security Center can be used to implement Just in Time (JIT) virtual machine access. You can also lock down VM modification using Azure IAM settings using specific users or groups with specific Azure roles assigned
 
-    4.  You can use Azure Monitor to do network testing and packet capture across virtual machines and virtual networks
+    b.  Ensure that admins are included in the appropriate resource administrative groups with appropriate IAM roles assigned
 
-    5.  Azure Monitor and Log Analytics can be leveraged to create queries across Azure event logging that will feed into PowerBI reports
+2.  How will you monitor and audit network traffic across Virual networks?
 
-    6.  Auditing and Threat detection was enabled on all SQL Azure databases
+    a.  Azure Security Center can be used to create custom alerts based on logging data from the Network Security Group rule execution
+
+    b.  You can use Azure Monitor to do network testing and packet capture across virtual machines and virtual networks
+
+    c.  Azure Monitor and Log Analytics can be leveraged to create queries across Azure event logging that will feed into PowerBI reports
+
+3.  How will you monitor and audit Azure SQL?
+
+    a.  Auditing and Threat detection was enabled on all SQL Azure databases
+
+4.  Create custom alerts and execute remediation and investigation activites on detection?
+
+    a.  Azure Runbooks can be setup to execute on alerts
+
+5.  What tools would you setup to surface audit and compliance reporting to IT Executives?
+
+    a.  Compliance Manager can be used to implement compliance activites and task assignements
 
 *Ensuring availability and business continuity*
 
-    1.  Azure Recovery Service Vault was utilized to make backups of virtual machines
+Describe how you would ensure that the following resources would be available in the unlikely event of an attack or intentional or unintentional data loss?
 
-    2.  Azure Recovery Service Vault was utilized to make hourly log backups of SQL Azure
+1.  Virutal Machines
 
-    3.  Azure SQL geo-replication was enabled to ensure high availability and redundancy
+    a.  Azure Recovery Service Vault was utilized to make backups of virtual machines
+
+2.  Azure SQL
+
+    a.  Azure Recovery Service Vault was utilized to make hourly log backups of SQL Azure
+
+    b.  Azure SQL geo-replication was enabled to ensure high availability and redundancy
 
 *Ensuring protection*
 
-    1.  Azure Premium features should be enabled to configure admin credentials to have Multi-factor Authentication
+1.  Ensure that admin credentials are sufficiently protected and monitored?
 
-    2.  Azure AD Identity protection features should be enabled to ensure that if a credential is or attempting to be compromised that the information is available for alerting and reporting, that includes logons, failed logins, locked accounts, active critical issues, etc.
+    a.  Azure Premium features should be enabled to configure admin credentials to have Multi-factor Authentication
 
-    3.  Adaptive application controls can be enabled on all virtual machines to ensure that no software is being installed that has not been approved
+    b.  Azure AD Identity protection features should be enabled to ensure that if a credential is or attempting to be compromised that the information is available for alerting and reporting, that includes logons, failed logins, locked accounts, active critical issues, etc.
 
-    4.  Privileged Access Workstation (PAW) virtual machine(s) will be set up as the entry point to gain access to all other virtual machines in the Azure subscription. No Access to virtual machines other than the PAW will be remote desktop enabled
+2.  Prevent admins from causing intended and unintended harm to the environment such as unapproved software installs
 
-    5.  Microsoft Intune can be used to ensure that only corporate and/or compliant devices can access Azure and Azure resources via conditional access policies
+    a.   Adaptive application controls can be enabled on all virtual machines to ensure that no software is being installed that has not been approved
 
-    6.  Additionally, the VM's in the web app and data tiers can leverage the Microsoft Antimalware extension, or partner security extensions (currently from Symantec and Trend Micro) that include antivirus, antimalware, firewalls and intrusion detection systems
+3.  Admins access Azure resources from secured and/or compliant corporate assets and do not directly access any production Virtual Machines from the internet
 
-    7.  All other measures Contoso has already put in place to secure PHI will continue to exist when the solution is deployed to Azure
+    a.  Privileged Access Workstation (PAW) virtual machine(s) will be set up as the entry point to gain access to all other virtual machines in the Azure subscription. No Access to virtual machines other than the PAW will be remote desktop enabled
+
+    b.  Microsoft Intune can be used to ensure that only corporate and/or compliant devices can access Azure and Azure resources via conditional access policies
+
+    c.  Additionally, the VM's in the web app and data tiers can leverage the Microsoft Antimalware extension, or partner security extensions (currently from Symantec and Trend Micro) that include antivirus, antimalware, firewalls and intrusion detection systems
+
+    d.  All other measures Contoso has already put in place to secure PHI will continue to exist when the solution is deployed to Azure
 
 ## Checklist of preferred objection handling
 
@@ -595,30 +615,30 @@ The primary audience is made up of the business decision makers and technology d
 
 -   Access to customer data by Microsoft operations and support personnel is denied by default. When granted, access is carefully managed and logged. Data center access to the systems that store customer data is strictly controlled via lock box processes.
 
--   Microsoft does not share data with third parties unless permitted by the customer
+-   Microsoft does not share data with third parties unless permitted by the customer.
 
--   Microsoft provides only the data it is legally compelled to provide, but never voluntarily
+-   Microsoft provides only the data it is legally compelled to provide, but never voluntarily.
 
--   Both employees and subcontractors work at Microsoft data centers
+-   Both employees and subcontractors work at Microsoft data centers.
 
 -   We require subcontractors to join Microsoft\'s Vendor Privacy Assurance Program, to meet our privacy requirements by contract, and to undergo regular privacy training. We contractually obligate subcontractors that work in facilities or on equipment controlled by Microsoft to follow our privacy standards. All other subcontractors are contractually obligated to follow privacy standards equivalent to our own.
 
 
 ***How does Azure protect against threats?***
 
--   Intrusion detection and prevention systems, denial of service attack prevention, regular penetration testing, and forensic tools help identify and mitigate threats from both outside and inside of Azure
+-   Intrusion detection and prevention systems, denial of service attack prevention, regular penetration testing, and forensic tools help identify and mitigate threats from both outside and inside of Azure.
 
 -   Microsoft Antimalware is built-in to Cloud Services and can be enabled for Virtual Machines to help identify and remove viruses, spyware and other malicious software and provide real-time protection. Customers can also run antimalware solutions from partners on their Virtual Machines.
 
--   Microsoft has decades of operating system security experience running its applications and services and latest developments allow the Microsoft Security Graph to analyze events to determine if and when an attack is occurring
+-   Microsoft has decades of operating system security experience running its applications and services and latest developments allow the Microsoft Security Graph to analyze events to determine if and when an attack is occurring.
 
 ***Does Azure allow enough granular RBAC controls to meet our least privileged needs?***
 
--   Azure resource groups can be set up with users, groups, and applications with varying levels of role assignments to meet any customer requirements
+-   Azure resource groups can be set up with users, groups, and applications with varying levels of role assignments to meet any customer requirements.
 
 -   Azure comes with several pre-built built-in roles - <https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles> and allows you to create custom roles - <https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-custom-roles>
 
--   Additionally, you can assign individual users and groups to just about any Azure resource
+-   Additionally, you can assign individual users and groups to just about any Azure resource.
 
 ***Is Azure virtual networking flexible enough to meet our requirements?***
 
@@ -688,7 +708,7 @@ The primary audience is made up of the business decision makers and technology d
 
         -   MLPS (China)
 
--   Azure hosted applications can meet compliance goals is designed and maintained properly
+-   Azure hosted applications can meet compliance goals is designed and maintained properly.
 
 ***Is Azure flexible enough to support data sovereignty needs and issues like those referenced in GDPR articles?***
 
@@ -708,7 +728,7 @@ The primary audience is made up of the business decision makers and technology d
 
 ***Does Azure permit penetration testing as a part of a security assessment?***
 
--   Yes, and as of mid-2017, you no longer need to get approval to execute these tests, but you can still notify Microsoft if you are planning to do so
+-   Yes, and as of mid-2017, you no longer need to get approval to execute these tests, but you can still notify Microsoft if you are planning to do so.
 
 ## Customer quote (to be read back to the attendees at the end)
 
