@@ -9,7 +9,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-August 2018
+October 2018
 </div>
 
 
@@ -140,7 +140,7 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
    f.  Select **Just in time VM access**.
 
-3.  Select the **Recommended** tab, and then check the checkbox to select all the virtual machines, and then select the **Enable JIT on 3 VMs** link.
+3.  Select the **Recommended** tab, and then check the checkbox to select the lab vms (db-1, paw-1 and web-1), and then select the **Enable JIT on 3 VMs** link.
 
 > **NOTE:** It could take up to 10 minutes for new VMs to show up if you upgraded to standard tier security.  Also note that it is possible new VMs display in the **No recommendation** tab until a backend process moves them to the **Recommended** tab.
 
@@ -156,7 +156,7 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
 1.  Select the **Configured** tab. You should now see all the machines listed.
 
-2.  Select the **paw-1** virtual machine, and then select **Request Access**.
+2.  Select the **paw-1** virtual machine, and then select **Request access**.
 
     ![On the Virtual machines screen, the first listed virtual machine name is selected and highlighted (paw-1), as is Request access above it.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image12.png "Request access for paw-1")
 
@@ -164,7 +164,7 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
     ![On is highlighted under Toggle for all four of the ports listed under paw-1.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image13.png "Select on for each of the ports")
 
-4.  At the bottom of the dialog, select **Open ports**. You should now see the **APPROVED** requests have been incremented and the **LAST ACCESS** is set to **Active now.**.
+4.  At the bottom of the dialog, select **Open ports**. After a few moments, you should now see the **APPROVED** requests have been incremented and the **LAST ACCESS** is set to **Active now.**.
 
     ![On the Virtual machines screen, 1 Requests and Active now are highlighted under Aproved and Last Access next to the paw-1 virtual machine.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image14.png "View Approved and Last Access status")
 
@@ -172,11 +172,13 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
     ![Activity Log is highlighted in the shortcut menu for the last user.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image15.png "View the Activity Log")
 
-6.  In the Azure Portal main menu, select **Network Security Groups**, then select **paw-1-nsg**.
+6.  In the Azure Portal main menu, select **All Services**, then type **Network**, then select **Network Security Group**:
 
-    ![Network security groups is highlighted on the left side of the Azure portal, and paw-1-nsg is highlighted to the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image16.png "Select paw-1-nsg")
+![Network security groups is highlighted on the left side of the Azure portal, and paw-1-nsg is highlighted to the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image16.png "Select paw-1-nsg")
 
-7.  Select **Inbound security rules.** You should now see a set of inbound security rules set up by JIT Access.
+7.  Select the **paw-1-nsg** network security group.
+
+8.  Select **Inbound security rules.** You should now see a set of inbound security rules set up by JIT Access.
 
     ![The first four listed items are highlighted under Inbound security rules.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image17.png "View the inbound security rules set up by JIT Access")
 
@@ -188,11 +190,11 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 ### Task 1: Setup the database
 
-1.  Switch to your Azure portal, select **More Services** then select **SQL Servers**.
+1.  Switch to your Azure portal, select **All Services** then search for **SQL Servers**.  Select **SQl Servers**:
 
     ![More services is highlighted on the left side of the Azure portal, and SQL servers is highlighted to the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image18.png "Select SQL Servers")
 
-2.  Select the **Azure SQL** database server you created using the Azure Manager template.
+2.  Select the **Azure SQL** database server you created using the Azure Manager template (Ex:  AzureSecurity-INIT).
 
 3.  Select **SQL Databases**, then select the **SampleDB** database.
 
@@ -218,7 +220,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 9.  Select **Connect**, in the **New Firewall Rule** dialog, select **Sign In**.
 
-10. Sign in as your Azure tenant admin.
+10. Sign in with your resource group owner credentials.
 
 11. In the dialog, select **OK**, notice how your IP address will be added for connection.
 
@@ -230,7 +232,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 13. In the Introduction dialog, select **Next**.
 
-14. Select **Browse**, navigate to the extracted **Database** directory, and select the **Insurance.dacpac** file.
+14. Select **Browse**, navigate to the extracted **Database** directory, and select the **Insurance.bacpac** file.
 
     ![Insurance.bacpac is selected in the Browse dialog box.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image25.png "Select Insurance.bacpac")
 
@@ -388,7 +390,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
     d.  Select **Add New**.
 
-    e.  Select your account.
+    e.  For the principal, select your account.
 
     f.  Select **Key permissions**, and select **Select all**.
 
@@ -403,6 +405,8 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
     j.  Select **Save**.
 
     k.  Retry the operation.
+
+    > **NOTE:** If you are still getting errors (such as Access Denied), ensure that you have selected the correct subscription and Key Vault.
 
     ![Results is highlighted on the left side of the Always Encrypted dialog box, and at right, Performing encryption operations is selected under Summary: Task. Performing encryption operations has a green check mark and is listed as Passed under Details.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image41.png "View the task results")
 
@@ -486,21 +490,19 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 7.  Copy and record the **Application ID** for later use.
 
-8.  Copy and record the **Object ID** for later use.
-
     ![The Application ID and Object ID are highlighted under Essentials for the AzureKeyVaultTest application, and All settings is selected at the bottom.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image50.png "Copy and record the Application ID and Object ID")
 
-9.  Select **Settings**.
+8.  Select **Settings**.
 
-10. Select **Keys**.
+9. Select **Keys**.
 
-11. For the description, enter **InsuranceAPI**.
+10. For the description, enter **InsuranceAPI**.
 
-12. For the Expires, select **In 1 year**.
+11. For the Expires, select **In 1 year**.
 
-13. Select **Save**.
+12. Select **Save**.
 
-14. Copy and record the key value for later use.
+13. Copy and record the key value for later use.
 
 ### Task 3: Assign Azure Active Directory application permissions
 
@@ -582,11 +584,17 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
 3.  In the **PAW-1** virtual machine, open **PowerShell ISE as administrator**.
 
-4.  Select File-\>Open, browse to the extracted GitHub directory and open the **\\Hands-on lab\\Scripts \\PortScanner.ps1**.
+4.  Run the following command:
 
-    > **NOTE:** You would have downloaded the GitHub repo and extraced this in the setup steps.  If you did not perform those steps, perform them now. You can also choose to copy the file from your desktop to the VM.
+```PowerShell
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+```
 
-5.  Review the script. It does the following:
+5.  Select File-\>Open, browse to the extracted GitHub directory and open the **\\Hands-on lab\\Scripts \\PortScanner.ps1**.
+
+    > **NOTE:** You would have downloaded the [GitHub repo](https://github.com/Microsoft/MCW-Azure-Security-Privacy-and-Compliance) and extraced this in the setup steps.  If you did not perform those steps, perform them now. You can also choose to copy the file from your desktop to the VM.
+
+6.  Review the script. It does the following:
 
     a.  Installs NotePad++
 
@@ -596,7 +604,7 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
     c.  Executes port scans
 
-6.  Run the script, and press **F5.** You should see the following (the Azure ARM Template created a default rule to block all traffic):
+7.  Run the script, and press **F5.** You should see the following (the Azure ARM Template created a default rule to block all traffic):
 
     a.  Port scan for port 3389 (RDP) to **DB-1** and **WEB-1** is unsuccessful from the **PAW-1** machine.
 
@@ -656,7 +664,7 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
     h.  Select **Add**.
 
-    > **NOTE:** In some cases it may take up to 15 minutes for your Network Security Group to change is status from **Updating**.  You won't be able to add any other rules until it completes.
+    > **NOTE:** In some rare cases it may take up to 15 minutes for your Network Security Group to change is status from **Updating**.  You won't be able to add any other rules until it completes.
 
 4.  Configure both the database and web server to only allow RDP connections from the PAW machine;
 
@@ -754,7 +762,7 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
 1.  In the main Azure Portal menu, select **Monitor**.
 
-2.  In the context menu, select **Network Watcher**.
+2.  In the context menu, select **Network**.
 
     ![Monitor is selected on the left side of the Azure portal, and Network watcher is highlighted on the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image67.png "Select Network watcher")
 
@@ -887,7 +895,7 @@ Synopsis: In this exercise, you will create custom security alerts using the Azu
 
     ![Screen shot of the playbooks blade with the Add Playbook button highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image79.png)
 
-3.  The **Create logic app** dialog will display:
+3.  The **Create logic app** blade will display:
 
    a.  For the name, enter **Email**.
 
@@ -929,21 +937,23 @@ Synopsis: In this exercise, attendees will learn to utilize the Log Analytics fe
 
 ### Task 1: Export a Power Query formula from Log Analytics
 
-1.  Select **Monitor**, then select **Log Analytics**.
+1.  Select **Monitor**, then select **Logs**.
 
-    ![Monitor is selected on the left side of the Azure portal, and Log Analytics is highlighted on the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image85.png "Select Log Analytics")
+    ![Monitor is selected on the left side of the Azure portal, and Logs is highlighted on the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image85.png "Select Log Analytics")
 
-2.  Select **All collected data**.
+2.  Expand the **Security** node, notice the various options available:
 
     ![All collected data is highlighted on the left side under A few more queries to try.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image86.png "Select All collected data")
 
-3.  In the **Log Search** dialog, select the **Power BI** link.
+3.  In the query window, type **SecurityEvent**, click **Run**.
+
+4.  In the top right, select **Export**, then select the **Export to Power BI (M Query)** link.
 
     ![Power BI is highlighted at the top of the Log Search dialog box.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image87.png "Select Power BI")
 
-4.  Select **Open**, a text document with the Power Query M Language will be displayed.
+5.  Select **Open**, a text document with the Power Query M Language will be displayed.
 
-5.  Follow the instructions in the document to execute the query in Power BI.
+6.  Follow the instructions in the document to execute the query in Power BI.
 
     ![The instructions at the top of the PowerBIQuery.txt file are highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image88.png "Follow the query instructions")
 
@@ -987,7 +997,7 @@ Synopsis: In this exercise, attendees will learn to navigate the Compliance Mana
 
 ![Several categories of controls are listed on the page.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image91.1.png)
 
-12. Scroll to the top of the web page and in the top navigation, select **Service Trust Portal**, then scroll to the bottom of the page. Notice the two other main sections of the trust center called: **Audit Reports** and **Trust Documents**.
+12. Scroll to the top of the web page and in the top navigation, select **Service Trust Portal**, then scroll to the bottom of the page. Notice the two other sections of the trust center called:
 
 13. Select **Audit Reports**.
 

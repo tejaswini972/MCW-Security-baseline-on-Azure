@@ -9,7 +9,7 @@ Before the hands-on lab setup guide
 </div>
 
 <div class="MCWHeader3">
-August 2018
+October 2018
 </div>
 
 
@@ -119,15 +119,15 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
         -   One storage account
 
-        -   Three virtual networks
+        -   Three virtual network (dbVNet, webVnet, mainVnet)
 
-        -   Three network security groups
+        -   Three network security groups 
 
         -   Three virtual machines (db-1, web-1, paw-1)
 
             -   IIS is installed on web-1 via a DSC script from the GitHub repository
 
-        -   One SQL Azure Server
+        -   One SQL Azure Server with sample database
 
         -   One Azure Key Vault
 
