@@ -12,8 +12,6 @@ Hands-on lab step-by-step
 October 2018
 </div>
 
-
-
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
 
 Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property.
@@ -85,7 +83,7 @@ At the end of this hands-on lab, you will be better able to design and build sec
 
 ## Overview
 
-Contoso is a multinational corporation, headquartered in the United States that provides insurance solutions worldwide. Its products include accident and health insurance, life insurance, travel, home, and auto coverage. Contoso manages data collection services by sending mobile agents directly to the insured to gather information as part of the data collection process for claims from an insured individual. These mobile agents are based all over the world and are residents of the region in which they work. Mobile agents are managed remotely and each regional corporate office has a support staff responsible for scheduling their time based on requests that arrive to the system.??
+Contoso is a multinational corporation, headquartered in the United States that provides insurance solutions worldwide. Its products include accident and health insurance, life insurance, travel, home, and auto coverage. Contoso manages data collection services by sending mobile agents directly to the insured to gather information as part of the data collection process for claims from an insured individual. These mobile agents are based all over the world and are residents of the region in which they work. Mobile agents are managed remotely and each regional corporate office has a support staff responsible for scheduling their time based on requests that arrive to the system.
 
 They are migrating many of their applications via Lift and Shift to Azure and would like to ensure that they can implement the same type of security controls and mechanisms they currently have. They would like to be able to demonstrate their ability to meet compliance guidelines required in the various countries/regions they do business. They have already migrated a web application and database server to their Azure instance and would like to enable various logging and security best practices for administrator logins, SQL Databases, and virtual network design.
 
@@ -99,24 +97,21 @@ The solution begins by creating a jump machine. This jump machine is used to acc
 
 ## Requirements
 
-1.  Microsoft Azure subscription must be pay-as-you-go or MSDN.
+1. Microsoft Azure subscription must be pay-as-you-go or MSDN.
 
--   Trial subscriptions will not work.
+    - Trial subscriptions will not work.
+    
+2. A machine with the following software installed:
 
-2.  A machine with the following software installed:
-
--   Visual Studio 2017
-
--   SQL Management Studio 2017
-
--   Power BI Desktop
-
+    - Visual Studio 2017
+    - SQL Management Studio 2017
+    - Power BI Desktop
 
 ## Exercise 1: Implementing Just-In-Time (JIT) access
 
 Duration: 15 minutes
 
-Synopsis: In this exercise, attendees will secure a Privileged Access Workstation (PAW) workstation using the Azure Security Center Just In Time Access feature
+Synopsis: In this exercise, attendees will secure a Privileged Access Workstation (PAW) workstation using the Azure Security Center Just In Time Access feature.
 
 ### Task 1: Setup virtual machine with JIT
 
@@ -126,23 +121,23 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
     ![Security Center is highlighted on the left side of the Azure portal, and Just in time VM access (Preview) is highlighted to the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image9.png)
 
-> **NOTE:** Your subscription may not be set up with the **Standard** tier; if that is the case then do the following:
+> **Note**: Your subscription may not be set up with the **Standard** tier; if that is the case then do the following:
 
-   a.  Select **Security Policy**.
+    a.  Select **Security Policy**.
 
-   b.  Expand the first node to show your subscriptions, select the subscription.
+    b.  Expand the first node to show your subscriptions, select the subscription.
 
-   c.  Toggle the **Inheritance** setting to **Unique**.
+    c.  Toggle the **Inheritance** setting to **Unique**.
 
-   d.  Select the **Standard** tier.
+    d.  Select the **Standard** tier.
 
-   e.  Select **Save**, note that it may take a few minutes for everything to "light up".
+    e.  Select **Save**, note that it may take a few minutes for everything to "light up".
 
-   f.  Select **Just in time VM access**.
+    f.  Select **Just in time VM access**.
 
 3.  Select the **Recommended** tab, and then check the checkbox to select the lab vms (db-1, paw-1 and web-1), and then select the **Enable JIT on 3 VMs** link.
 
-> **NOTE:** It could take up to 10 minutes for new VMs to show up if you upgraded to standard tier security.  Also note that it is possible new VMs display in the **No recommendation** tab until a backend process moves them to the **Recommended** tab.
+> **Note**: It could take up to 10 minutes for new VMs to show up if you upgraded to standard tier security.  Also note that it is possible new VMs display in the **No recommendation** tab until a backend process moves them to the **Recommended** tab.
 
 4.  In the configuration window that opens, review the settings, then select **Save**.
 
@@ -214,7 +209,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 8.  Enter the username and password used from the Azure Template deployment (**wsadmin** - **p\@ssword1rocks**).
 
-    > **NOTE:** If you changed the username and password in the ARM template deployment, use those values instead.
+    > **Note**: If you changed the username and password in the ARM template deployment, use those values instead.
 
     ![The information above is entered in the Connect to Server dialog box, and Connect is highlighted at the bottom.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image22.png "Sign in to the SQL Server Database Engine")
 
@@ -242,7 +237,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 17. On the **Database Settings** dialog, select **Next**.
 
-> **NOTE:** If you get an error, close and re-open SQL Management Studio try the import again. If that does not work, you may need to download the latest SQL Management Studio from [here](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017). In some instances the latest version may not work, version 17.3 is known to deploy the package properly.  You should also be aware that bacpac files exported from some SQL Server instances cannot be deployed to Azure SQL Servers.  We have also included a .bak file of the Insurance database that you can use to restore from.
+> **Note**: If you get an error, close and re-open SQL Management Studio try the import again. If that does not work, you may need to download the latest SQL Management Studio from [here](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017). In some instances the latest version may not work, version 17.3 is known to deploy the package properly.  You should also be aware that bacpac files exported from some SQL Server instances cannot be deployed to Azure SQL Servers.  We have also included a .bak file of the Insurance database that you can use to restore from.
 
 18. Select **Finish** and the database will deploy to Azure.
 
@@ -282,19 +277,19 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 5.  In the browser window that opens, browse to [http://localhost:portno/api/Users](http://localhost:portno/api/Users) you should see a json response that shows an unmasked SSN column.
 
-> **NOTE:** Depending on your browser, you may need to download to view the json response.
+> **Note**: Depending on your browser, you may need to download to view the json response.
 
    ![The json response is displayed in a browser window.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image30.png "View the json response")
 
 ### Task 3: Utilize data masking
 
-1.  Switch to the Azure Portal
+1.  Switch to the Azure Portal.
 
-2.  Select **SQL databases**
+2.  Select **SQL databases**.
 
-3.  Select the **Insurance** database
+3.  Select the **Insurance** database.
 
-4.  In the menu, select **Dynamic Data Masking**, then select **+Add Mask**
+4.  In the menu, select **Dynamic Data Masking**, then select **+Add Mask**.
 
     ![Dynamic Data Masking is highlighted on the left, and +Add mask is highlighted on the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image31.png "Select +Add mask")
 
@@ -378,7 +373,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 25. Select **Finish**, and the configured will start.
 
-    > **NOTE:** You may receive a "wrapKey" error. If so, ensure that your account has been assigned those permissions in the Azure Key Vault.
+    > **Note**: You may receive a "wrapKey" error. If so, ensure that your account has been assigned those permissions in the Azure Key Vault.
 
     ![Generate new column master key CMK\_Auto1 in Azure Key Vault paassecurity is highlighted with a green check mark at the top of the Task Summary list.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image39.png "View the task summary")
 
@@ -406,7 +401,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
     k.  Retry the operation.
 
-    > **NOTE:** If you are still getting errors (such as Access Denied), ensure that you have selected the correct subscription and Key Vault.
+    > **Note**: If you are still getting errors (such as Access Denied), ensure that you have selected the correct subscription and Key Vault.
 
     ![Results is highlighted on the left side of the Always Encrypted dialog box, and at right, Performing encryption operations is selected under Summary: Task. Performing encryption operations has a green check mark and is listed as Passed under Details.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image41.png "View the task results")
 
@@ -534,11 +529,11 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 3.  In the new window that opens, run the following commands.
 
-> **NOTE**: These already exist in the project but are provided as a reference.
+> **Note**: These already exist in the project but are provided as a reference.
 
-    a.  Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory -Version 2.16.204221202.
+   a.  Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory -Version 2.16.204221202.
 
-    b.  Install-Package Microsoft.Azure.KeyVault.
+   b.  Install-Package Microsoft.Azure.KeyVault.
 
 4.  From **Solution Explorer**, double-click the **web.config** file to open it.
 
@@ -558,7 +553,7 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 2.  Open the **global.asax.cs** file, and place a break point at line 28.
 
-> **NOTE:** This code makes a call to get an accessToken as the application you set up above, then make a call to the Azure Key Vault using that accessToken.
+> **Note**: This code makes a call to get an accessToken as the application you set up above, then make a call to the Azure Key Vault using that accessToken.
 
 3.  Run the solution, and press **F5**.
 
@@ -580,7 +575,7 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
 2.  Select **paw-1**, then select **Connect**.  In the dialog, select **Download RDP File**.  Open the downloaded RDP file and connect to the Virtual Machine.
 
-    > **NOTE:** Default username is **wsadmin** with **p\@ssword1rocks** as password and you may need to request JIT Access if you have taken a break between exercises.
+    > **Note**: Default username is **wsadmin** with **p\@ssword1rocks** as password and you may need to request JIT Access if you have taken a break between exercises.
 
 3.  In the **PAW-1** virtual machine, open **PowerShell ISE as administrator**.
 
@@ -592,7 +587,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
 5.  Select File-\>Open, browse to the extracted GitHub directory and open the **\\Hands-on lab\\Scripts \\PortScanner.ps1**.
 
-    > **NOTE:** You would have downloaded the [GitHub repo](https://github.com/Microsoft/MCW-Azure-Security-Privacy-and-Compliance) and extraced this in the setup steps.  If you did not perform those steps, perform them now. You can also choose to copy the file from your desktop to the VM.
+    > **Note**: You would have downloaded the [GitHub repo](https://github.com/Microsoft/MCW-Azure-Security-Privacy-and-Compliance) and extraced this in the setup steps.  If you did not perform those steps, perform them now. You can also choose to copy the file from your desktop to the VM.
 
 6.  Review the script. It does the following:
 
@@ -600,7 +595,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
     b.  Adds hosts entries for DNS
 
-    > **NOTE:** When using multiple virtual networks, you must setup a DNS server in the Azure tenant
+    > **Note**: When using multiple virtual networks, you must setup a DNS server in the Azure tenant
 
     c.  Executes port scans
 
@@ -664,57 +659,57 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
     h.  Select **Add**.
 
-    > **NOTE:** In some rare cases it may take up to 15 minutes for your Network Security Group to change is status from **Updating**.  You won't be able to add any other rules until it completes.
+    > **Note**: In some rare cases it may take up to 15 minutes for your Network Security Group to change is status from **Updating**.  You won't be able to add any other rules until it completes.
 
-4.  Configure both the database and web server to only allow RDP connections from the PAW machine;
+4.  Configure both the database and web server to only allow RDP connections from the PAW machine:
 
     a.  Select **Network Security Groups.** For both the **DbTrafficOnly** and **WebTrafficOnly**, do the following:
+    
+       -  Select **Inbound Security Rules**.
 
-        i.  Select **Inbound Security Rules**.
+       -  Select **+Add**.
 
-        ii. Select **+Add**.
+       -  For the **Source**, select **IP Addresses**.
 
-        iii. For the **Source**, select **IP Addresses**.
+       -  For the **Source IP address**, enter **10.0.0.4**.
 
-        iv. For the **Source IP address**, enter **10.0.0.4**.
+       -  For the **Destination port range**, enter **3389**.
 
-        v.  For the **Destination port range**, enter **3389**.
+       -  For the **Priority**, enter **101**.
 
-        vi. For the **Priority**, enter **101**.
+       -  For the **Name**, enter **Port_3389**.
 
-        vii. For the **Name**, enter **Port_3389**.
-
-        viii. Select **Add**.
+       -  Select **Add**.
 
 5.  Configure all NSGs to have Diagnostic logs enabled.
 
     a.  Select **Network security groups.** For each NSG, do the following:
 
-        i. In the content menu, select **Diagnostic logs**, and then select **Turn on diagnostics**.
+       -  In the content menu, select **Diagnostic logs**, and then select **Turn on diagnostics**.
 
        ![Diagnostics logs is selected and highlighted under Monitoring on the left side, and Turn on diagnostics is highlighted on the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image58.png "Select Turn on diagnostics")
 
-        ii. For the name, enter the NSG name and then add **Logging** to the end.
+       -  For the name, enter the NSG name and then add **Logging** to the end.
 
-        iii.  Check the **Send to Log Analytics** checkbox, in the **Log Analytics** box, select **Configure**.
+       -  Check the **Send to Log Analytics** checkbox, in the **Log Analytics** box, select **Configure**.
+       
+       -  For the first NSG you configure, select **Create New Workspace.** For the name enter **azuresecurity-yourinitials**.  For the remaining, simply select the new **azuresecurity-yourinitials** workspace.
 
-        iv. For the first NSG you configure, select **Create New Workspace.** For the name enter **azuresecurity-yourinitials**.  For the remaining, simply select the new **azuresecurity-yourinitials** workspace.
+       -  Select your resource group.
 
-        v. Select your resource group.
-
-        vi. Select your location (East US is preferred).
+       -  Select your location (East US is preferred).
 
        ![+ Create New Workspace is selected on the left, and the above information is entered on the right under OMS Workspace.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image59.png "Create a new workspace")
 
-        vii. Select **OK**, wait for the OMS workspace to be created.
+       -  Select **OK**, wait for the OMS workspace to be created.
 
-        viii. Select both LOG checkboxes.
+       -  Select both LOG checkboxes.
 
-        ix. Select **Save**.
+       -  Select **Save**.
 
        ![Save is highlighted at the top, and two log items are selected and highlighted below.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image60.png "Save the logs")
 
-        x.  Repeat for all remaining Network Security Groups
+       -  Repeat for all remaining Network Security Groups
 
 ### Task 3: Test network security group rules \#2
 
@@ -728,7 +723,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
     b.  Port scan for port 1433 (SQL) to **DB-1** is successful, and **WEB-1** is unsuccessful from the **PAW-1** machine.
 
-> **NOTE:** You may need to disable the windows firewall on the DB-1 server to achieve this result.
+> **Note**: You may need to disable the windows firewall on the DB-1 server to achieve this result.
 
    ![The information above for port 1433 (SQL) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image62.png "View the information")
 
@@ -796,7 +791,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
 2.  Uncomment the last line of the script, and press **F5**.
 
-> **NOTE:** You should see the basic ports scanned, and then a port scan from 80 to 443. This will generate many security center logs for the Network Security Group which will be used in the Custom Alert in the next exercise.
+> **Note**: You should see the basic ports scanned, and then a port scan from 80 to 443. This will generate many security center logs for the Network Security Group which will be used in the Custom Alert in the next exercise.
 
 ## Exercise 5: Creating security log alerts
 
@@ -810,7 +805,7 @@ Synopsis: In this exercise, you will create custom security alerts using the Azu
 
 2.  Select **Security Center,** then select **Custom alert rules (Preview)**.
 
-> **NOTE:** If you see **Try custom alert rules now**, do the following:
+> **Note:** If you see **Try custom alert rules now**, do the following:
 
    a.  Select **Security Policy**.
 
@@ -836,7 +831,7 @@ Synopsis: In this exercise, you will create custom security alerts using the Azu
 
 6.  For the **Workspace**, select the **azuresecurity-yourinitials** workspace that you created for the Network Security Groups.
 
-> **NOTE**  If you do not see this workspace, you will need to ensure that the **Security Policy** blade shows the workspace and that the **Pricing Tier** has been set to **Standard**
+> **Note**:  If you do not see this workspace, you will need to ensure that the **Security Policy** blade shows the workspace and that the **Pricing Tier** has been set to **Standard**
 
 ![+ The Security Policy blade showing the azuresecurity-yourinitals workspace set to Standard pricing tier.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image73.1.png "Workspace set to Standard")
 
@@ -846,16 +841,16 @@ Synopsis: In this exercise, you will create custom security alerts using the Azu
  search * | where Type != 'AzureMetric' and OperationName == 'NetworkSecurityGroupCounters' and type_s == 'block' and direction_s == 'In' and Resource == 'WEBTRAFFICONLY'
  ```
 
-> **NOTE:** If you were quick going through the labs, then you may not have log data in the OMS workspace just yet that corresponds to "AzureMetric". You may need to wait 15-30 minutes before a query will execute.
+> **Note**: If you were quick going through the labs, then you may not have log data in the OMS workspace just yet that corresponds to "AzureMetric". You may need to wait 15-30 minutes before a query will execute.
 
 
-> **NOTE:** Please be sure that you type the query correctly. Due to this being a preview feature, you might not be able to "edit" the alert after it is created and you will need to delete the alert and recreate it.
+> **Note**: Please be sure that you type the query correctly. Due to this being a preview feature, you might not be able to "edit" the alert after it is created and you will need to delete the alert and recreate it.
 
 8.  For the period, select **Over the last 1 hours**.
 
 9.  For the evaluation, select **Every 5 minutes**.
 
-> **NOTE**: This is so that our lab will run quickly and may not be appropriate for real world.
+> **Note:** This is so that our lab will run quickly and may not be appropriate for real world.
 
 10.  For the threshold, enter **50**.
 
@@ -875,7 +870,7 @@ Synopsis: In this exercise, you will create custom security alerts using the Azu
 
     ![This is a screenshot of the new PortScans security alert, which has a Medium Severity of 1.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image75.png "View the new PortScans alert")
 
-> **NOTE:** It may take 15-20 minutes for the alert to fire. You can continue to execute the port scan script to cause log events or you can lower the threshold for the custom alert.
+> **Note**: It may take 15-20 minutes for the alert to fire. You can continue to execute the port scan script to cause log events or you can lower the threshold for the custom alert.
 
 4.  Select one of the rows displayed.
 
@@ -897,11 +892,11 @@ Synopsis: In this exercise, you will create custom security alerts using the Azu
 
 3.  The **Create logic app** blade will display:
 
-   a.  For the name, enter **Email**.
+    a.  For the name, enter **Email**.
 
-   b.  Select your existing resource group.
+    b.  Select your existing resource group.
 
-   c.  Toggle the **Log Analytics** to **On** and then select your **azuresecurity** OMS workspace.
+    c.  Toggle the **Log Analytics** to **On** and then select your **azuresecurity** OMS workspace.
 
    ![The information above is entered in the Create logic app dialog box.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image80.png "Enter Create logic app information")
 
@@ -919,7 +914,7 @@ Synopsis: In this exercise, you will create custom security alerts using the Azu
 
     ![The Sign in button is highlighted next to Office 365 Outlook under This logic app will connect to.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image83.png "Sign in to Office 365 Outlook")
 
-> **NOTE:** This would need to be a valid Office 365 account.
+> **Note**: This would need to be a valid Office 365 account.
 
 8. Select **Continue**.
 
@@ -1083,4 +1078,6 @@ Appendix A outlines the detailed steps involved in manually creating the resourc
 ### Task 6: Create an Azure Key Vault
 
 -   Create an instance of Azure Key Vault.
+
+You should follow all steps provided *after* attending the Hands-on lab.
 
