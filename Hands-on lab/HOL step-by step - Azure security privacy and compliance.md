@@ -123,17 +123,17 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
 > **Note**: Your subscription may not be set up with the **Standard** tier; if that is the case then do the following:
 
-    a.  Select **Security Policy**.
+   a.  Select **Security Policy**.
 
-    b.  Expand the first node to show your subscriptions, select the subscription.
+   b.  Expand the first node to show your subscriptions, select the subscription.
 
-    c.  Toggle the **Inheritance** setting to **Unique**.
+   c.  Toggle the **Inheritance** setting to **Unique**.
 
-    d.  Select the **Standard** tier.
+   d.  Select the **Standard** tier.
 
-    e.  Select **Save**, note that it may take a few minutes for everything to "light up".
+   e.  Select **Save**, note that it may take a few minutes for everything to "light up".
 
-    f.  Select **Just in time VM access**.
+   f.  Select **Just in time VM access**.
 
 3.  Select the **Recommended** tab, and then check the checkbox to select the lab vms (db-1, paw-1 and web-1), and then select the **Enable JIT on 3 VMs** link.
 
@@ -527,13 +527,13 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 2.  In the menu, select **View-\>Other Windows-\>Package Manager Console**.
 
-3.  In the new window that opens, run the following commands.
+3.  In the new window that opens, run the following commands:
+
+    a.  Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory -Version 2.16.204221202.
+
+    b.  Install-Package Microsoft.Azure.KeyVault.
 
 > **Note**: These already exist in the project but are provided as a reference.
-
-   a.  Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory -Version 2.16.204221202.
-
-   b.  Install-Package Microsoft.Azure.KeyVault.
 
 4.  From **Solution Explorer**, double-click the **web.config** file to open it.
 
@@ -595,7 +595,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
     b.  Adds hosts entries for DNS
 
-    > **Note**: When using multiple virtual networks, you must setup a DNS server in the Azure tenant
+    > **Note**: When using multiple virtual networks, you must setup a DNS server in the Azure tenant.
 
     c.  Executes port scans
 
