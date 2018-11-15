@@ -32,7 +32,6 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Before the hands-on lab](#before-the-hands-on-lab)
       - [Task 1: Download GitHub resources](#task-1-download-github-resources)
       - [Task 2: Deploy resources to Azure](#task-2-deploy-resources-to-azure)
-      - [Next steps](#next-steps)
 
 <!-- /TOC -->
 
