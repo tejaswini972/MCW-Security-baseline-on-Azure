@@ -737,9 +737,9 @@ Describe how you would secure each Azure resource from internal and external att
 
      To maintain SOC 1 and SOC 2 compliance, there are auditing requirements for the customer. To address this need, Microsoft makes certificates and audit reports available in support of the customer\'s reports and certifications.
 
-    -   ISO/IEC 27001:2005 Audit and Certification certificates are publicly available.
+   -   ISO/IEC 27001:2005 Audit and Certification certificates are publicly available.
 
-    -   SOC 1 and SOC 2 reports are available under NDA to customers to meet auditing requirements.
+   -   SOC 1 and SOC 2 reports are available under NDA to customers to meet auditing requirements.
 
    Customers cannot audit the data center. However independent audits and certifications are shared instead of individual customer audits. These certifications and attestations accurately represent how Microsoft obtains and meets security and compliance objectives, and serve as a practical mechanism to validate Microsoft promises for all customers.?? Allowing potentially thousands of customers to audit Microsoft services would not be a scalable practice and might compromise security and privacy.?? The independent third-party validation program includes audits that are conducted on an annual basis to verify Azure security controls.
 
