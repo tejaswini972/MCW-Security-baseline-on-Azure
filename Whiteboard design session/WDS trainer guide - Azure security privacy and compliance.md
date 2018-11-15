@@ -74,7 +74,7 @@ An amazing trainer:
 
 -   Ties it all together for the participant.
 
--   Provides insight and experience into the learning process.
+-   Provides insight and experience to the learning process.
 
 -   Effectively leads the whiteboard design session discussion.
 
@@ -88,17 +88,21 @@ Each whiteboard design session uses the following flow:
 
 **Step 1: Review the customer case study (15 minutes)**
 
-Outcome: Analyze your customer's needs.
+**Outcome**
 
--   Customer's background, situation, needs, and technical requirements
+Analyze your customer's needs.
+
+-   Customer's background, situation, needs and technical requirements
 
 -   Current customer infrastructure and architecture
 
--   Potential issues, objectives, and blockers
+-   Potential issues, objectives and blockers
 
 **Step 2: Design a proof of concept solution (60 minutes)**
 
-Outcome: Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
+**Outcome**
+
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
 -   Determine your target customer audience.
 
@@ -110,7 +114,9 @@ Outcome: Design a solution and prepare to present the solution to the target cus
 
 **Step 3: Present the solution (30 minutes)**
 
-Outcome: Present solution to your customer
+**Outcome**
+
+Present solution to your customer:
 
 -   Present solution
 
@@ -132,7 +138,7 @@ Before conducting your first whiteboard design session:
 
 -   Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions.
 
--   Before the whiteboard design session, discuss the case study to pick up more ideas.
+-   Prior to the whiteboard design session, discuss the case study to pick up more ideas.
 
 -   Make notes for later.
 
@@ -156,9 +162,9 @@ When participants are doing activities, you can **look ahead to refresh your mem
 
 **Ask questions** and get them to share to fully involve your group in the learning process.
 
-**Ask first** whenever possible. Before launching into a topic, learn your audience's opinions about it and experiences with it. Asking first enables you to assess their level of knowledge and experience, and leaves them more open to what you are presenting.
+**Ask first**, whenever possible. Before launching into a topic, learn your audience's opinions about it and experiences with it. Asking first enables you to assess their level of knowledge and experience, and leaves them more open to what you are presenting.
 
-**Wait for responses**. If you ask a question such as, \"What\'s your experience with (fill in the blank)?\" Then wait. Do not be afraid of a little silence. If you leap into the silence, your participants will feel you are not serious about involving them and will become passive. Give participants a chance to think, and if no one answers, patiently ask again. You will usually get a response.
+**Wait for responses**. If you ask a question such as, "What's your experience with (fill in the blank)?" then wait. Do not be afraid of a little silence. If you leap into the silence, your participants will feel you are not serious about involving them and will become passive. Give participants a chance to think, and if no one answers, patiently ask again. You will usually get a response.
 
 #  Azure security, privacy, and compliance whiteboard design session student guide
 
@@ -369,7 +375,6 @@ Directions: With all participants at your table:
 3.  Determine how you will respond to the customer’s objections.
 
 Prepare a 15-minute chalk-talk style presentation to the customer. 
-
 
 ## Step 3: Present the solution
 
@@ -602,11 +607,11 @@ Describe how you would secure each Azure resource from internal and external att
 
 1.  Can Azure support the lift and shift of their web and database applications?
 
--   Yes, and it is the next logical step for many organizations in their cloud journey: 
+    Yes, and it is the next logical step for many organizations in their cloud journey: 
 
     ![An arrow labeled Existing .NET application modernization: Maturity models spans four boxes labeled Existing apps (On-premises), Cloud Infrastructure-Ready (Azure), Cloud DevOps-Ready (Azure), and Cloud-Optimized (Azure). The Cloud Infrastructure-Ready box is highlighted in yellow. Below the Cloud Infrastructure-Ready and Cloud DevOps-Ready boxes is an arrow labeled LIFT and SHIFT: No re-architect, no coded changes. Below the Cloud-Optimized box is an arrow labeled Architect for the cloud (might need new code).](images/Whiteboarddesignsessiontrainerguide-Azuresecurityprivacyandcomplianceimages/media/image5.png "Existing .NET application modernization: Maturity models ")
 
--   There are many programs that customers can take advantage of to help with the move Azure including:
+    There are many programs that customers can take advantage of to help with the move Azure including:
 
     -   [Microsoft FastTrack for Azure](https://azure.microsoft.com/en-us/roadmap/fasttrack-for-azure/)
 
@@ -614,57 +619,57 @@ Describe how you would secure each Azure resource from internal and external att
 
 2.  Admins are worried that they won't have the bandwidth to perform deployments of the corporate website and other supporting web applications.
 
--   Azure ExpressRoute can be used to create private connections between Azure datacenters and infrastructure on your premises or in a colocation environment. ExpressRoute connections don\'t go over the public Internet, and they offer more reliability, faster speeds, and lower latencies than typical Internet connections. In some cases, using ExpressRoute connections to transfer data between on-premises systems and Azure can give you significant cost benefits.
+    Azure ExpressRoute can be used to create private connections between Azure datacenters and infrastructure on your premises or in a colocation environment. ExpressRoute connections don\'t go over the public Internet, and they offer more reliability, faster speeds, and lower latencies than typical Internet connections. In some cases, using ExpressRoute connections to transfer data between on-premises systems and Azure can give you significant cost benefits.
 
 3.  Can Azure help contain costs for minimally used costly production and development resources?
 
--   Yes, Azure Cost Management + Billing has free features via the Cloudyn application that allows you to monitor your cloud spend, drive organizational accountability and optimize your cloud efficiency.
+    Yes, Azure Cost Management + Billing has free features via the Cloudyn application that allows you to monitor your cloud spend, drive organizational accountability and optimize your cloud efficiency.
 
 4.  Does Azure support the ability to allow VPN connections to specific resources?
 
--   Yes, Azure provides the ability to do site-to-site IPSec VPNs and the ability to create point-to-site VPNs. By utilizing a site-to-site VPN Gateway, you can connect your on-premises networks with Azure utilizing IPSec and IKE. Point-to-site will allow individual client computers to connect to your Azure virtual network(s) via SSTP or IKE.
+    Yes, Azure provides the ability to do site-to-site IPSec VPNs and the ability to create point-to-site VPNs. By utilizing a site-to-site VPN Gateway, you can connect your on-premises networks with Azure utilizing IPSec and IKE. Point-to-site will allow individual client computers to connect to your Azure virtual network(s) via SSTP or IKE.
 
 5.  Can Microsoft employees or government entities access our data?
 
--   Access to customer data by Microsoft operations and support personnel is denied by default. When granted, access is carefully managed and logged. Data center access to the systems that store customer data is strictly controlled via lock box processes.
+    Access to customer data by Microsoft operations and support personnel is denied by default. When granted, access is carefully managed and logged. Data center access to the systems that store customer data is strictly controlled via lock box processes.
 
--   Microsoft does not share data with third parties unless permitted by the customer.
+    Microsoft does not share data with third parties unless permitted by the customer.
 
--   Microsoft provides only the data it is legally compelled to provide, but never voluntarily.
+    Microsoft provides only the data it is legally compelled to provide, but never voluntarily.
 
--   Both employees and subcontractors work at Microsoft data centers.
+    Both employees and subcontractors work at Microsoft data centers.
 
--   We require subcontractors to join Microsoft\'s Vendor Privacy Assurance Program, to meet our privacy requirements by contract, and to undergo regular privacy training. We contractually obligate subcontractors that work in facilities or on equipment controlled by Microsoft to follow our privacy standards. All other subcontractors are contractually obligated to follow privacy standards equivalent to our own.
+    We require subcontractors to join Microsoft\'s Vendor Privacy Assurance Program, to meet our privacy requirements by contract, and to undergo regular privacy training. We contractually obligate subcontractors that work in facilities or on equipment controlled by Microsoft to follow our privacy standards. All other subcontractors are contractually obligated to follow privacy standards equivalent to our own.
 
 6.  How does Azure protect against threats?
 
--   Intrusion detection and prevention systems, denial of service attack prevention, regular penetration testing, and forensic tools help identify and mitigate threats from both outside and inside of Azure.
+    Intrusion detection and prevention systems, denial of service attack prevention, regular penetration testing, and forensic tools help identify and mitigate threats from both outside and inside of Azure.
 
--   Microsoft Antimalware is built-in to Cloud Services and can be enabled for Virtual Machines to help identify and remove viruses, spyware and other malicious software and provide real-time protection. Customers can also run antimalware solutions from partners on their Virtual Machines.
+    Microsoft Antimalware is built-in to Cloud Services and can be enabled for Virtual Machines to help identify and remove viruses, spyware and other malicious software and provide real-time protection. Customers can also run antimalware solutions from partners on their Virtual Machines.
 
--   Microsoft has decades of operating system security experience running its applications and services and latest developments allow the Microsoft Security Graph to analyze events to determine if and when an attack is occurring.
+    Microsoft has decades of operating system security experience running its applications and services and latest developments allow the Microsoft Security Graph to analyze events to determine if and when an attack is occurring.
 
 7.  Does Azure allow enough granular RBAC controls to meet our least privileged needs?
 
--   Azure resource groups can be set up with users, groups, and applications with varying levels of role assignments to meet any customer requirements.
+    Azure resource groups can be set up with users, groups, and applications with varying levels of role assignments to meet any customer requirements.
 
--   Azure comes with several pre-built built-in roles - <https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles> and allows you to create custom roles - <https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-custom-roles>
+    Azure comes with several pre-built built-in roles - <https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles> and allows you to create custom roles - <https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-custom-roles>
 
--   Additionally, you can assign individual users and groups to just about any Azure resource.
+    Additionally, you can assign individual users and groups to just about any Azure resource.
 
 8.  Is Azure virtual networking flexible enough to meet our requirements?
 
--   Azure Virtual Network gives you an isolated and highly-secure environment to run your virtual machines and applications. Use your private IP addresses and define subnets, access control policies, and more. Use Virtual Network to treat Azure the same as you would your own datacenter.
+    Azure Virtual Network gives you an isolated and highly-secure environment to run your virtual machines and applications. Use your private IP addresses and define subnets, access control policies, and more. Use Virtual Network to treat Azure the same as you would your own datacenter.
 
--   Traffic between Azure resources in a single region, or in multiple regions, stays in the Azure network---intra-Azure traffic doesn't flow over the Internet. In Azure, traffic for virtual machine-to-virtual machine, storage, and SQL communication only traverses the Azure network, regardless of the source and destination Azure region. Inter-region virtual network-to-virtual network traffic also flows entirely across the Azure network.
+    Traffic between Azure resources in a single region, or in multiple regions, stays in the Azure network---intra-Azure traffic doesn't flow over the Internet. In Azure, traffic for virtual machine-to-virtual machine, storage, and SQL communication only traverses the Azure network, regardless of the source and destination Azure region. Inter-region virtual network-to-virtual network traffic also flows entirely across the Azure network.
 
--   In a virtual network, run your favorite network virtual appliances such as WAN optimizers, load balancers, and application firewalls and define traffic flows, allowing you to design your network with a greater degree of control.
+    In a virtual network, run your favorite network virtual appliances such as WAN optimizers, load balancers, and application firewalls and define traffic flows, allowing you to design your network with a greater degree of control.
 
--   Use Virtual Network to build your hybrid cloud applications that securely connect to your on-premises datacenter---so an Azure web application can access an on-premises SQL Server database, or authenticate customers against an on-premises Azure Active Directory service.
+    Use Virtual Network to build your hybrid cloud applications that securely connect to your on-premises datacenter---so an Azure web application can access an on-premises SQL Server database, or authenticate customers against an on-premises Azure Active Directory service.
 
 9.  Can Azure supplement on-premises and 3rd party SIEM systems for auditing and compliance tasks?
 
--   Yes, Azure has a robust set of integration scenarios for customers including:
+    Yes, Azure has a robust set of integration scenarios for customers including:
 
     -   Command Line Interface (CLI), PowerShell and a [REST API](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-rest-api-walkthrough)
 
@@ -720,27 +725,27 @@ Describe how you would secure each Azure resource from internal and external att
 
         -   MLPS (China)
 
--   Azure hosted applications can meet compliance goals is designed and maintained properly.
+    Azure hosted applications can meet compliance goals is designed and maintained properly.
 
 11.  Is Azure flexible enough to support data sovereignty needs and issues like those referenced in GDPR articles?
 
--   Microsoft was among the first cloud providers to sign a set of EU "model clauses," which are standard contractual clauses that govern the international transfer of personal data. When included in service agreements with data processors, the model clauses assure customers that appropriate steps have been taken to help safeguard personal data, even if data is stored in a cloud-based service center located outside the EEA. In affirming these, a data processor is affirming that they are meeting the data protection standards set forth by the EU Directive on Data Protection.
+     Microsoft was among the first cloud providers to sign a set of EU "model clauses," which are standard contractual clauses that govern the international transfer of personal data. When included in service agreements with data processors, the model clauses assure customers that appropriate steps have been taken to help safeguard personal data, even if data is stored in a cloud-based service center located outside the EEA. In affirming these, a data processor is affirming that they are meeting the data protection standards set forth by the EU Directive on Data Protection.
 
--   Microsoft has UK Government IL2 certification. UK Government Departments require products and services to be accredited to IL2 or IL3. These terms, Business Impact Levels 2 or 3, essentially require the telecoms operator or service provider to pass an audit based on ISO 27k as additionally extended by the *NGN Good Practice Guide*.
+     Microsoft has UK Government IL2 certification. UK Government Departments require products and services to be accredited to IL2 or IL3. These terms, Business Impact Levels 2 or 3, essentially require the telecoms operator or service provider to pass an audit based on ISO 27k as additionally extended by the *NGN Good Practice Guide*.
 
 12.  How can we ensure continued SOC 1 and SOC 2 compliance?
 
--   To maintain SOC 1 and SOC 2 compliance, there are auditing requirements for the customer. To address this need, Microsoft makes certificates and audit reports available in support of the customer\'s reports and certifications.
+     To maintain SOC 1 and SOC 2 compliance, there are auditing requirements for the customer. To address this need, Microsoft makes certificates and audit reports available in support of the customer\'s reports and certifications.
 
     -   ISO/IEC 27001:2005 Audit and Certification certificates are publicly available.
 
     -   SOC 1 and SOC 2 reports are available under NDA to customers to meet auditing requirements.
 
--   Customers cannot audit the data center. However independent audits and certifications are shared instead of individual customer audits. These certifications and attestations accurately represent how Microsoft obtains and meets security and compliance objectives, and serve as a practical mechanism to validate Microsoft promises for all customers.?? Allowing potentially thousands of customers to audit Microsoft services would not be a scalable practice and might compromise security and privacy.?? The independent third-party validation program includes audits that are conducted on an annual basis to verify Azure security controls.
+   Customers cannot audit the data center. However independent audits and certifications are shared instead of individual customer audits. These certifications and attestations accurately represent how Microsoft obtains and meets security and compliance objectives, and serve as a practical mechanism to validate Microsoft promises for all customers.?? Allowing potentially thousands of customers to audit Microsoft services would not be a scalable practice and might compromise security and privacy.?? The independent third-party validation program includes audits that are conducted on an annual basis to verify Azure security controls.
 
 13.  Does Azure permit penetration testing as a part of a security assessment?
 
--   Yes, and as of mid-2017, you no longer need to get approval to execute these tests, but you can still notify Microsoft if you are planning to do so.
+   Yes, and as of mid-2017, you no longer need to get approval to execute these tests, but you can still notify Microsoft if you are planning to do so.
 
 ## Customer quote (to be read back to the attendees at the end)
 
