@@ -3,9 +3,11 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "adminUsername": {
+	  "defaultValue" : "wsadmin",
       "type": "string"
     },
     "adminPassword": {
+	  "defaultValue" : "p@ssword1rocks",
       "type": "securestring"
     },
     "sqlservername": {
@@ -738,7 +740,7 @@
         "typeHandlerVersion": "2.19",
         "autoUpgradeMinorVersion": true,
         "settings": {
-          "ModulesUrl": "https://github.com/MCW-Azure-security-privacy-and-compliance/blob/master/Hands-on%20lab/Scripts/Install_IIS.zip?raw=true",
+          "ModulesUrl": "https://github.com/Microsoft/MCW-Azure-security-privacy-and-compliance/blob/master/Hands-on%20lab/Scripts/Install_IIS.zip?raw=true",
           "ConfigurationFunction": "Install_IIS.ps1\\InstallIIS",
           "Properties": {
             "MachineName": "web-1"

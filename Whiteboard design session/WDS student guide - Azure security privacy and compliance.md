@@ -9,7 +9,7 @@ Azure security, privacy, and compliance
 </div>
 
 <div class="MCWHeader3">
-August 2018
+October 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -57,8 +57,8 @@ Analyze your customer’s needs.
 Timeframe: 15 minutes 
 
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
-1.  Meet your table participants and trainer .
-2.  Read all of the directions for steps 1–3 in the student guide .
+1.  Meet your table participants and trainer.
+2.  Read all of the directions for steps 1–3 in the student guide.
 3.  As a table team, review the following customer case study.
 
 ### Customer situation
@@ -143,12 +143,11 @@ Jack Tradewinds, the CIO of Contoso Ltd, has heard a great deal of positive news
 
 13. Does Azure permit penetration testing as a part of a security assessment?
 
-
 ### Infographic for common scenarios
 
 This Infographic shows an example of a generic implementation of various security Azure technologies in action that can be used as a reference in your design:
 
-![Security and Compliance infographic This is an example of a generic implementation of various Azure security technologies. ](images/Whiteboarddesignsessionstudentguide-Azuresecurityprivacyandcomplianceimages/media/image2.png)
+![Security and Compliance infographic This is an example of a generic implementation of various Azure security technologies.](images/Whiteboarddesignsessionstudentguide-Azuresecurityprivacyandcomplianceimages/media/image2.png)
 
 ## Step 2: Design a proof of concept solution
 
@@ -260,40 +259,18 @@ Timeframe: 30 minutes
 
 Directions:
 1.  Pair with another table.
+
 2.  One table is the Microsoft team and the other table is the customer.
+
 3.  The Microsoft team presents their proposed solution to the customer.
+
 4.  The customer makes one of the objections from the list of objections.
+
 5.  The Microsoft team responds to the objection.
+
 6.  The customer team gives feedback to the Microsoft team.
+
 7.  Tables switch roles and repeat Steps 2–6.
-
-## Checklist of preferred objection handling
-
-1.  **Can Azure support the lift and shift of their web and database applications?**
-
-2.  **Admins are worried that they won't have the bandwidth to perform deployments of the corporate website and other supporting web applications.**
-
-3.  **Can Azure help contain costs for minimally used costly production and development resources?**
-
-4.  **Does Azure support the ability to allow VPN connections to specific resources?**
-
-5.  **Can Microsoft employees or government entities access our data?**
-
-6.  **How does Azure protect against threats?**
-
-7.  **Does Azure allow enough granular RBAC controls to meet our least privileged needs?**
-
-8.  **Is Azure virtual networking flexible enough to meet our requirements?**
-
-9.  **Can Azure supplement on-premises and 3rd party SIEM systems for auditing and compliance tasks?**
-
-10. **What certifications does Azure have and can Azure hosted applications meet the US and European compliance goals?**
-
-11. **Is Azure flexible enough to support data sovereignty needs and issues like those referenced in GDPR articles?**
-
-12. **How can we ensure continued SOC 1 and SOC 2 compliance?**
-
-13. **Does Azure permit penetration testing as a part of a security assessment?**
 
 ##  Wrap-up 
 
