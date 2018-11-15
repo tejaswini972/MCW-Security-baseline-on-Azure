@@ -40,12 +40,15 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ## Requirements
 
-1. Microsoft Azure subscription must be pay-as-you-go or MSDN
-  - Trial subscriptions will not work
+1. Microsoft Azure subscription must be pay-as-you-go or MSDN.
+
+    - Trial subscriptions will not work.
+    
 2. A machine with the following software installed:
-  - Visual Studio 2017
-  - SQL Management Studio 2017
-  - Power BI Desktop
+
+    - Visual Studio 2017
+    - SQL Management Studio 2017
+    - Power BI Desktop
 
 ## Before the hands-on lab
 
@@ -61,9 +64,7 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
     ![Clone or download and Download ZIP are highlighted in this screenshot of the cloud workshop GitHub repository.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image3.png)
 
-3.  Extract the zip file to your local machine, be sure to keep note of where you have extracted the files, you should
-
-    now see a set of folders:
+3.  Extract the zip file to your local machine, be sure to keep note of where you have extracted the files. You should now see a set of folders:
 
     ![A set of extracted folders and files are visible in File Explorer: .vs, AzureTemplate, Database, Scripts, WebApp, README.md.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image4.png "Extract the zip file")
 
@@ -93,21 +94,21 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
 11. Select **Save**, you will see the dialog with the input parameters. Fill out the form:
 
-    a.  Subscription: select your **subscription**.
+    -  Subscription: select your **subscription**.
 
-    b.  Resource group: Use an existing Resource group, or create a new one by entering a unique name, such as **azsecurity-\[your initials or first name\]**.
+    -  Resource group: Use an existing Resource group, or create a new one by entering a unique name, such as **azsecurity-\[your initials or first name\]**.
 
-    c.  Location: Select a **location** for the Resource group. Recommend using East US, East US 2, West Central US, or West US 2.
+    -  Location: Select a **location** for the Resource group. Recommend using East US, East US 2, West Central US, or West US 2.
 
-    d.  Modify the **sqlservername** to be something unique such as "azsecurity-\[your initials or first name\]".
+    -  Modify the **sqlservername** to be something unique such as "azsecurity-\[your initials or first name\]".
 
-    e.  Fill in the remaining parameters, but if you change anything, be sure to note it for future reference throughout the lab.
+    -  Fill in the remaining parameters, but if you change anything, be sure to note it for future reference throughout the lab.
 
-    NOTE:  User Object Id is meant to be the object id of a user that will be added as an administrator to an Azure Key Vault instance.  You can type anything here but the permission assignment with fail in the ARM template later unless it is a valid Azure Active Directory User Object Id.  You can find your object id by opening a new Azure portal window and navigating to the Azure Active Directory blade, select **Users**, search for your user account, select it, in the window you will see the **Object ID** field.  Click the copy link, then paste the value into the template object user id text box.
+    >**Note**:  User Object Id is meant to be the object id of a user that will be added as an administrator to an Azure Key Vault instance.  You can type anything here but the permission assignment with fail in the ARM template later unless it is a valid Azure Active Directory User Object Id.  You can find your object id by opening a new Azure portal window and navigating to the Azure Active Directory blade, select **Users**, search for your user account, select it, in the window you will see the **Object ID** field.  Click the copy link, then paste the value into the template object user id text box.
 
-    f.  Check the **I agree to the terms and conditions stated above** checkbox.
+    -  Check the **I agree to the terms and conditions stated above** checkbox.
 
-    g.  Select **Purchase**.
+    -  Select **Purchase**.
 
     ![The above information is entered in the form, and I agree to the terms and conditions stated above and Purchase are selected and highlighted at the bottom.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image6.png "Fill out the form")
 
@@ -115,33 +116,24 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
     ![Deployments is highlighted under Settings on the left side of the Azure portal, and Microsoft.Template is highlighted under Deployment Name on the right side.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image7.png "Select the Deployments link")
 
-    h.  As part of the deployment, you will see the following items created:
+    -  As part of the deployment, you will see the following items created:
 
-        -   One storage account
+       -  One storage account
 
-        -   Three virtual network (dbVNet, webVnet, mainVnet)
+       -  Three virtual network (dbVNet, webVnet, mainVnet)
 
-        -   Three network security groups 
+       -  Three network security groups 
 
-        -   Three virtual machines (db-1, web-1, paw-1)
+       -  Three virtual machines (db-1, web-1, paw-1)
 
             -   IIS is installed on web-1 via a DSC script from the GitHub repository
 
-        -   One SQL Azure Server with sample database
+       -  One SQL Azure Server with sample database
 
-        -   One Azure Key Vault
+       -  One Azure Key Vault
 
     ![Created items list This screenshot is a list of the items that were created, including the items listed above. ](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image8.png)
 
 13. See Appendix A for detailed steps on creating these components without using an ARM template.
 
 You should follow all steps provided *before* attending the hands-on lab.
-
-## Next steps
-
-You are now ready to complete the hands-on lab. Select a guide below to get started, or you can return to the overview page for the lab.
-
-- Complete Hands-on lab
-  - [Step-by-step guide](https://github.com/Microsoft/MCW-Azure-security-privacy-and-compliance/blob/master/Hands-on%20lab/HOL%20step-by%20step%20-%20Azure%20security%20privacy%20and%20compliance.md)
-  - [Unguided guide](https://github.com/Microsoft/MCW-Azure-security-privacy-and-compliance/blob/master/Hands-on%20lab/HOL%20unguided%20-%20Azure%20security%2C%20privacy%20and%20compliance.md)
-- Return to [Hands-on lab readme](https://github.com/Microsoft/MCW-Azure-security-privacy-and-compliance/blob/master/README.md)
