@@ -34,6 +34,20 @@
     "diagStorageAccountName": "[concat('diagstor', uniqueString(resourceGroup().id))]"
   },
   "resources": [
+	{
+            "type": "microsoft.operationalinsights/workspaces",
+            "name": "azsecuritylogging",
+            "apiVersion": "2015-11-01-preview",
+            "location": "eastus",
+            "scale": null,
+            "properties": {
+                "sku": {
+                    "name": "standalone"
+                },
+                "retentionInDays": 31
+            },
+            "dependsOn": []
+    },
     {
       "name": "[variables('virtualMachineName')]",
       "type": "Microsoft.Compute/virtualMachines",

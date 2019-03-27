@@ -9,7 +9,7 @@ Azure security, privacy, and compliance
 </div>
 
 <div class="MCWHeader3">
-October 2018
+March 2019
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -206,7 +206,9 @@ The fundamental workflow for Contoso is as follows:
 
 Contoso currently hosts their systems at co-locations facilities within each geopolitical region and manages all IT operations for the systems. In the United States, they have achieved SOC 1 and SOC 2 compliance and follow required HIPAA regulations to protect PHI. Because of the new European GDPR laws, Contoso must evaluate their computing environments for compliance gaps. Contoso has concerns about maintaining their SOC 2 certification and HIPAA compliance with respect to moving to Azure. They would like to specifically address concerns about regional issues of data sovereignty for sensitive data within the context of the GDPR and want to ensure that if they move to Azure, they will be able to continue to have isolation between components.
 
-In addition to the GDPR compliance requirements, they are expecting significant growth within the United States and abroad. They foresee the need to scale their system and are exploring moving their web applications (corporate and data collection web apps) to Microsoft Azure via lift and shift and other applicable methods to simplify some of the operations management overhead and associated costs, beginning with their U.S. data center and then those in Europe. They would also like to ensure that the corporate website and external facing web apps are sufficiently isolated.
+In addition to the GDPR compliance requirements, they are expecting significant growth within the United States and abroad. They foresee the need to scale their system and are exploring moving their web applications (corporate and data collection web apps) to Microsoft Azure via lift and shift and other applicable methods to simplify some of the operations management overhead and associated costs, beginning with their U.S. data center and then those in Europe. They would also like to ensure that the corporate website and external facing web apps are sufficiently isolated.  Lastly, they want to ensure that resources are created using best practices and that those practices are followed during the resource providing process.
+
+Contoso has been using their on-premises SIEM to do most of their auditing and log reporting. They are wondering what options they have to monitor their on-premises and future cloud based resources.  They have thoughtfully tuned their on-premises SIEM to reduce false positives and normalize the metadata across different log types. They are worried about the amount of logs and potential for unnecessary work when they move workloads to Azure.
 
 Jack Tradewinds, the CIO of Contoso Ltd, has heard a great deal of positive news about Azure and its progress in terms of security and compliance. He would like to learn more about the security features and if they can move some of their data and applications away from their on-premises datacenter. Given his long-standing relationship with Microsoft, he would like to see if Azure can meet his needs.
 
@@ -220,29 +222,31 @@ Jack Tradewinds, the CIO of Contoso Ltd, has heard a great deal of positive news
 
 4.  Contain hosting and operational costs associated with running the system.
 
-5.  Enable method to continually review and assign legal compliance tasks to the appropriate individuals and provide a compliance reporting ability for Azure resources.
+5.  Enable method to continually review and assign legal compliance tasks to the appropriate individuals and provide a compliance reporting ability for Azure resources.  
 
-6.  Limit access to the corporate site to users on the Contoso domain, and continue to support VPN access.
+6.  Enforce subscription owners to configure Azure resources with compliance and security while disallowing the creation of specific resources.
 
-7.  Extract all web applications that have configuration or embedded connection strings to a more secure implementation.
+7.  Limit access to the corporate site to users on the Contoso domain, and continue to support VPN access.
 
-8.  Migrate current database applications to Azure PaaS solution with the appropriate data backup features implemented to prevent catastrophic data loss due to intentional or unintentional acts.
+8.  Extract all web applications that have configuration or embedded connection strings to a more secure implementation.
 
-9.  Implement all security best practices on the migrated databases such as encryption at rest and during transport as well as ensure that sensitive data is not exposed to non-admin database users and applications.
+9.  Migrate current database applications to Azure PaaS solution with the appropriate data backup features implemented to prevent catastrophic data loss due to intentional or unintentional acts.
 
-10. Ensure network segregation between Azure admin and the lift and shifted web and database tiers.
+10.  Implement all security best practices on the migrated databases such as encryption at rest and during transport as well as ensure that sensitive data is not exposed to non-admin database users and applications.
 
-11. Enable logging across all components (identity, virtual network, virtual machine, web, and database) to support an all-encompassing monitoring solution.
+11. Ensure network segregation between Azure admin and the lift and shifted web and database tiers.
 
-12. Ensure that Azure admins utilize best practices when accessing the Azure virtual machine resources and that all logins are logged for identity theft analysis activities.
+12. Enable logging across all components (identity, virtual network, virtual machine, web, and database) to support an all-encompassing monitoring solution.
 
-13. Ensure ease of use by syncing appropriate admin username and passwords for on-premises and cloud resources.
+13. Ensure that Azure admins utilize best practices when accessing the Azure virtual machine resources and that all logins are logged for identity theft analysis activities.
 
-14. Ensure that only authorized users can access specific Azure resources when logged into the Azure Portal.
+14. Ensure ease of use by syncing appropriate admin username and passwords for on-premises and cloud resources.
 
-15. Setup auditing such that software installs are monitored across Azure virtual machine resources.
+15. Ensure that only authorized users can access specific Azure resources when logged into the Azure Portal.
 
-16. When specific security events are detected (such as a port scan), allow for the execution of actions to remediate, start the investigative process or prevent further information leakage or damage.
+16. Setup auditing such that software installs are monitored across Azure virtual machine resources.
+
+17. When specific security events are detected (such as a port scan), allow for the execution of actions to remediate, start the investigative process or prevent further information leakage or damage.
 
 ### Customer objections 
 
@@ -314,13 +318,15 @@ Briefly sketch-out and propose a high-level solution that meets the customer's b
 
 6.  SQL Server 2017 in a VM
 
-7.  Azure Security Center, Azure Monitor and Log Analytics
+7.  Azure Security Center
 
-8.  Azure Key Vault
+8.  Azure Sentinal and Azure Policy
 
-9.  Microsoft Azure Active Directory (Connect, IAM, etc.)
+9.  Azure Key Vault
 
-10. Microsoft Intune
+10.  Microsoft Azure Active Directory (Connect, IAM, etc.)
+
+11. Microsoft Intune
 
 *Securing Sensitive Data*
 
@@ -425,6 +431,8 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | SQL Server (IaaS)   | <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview>  |
 | Azure Identity Access Management (IAM)  | <https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-configure>  |
 | Azure Monitor and Log Analytics   | <https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview>   |
+| Azure Sentinel   | <https://docs.microsoft.com/en-us/azure/sentinel/>   |
+| Azure Policy   | <https://azure.microsoft.com/en-us/services/azure-policy/>   |
 | Azure Key Vault   |  <https://docs.microsoft.com/en-us/azure/key-vault/>  |
 | Microsoft Azure Active Directory Connect  | <https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-whatis>  |
 | Lift and Shift (IaaS)  |  <https://docs.microsoft.com/en-us/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas> |
@@ -551,7 +559,9 @@ Describe how you will use Azure features to ensure the following:
 
     b.  You can use Azure Monitor to do network testing and packet capture across virtual machines and virtual networks.
 
-    c.  Azure Monitor and Log Analytics can be leveraged to create queries across Azure event logging that will feed into PowerBI reports.
+    c.  Azure Monitor and Log Analytics can be leveraged to create queries across Azure event logging event data that will feed into PowerBI reports.
+
+    d.  Azure Sentinel can be used to create alerts and cases for auto-assignment and investigation activities
 
 3.  How will you monitor and audit Azure SQL?
 
@@ -559,11 +569,17 @@ Describe how you will use Azure features to ensure the following:
 
 4.  Create custom alerts and execute remediation and investigation activites on detection?
 
-    a.  Azure Runbooks can be setup to execute on alerts.
+    a.  Azure Sentinel can be used to hunt down specific events and create alerts based on event data
+    
+    b.  Azure Runbooks can be setup to execute on alerts.
 
 5.  What tools would you setup to surface audit and compliance reporting to IT Executives?
 
-    a.  Compliance Manager can be used to implement compliance activites and task assignements.
+    a.  Azure Policy can be used to determine if resource group owners have been following best practice organizational policies
+
+    b.  Compliance Manager can be used to implement compliance activites and task assignements as it related to legislative requirements
+
+    c.  Secure score can also be used to determine what activities can be performed to further secure the Azure subscription and its resources
 
 *Ensuring availability and business continuity*
 

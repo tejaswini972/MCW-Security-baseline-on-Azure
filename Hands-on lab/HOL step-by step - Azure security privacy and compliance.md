@@ -9,7 +9,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-October 2018
+March 2019
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -52,14 +52,17 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
         - [Task 4: Install network watcher VM extension](#task-4-install-network-watcher-vm-extension)
         - [Task 5: Setup network packet capture](#task-5-setup-network-packet-capture)
         - [Task 6: Execute a port scan](#task-6-execute-a-port-scan)
-    - [Exercise 5: Creating security log alerts](#exercise-5-creating-security-log-alerts)
-        - [Task 1: Create a custom alert](#task-1-create-a-custom-alert)
-        - [Task 2: Investigate a custom alert](#task-2-investigate-a-custom-alert)
-        - [Task 3: Create and run a playbook](#task-3-create-and-run-a-playbook)
-    - [Exercise 6: Creating Compliance Reports with Power BI](#exercise-6-creating-compliance-reports-with-power-bi)
-        - [Task 1: Export a Power Query formula from Log Analytics](#task-1-export-a-power-query-formula-from-log-analytics)
-    - [Exercise 7: Using Compliance Manager](#exercise-7-using-compliance-manager)
-        - [Task 1: Use Compliance Manager for Azure](#task-1-use-compliance-manager-for-azure)
+    - [Exercise 5: Azure Sentinal logging and reporting](#exercise-5-azure-sentinal-logging-and-reporting)
+        - [Task 1: Create a Dashboard](#task-1-create-a-dashboard)
+        - [Task 2: Create a custom alert](#task-2-create-a-custom-alert)
+        - [Task 3: Investigate a custom alert](#task-3-investigate-a-custom-alert)
+        - [Task 4: Create and run a playbook](#task-4-create-and-run-a-playbook)
+        - [Task 5: Execute Jupityer Notebooks](#task-5-create-jupityer-notebooks)
+        - [Task 6: Export a Power Query formula from Log Analytics](#task-6-export-a-power-query-formula-from-log-analytics)
+    - [Exercise 6: Using Compliance Tools (Azure Policy, Secure Score and Compliance Manager)](#exercise-6-using-compliance-manager)
+        - [Task 1: Azure Policy](#task-1-azure-policy)
+        - [Task 2: Secure Score](#task-2-secure-score)
+        - [Task 3: Use Compliance Manager for Azure](#task-3-use-compliance-manager-for-azure)
     - [After the hands-on lab](#after-the-hands-on-lab)
         - [Task 1: Delete resource group](#task-1-delete-resource-group)
         - [Task 2: Delete lab environment (optional)](#task-2-delete-lab-environment-optional)
@@ -91,9 +94,9 @@ They are migrating many of their applications via Lift and Shift to Azure and wo
 
 Contoso administrators recently learned about the Azure Security Center and have decided to implement many of its features to secure their cloud-based Azure infrastructure (IaaS) and applications (PaaS). Specifically, they want to ensure that any internet exposed resources have been property secured and any non-required internet access disabled. They also decided that implementing a "jump machine" for admins with Application Security was also important as they have had instances of admins installing non-approved software on their machines and then accessing cloud resources. Additionally, they want the ability to be alerted when TCP/IP Port Scans are detected and fire alerts based on those attacks.
 
-![This diagram shows external access to Azure resources where Just In Time is utilize to lock down the Jump Machine. Azure Log Analytics is then used to monitor the deny events on the network security groups.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image2.png)
+![This diagram shows external access to Azure resources where Just In Time is utilize to lock down the Jump Machine. Azure Log Analytics with Azure Sentinel is then used to monitor the deny events on the network security groups.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image2.png)
 
-The solution begins by creating a jump machine. This jump machine is used to access the virtual machines and other resources in the resource group. All other access is disabled via multiple **virtual networks**. More than one virtual network is required as having a single **virtual network** would cause all resource to be accessible based on the default currently un-customizable security group rules. Resources are organized into these virtual networks. **Azure Center Security** is utilized to do **Just-In-Time** access to the jump machine. This ensures that all access is audited to the jump machine and that only authorized IP-addressed are allowed access, this prevents random attacks on the virtual machines from bad internet actors. Additionally, applications are not allowed to be installed on the jump machine to ensure that malware never becomes an issue. Each of the virtual network and corresponding **network security groups** have logging enabled to record deny events to **Azure Logging**. These events are then monitored by a **custom alert rule** in **Azure Security Center** to fire **custom alerts**. Once the solution is in place, the **Compliance Manager** tool is utilized to ensure that all GDPR based technical and business controls are implemented and maintained to ensure GDPR compliance.
+The solution begins by creating a jump machine. This jump machine is used to access the virtual machines and other resources in the resource group. All other access is disabled via multiple **virtual networks**. More than one virtual network is required as having a single **virtual network** would cause all resource to be accessible based on the default currently un-customizable security group rules. Resources are organized into these virtual networks. **Azure Center Security** is utilized to do **Just-In-Time** access to the jump machine. This ensures that all access is audited to the jump machine and that only authorized IP-addressed are allowed access, this prevents random attacks on the virtual machines from bad internet actors. Additionally, applications are not allowed to be installed on the jump machine to ensure that malware never becomes an issue. Each of the virtual network and corresponding **network security groups** have logging enabled to record deny events to **Azure Logging**. These events are then monitored by a **custom alert rule** in **Azure Sentinel** to fire **custom alerts**. Once the solution is in place, the **Compliance Manager** tool is utilized to ensure that all GDPR based technical and business controls are implemented and maintained to ensure GDPR compliance.
 
 ## Requirements
 
@@ -123,17 +126,17 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
 > **Note**: Your subscription may not be set up with the **Standard** tier; if that is the case then do the following:
 
-   a.  Select **Security Policy**.
+   a.  In the **Security Center** blade, select **Security Policy**.
 
-   b.  Expand the first node to show your subscriptions, select the subscription.
+   b.  For your subscription, select **Edit settings**
 
-   c.  Toggle the **Inheritance** setting to **Unique**.
+   c.  Select **Pricing Tier**
 
-   d.  Select the **Standard** tier.
+   d.  Select **Stanard**
 
-   e.  Select **Save**, note that it may take a few minutes for everything to "light up".
+   e.  Click **Save**
 
-   f.  Select **Just in time VM access**.
+   f.  Navigate back to Security Center, select **Just in time VM access**.
 
 3.  Select the **Recommended** tab, and then check the checkbox to select the lab vms (db-1, paw-1 and web-1), and then select the **Enable JIT on 3 VMs** link.
 
@@ -275,7 +278,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 4.  Run the **InsuranceAPI** solution and press **F5**.
 
-5.  In the browser window that opens, browse to [http://localhost:portno/api/Users](http://localhost:portno/api/Users) you should see a json response that shows an unmasked SSN column.
+5.  In the browser window that opens, browse to [http://localhost:portno/api/Users/E91019DA-26C8-B201-1385-0011F6C365E9](http://localhost:portno/api/Users/E91019DA-26C8-B201-1385-0011F6C365E9) you should see a json response that shows an unmasked SSN column.
 
 > **Note**: Depending on your browser, you may need to download to view the json response.
 
@@ -529,9 +532,11 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 3.  In the new window that opens, run the following commands:
 
-    a.  Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory -Version 2.16.204221202.
+    a.  Install-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform
 
-    b.  Install-Package Microsoft.Azure.KeyVault.
+    b.  Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory -Version 2.16.204221202.
+
+    c.  Install-Package Microsoft.Azure.KeyVault.
 
 > **Note**: These already exist in the project but are provided as a reference.
 
@@ -573,7 +578,7 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
 1.  In the Azure Portal, select **Virtual Machines**.
 
-2.  Select **paw-1**, then select **Connect**.  In the dialog, select **Download RDP File**.  Open the downloaded RDP file and connect to the Virtual Machine.
+2.  Select **paw-1**, then select **Connect**.  In the dialog, select **Download RDP file Anyway**.  Open the downloaded RDP file and connect to the Virtual Machine.
 
     > **Note**: Default username is **wsadmin** with **p\@ssword1rocks** as password and you may need to request JIT Access if you have taken a break between exercises.
 
@@ -585,11 +590,13 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 ```
 
-5.  Select File-\>Open, browse to the extracted GitHub directory and open the **\\Hands-on lab\\Scripts \\PortScanner.ps1**.
+5.  In the popup, click **Yes**.
+
+6.  Select File-\>Open, browse to the extracted GitHub directory and open the **\\Hands-on lab\\Scripts \\PortScanner.ps1**.
 
     > **Note**: You would have downloaded the [GitHub repo](https://github.com/Microsoft/MCW-Azure-Security-Privacy-and-Compliance) and extraced this in the setup steps.  If you did not perform those steps, perform them now. You can also choose to copy the file from your desktop to the VM.
 
-6.  Review the script. It does the following:
+7.  Review the script. It does the following:
 
     a.  Installs NotePad++
 
@@ -599,7 +606,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
     c.  Executes port scans
 
-7.  Run the script, and press **F5.** You should see the following (the Azure ARM Template created a default rule to block all traffic):
+8.  Run the script, and press **F5.** You should see the following (the Azure ARM Template created a default rule to block all traffic):
 
     a.  Port scan for port 3389 (RDP) to **DB-1** and **WEB-1** is unsuccessful from the **PAW-1** machine.
 
@@ -683,7 +690,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
 5.  Configure all NSGs to have Diagnostic logs enabled.
 
-    a.  Select **Network security groups.** For each NSG, do the following:
+    a.  Select **Network security groups.** For each NSG (DBTrafficOnly and WebTrafficOnly), do the following:
 
        -  In the content menu, select **Diagnostic logs**, and then select **Turn on diagnostics**.
 
@@ -739,7 +746,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
 3.  Select **db-1**.
 
-4.  Select **Extensions**, then select **+Add**.
+4.  In the blade menu, select **Extensions**, then select **+Add**.
 
     ![Extensions is selected and highlighted on the left under Settings, and + Add is highlighted at the top right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image64.png "Select + Add")
 
@@ -783,7 +790,13 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
     ![In this screenshot, databasetraffic is entered in the Packet capture name box, and the Storage account check box is selected.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image70.png "Dialog box screenshot")
 
-11. Select **OK**.
+11. For the values, enter the following:
+
+-   Maxiumum bytes per packet: 0
+-   Maximum bytes per session: 1073741824
+-   Time limit: 600
+
+12. Select **OK**.
 
 ### Task 6: Execute a port scan
 
@@ -793,102 +806,95 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
 > **Note**: You should see the basic ports scanned, and then a port scan from 80 to 443. This will generate many security center logs for the Network Security Group which will be used in the Custom Alert in the next exercise.
 
-## Exercise 5: Creating security log alerts
+## Exercise 5: Azure Sentinal Logging and Reporting
 
 Duration: 20 minutes
 
-Synopsis: In this exercise, you will create custom security alerts using the Azure Security Center. The alert will generate the execution of a RunBook using Logic Apps.
+Synopsis: In this exercise, you will setup Azure Sentinal to point to a logging workspace and then create custom alerts that execute Azure Runbooks.
 
-### Task 1: Create a custom alert
+### Task 1: Create a dashboard
 
 1.  Open the Azure Portal.
 
-2.  Select **Security Center,** then select **Custom alert rules (Preview)**.
+2.  Click **All services**, then type **Sentinel**, select **Azure Sentinel**
 
-> **Note:** If you see **Try custom alert rules now**, do the following:
+![In this screenshot, All Services is selected, and then a search for Sentinel is displayed.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image94.png "Searching for Sentinel")
 
-   a.  Select **Security Policy**.
+3.  In the blade, click **+Add**, select the Log Analytics resource for your resource group, then click **Add Azure Sentinel**
 
-   b.  Select the OMS workspace called **azuresecurity**.
+4.  In the blade, select **Dashboards**
 
-   c.  Select the **Standard** tier.
+5.  In the list of dashboards, select **Azure AD Audit logs**, select **Install**
 
-   ![Pricing tier is selected on the left under Policy Components, and Standard tier is selected on the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image71.png "Select the Standard tier")
+![In this screenshot, Dashboards has been selected and the Azure AD Audit Logs dashboard has also been selected.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image95.png "Adding a dashboard")
 
-   d.  Select **Save**.
+6.  In the list of dashboards, select **Azure Network Watcher**, select **Install**
 
-   e.  Select **Custom Alert Rules**.
+7.  Click **View Dashboard**, take a moment to review your new dashboard
 
-   ![Security Center is selected on the left side of the Azure portal, and Custom alert rules (Preview) is highlighted on the right under Detection.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image72.png "Select Custom Alert Rules")
+### Task 2: Create a Analytics alert
 
-3.  Select the **+** **New custom alert rule** link.
+1.  Navigate back to the **Azure Sentinel** workspace, in the **Configuration** blade section, select **Analytics** then select **+Add**.
 
-    ![+ New custom alert rule is highlighted in Security Center -- Custom alert rules (Preview).](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image73.png "Select a custom alert rule")
+![In this screenshot, Analytics is highlighted and so is the Add button.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image96.png "Adding a analytics alert")
 
-4.  For the name, enter **PortScans**.
+2.  For the name, enter **PortScans**.
 
-5.  For the description, enter **A custom rule to detect port scans**.
+3.  For the description, enter **A custom rule to detect port scans**.
 
-6.  For the **Workspace**, select the **azuresecurity-yourinitials** workspace that you created for the Network Security Groups.
-
-> **Note**:  If you do not see this workspace, you will need to ensure that the **Security Policy** blade shows the workspace and that the **Pricing Tier** has been set to **Standard**
-
-![+ The Security Policy blade showing the azuresecurity-yourinitals workspace set to Standard pricing tier.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image73.1.png "Workspace set to Standard")
-
-7.  In the Search Query text box, type:
+4.  In the **Set alert query** text box, type:
 
 ```powershell
- search * | where Type != 'AzureMetric' and OperationName == 'NetworkSecurityGroupCounters' and type_s == 'block' and direction_s == 'In' and Resource == 'WEBTRAFFICONLY'
+ AzureDiagnostics | where Type != 'AzureMetric' and OperationName == 'NetworkSecurityGroupCounters' and type_s == 'block' and direction_s == 'In' and Resource == 'WEBTRAFFICONLY'
  ```
+
+ ![In this screenshot, the alert simulation shows data after the query has been entered.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image97.png "Reviewing alert simulation data")
 
 > **Note**: If you were quick going through the labs, then you may not have log data in the OMS workspace just yet that corresponds to "AzureMetric". You may need to wait 15-30 minutes before a query will execute.
 
+5.  For the operator value, enter **50**.
 
-> **Note**: Please be sure that you type the query correctly. Due to this being a preview feature, you might not be able to "edit" the alert after it is created and you will need to delete the alert and recreate it.
+8.  For the frequency, select **1** and **Hours**.
 
-8.  For the period, select **Over the last 1 hours**.
-
-9.  For the evaluation, select **Every 5 minutes**.
+9.  For the period, select **1** and **Hours**.
 
 > **Note:** This is so that our lab will run quickly and may not be appropriate for real world.
 
-10.  For the threshold, enter **50**.
+10. For the suppress alerts for, enter **60** and **Minutes**
 
-11. For the suppress alerts, enter **60**.
+    ![The above information is entered in the dialog box for the new custom analytics rule.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image98.png "Enter the information in the dialog box")
 
-    ![The above information is entered in the dialog box for the new custom alert rule.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image74.png "Enter the information in the dialog box")
+11. Click **Create**.
 
-12. Select **OK**.
+>   **Note**:  It may take a few minutes for the alert to fire.  You may need to run the PortScan script a few times from **paw-1**
 
-### Task 2: Investigate a custom alert
+### Task 3: Investigate a custom alert Case
 
-1.  In the main menu, select **Security Center**.
+1.  In the main menu, select **Azure Sentinel**.
 
-2.  Select **Security Alerts**.
+2.  Select **Cases**.
 
-3.  Select the new **PortScans** alert.
+3.  Select the new **PortScans** case.
 
     ![This is a screenshot of the new PortScans security alert, which has a Medium Severity of 1.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image75.png "View the new PortScans alert")
 
 > **Note**: It may take 15-20 minutes for the alert to fire. You can continue to execute the port scan script to cause log events or you can lower the threshold for the custom alert.
 
-4.  Select one of the rows displayed.
+4.  In the dialog, click **Investigate**
 
-    ![This is a screenshot of the Various row, which is listed under Attacked Resource.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image76.png "Select a row")
+    ![This is a screenshot of the case dialog, with the button Investigate highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image76.png "Investigate a case")
 
-5.  You will see the information about the alert that was fired:
+5.  In future versions, you will get to see insights about the alerts and the resources related to what caused it to fire:
 
     ![This is a screen shot of an alert instance.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image77.png)
 
-### Task 3: Create and run a playbook
+### Task 4: Create and run a playbook
 
-1.  In the **Security Center** blade, select **Playbooks (Preview)**.
-
-    ![Screen shot of the Security Center with the Playbooks (Preview) link highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image78.png)
+1.  In the **Azure Sentinel** blade, select **Playbooks**.
 
 2.  In the new window, select **Add Playbook**.
 
-    ![Screen shot of the playbooks blade with the Add Playbook button highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image79.png)
+    ![Screen shot of the playbooks blade with the Playbooks and Add Playbook links highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image79.png)
 
 3.  The **Create logic app** blade will display:
 
@@ -920,31 +926,47 @@ Synopsis: In this exercise, you will create custom security alerts using the Azu
 
 9. For the email address, enter your email.
 
-10. Select **Save**. You now have an email alert action based on PowerApps for your custom security alert.
+10. Select **Save**. You now have an email alert action based on PowerApps for your custom security alert to use.
 
     ![Save is highlighted in Logic Apps Designer, and information about the custom security alert appears below.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image84.png "Save the email alert action")
 
-## Exercise 6: Creating Compliance Reports with Power BI
+### Task 5: Execute Jupityer Notebooks
 
-Duration: 20 minutes
+1.  In the **Azure Sentinel** blade, select **Notebooks**
 
-Synopsis: In this exercise, attendees will learn to utilize the Log Analytics feature of Azure to create Power BI Reports.
+2.  Scroll to the bottom of the page and select **Clone Azure Sentinel Notebooks**
 
-### Task 1: Export a Power Query formula from Log Analytics
+![Notebooks and Clone Azure Sentinel Notebooks is highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image99.png "Close Azure Sentinel Notebooks")
 
-1.  Select **Monitor**, then select **Logs**.
+3.  The Azure Notebooks page will open, on the page, select **Import**
 
-    ![Monitor is selected on the left side of the Azure portal, and Logs is highlighted on the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image85.png "Select Log Analytics")
+![Import button is highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image100.png "Import Azure Sentinel notebooks")
 
-2.  Expand the **Security** node, notice the various options available:
+4.  In your notebook, browse to **/Azure Sentinel/Notebooks**, then select **Get Started.ipynb**
 
-    ![All collected data is highlighted on the left side under A few more queries to try.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image86.png "Select All collected data")
+5.  On the page, select **Run on Free Azure**
 
-3.  In the query window, type **SecurityEvent**, click **Run**.
+![The Run on Free Azure is button is highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image101.png "Set the run notebook host")
+
+6.  In the menu, select **Kernel->Change kernel**, then select **Python 3.6**
+
+![The page menu is expanded to the Kernel menu item and the change kernel with Python 3.6 is selected](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image102.png "Set the Kernel to Python 3.6")
+
+7.  Click the **Run** button until you execute the entire Notebook, note that some steps will required your input
+
+>   NOTE: You can find the open source github notebooks at [https://github.com/Azure/Azure-Sentinel](https://github.com/Azure/Azure-Sentinel/tree/master/Notebooks)
+
+### Task 6: Creating Reports with Power BI
+
+1.  Navigate back to your **Azure Sentinel** browser window.  Select **Logs**.
+
+2.  Expand the **LogManagement** node, notice the various options available:
+
+3.  In the query window, type **AzureDiagnostics**, then click the **eye** icon.
 
 4.  In the top right, select **Export**, then select the **Export to Power BI (M Query)** link.
 
-    ![Power BI is highlighted at the top of the Log Search dialog box.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image87.png "Select Power BI")
+    ![All the above button clicks are displayed with red highlighting.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image103.png "Export a Power BI report query")
 
 5.  Select **Open**, a text document with the Power Query M Language will be displayed.
 
@@ -954,13 +976,96 @@ Synopsis: In this exercise, attendees will learn to utilize the Log Analytics fe
 
 6.  Close **Power BI**.
 
-## Exercise 7: Using Compliance Manager
+## Exercise 6: Using Compliance Tools (Azure Policy, Secure Score and Compliance Manager)
 
 Duration: 15 minutes
 
-Synopsis: In this exercise, attendees will learn to navigate the Compliance Manager to explore the various documents that describe the compliance and trust.
+Synopsis: In this exercise, attendees will learn to navigate the Azure Policy and Secure Score features of Azure.  You will also explore the Compliance Manager portal that will provide you helpful tasks that you should consider when attempting to achieve specific compliance policies.
 
-### Task 1: Use Compliance Manager for Azure
+### Task 1: Review a basic Azure Policy
+
+1.  Open the [Azure Portal](https://portal.azure.com).  Select **All Services**, then type **Policy**.  Select **Policy** in the list of items.
+
+    ![The links above are all highlighted to get to the Azure Policy blade.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image104.png "Open the Azure Policy blade")
+
+2.  In the blade menu, click **Compliance**, review your **Overall resource compliance** percentage
+
+    ![The links above are all highlighted to get to the Azure Policy blade.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image105.png "Open the Azure Policy blade")
+
+4.  For the scope, ensure the proper subcription is selected, then select **ASC Default**
+5.  In the **Initiative compliance** blade, review your compliance metrics
+6.  Scroll to the results area and select the *Non-compliant resources** tab
+
+    ![The non-compliant resources tab is highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image106.png "Select the Non-Compliant resources tab")
+
+7.  In the filter search box, type **PAW-1** and select it when displayed
+8.  With the **Policies** tab selected, review the policies that the resource is non-complying against.  
+
+    ![The Resource compliance blade for PAW-1 is displayed with the non-compliant items highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image107.png "Review the non-compliant items")
+
+9.  Click one of the policies.  Review the Definition JSON of the policy definition, notice how it is based on ARM Template format and is looking for specific propeties to be set of the non-compliant resources.
+
+    ![The policy definition is displayed](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image108.png "Review the policy definition")
+
+> **Note**: You can use these out of box templates to build your own policies and apply them as blueprints
+
+### Task 2: Review and create Azure Blueprints
+
+1.  In the Policy blade, select **Definitions**.  These are a list of all defined policies which can be selected to be assigned to your subscription resources.
+
+    ![A listing of policy definitions on the Policy Blade Definitions](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image109.png "Review available policy definitions")
+
+2.  In the Policy blade, select **Blueprints**.
+3.  In the Blueprints blade, select **Blueprint definitions**
+4.  Select **+Create blueprint**
+
+    ![All the buttons above are highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image110.png "Create a new blueprint")
+
+5.  Review some of the sample blueprints, then select **Start with blank blueprint**
+
+    ![Page displayed with the blueprint templates and the Start with a blank blueprint highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image111.png "Create a blank blueprint")
+
+6.  For the name, type **gdprblueprint**
+7.  For the location, select the ellispes, then select your subscription in the drop down
+8.  Click **Select**
+
+    ![New blue print dialog with name and location filled in](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image112.png "Set blueprint fields")
+
+9.  Select **Next: Artifacts**
+10.  Click **+Add artifact**
+11. For the Artifact Type, select **Policy Assignment**, review all the policies available to you (at the time of this writing you would see 151 policies)
+12. In the search box, type **unrestricted**, browse for the **Audit unrestrited network acess to storage accounts**
+
+    ![Screen shot showing steps 9-12 highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image113.png "Add an artifact")
+
+13. Click **Add**
+14. Click **Save Draft**
+15. For the new blueprint, click the ellipses, then select **Publish Blueprint**
+
+    ![Screen shot showing the Publish blueprint dialog](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image114.png "Publish blueprint dialog")
+
+16. For the version type **1.0.0**
+17. Click **Publish**
+18. For the new blueprint, click the ellipses, then select **Assign Blueprint**
+
+    ![Screen shot showing the Assign blueprint dialog](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image114.png "Assign blueprint dialog")
+
+19. Review the page, then click **Assign**.  This policy will now be audited across all your storage accounts in the specifc subscription
+
+### Task 3: Secure Score
+
+1.  In the Azure Portal, select **All Services**, then type **Security**, select **Security Center**
+2.  In the Security Center blade, select **Secure score**
+3.  Review your overall secure score values and then notice the category values
+
+    ![Screen shot showing Secure score blade and the score and categories highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image115.png "Review Secure Score score and categories")
+
+4.  Select your subscription, you will be presented with the items that have failed resource validation sorted by the score value that is assigned to that particular recommendation item
+5.  Select the **Provision an Azure AD administrator for SQL Server**, on the recommendation blade, you will be presented with information about how to remediate the recommendation to gain the impact value to your score
+
+    ![Screen shot with the Probision an Azure AD Administrator for SQL Server highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image116.png "Review a security recommendation")
+
+### Task 4: Use Compliance Manager for Azure
 
 1.  In a browser, go to the Service Trust/Compliance Manager portal (<https://servicetrust.microsoft.com>).
 
@@ -1019,7 +1124,13 @@ In this exercise, attendees will deprovision any Azure resources that were creat
 
 3.  Select **Delete** in the command bar, and confirm the deletion by re-typing the Resource group name and selecting **Delete**.
 
-### Task 2: Delete lab environment (optional)
+4.  Don't forget to delete the Azure Key Vault application you created in Exercise 3, Task 3
+
+### Task 2: Remove Standard Tier Pricing
+
+1.  Be sure to set your Azure Security pricing back to **Free**.
+
+### Task 3: Delete lab environment (optional)
 
 1.  If you are using a hosted platform, make sure you shut it down or delete it.
 

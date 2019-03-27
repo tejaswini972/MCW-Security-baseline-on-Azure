@@ -9,7 +9,7 @@ Before the hands-on lab setup guide
 </div>
 
 <div class="MCWHeader3">
-October 2018
+March 2019
 </div>
 
 
@@ -77,11 +77,11 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
 4.  Type a resource group name, such as **azsecurity-\[your initials or first name\]**.
 
-5.  Select **Create**.
+5.  Select **Review + Create**, then select **Create**
 
 6.  Select **Refresh** to see your new resource group displayed and select it.
 
-7.  Select **Automation Script**, and then select **Deploy**.
+7.  Select **Export template**, and then select **Deploy**.
 
     ![Automation script is highlighted under Settings on the left side of the Azure portal, and Deploy is highlighted on the top-right side.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image5.png "Select Deploy")
 
@@ -102,8 +102,6 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
     -  Modify the **sqlservername** to be something unique such as "azsecurity-\[your initials or first name\]".
 
     -  Fill in the remaining parameters, but if you change anything, be sure to note it for future reference throughout the lab.
-
-    >**Note**:  User Object Id is meant to be the object id of a user that will be added as an administrator to an Azure Key Vault instance.  You can type anything here but the permission assignment with fail in the ARM template later unless it is a valid Azure Active Directory User Object Id.  You can find your object id by opening a new Azure portal window and navigating to the Azure Active Directory blade, select **Users**, search for your user account, select it, in the window you will see the **Object ID** field.  Click the copy link, then paste the value into the template object user id text box.
 
     -  Check the **I agree to the terms and conditions stated above** checkbox.
 

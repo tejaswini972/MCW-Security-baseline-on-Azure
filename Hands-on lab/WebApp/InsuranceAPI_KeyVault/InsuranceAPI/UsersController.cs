@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Core.EntityClient;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 
@@ -28,6 +25,10 @@ namespace InsuranceAPI
             efBuilder.ProviderConnectionString = Util.EncryptSecret;
 
             db = new InsuranceEntities(efBuilder.ConnectionString);
+
+            db.Configuration.LazyLoadingEnabled = false;
+            db.Configuration.ProxyCreationEnabled = false;
+            db.Configuration.ValidateOnSaveEnabled = false;
 
         }
 
