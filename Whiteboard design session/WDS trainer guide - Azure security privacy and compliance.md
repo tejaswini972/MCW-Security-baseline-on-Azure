@@ -202,11 +202,11 @@ The fundamental workflow for Contoso is as follows:
 
 3.  When the data collection for an insured is completed, the mobile agent marks the task completed so that the corporate system can process those results.
 
-4.  Support staff processes complete work orders and submits results through the corporate website requiring another transfer of sensitive data.
+4.  Support staff processes complete work orders and submits results through the corporate website requiring another transfer of sensitive data. They also tend to utilize Microsoft Support when tough issues arise and want to know what options they have to engage and log support activities with VMs and other Azure resources. 
 
 Contoso currently hosts their systems at co-locations facilities within each geopolitical region and manages all IT operations for the systems. In the United States, they have achieved SOC 1 and SOC 2 compliance and follow required HIPAA regulations to protect PHI. Because of the new European GDPR laws, Contoso must evaluate their computing environments for compliance gaps. Contoso has concerns about maintaining their SOC 2 certification and HIPAA compliance with respect to moving to Azure. They would like to specifically address concerns about regional issues of data sovereignty for sensitive data within the context of the GDPR and want to ensure that if they move to Azure, they will be able to continue to have isolation between components.
 
-In addition to the GDPR compliance requirements, they are expecting significant growth within the United States and abroad. They foresee the need to scale their system and are exploring moving their web applications (corporate and data collection web apps) to Microsoft Azure via lift and shift and other applicable methods to simplify some of the operations management overhead and associated costs, beginning with their U.S. data center and then those in Europe. They would also like to ensure that the corporate website and external facing web apps are sufficiently isolated.  Lastly, they want to ensure that resources are created using best practices and that those practices are followed during the resource providing process.
+In addition to the GDPR compliance requirements, they are expecting significant growth within the United States and abroad. They foresee the need to scale their system and are exploring moving their web applications (corporate and data collection web apps) to Microsoft Azure via lift and shift and other applicable methods to simplify some of the operations management overhead and associated costs, beginning with their U.S. data center and then those in Europe. They would also like to ensure that the corporate website and external facing web apps are sufficiently isolated.  Lastly, they want to ensure that resources are created using best practices and that those practices are followed during the resource provisioning process.
 
 Contoso has been using their on-premises SIEM to do most of their auditing and log reporting. They are wondering what options they have to monitor their on-premises and future cloud based resources.  They have thoughtfully tuned their on-premises SIEM to reduce false positives and normalize the metadata across different log types. They are worried about the amount of logs and potential for unnecessary work when they move workloads to Azure.
 
@@ -433,6 +433,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | Azure Monitor and Log Analytics   | <https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview>   |
 | Azure Sentinel   | <https://docs.microsoft.com/en-us/azure/sentinel/>   |
 | Azure Policy   | <https://azure.microsoft.com/en-us/services/azure-policy/>   |
+| Azure Lockbox   | <https://azure.microsoft.com/en-us/blog/approve-audit-support-access-requests-to-vms-using-customer-lockbox-for-azure/>   |
 | Azure Key Vault   |  <https://docs.microsoft.com/en-us/azure/key-vault/>  |
 | Microsoft Azure Active Directory Connect  | <https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-whatis>  |
 | Lift and Shift (IaaS)  |  <https://docs.microsoft.com/en-us/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas> |
@@ -657,6 +658,8 @@ Describe how you would secure each Azure resource from internal and external att
 
     We require subcontractors to join Microsoft\'s Vendor Privacy Assurance Program, to meet our privacy requirements by contract, and to undergo regular privacy training. We contractually obligate subcontractors that work in facilities or on equipment controlled by Microsoft to follow our privacy standards. All other subcontractors are contractually obligated to follow privacy standards equivalent to our own.
 
+    Azure Support can access your VMs utilizing the audited Azure Lockbox feature when needed in the resolution of difficult issues.
+
 6.  How does Azure protect against threats?
 
     Intrusion detection and prevention systems, denial of service attack prevention, regular penetration testing, and forensic tools help identify and mitigate threats from both outside and inside of Azure.
@@ -698,6 +701,8 @@ Describe how you would secure each Azure resource from internal and external att
     -   Events saved to a Storage Account for analysis later
 
     -   Export data using Log Profiles with Log Analytics
+
+    Ultimately, you will want to encourage them to use the new Azure Sentinel offering.
 
 10.  What certifications does Azure have and can Azure hosted applications meet the US and European compliance goals?
 
