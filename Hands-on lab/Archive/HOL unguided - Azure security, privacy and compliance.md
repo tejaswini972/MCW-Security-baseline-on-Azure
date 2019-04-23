@@ -26,7 +26,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 <!-- TOC -->
 
-- [Security baseline on Azure hands-on lab unguided](#azure-security-privacy-and-compliance-hands-on-lab-unguided)
+- [Security baseline on Azure hands-on lab unguided](#Security-baseline-on-Azure-hands-on-lab-unguided)
     - [Abstract and learning objectives](#abstract-and-learning-objectives)
     - [Overview](#overview)
     - [Solution architecture](#solution-architecture)

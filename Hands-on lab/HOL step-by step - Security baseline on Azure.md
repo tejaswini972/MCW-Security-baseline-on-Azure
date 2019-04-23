@@ -26,7 +26,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 <!-- TOC -->
 
-- [Security baseline on Azure hands-on lab step-by-step](#Security-baseline-on-Azure-hands-on-lab-step-by-step)
+- [Security baseline on Azure hands-on lab step-by-step](#security-baseline-on-azure-hands-on-lab-step-by-step)
     - [Abstract and learning objectives](#abstract-and-learning-objectives)
     - [Overview](#overview)
     - [Solution architecture](#solution-architecture)
@@ -54,18 +54,20 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
         - [Task 6: Execute a port scan](#task-6-execute-a-port-scan)
     - [Exercise 5: Azure Sentinal logging and reporting](#exercise-5-azure-sentinal-logging-and-reporting)
         - [Task 1: Create a Dashboard](#task-1-create-a-dashboard)
-        - [Task 2: Create a custom alert](#task-2-create-a-custom-alert)
-        - [Task 3: Investigate a custom alert](#task-3-investigate-a-custom-alert)
+        - [Task 2: Create an Analytics alert](#task-2-create-an-analytics-alert)
+        - [Task 3: Investigate a custom alert case](#task-3-investigate-a-custom-alert-case)
         - [Task 4: Create and run a playbook](#task-4-create-and-run-a-playbook)
-        - [Task 5: Execute Jupityer Notebooks](#task-5-create-jupityer-notebooks)
-        - [Task 6: Export a Power Query formula from Log Analytics](#task-6-export-a-power-query-formula-from-log-analytics)
+        - [Task 5: Execute Jupityer Notebooks](#task-5-execute-jupityer-notebooks)
+        - [Task 6: Creating Reports with Power BI](#task-6-creating-reports-with-power-bi)
     - [Exercise 6: Using Compliance Tools (Azure Policy, Secure Score and Compliance Manager)](#exercise-6-using-compliance-manager)
-        - [Task 1: Azure Policy](#task-1-azure-policy)
-        - [Task 2: Secure Score](#task-2-secure-score)
-        - [Task 3: Use Compliance Manager for Azure](#task-3-use-compliance-manager-for-azure)
+        - [Task 1: Review a basic Azure Policy](#task-1-review-a-basic-azure-policy)
+        - [Task 2: Review and create Azure Blueprints](#task-2-review-and-create-azure-blueprint)
+        - [Task 3: Secure Score](#task-3-secure-score)
+        - [Task 4: Use Compliance Manager for Azure](#task-4-use-compliance-manager-for-azure)
     - [After the hands-on lab](#after-the-hands-on-lab)
         - [Task 1: Delete resource group](#task-1-delete-resource-group)
-        - [Task 2: Delete lab environment (optional)](#task-2-delete-lab-environment-optional)
+        - [Task 2: Remove Standard Tier Pricing](#task-2-remove-standard-tier-pricing)
+        - [Task 3: Delete lab environment (optional)](#task-3-delete-lab-environment-optional)
     - [Appendix A](#appendix-a)
         - [Task 1: Create storage account](#task-1-create-storage-account)
         - [Task 2: Create virtual networks](#task-2-create-virtual-networks)
@@ -850,17 +852,17 @@ Synopsis: In this exercise, you will setup Azure Sentinal to point to a logging 
 
 5.  For the operator value, enter **50**.
 
-8.  For the frequency, select **30** and **Minutes**.
+6.  For the frequency, select **30** and **Minutes**.
 
-9.  For the period, select **30** and **Minutes**.
+7.  For the period, select **30** and **Minutes**.
 
 > **Note:** This is so that our lab will run quickly and may not be appropriate for real world.
 
-10. For the suppress alerts for, enter **30** and **Minutes**
+8. For the suppress alerts for, enter **30** and **Minutes**
 
     ![The above information is entered in the dialog box for the new custom analytics rule.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image98.png "Enter the information in the dialog box")
 
-11. Click **Create**.
+9. Click **Create**.
 
 >   **Note**:  It may take a few minutes for the alert to fire.  You may need to run the PortScan script a few times from **paw-1**
 
