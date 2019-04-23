@@ -554,7 +554,7 @@ Describe how you will use Azure features to ensure the following:
 
     a.  Azure Security Center can be used to implement Just in Time (JIT) virtual machine access. You can also lock down VM modification using Azure IAM settings using specific users or groups with specific Azure roles assigned.
 
-    b.  Ensure that admins are included in the appropriate resource administrative groups with appropriate IAM roles assigned.
+    b.  Ensure that admins are included in the appropriate resource administrative groups with appropriate IAM roles assigned and using Privledged Identity Management (PIM).
 
 2.  How will you monitor and audit network traffic across Virual networks?
 
@@ -569,6 +569,8 @@ Describe how you will use Azure features to ensure the following:
 3.  How will you monitor and audit Azure SQL?
 
     a.  Auditing and Threat detection was enabled on all SQL Azure databases.
+
+    b.  Azure Diagnostics was enabled and all logs are being forwarded to Log Analytics and Azure Sentinel
 
 4.  Create custom alerts and execute remediation and investigation activites on detection?
 
@@ -671,6 +673,10 @@ Describe how you would secure each Azure resource from internal and external att
     Microsoft Antimalware is built-in to Cloud Services and can be enabled for Virtual Machines to help identify and remove viruses, spyware and other malicious software and provide real-time protection. Customers can also run antimalware solutions from partners on their Virtual Machines.
 
     Microsoft has decades of operating system security experience running its applications and services and latest developments allow the Microsoft Security Graph to analyze events to determine if and when an attack is occurring.
+
+    Azure Firewall can provide DDoS and Threat Intelligence services to ensure bad actors are not being allowed access to the web applications.
+
+    If the customer has a healthy security budget, they could migrate their web applications to Application Service Environments (ASE) with Web Application Gateway (WAG) to implment an even more segregated and secured environment.
 
 7.  Does Azure allow enough granular RBAC controls to meet our least privileged needs?
 
