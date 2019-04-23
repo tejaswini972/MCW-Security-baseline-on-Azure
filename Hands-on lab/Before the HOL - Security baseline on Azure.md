@@ -103,6 +103,8 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
     -  Fill in the remaining parameters, but if you change anything, be sure to note it for future reference throughout the lab.
 
+    -  The **userObjectId** can be retreived by navigating to Azure Active Directory blade and searching for your user account.  On the user account page, you will find your object id which you can copy and paste into the field.
+
     -  Check the **I agree to the terms and conditions stated above** checkbox.
 
     -  Select **Purchase**.
