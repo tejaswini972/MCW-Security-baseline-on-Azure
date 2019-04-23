@@ -14,9 +14,6 @@
     "databaseName": {
       "defaultValue": "SampleDB",
       "type": "string"
-    },
-    "userObjectId": {
-      "type": "string"
     }
   },
   "variables": {

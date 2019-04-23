@@ -1,7 +1,7 @@
 ![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
-Azure security, privacy, and compliance
+Security baseline on Azure
 </div>
 
 <div class="MCWHeader2">
@@ -18,7 +18,7 @@ Microsoft may have patents, patent applications, trademarks, copyrights, or othe
 
 The names of manufacturers, products, or URLs are provided for informational purposes only, and Microsoft makes no representations and warranties, either expressed, implied, or statutory, regarding these manufacturers or the use of the products with any Microsoft technologies. The inclusion of a manufacturer or product does not imply endorsement of Microsoft of the manufacturer or product. Links may be provided to third-party sites. Such sites are not under the control of Microsoft and Microsoft is not responsible for the contents of any linked site or any link contained in a linked site, or any changes or updates to such sites. Microsoft is not responsible for webcasting or any other form of transmission received from any linked site. Microsoft is providing these links to you only as a convenience, and the inclusion of any link does not imply endorsement of Microsoft of the site or the products contained therein.
 
-© 2018 Microsoft Corporation. All rights reserved.
+© 2019 Microsoft Corporation. All rights reserved.
 
 Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx> are trademarks of the Microsoft group of companies. All other trademarks are the property of their respective owners.
 
@@ -31,7 +31,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Whiteboard design session flow](#whiteboard-design-session-flow)
     - [Before the whiteboard design session: How to prepare](#before-the-whiteboard-design-session-how-to-prepare)
     - [During the whiteboard design session: Tips for an effective whiteboard design session](#during-the-whiteboard-design-session-tips-for-an-effective-whiteboard-design-session)
-- [Azure security, privacy, and compliance whiteboard design session student guide](#azure-security-privacy-and-compliance-whiteboard-design-session-student-guide)
+- [Security baseline on Azure whiteboard design session student guide](#azure-security-privacy-and-compliance-whiteboard-design-session-student-guide)
     - [Abstract and learning objectives](#abstract-and-learning-objectives)
     - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
         - [Customer situation](#customer-situation)
@@ -42,7 +42,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Step 3: Present the solution](#step-3-present-the-solution)
     - [Wrap-up](#wrap-up)
     - [Additional references](#additional-references)
-- [Azure security, privacy, and compliance whiteboard design session trainer guide](#azure-security-privacy-and-compliance-whiteboard-design-session-trainer-guide)
+- [Security baseline on Azure whiteboard design session trainer guide](#azure-security-privacy-and-compliance-whiteboard-design-session-trainer-guide)
     - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study-1)
     - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution-1)
     - [Step 3: Present the solution](#step-3-present-the-solution-1)
@@ -166,7 +166,7 @@ When participants are doing activities, you can **look ahead to refresh your mem
 
 **Wait for responses**. If you ask a question such as, "What's your experience with (fill in the blank)?" then wait. Do not be afraid of a little silence. If you leap into the silence, your participants will feel you are not serious about involving them and will become passive. Give participants a chance to think, and if no one answers, patiently ask again. You will usually get a response.
 
-#  Azure security, privacy, and compliance whiteboard design session student guide
+#  Security baseline on Azure whiteboard design session student guide
 
 ## Abstract and learning objectives 
 
@@ -423,9 +423,11 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | Azure Virtual Networks | <https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview>   |
 | Network Security Groups | <https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg>  |
 | Azure VPN Gateway   |  <https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal>  |
+| Azure Firewall   |  <https://docs.microsoft.com/en-us/azure/firewall>  |
+| Azure Application Gateway   |  <https://docs.microsoft.com/en-us/azure/application-gateway>  |
 | Azure Web Apps   | <https://docs.microsoft.com/en-us/azure/app-service/>   |
 | Azure SQL   | <https://docs.microsoft.com/en-us/azure/sql-database/>     |
-|  Azure SQL documentation, TDE, data masking and encryption at rest   |  <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-always-encrypted-azure-key-vault>   |
+| Azure SQL documentation, TDE, data masking and encryption at rest   |  <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-always-encrypted-azure-key-vault>   |
 | Express Route   | <https://docs.microsoft.com/en-us/azure/expressroute/expressroute-introduction>  |
 | Azure Storage Encryption  | <https://docs.microsoft.com/en-us/azure/storage/common/storage-service-encryption>  |
 | SQL Server (IaaS)   | <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview>  |
@@ -448,7 +450,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | Azure Trust Center  | <http://azure.microsoft.com/en-us/support/trust-center/>     |
 
 
-# Azure security, privacy, and compliance whiteboard design session trainer guide
+# Security baseline on Azure whiteboard design session trainer guide
 
 ## Step 1: Review the customer case study
 
@@ -588,7 +590,7 @@ Describe how you would ensure that the following resources would be available in
 
 1.  Virutal Machines
 
-    a.  Azure Recovery Service Vault was utilized to make backups of virtual machines
+    a.  Azure Recovery Service Vault **configured to use GRS** was utilized to make backups of virtual machines
 
 2.  Azure SQL
 
@@ -609,6 +611,8 @@ Describe how you would secure each Azure resource from internal and external att
 2.  Prevent admins from causing intended and unintended harm to the environment such as unapproved software installs.
 
     a.   Adaptive application controls can be enabled on all virtual machines to ensure that no software is being installed that has not been approved.
+
+    b.  Through Security Center, implment the Auto Provisioning of the Microsoft Monitoing Agent (MMA) extension on all existing and newly created VMs for data collection activities.
 
 3.  Admins access Azure resources from secured and/or compliant corporate assets and do not directly access any production Virtual Machines from the internet.
 
@@ -640,7 +644,7 @@ Describe how you would secure each Azure resource from internal and external att
 
 3.  Can Azure help contain costs for minimally used costly production and development resources?
 
-    Yes, Azure Cost Management + Billing has free features via the Cloudyn application that allows you to monitor your cloud spend, drive organizational accountability and optimize your cloud efficiency.
+    Yes, Azure Cost Management + Billing has free features that allows you to monitor your cloud spend, drive organizational accountability and optimize your cloud efficiency.
 
 4.  Does Azure support the ability to allow VPN connections to specific resources?
 
@@ -702,7 +706,7 @@ Describe how you would secure each Azure resource from internal and external att
 
     -   Export data using Log Profiles with Log Analytics
 
-    Ultimately, you will want to encourage them to use the new Azure Sentinel offering.
+    Ultimately, you will want to encourage them to use the new Azure Sentinel offering (currently in preview as of 4/2019).
 
 10.  What certifications does Azure have and can Azure hosted applications meet the US and European compliance goals?
 

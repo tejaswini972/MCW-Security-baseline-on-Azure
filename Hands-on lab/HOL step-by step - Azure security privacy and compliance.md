@@ -1,7 +1,7 @@
 ![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
-Azure security, privacy, and compliance
+Security baseline on Azure
 </div>
 
 <div class="MCWHeader2">
@@ -18,7 +18,7 @@ Microsoft may have patents, patent applications, trademarks, copyrights, or othe
 
 The names of manufacturers, products, or URLs are provided for informational purposes only, and Microsoft makes no representations and warranties, either expressed, implied, or statutory, regarding these manufacturers or the use of the products with any Microsoft technologies. The inclusion of a manufacturer or product does not imply endorsement of Microsoft of the manufacturer or product. Links may be provided to third-party sites. Such sites are not under the control of Microsoft and Microsoft is not responsible for the contents of any linked site or any link contained in a linked site, or any changes or updates to such sites. Microsoft is not responsible for webcasting or any other form of transmission received from any linked site. Microsoft is providing these links to you only as a convenience, and the inclusion of any link does not imply endorsement of Microsoft of the site or the products contained therein.
 
-© 2018 Microsoft Corporation. All rights reserved.
+© 2019 Microsoft Corporation. All rights reserved.
 
 Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx> are trademarks of the Microsoft group of companies. All other trademarks are the property of their respective owners.
 
@@ -26,7 +26,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 <!-- TOC -->
 
-- [Azure security, privacy, and compliance hands-on lab step-by-step](#azure-security-privacy-and-compliance-hands-on-lab-step-by-step)
+- [Security baseline on Azure hands-on lab step-by-step](#azure-security-privacy-and-compliance-hands-on-lab-step-by-step)
     - [Abstract and learning objectives](#abstract-and-learning-objectives)
     - [Overview](#overview)
     - [Solution architecture](#solution-architecture)
@@ -76,7 +76,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 <!-- /TOC -->
 
-# Azure security, privacy, and compliance hands-on lab step-by-step 
+# Security baseline on Azure hands-on lab step-by-step 
 
 ## Abstract and learning objectives 
 
@@ -146,7 +146,9 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
     ![In the configuration window, port settings are listed, and Save is highlighted above them.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image10.png "Select Save")
 
-5.  You should now see the states change to **Resolved**.
+5.  You should now see the states change to **Resolved**.  
+
+> **Note**: It could take a couple minute for this to revert to the resolved state.
     
     ![On the Virtual machines screen, several virtual machines have their State listed as Resolved.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image11.png "View the state change")
 
@@ -438,6 +440,8 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 1.  From the extracted GitHub directory, open the **\\Hands-on lab\\WebApp\\InsuranceAPI\_KeyVault\\InsuranceAPI.sln** solution.
 
+>NOTE:  Be sure you open the correct solution (there are two)
+
 2.  Switch to your Azure Portal.
 
 3.  Select **Key Vaults**, then select your Azure Key Vault.
@@ -534,9 +538,9 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
     a.  Install-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform
 
-    b.  Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory -Version 2.16.204221202.
+    b.  Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory -Version 2.16.204221202
 
-    c.  Install-Package Microsoft.Azure.KeyVault.
+    c.  Install-Package Microsoft.Azure.KeyVault
 
 > **Note**: These already exist in the project but are provided as a reference.
 
@@ -700,16 +704,8 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
        -  Check the **Send to Log Analytics** checkbox, in the **Log Analytics** box, select **Configure**.
        
-       -  For the first NSG you configure, select **Create New Workspace.** For the name enter **azuresecurity-yourinitials**.  For the remaining, simply select the new **azuresecurity-yourinitials** workspace.
-
-       -  Select your resource group.
-
-       -  Select your location (East US is preferred).
-
-       ![+ Create New Workspace is selected on the left, and the above information is entered on the right under OMS Workspace.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image59.png "Create a new workspace")
-
-       -  Select **OK**, wait for the OMS workspace to be created.
-
+       -  Select the **azsecuritylogging** workspace.
+       
        -  Select both LOG checkboxes.
 
        -  Select **Save**.
@@ -850,17 +846,17 @@ Synopsis: In this exercise, you will setup Azure Sentinal to point to a logging 
 
  ![In this screenshot, the alert simulation shows data after the query has been entered.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image97.png "Reviewing alert simulation data")
 
-> **Note**: If you were quick going through the labs, then you may not have log data in the OMS workspace just yet that corresponds to "AzureMetric". You may need to wait 15-30 minutes before a query will execute.
+> **Note**: If you were quick going through the labs, then you may not have log data in the Log Analytics workspace just yet that corresponds to "AzureMetric". You may need to wait 15-30 minutes before a query will execute.
 
 5.  For the operator value, enter **50**.
 
-8.  For the frequency, select **1** and **Hours**.
+8.  For the frequency, select **30** and **Minutes**.
 
-9.  For the period, select **1** and **Hours**.
+9.  For the period, select **30** and **Minutes**.
 
 > **Note:** This is so that our lab will run quickly and may not be appropriate for real world.
 
-10. For the suppress alerts for, enter **60** and **Minutes**
+10. For the suppress alerts for, enter **30** and **Minutes**
 
     ![The above information is entered in the dialog box for the new custom analytics rule.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image98.png "Enter the information in the dialog box")
 
@@ -902,7 +898,7 @@ Synopsis: In this exercise, you will setup Azure Sentinal to point to a logging 
 
     b.  Select your existing resource group.
 
-    c.  Toggle the **Log Analytics** to **On** and then select your **azuresecurity** OMS workspace.
+    c.  Toggle the **Log Analytics** to **On** and then select your **azuresecurity** Log Analytics workspace.
 
    ![The information above is entered in the Create logic app dialog box.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image80.png "Enter Create logic app information")
 
