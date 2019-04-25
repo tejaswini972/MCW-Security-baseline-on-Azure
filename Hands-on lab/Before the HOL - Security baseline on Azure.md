@@ -77,7 +77,7 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
 4.  Type a resource group name, such as **azsecurity-\[your initials or first name\]**.
 
-5.  Select **Review + Create**, then select **Create**
+5.  Select **Review + Create**, then select **Create**.
 
 6.  Select **Refresh** to see your new resource group displayed and select it.
 
@@ -93,7 +93,7 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
 11. Select **Save**, you will see the dialog with the input parameters. Fill out the form:
 
-    -  Subscription: select your **subscription**.
+    -  Subscription: Select your **subscription**.
 
     -  Resource group: Use an existing Resource group, or create a new one by entering a unique name, such as **azsecurity-\[your initials or first name\]**.
 
@@ -103,7 +103,7 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
     -  Fill in the remaining parameters, but if you change anything, be sure to note it for future reference throughout the lab.
 
-    -  The **userObjectId** can be retreived by navigating to Azure Active Directory blade and searching for your user account.  On the user account page, you will find your object id which you can copy and paste into the field.
+    -  The **userObjectId** can be retrieved by navigating to Azure Active Directory blade and searching for your user account.  On the user account page, you will find your object id which you can copy and paste into the field.
 
     -  Check the **I agree to the terms and conditions stated above** checkbox.
 
@@ -117,19 +117,19 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
     -  As part of the deployment, you will see the following items created:
 
-       -  One storage account
+       -  One storage account.
 
-       -  Three virtual network (dbVNet, webVnet, mainVnet)
+       -  Three virtual networks (dbVNet, webVnet, mainVnet).
 
-       -  Three network security groups 
+       -  Three network security groups. 
 
-       -  Three virtual machines (db-1, web-1, paw-1)
+       -  Three virtual machines (db-1, web-1, paw-1).
 
-            -   IIS is installed on web-1 via a DSC script from the GitHub repository
+            -   IIS is installed on web-1 via a DSC script from the GitHub repository.
 
-       -  One SQL Azure Server with sample database
+       -  One SQL Azure Server with sample database.
 
-       -  One Azure Key Vault
+       -  One Azure Key Vault.
 
     ![Created items list This screenshot is a list of the items that were created, including the items listed above. ](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image8.png)
 
