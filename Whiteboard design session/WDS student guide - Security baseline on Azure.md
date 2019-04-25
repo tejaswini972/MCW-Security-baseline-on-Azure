@@ -79,7 +79,7 @@ Contoso currently hosts their systems at co-locations facilities within each geo
 
 In addition to the GDPR compliance requirements, they are expecting significant growth within the United States and abroad. They foresee the need to scale their system and are exploring moving their web applications (corporate and data collection web apps) to Microsoft Azure via lift and shift and other applicable methods to simplify some of the operations management overhead and associated costs, beginning with their U.S. data center and then those in Europe. They would also like to ensure that the corporate website and external facing web apps are sufficiently isolated.  Lastly, they want to ensure that resources are created using best practices and that those practices are followed during the resource provisioning process.
 
-Contoso has been using their on-premises SIEM to do most of their auditing and log reporting. They are wondering what options they have to monitor their on-premises and future cloud based resources.  They have thoughtfully tuned their on-premises SIEM to reduce false positives and normalize the metadata across different log types. They are worried about the amount of logs and potential for unnecessary work when they move workloads to Azure.
+Contoso has been using their on-premises SIEM to do most of their auditing and log reporting. They are wondering what options they have to monitor their on-premises and future cloud-based resources.  They have thoughtfully tuned their on-premises SIEM to reduce false positives and normalize the metadata across different log types. They are worried about the amount of logs and potential for unnecessary work when they move workloads to Azure.
 
 Jack Tradewinds, the CIO of Contoso Ltd, has heard a great deal of positive news about Azure and its progress in terms of security and compliance. He would like to learn more about the security features and if they can move some of their data and applications away from their on-premises datacenter. Given his long-standing relationship with Microsoft, he would like to see if Azure can meet his needs.
 
@@ -219,7 +219,7 @@ Describe how you will use Azure features to ensure the following:
 
 4.  Create custom alerts and execute remediation and investigation activities on detection?
 
-5.  What tools would you setup surface audit and compliance reporting to IT Executives?
+5.  What tools would you setup to surface audit and for compliance reporting to IT Executives?
 
 *Ensuring availability and business continuity*
 
