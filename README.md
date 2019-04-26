@@ -1,4 +1,4 @@
-# Azure security, privacy, and compliance
+# Security baseline on Azure
 
 Contoso Ltd is a multinational corporation, headquartered in the United States that provides insurance solutions worldwide. Its products include accident and health insurance, life insurance, travel, home, and auto coverage. Contoso manages data collection services by sending mobile agents directly to the insured to gather information as part of the data collection process for claims from an insured individual. These mobile agents are based all over the world and are residents of the region in which they work. Mobile agents are managed remotely through regional corporate offices.
 
@@ -41,8 +41,11 @@ At the end of this hands-on lab, you will be better able to design and build sec
 - SQL Server Virtual Machines
 - Azure IAM
 - Azure Monitor and Log Analytics
+- Azure Sentinal
+- Azure Policy
 - Power BI
 - Azure Security Center
+- Secure Score
 - Azure Key Vault Integrations
 - Microsoft Azure Active Directory
 - Microsoft Intune

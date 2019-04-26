@@ -15,6 +15,13 @@ namespace InsuranceAPI
     {
         private InsuranceEntities db = new InsuranceEntities();
 
+        public UsersController()
+        {
+            db.Configuration.LazyLoadingEnabled = false;
+            db.Configuration.ProxyCreationEnabled = false;
+            db.Configuration.ValidateOnSaveEnabled = false;
+        }
+
         // GET: api/Users
         public IQueryable<User> GetUsers()
         {
