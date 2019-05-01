@@ -421,6 +421,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | **Description** | **Links** |
 | Azure Virtual Machines | <https://docs.microsoft.com/en-us/azure/virtual-machines/windows/>   |
 | Azure Virtual Networks | <https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview>   |
+| Azure DDoS | <https://docs.microsoft.com/en-us/azure/virtual-network/ddos-protection-overview>   |
 | Network Security Groups | <https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-nsg>  |
 | Azure VPN Gateway   |  <https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal>  |
 | Azure Firewall   |  <https://docs.microsoft.com/en-us/azure/firewall>  |
