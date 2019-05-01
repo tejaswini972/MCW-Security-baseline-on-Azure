@@ -208,7 +208,7 @@ Contoso currently hosts their systems at co-locations facilities within each geo
 
 In addition to the GDPR compliance requirements, they are expecting significant growth within the United States and abroad. They foresee the need to scale their system and are exploring moving their web applications (corporate and data collection web apps) to Microsoft Azure via lift and shift and other applicable methods to simplify some of the operations management overhead and associated costs, beginning with their U.S. data center and then those in Europe. They would also like to ensure that the corporate website and external facing web apps are sufficiently isolated.  Lastly, they want to ensure that resources are created using best practices and that those practices are followed during the resource provisioning process.
 
-Contoso has been using their on-premises SIEM to do most of their auditing and log reporting. They are wondering what options they have to monitor their on-premises and future cloud based resources.  They have thoughtfully tuned their on-premises SIEM to reduce false positives and normalize the metadata across different log types. They are worried about the amount of logs and potential for unnecessary work when they move workloads to Azure.
+Contoso has been using their on-premises SIEM to do most of their auditing and log reporting. They are wondering what options they have to monitor their on-premises and future cloud-based resources.  They have thoughtfully tuned their on-premises SIEM to reduce false positives and normalize the metadata across different log types. They are worried about the amount of logs and potential for unnecessary work when they move workloads to Azure.
 
 Jack Tradewinds, the CIO of Contoso Ltd, has heard a great deal of positive news about Azure and its progress in terms of security and compliance. He would like to learn more about the security features and if they can move some of their data and applications away from their on-premises datacenter. Given his long-standing relationship with Microsoft, he would like to see if Azure can meet his needs.
 
@@ -320,7 +320,7 @@ Briefly sketch-out and propose a high-level solution that meets the customer's b
 
 7.  Azure Security Center
 
-8.  Azure Sentinal and Azure Policy
+8.  Azure Sentinel and Azure Policy
 
 9.  Azure Key Vault
 
@@ -350,7 +350,7 @@ Describe how you will use Azure features to ensure the following:
 
 4.  Create custom alerts and execute remediation and investigation activities on detection?
 
-5.  What tools would you setup surface audit and compliance reporting to IT Executives?
+5.  What tools would you setup to surface audit and compliance reporting to IT Executives?
 
 *Ensuring availability and business continuity*
 
@@ -556,13 +556,13 @@ Describe how you will use Azure features to ensure the following:
 
     b.  Ensure that admins are included in the appropriate resource administrative groups with appropriate IAM roles assigned.
 
-2.  How will you monitor and audit network traffic across Virual networks?
+2.  How will you monitor and audit network traffic across Virtual networks?
 
     a.  Azure Security Center can be used to create custom alerts based on logging data from the Network Security Group rule execution.
 
     b.  You can use Azure Monitor to do network testing and packet capture across virtual machines and virtual networks.
 
-    c.  Azure Monitor and Log Analytics can be leveraged to create queries across Azure event logging event data that will feed into PowerBI reports.
+    c.  Azure Monitor and Log Analytics can be leveraged to create queries across Azure event logging event data that will feed into Power BI reports.
 
     d.  Azure Sentinel can be used to create alerts and cases for auto-assignment and investigation activities
 
@@ -570,7 +570,7 @@ Describe how you will use Azure features to ensure the following:
 
     a.  Auditing and Threat detection was enabled on all SQL Azure databases.
 
-4.  Create custom alerts and execute remediation and investigation activites on detection?
+4.  Create custom alerts and execute remediation and investigation activities on detection?
 
     a.  Azure Sentinel can be used to hunt down specific events and create alerts based on event data
     
@@ -580,7 +580,7 @@ Describe how you will use Azure features to ensure the following:
 
     a.  Azure Policy can be used to determine if resource group owners have been following best practice organizational policies
 
-    b.  Compliance Manager can be used to implement compliance activites and task assignements as it related to legislative requirements
+    b.  Compliance Manager can be used to implement compliance activities and task assignments as it related to legislative requirements
 
     c.  Secure score can also be used to determine what activities can be performed to further secure the Azure subscription and its resources
 
@@ -588,7 +588,7 @@ Describe how you will use Azure features to ensure the following:
 
 Describe how you would ensure that the following resources would be available in the unlikely event of an attack or intentional or unintentional data loss?
 
-1.  Virutal Machines
+1.  Virtual Machines
 
     a.  Azure Recovery Service Vault **configured to use GRS** was utilized to make backups of virtual machines
 
@@ -612,7 +612,7 @@ Describe how you would secure each Azure resource from internal and external att
 
     a.   Adaptive application controls can be enabled on all virtual machines to ensure that no software is being installed that has not been approved.
 
-    b.  Through Security Center, implment the Auto Provisioning of the Microsoft Monitoing Agent (MMA) extension on all existing and newly created VMs for data collection activities.
+    b.  Through Security Center, implement the Auto Provisioning of the Microsoft Monitoring Agent (MMA) extension on all existing and newly created VMs for data collection activities.
 
 3.  Admins access Azure resources from secured and/or compliant corporate assets and do not directly access any production Virtual Machines from the internet.
 
@@ -700,7 +700,7 @@ Describe how you would secure each Azure resource from internal and external att
 
     -   Events streamed to Event Hub
 
-    -   PowerBI integration
+    -   Power BI integration
 
     -   Events saved to a Storage Account for analysis later
 

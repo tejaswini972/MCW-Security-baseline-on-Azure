@@ -41,7 +41,7 @@ At the end of this hands-on lab, you will be better able to design and build sec
 - SQL Server Virtual Machines
 - Azure IAM
 - Azure Monitor and Log Analytics
-- Azure Sentinal
+- Azure Sentinel
 - Azure Policy
 - Power BI
 - Azure Security Center
