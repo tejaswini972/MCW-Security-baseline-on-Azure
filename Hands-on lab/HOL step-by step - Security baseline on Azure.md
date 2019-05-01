@@ -930,7 +930,7 @@ Synopsis: In this exercise, you will setup Azure Sentinal to point to a logging 
 
 11. Lastly, after you have created the new Playbook, ensure that the status is **Enabled**.  If not, then click **Enable** in the menu.
 
-### Task 5: Execute Jupityer Notebooks
+### Task 5: Execute Jupyter Notebooks
 
 1.  In the **Azure Sentinel** blade, select **Notebooks**
 
