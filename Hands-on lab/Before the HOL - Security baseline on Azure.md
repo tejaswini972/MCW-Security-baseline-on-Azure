@@ -49,6 +49,8 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - SQL Management Studio 2017
     - Power BI Desktop
 
+3. An Office 365 email account or other email-based account
+
 ## Before the hands-on lab
 
 Duration: 30 minutes

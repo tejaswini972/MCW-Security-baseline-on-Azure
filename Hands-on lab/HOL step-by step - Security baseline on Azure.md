@@ -918,15 +918,17 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
     ![The Sign in button is highlighted next to Office 365 Outlook under This logic app will connect to.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image83.png "Sign in to Office 365 Outlook")
 
-> **Note**: This would need to be a valid Office 365 account.
+> **Note**: This would need to be a valid Office 365 account, if you do not have a valid Office 365 account, then utilize a basic email template for Outlook.com
 
 8. Select **Continue**.
 
 9. For the email address, enter your email.
 
-10. Select **Save**. You now have an email alert action based on PowerApps for your custom security alert to use.
+10. Select **Save**. You now have an email alert action based on LogicApps for your custom security alert to use.
 
     ![Save is highlighted in Logic Apps Designer, and information about the custom security alert appears below.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image84.png "Save the email alert action")
+
+11. Lastly, after you have created the new Playbook, ensure that the status is **Enabled**.  If not, then click **Enable** in the menu.
 
 ### Task 5: Execute Jupyter Notebooks
 
