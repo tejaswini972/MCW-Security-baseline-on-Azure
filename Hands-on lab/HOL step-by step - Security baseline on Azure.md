@@ -1071,11 +1071,13 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
 2.  In the top corner, select **Sign in**, you will be redirected to the Azure AD login page.
 
-    ![Sign in is highlighted at the top of the Service Trust/Compliance Manager portal.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image89.jpeg "Sign in to Compliance Manager")
+    ![Sign in is highlighted at the top of the Service Trust/Compliance Manager portal.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image89.png "Sign in to Compliance Manager")
 
 3.  If prompted, select or sign in with your Azure AD\\Office 365 credentials.
 
-4.  Select the **LAUNCH COMPLIANCE MANAGER** link.
+4.  In the menu, select **Compliance Manager->Compliance Manager Classic**.
+
+    ![Compliance Manager Classic is highlight in the menu navigation.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image89.1.png "Open Compliance Manager Classic")
 
 5.  Select on the **+Add Assessment** link.
 
