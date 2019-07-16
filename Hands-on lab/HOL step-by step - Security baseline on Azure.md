@@ -708,7 +708,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
        -  Check the **Send to Log Analytics** checkbox, in the **Log Analytics** box, select **Configure**.
        
-       -  Select the **azsecuritylogging** workspace.
+       -  Select the **azseclog...** workspace.
        
        -  Select both LOG checkboxes.
 
