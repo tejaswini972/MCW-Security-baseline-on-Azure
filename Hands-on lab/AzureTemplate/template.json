@@ -379,7 +379,26 @@
       "apiVersion": "2017-06-01",
       "location": "[resourceGroup().location]",
       "properties": {
-        "securityRules": [ ]
+        "securityRules": [
+			{
+				"name": "DenyAll",				
+				"properties": {
+					"provisioningState": "Succeeded",
+					"protocol": "*",
+					"sourcePortRange": "*",
+					"destinationPortRange": "*",
+					"sourceAddressPrefix": "*",
+					"destinationAddressPrefix": "*",
+					"access": "Deny",
+					"priority": 1000,
+					"direction": "Inbound",
+					"sourcePortRanges": [],
+					"destinationPortRanges": [],
+					"sourceAddressPrefixes": [],
+					"destinationAddressPrefixes": []
+				}
+			}
+		]
       },
       "dependsOn": [ ]
     },
@@ -399,7 +418,26 @@
       "apiVersion": "2017-06-01",
       "location": "[resourceGroup().location]",
       "properties": {
-        "securityRules": [ ]
+        "securityRules": [
+			{
+				"name": "DenyAll",				
+				"properties": {
+					"provisioningState": "Succeeded",
+					"protocol": "*",
+					"sourcePortRange": "*",
+					"destinationPortRange": "*",
+					"sourceAddressPrefix": "*",
+					"destinationAddressPrefix": "*",
+					"access": "Deny",
+					"priority": 1000,
+					"direction": "Inbound",
+					"sourcePortRanges": [],
+					"destinationPortRanges": [],
+					"sourceAddressPrefixes": [],
+					"destinationAddressPrefixes": []
+				}
+			}
+		]
       },
       "dependsOn": [ ]
     },
