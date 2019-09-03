@@ -856,7 +856,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 4.  In the **Set alert query** text box, type:
 
 ```powershell
- AzureDiagnostics | where Type != 'AzureMetric' and OperationName == 'NetworkSecurityGroupCounters' and type_s == 'block' and direction_s == 'In' and Resource == 'WEBTRAFFICONLY'  and TimeGenerated > ago(1h)
+ AzureDiagnostics | where Type != 'AzureMetric' and OperationName == 'NetworkSecurityGroupCounters' and type_s == 'block' and direction_s == 'In' and Resource == 'WEBTRAFFICONLY' and TimeGenerated > ago(1h)
  ```
 
  ![In this screenshot, the alert simulation shows data after the query has been entered.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image97.png "Reviewing alert simulation data")
