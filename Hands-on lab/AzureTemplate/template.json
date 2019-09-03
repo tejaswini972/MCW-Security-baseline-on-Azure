@@ -3,9 +3,11 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "adminUsername": {
+		"defaultValue" : "wsadmin",
       "type": "string"
     },
     "adminPassword": {
+		"defaultValue" : "p@ssword1rocks",
       "type": "securestring"
     },
     "sqlservername": {
