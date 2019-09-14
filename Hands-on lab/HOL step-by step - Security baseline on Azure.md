@@ -1,4 +1,4 @@
-![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
+![Microsoft Cloud Workshops](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
 Security baseline on Azure
@@ -136,9 +136,10 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
    d.  Select **Standard**
 
-   e.  Click **Save**
+   e.  Select **Save**
 
    f.  Navigate back to Security Center, select **Just in time VM access**.
+
 
 3.  Select the **Recommended** tab, and then check the checkbox to select the lab vms (db-1, paw-1 and web-1), and then select the **Enable JIT on 3 VMs** link.
 
@@ -444,31 +445,31 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 1.  Switch to your Azure Portal.
 
-1.  Select **Key Vaults**, then select your Azure Key Vault.
+2.  Select **Key Vaults**, then select your Azure Key Vault.
 
     ![Key vaults is highlighted on the left side of the Azure portal, and CloudSecurityVault is highlighted on the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image45.png "Select your Azure Key Vault")
 
-1.  Select **Secrets**, then select **+Generate/Import**.
+3.  Select **Secrets**, then select **+Generate/Import**.
 
     ![Secrets is highlighted on the left side of the Azure portal, and Generate/Import is highlighted on the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image45.1.png "Create a new secret")
 
-1.  For the **Upload Options**, select **Manual**.
+4.  For the **Upload Options**, select **Manual**.
 
-1.  For the **Name**, enter **InsuranceAPI**.
+5.  For the **Name**, enter **InsuranceAPI**.
 
-1.  For the **Value,** copy the connection string information from the InsuranceAPI solution web.config file in Exercise 2.
+6.  For the **Value,** copy the connection string information from the InsuranceAPI solution web.config file in Exercise 2.
 
-1.  Select **Create**.
+7.  Select **Create**.
 
-1.  Select **Secrets**.
+8.  Select **Secrets**.
 
-1. Select **InsuranceAPI**.
+9. Select **InsuranceAPI**.
 
-1. Select the current version.
+10. Select the current version.
 
     ![The current version is selected with a status of Enabled under InsuranceAPI Versions.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image46.png "Select the current version")
 
-1. Copy and record the secret identifier URL for later use:
+11. Copy and record the secret identifier URL for later use:
 
     ![The Secret Identifier URL is highlighted under Properties.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image47.png "Copy and record the secret identifier URL")
 
@@ -478,33 +479,33 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
     ![Azure Active Directory is highlighted on the left side of the Azure portal, and App registrations is highlighted on the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image48.png "Select App registrations")
 
-1.  Select **+New application registration**.
+2.  Select **+New application registration**.
 
-1.  For the user-facing display name, type **AzureKeyVaultTest**.
+3.  For the user-facing display name, type **AzureKeyVaultTest**.
 
-1.  For the supported accounts, select **Accounts in this organization directory only...**
+4.  For the supported accounts, select **Accounts in this organization directory only...**
 
-1.  For the Redirect URL, type <http://localhost:12345>.
+5.  For the Redirect URL, type <http://localhost:12345>.
 
     ![AzureKeyVaultTest is entered in the Name box, and http://localhost:12345 is entered in the Sign-on URL box under Create.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image49.png "Create a new application registration")
 
-1.  Select **Register**.
+6.  Select **Register**.
 
-1.  Copy and record the **Application ID** for later use.
+7.  Copy and record the **Application ID** for later use.
 
     ![The Application ID and Object ID are highlighted under Essentials for the AzureKeyVaultTest application, and All settings is selected at the bottom.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image50.png "Copy and record the Application ID and Object ID")
 
-1.  Select **Certificates and secrets**.
+8.  Select **Certificates and secrets**.
 
-1. Under **Client secrets**, click **New client secret**.
+9. Under **Client secrets**, select **New client secret**.
 
-1. For the description, enter **InsuranceAPI**.
+10. For the description, enter **InsuranceAPI**.
 
-1. For the Expires, select **In 1 year**.
+11. For the Expires, select **In 1 year**.
 
-1. Select **Add**.
+12. Select **Add**.
 
-1. Copy and record the key value for later use.
+13. Copy and record the key value for later use.
 
 ### Task 3: Assign Azure Active Directory application permissions
 
@@ -534,11 +535,11 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 >**Note**:  Be sure you re-open the correct solution.
 
-1.  Switch to **Visual Studio**.
+2.  Switch to **Visual Studio**.
 
-1.  In the menu, select **View-\>Other Windows-\>Package Manager Console**.
+3.  In the menu, select **View-\>Other Windows-\>Package Manager Console**.
 
-1.  In the new window that opens, run the following commands:
+4.  In the new window that opens, run the following commands:
 
     a.  Install-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform
 
@@ -548,17 +549,17 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 > **Note**: These already exist in the project but are provided as a reference.
 
-1.  From **Solution Explorer**, double-click the **web.config** file to open it.
+5.  From **Solution Explorer**, double-click the **web.config** file to open it.
 
     Notice the **appSettings** section has some token values:
 
     ![Some token values are highlighted in the appSettings section of the Web.config file.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image53.png "Note the token values")
 
-1.  Replace the **ClientId** and **ClientSecret** with the values from Task 2.
+6.  Replace the **ClientId** and **ClientSecret** with the values from Task 2.
 
-1.  Replace the **SecretUri** with the Azure Key Vault secret key Uri from Task 1.
+7.  Replace the **SecretUri** with the Azure Key Vault secret key Uri from Task 1.
 
-1.  Save the file.
+8.  Save the file.
 
 ### Task 5: Test the solution
 
@@ -578,8 +579,8 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 5.  Navigate to [http://localhost:portno/api/Users](http://localhost:portno/api/Users), you should get an error. Because you encrypted the column in the previous exercise, EntityFramework is not able to retrieve the value. You would need to:
 
--   Run the **\\Hands-on lab\\Database\\02\_PermissionSetup.ps1** script
--   Add the [AzureKeyVaultProvider for Entity Framework](https://blogs.msdn.microsoft.com/sqlsecurity/2015/11/10/using-the-azure-key-vault-key-store-provider-for-always-encrypted/) reference to the project and then register the provider code in order for .NET to handle the encrypted column and add the "Column Encryption Setting=Enabled" to the connection string.
+    a.  Run the **\\Hands-on lab\\Database\\02\_PermissionSetup.ps1** script
+    b.  Add the [AzureKeyVaultProvider for Entity Framework](https://blogs.msdn.microsoft.com/sqlsecurity/2015/11/10/using-the-azure-key-vault-key-store-provider-for-always-encrypted/) reference to the project and then register the provider code in order for .NET to handle the encrypted column and add the "Column Encryption Setting=Enabled" to the connection string.
 
 ## Exercise 4: Securing the network
 
@@ -597,9 +598,9 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
 3.  In the **PAW-1** virtual machine, open **Windows PowerShell ISE** as **administrator**.
 
-    -   Click **Windows** icon
+    -   Select the **Windows** icon
 
-    -   Right-click **Windows PowerShell ISE**, click **More** then select **Run as Administrator**
+    -   Right-click **Windows PowerShell ISE**, choose **More** then select **Run as Administrator**
 
 4.  Copy and run the following command:
 
@@ -607,7 +608,7 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 ```
 
-5.  In the dialog, click **Yes**
+5.  In the dialog, select **Yes**
 
 6.  Select **File-\>Open**, browse to the extracted GitHub directory and open the **\\Hands-on lab\\Scripts \\PortScanner.ps1**.
 
@@ -827,11 +828,11 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 1.  Open the Azure Portal.
 
-2.  Click **All services**, then type **Sentinel**, select **Azure Sentinel**
+2.  Select **All services**, then type **Sentinel**, select **Azure Sentinel**
 
 ![In this screenshot, All Services is selected, and then a search for Sentinel is displayed.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image94.png "Searching for Sentinel")
 
-3.  In the blade, click **+Add**, select the Log Analytics resource for your resource group, then click **Add Azure Sentinel**
+3.  In the blade, select **+Add**, select the Log Analytics resource for your resource group, then choose **Add Azure Sentinel**
 
 4.  In the blade, under **Threat Management**, select **Dashboards**
 
@@ -841,7 +842,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 6.  In the list of dashboards, select **Azure Network Watcher**, select **Install**
 
-7.  Click **View Dashboard**, take a moment to review your new dashboards
+7.  Select **View Dashboard**, take a moment to review your new dashboards
 
 ### Task 2: Create an Analytics alert
 
@@ -875,7 +876,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
     ![The above information is entered in the dialog box for the new custom analytics rule.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image98.png "Enter the information in the dialog box")
 
-9. Click **Create**.
+9. Select **Create**.
 
 >   **Note**:  It may take a few minutes for the alert to fire.  You may need to run the PortScan script a few times from **paw-1**
 
@@ -891,7 +892,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 > **Note**: It may take 15-20 minutes for the alert to fire. You can continue to execute the port scan script to cause log events or you can lower the threshold for the custom alert.
 
-4.  In the dialog, click **Investigate**
+4.  In the dialog, choose **Investigate**
 
     ![This is a screenshot of the case dialog, with the button Investigate highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image76.png "Investigate a case")
 
@@ -941,7 +942,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
     ![Save is highlighted in Logic Apps Designer, and information about the custom security alert appears below.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image84.png "Save the email alert action")
 
-11. Lastly, after you have created the new Playbook, ensure that the status is **Enabled**.  If not, then click **Enable** in the menu.
+11. Lastly, after you have created the new Playbook, ensure that the status is **Enabled**.  If not, then select **Enable** in the menu.
 
 ### Task 5: Execute Jupyter Notebooks
 
@@ -965,7 +966,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 ![The page menu is expanded to the Kernel menu item and the change kernel with Python 3.6 is selected](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image102.png "Set the Kernel to Python 3.6")
 
-7.  Click the **Run** button until you execute the entire Notebook, note that some steps will required your input.
+7.  Choose the **Run** button until you execute the entire Notebook, note that some steps will required your input.
 
 >   **Note**: You can find the open source GitHub notebooks at [https://github.com/Azure/Azure-Sentinel](https://github.com/Azure/Azure-Sentinel/tree/master/Notebooks).
 
@@ -975,7 +976,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 2.  Expand the **LogManagement** node, notice the various options available.
 
-3.  In the schema window, select **AzureDiagnostics**, then click the **eye** icon.
+3.  In the schema window, select **AzureDiagnostics**, then choose the **eye** icon.
 
 4.  In the top right, select **Export**, then select the **Export to Power BI (M Query)** link.
 
@@ -1001,11 +1002,11 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
     ![The links above are all highlighted to get to the Azure Policy blade.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image104.png "Open the Azure Policy blade")
 
-2.  In the blade menu, click **Compliance**, review your **Overall resource compliance** percentage.
+2.  In the blade menu, select **Compliance**, review your **Overall resource compliance** percentage.
 
     ![The links above are all highlighted to get to the Azure Policy blade.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image105.png "Open the Azure Policy blade")
 
-3.  For the scope, ensure the proper subscription is selected, then select **ASC Default (subscrition...**.
+3.  For the scope, ensure the proper subscription is selected, then select **ASC Default (subscription...**.
 
 4.  In the **Initiative compliance** blade, review your compliance metrics.
 
@@ -1019,7 +1020,7 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
     ![The Resource compliance blade for PAW-1 is displayed with the non-compliant items highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image107.png "Review the non-compliant items")
 
-8.  Click one of the policies.  Review the Definition JSON of the policy definition, notice how it is based on ARM Template format and is looking for specific properties to be set of the non-compliant resources.
+8.  Choose one of the policies.  Review the Definition JSON of the policy definition, notice how it is based on ARM Template format and is looking for specific properties to be set of the non-compliant resources.
 
     ![The policy definition is displayed](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image108.png "Review the policy definition")
 
@@ -1032,7 +1033,9 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
     ![A listing of policy definitions on the Policy Blade Definitions](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image109.png "Review available policy definitions")
 
 2.  In the Policy blade, select **Blueprints**.
+
 3.  In the Blueprints blade, select **Blueprint definitions**.
+
 4.  Select **+Create blueprint**.
 
     ![All the buttons above are highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image110.png "Create a new blueprint")
@@ -1042,31 +1045,40 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
     ![Page displayed with the blueprint templates and the Start with a blank blueprint highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image111.png "Create a blank blueprint")
 
 6.  For the name, type **gdprblueprint**.
+
 7.  For the location, select the ellipses, then select your subscription in the drop down.
-8.  Click **Select**.
+
+8.  Choose **Select**.
 
     ![New blue print dialog with name and location filled in](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image112.png "Set blueprint fields")
 
 9.  Select **Next: Artifacts**.
-10.  Click **+Add artifact**.
+
+10.  Select **+Add artifact**.
+
 11. For the Artifact Type, select **Policy Assignment**, review all the policies available to you (at the time of this writing you would see 283 policies).
+
 12. In the search box, type **unrestricted**, browse for the **Audit unrestricted network access to storage accounts**.
 
     ![Screen shot showing steps 9-12 highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image113.png "Add an artifact")
 
-13. Click **Add**
-14. Click **Save Draft**
+13. Select **Add**.
+
+14. Select **Save Draft**.
+
 15. For the new blueprint, click the ellipses, then select **Publish Blueprint**
 
     ![Screen shot showing the Publish blueprint dialog](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image114.png "Publish blueprint dialog")
 
 16. For the version type **1.0.0**.
-17. Click **Publish**.
+
+17. Select **Publish**.
+
 18. For the new blueprint, click the ellipses, then select **Assign Blueprint**.
 
     ![Screen shot showing the Assign blueprint dialog](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image114.png "Assign blueprint dialog")
 
-19. Review the page, then click **Assign**.  This policy will now be audited across all your storage accounts in the specific subscription.
+19. Review the page, then choose **Assign**.  This policy will now be audited across all your storage accounts in the specific subscription.
 
 ### Task 3: Secure Score
 
@@ -1118,7 +1130,7 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
 ![Several categories of controls are listed on the page.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image91.1.png)
 
-12. On the top menu, click **Trust Documents**, then select **Audit Reports**
+12. On the top menu, choose **Trust Documents**, then select **Audit Reports**
 
 13. Notice the various tabs that you can select from, select **FedRAMP Reports**.
 
