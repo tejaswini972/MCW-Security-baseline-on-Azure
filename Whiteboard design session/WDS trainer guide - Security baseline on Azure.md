@@ -1,4 +1,4 @@
-![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
+![Microsoft Cloud Workshops](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
 Security baseline on Azure
@@ -9,7 +9,7 @@ Security baseline on Azure
 </div>
 
 <div class="MCWHeader3">
-March 2019
+August 2019
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -571,7 +571,7 @@ Describe how you will use Azure features to ensure the following:
 
     a.  Auditing and Threat detection was enabled on all SQL Azure databases.
 
-    b.  Azure Diagnostics was enabled and all logs are being forwarded to Log Analytics and Azure Sentinel
+    b.  Azure Diagnostics was enabled, and all logs are being forwarded to Log Analytics and Azure Sentinel
 
 4.  Create custom alerts and execute remediation and investigation activities on detection?
 
@@ -615,7 +615,7 @@ Describe how you would secure each Azure resource from internal and external att
 
     a.   Adaptive application controls can be enabled on all virtual machines to ensure that no software is being installed that has not been approved.
 
-    b.  Through Security Center, impliment the Auto Provisioning of the Microsoft Monitoring Agent (MMA) extension on all existing and newly created VMs for data collection activities.
+    b.  Through Security Center, implement the Auto Provisioning of the Microsoft Monitoring Agent (MMA) extension on all existing and newly created VMs for data collection activities.
 
 3.  Admins access Azure resources from secured and/or compliant corporate assets and do not directly access any production Virtual Machines from the internet.
 
@@ -677,7 +677,7 @@ Describe how you would secure each Azure resource from internal and external att
 
     Azure Firewall can provide DDoS and Threat Intelligence services to ensure bad actors are not being allowed access to the web applications.
 
-    If the customer has a healthy security budget, they could migrate their web applications to Application Service Environments (ASE) with Web Application Gateway (WAG) to impliment an even more segregated and secured environment.
+    If the customer has a healthy security budget, they could migrate their web applications to Application Service Environments (ASE) with Web Application Gateway (WAG) to implement an even more segregated and secured environment.
 
 7.  Does Azure allow enough granular RBAC controls to meet our least privileged needs?
 
@@ -769,15 +769,15 @@ Describe how you would secure each Azure resource from internal and external att
 
      To maintain SOC 1 and SOC 2 compliance, there are auditing requirements for the customer. To address this need, Microsoft makes certificates and audit reports available in support of the customer\'s reports and certifications.
 
-   -   ISO/IEC 27001:2005 Audit and Certification certificates are publicly available.
+     -   ISO/IEC 27001:2005 Audit and Certification certificates are publicly available.
 
-   -   SOC 1 and SOC 2 reports are available under NDA to customers to meet auditing requirements.
+     -   SOC 1 and SOC 2 reports are available under NDA to customers to meet auditing requirements.
 
-   Customers cannot audit the data center. However independent audits and certifications are shared instead of individual customer audits. These certifications and attestations accurately represent how Microsoft obtains and meets security and compliance objectives, and serve as a practical mechanism to validate Microsoft promises for all customers.?? Allowing potentially thousands of customers to audit Microsoft services would not be a scalable practice and might compromise security and privacy.?? The independent third-party validation program includes audits that are conducted on an annual basis to verify Azure security controls.
+     Customers cannot audit the data center. However independent audits and certifications are shared instead of individual customer audits. These certifications and attestations accurately represent how Microsoft obtains and meets security and compliance objectives, and serve as a practical mechanism to validate Microsoft promises for all customers.?? Allowing potentially thousands of customers to audit Microsoft services would not be a scalable practice and might compromise security and privacy.?? The independent third-party validation program includes audits that are conducted on an annual basis to verify Azure security controls.
 
 13.  Does Azure permit penetration testing as a part of a security assessment?
 
-   Yes, and as of mid-2017, you no longer need to get approval to execute these tests, but you can still notify Microsoft if you are planning to do so.
+     Yes, and as of mid-2017, you no longer need to get approval to execute these tests, but you can still notify Microsoft if you are planning to do so.
 
 ## Customer quote (to be read back to the attendees at the end)
 

@@ -1,4 +1,4 @@
-![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
+![Microsoft Cloud Workshops](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
 Security baseline on Azure
@@ -9,7 +9,7 @@ Before the hands-on lab setup guide
 </div>
 
 <div class="MCWHeader3">
-March 2019
+August 2019
 </div>
 
 
@@ -45,9 +45,9 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     
 2. A machine with the following software installed:
 
-    - Visual Studio 2017
-    - SQL Management Studio 2017
-    - Power BI Desktop
+    - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+    - [SQL Management Studio 2017](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
+    - [Power BI Desktop](https://powerbi.microsoft.com/en-us/downloads/)
 
 3. An Office 365 email account or other email-based account
 
@@ -59,7 +59,7 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
 ### Task 1: Download GitHub resources
 
-1.  Open a browser window to the cloud workshop GitHub repository (<https://github.com/Microsoft/MCW-Azure-Security-Privacy-and-Compliance>).
+1.  Open a browser window to the cloud workshop GitHub repository (<https://github.com/microsoft/MCW-Security-baseline-on-Azure>).
 
 2.  Select **Clone or download**, then select **Download Zip**.
 
