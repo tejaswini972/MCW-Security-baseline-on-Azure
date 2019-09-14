@@ -153,7 +153,7 @@ This Infographic shows an example of a generic implementation of various securit
 
 ![Security and Compliance infographic This is an example of a generic implementation of various Azure security technologies.](images/Whiteboarddesignsessionstudentguide-Azuresecurityprivacyandcomplianceimages/media/image2.png)
 
-## Step 2: Design a proof of concept solution
+## Step 2: Design a proof of concept solution 
 
 **Outcome**
 
@@ -281,7 +281,6 @@ Directions:
 Timeframe: 15 minutes
 
 Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
-
 
 ## Additional References
 
