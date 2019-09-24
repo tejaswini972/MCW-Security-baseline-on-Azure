@@ -4,6 +4,8 @@ Contoso Ltd is a multinational corporation, headquartered in the United States t
 
 They are exploring a lift and shift strategy to Azure, but have a large focus on Azure Security and Privacy features.
 
+August 2019
+
 ## Target audience
 
 - Cloud Administrators
@@ -11,7 +13,7 @@ They are exploring a lift and shift strategy to Azure, but have a large focus on
 - Security Analysts
 - Security Architects
 
-## Abstract
+## Abstracts
 
 ### Workshop
 
@@ -57,3 +59,16 @@ Security and Management
 
 ## Related References 
 - [MCW](https://github.com/Microsoft/MCW)
+
+## Help & Support
+
+We welcome feedback and comments from Microsoft SMEs & learning partners who deliver MCWs.  
+
+***Having trouble?***
+- First, verify you have followed all written lab instructions (including the Before the Hands-on lab document).
+- Next, submit an issue with a detailed description of the problem.
+- Please do not submit pull requests. Our authors will review open issues and submit pull requests, as needed, for approval.  
+
+If you are planning to present a workshop, *review and test the materials early*! We recommend at least two weeks prior.
+
+### Please allow 5 - 10 business days for review and resolution of issues.
