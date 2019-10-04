@@ -259,13 +259,13 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
     ![In SQL Management Studio, Open is selected in the File menu, and File is selected in the shortcut menu.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image27.png "Open a file")
 
-21. Browse to the extracted GitHub folder, select the **\\Hands-on lab\\Database\\00\_CreateLogin.ps1** file.
+21. Browse to the extracted GitHub folder, select the **\\Hands-on lab\\Database\\00\_CreateLogin.sql** file.
 
 22. Ensure that the **master** database is selected.
 
 23. Run the script to create a login called **agent**.
 
-24. Browse to the extracted folder, select the **\\Hands-on lab\\Database\\01\_CreateUser.ps1** file.
+24. Browse to the extracted folder, select the **\\Hands-on lab\\Database\\01\_CreateUser.sql** file.
 
 25. Ensure that the **Insurance** database is selected.
 
@@ -579,7 +579,7 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 5.  Navigate to [http://localhost:portno/api/Users](http://localhost:portno/api/Users), you should get an error. Because you encrypted the column in the previous exercise, EntityFramework is not able to retrieve the value. You would need to:
 
-    a.  Run the **\\Hands-on lab\\Database\\02\_PermissionSetup.ps1** script
+    a.  Run the **\\Hands-on lab\\Database\\02\_PermissionSetup.sql** script
     b.  Add the [AzureKeyVaultProvider for Entity Framework](https://blogs.msdn.microsoft.com/sqlsecurity/2015/11/10/using-the-azure-key-vault-key-store-provider-for-always-encrypted/) reference to the project and then register the provider code in order for .NET to handle the encrypted column and add the "Column Encryption Setting=Enabled" to the connection string.
 
 ## Exercise 4: Securing the network
