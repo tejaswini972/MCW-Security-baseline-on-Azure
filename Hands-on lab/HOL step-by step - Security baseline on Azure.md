@@ -870,7 +870,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 > **Note**: If you were quick going through the labs, then you may not have log data in the Log Analytics workspace just yet that corresponds to "AzureMetric". You may need to wait 15-30 minutes before a query will execute.
 
-5.  Under **Query scheduling**, for the **Run query every** setting, type **30** minutes
+5.  Under **Query scheduling**, for the **Run query every** setting, type **10** minutes
 
 6.  For the **Lookup data from the last**, type **1** hours
 
@@ -1018,7 +1018,7 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
 3.  For the scope, ensure the proper subscription is selected, then select **ASC Default (subscription...**.
 
-4.  In the **Initiative compliance** blade, review your compliance metrics.
+4.  In the **Initiative compliance** blade, review your compliance metrics.  Select the row that has the **ASC Default** policy.
 
 5.  Scroll to the results area and select the **Non-compliant resources** tab.
 
@@ -1066,7 +1066,7 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
 10.  Select **+Add artifact**.
 
-11. For the Artifact Type, select **Policy Assignment**, review all the policies available to you (at the time of this writing you would see 283 policies).
+11. For the Artifact Type, select **Policy Assignment**, review all the policies available to you (at the time of this writing you would see 37 definitions and 311 policies).
 
 12. In the search box, type **unrestricted**, browse for the **Audit unrestricted network access to storage accounts**.
 
