@@ -55,7 +55,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Exercise 5: Azure Sentinel logging and reporting](#exercise-5-azure-sentinel-logging-and-reporting)
         - [Task 1: Create a Dashboard](#task-1-create-a-dashboard)
         - [Task 2: Create an Analytics alert](#task-2-create-an-analytics-alert)
-        - [Task 3: Investigate a custom alert case](#task-3-investigate-a-custom-alert-case)
+        - [Task 3: Investigate a custom alert incident](#task-3-investigate-a-custom-alert-incident)
         - [Task 4: Create and run a playbook](#task-4-create-and-run-a-playbook)
         - [Task 5: Execute Jupyter Notebooks](#task-5-execute-jupyter-notebooks)
         - [Task 6: Creating Reports with Power BI](#task-6-creating-reports-with-power-bi)
@@ -870,33 +870,35 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 > **Note**: If you were quick going through the labs, then you may not have log data in the Log Analytics workspace just yet that corresponds to "AzureMetric". You may need to wait 15-30 minutes before a query will execute.
 
-5.  Under **Query scheduling**, for the **Run query every** setting, type **10** minutes
+5.  Under **Map entities**, for the **IP address**, select **conditions_sourceIP_s**
 
-6.  For the **Lookup data from the last**, type **1** hours
+6.  Under **Query scheduling**, for the **Run query every** setting, type **10** minutes
 
-7.  Under **Alert threshold**, for the **Generate alert when number of query results**, enter **50**.
+7.  For the **Lookup data from the last**, type **2** hours
+
+8.  Under **Alert threshold**, for the **Generate alert when number of query results**, enter **50**.
 
 > **Note:** This is so that our lab will run quickly and may not be appropriate for real world.
 
-8. For the suppress alerts for, enter **30** and **Minutes**.
+9. For the suppress alerts for, enter **30** and **Minutes**.
 
     ![The above information is entered in the dialog box for the new custom analytics rule.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image98.png "Enter the information in the dialog box")
 
-9. Select **Next: Automated response**.
+10. Select **Next: Automated response**.
 
-9. Select **Next: Review**.
+11. Select **Next: Review**.
 
-9. Select **Create**.
+12. Select **Create**.
 
 >   **Note**:  It may take a few minutes for the alert to fire.  You may need to run the PortScan script a few times from **paw-1**
 
-### Task 3: Investigate a custom alert Case
+### Task 3: Investigate a custom alert incident
 
 1.  In the main menu, select **Azure Sentinel**.
 
 2.  Select **Incidents**.
 
-3.  Select the new **PortScans** case.
+3.  Select the new **PortScans** incident.
 
     ![This is a screenshot of the new PortScans security alert, which has a Medium Severity of 1.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image75.png "View the new PortScans alert")
 
@@ -904,7 +906,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 4.  In the dialog, choose **Investigate**
 
-    ![This is a screenshot of the case dialog, with the button Investigate highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image76.png "Investigate a case")
+    ![This is a screenshot of the incident dialog, with the button Investigate highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image76.png "Investigate an incident")
 
 5.  In future versions, you will get to see insights about the alerts and the resources related to what caused it to fire:
 
