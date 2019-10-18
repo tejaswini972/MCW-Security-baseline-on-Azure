@@ -9,7 +9,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-August 2019
+October 2019
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -109,7 +109,7 @@ The solution begins by creating a jump machine. This jump machine is used to acc
 2. A machine with the following software installed:
 
     - Visual Studio 2017
-    - SQL Management Studio 2017
+    - SQL Management Studio
     - Power BI Desktop
 
 ## Exercise 1: Implementing Just-In-Time (JIT) access
@@ -122,7 +122,7 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
 1.  In a browser, navigate to your Azure portal (<https://portal.azure.com>).
 
-2.  Select **Security Center,** then select **Just in time VM access**.
+2.  Select **Security Center,** then under **ADVANCED CLOUD DEFENSE** select **Just in time VM access**.
 
     ![Security Center is highlighted on the left side of the Azure portal, and Just in time VM access (Preview) is highlighted to the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image9.png)
 
@@ -140,8 +140,7 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
    f.  Navigate back to Security Center, select **Just in time VM access**.
 
-
-3.  Select the **Recommended** tab, and then check the checkbox to select the lab vms (db-1, paw-1 and web-1), and then select the **Enable JIT on 3 VMs** link.
+3.  Select the **Configured** tab, and verify the lab vms (db-1, paw-1 and web-1) are displayed.  If not, select the **Recommended** tab, and then check the checkbox to select the lab vms (db-1, paw-1 and web-1), and then select the **Enable JIT on 3 VMs** link.
 
 > **Note**: It could take up to 10 minutes for new VMs to show up if you upgraded to standard tier security.  Also note that it is possible new VMs display in the **No recommendation** tab until a backend process moves them to the **Recommended** tab.  In you find the VMs do not show up after 10 minutes, you can manually enable JIT by clicking the **Configuration** tab in the VMs configuration blade and then clicking **Enable JIT Access**
 
@@ -151,7 +150,7 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
     ![In the configuration window, port settings are listed, and Save is highlighted above them.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image10.png "Select Save")
 
-5.  You should now see the states change to **Resolved**.  
+5.  If you had to setup Just In Time, you should now see the states changed to **Resolved**.
 
 > **Note**: It could take a couple minute for this to revert to the resolved state.
     
@@ -172,6 +171,8 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 4.  At the bottom of the dialog, select **Open ports**. After a few moments, you should now see the **APPROVED** requests have been incremented and the **LAST ACCESS** is set to **Active now.**.
 
     ![On the Virtual machines screen, 1 Requests and Active now are highlighted under Aproved and Last Access next to the paw-1 virtual machine.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image14.png "View Approved and Last Access status")
+
+> **Note**  If you did not wait for your VMs and virtual networks to be fully provisioned via the ARM template, you may get an error.
 
 5.  Select the ellipses, then select **Activity Log**, you will be able to see a history of who requests access to the virtual machines.
 
@@ -237,7 +238,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 13. In the Introduction dialog, select **Next**.
 
-14. Select **Browse**, navigate to the extracted **Database** directory, and select the **Insurance.bacpac** file.
+14. Select **Browse**, navigate to the extracted **/Hands-on- lab/Database** directory, and select the **Insurance.bacpac** file.
 
     ![Insurance.bacpac is selected in the Browse dialog box.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image25.png "Select Insurance.bacpac")
 
@@ -273,7 +274,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 ### Task 2: Test the web application solution
 
-1.  In the extracted directory, double-click the **/WebApp/InsuranceAPI/InsuranceAPI.sln** solution file, and Visual Studio will open.
+1.  In the extracted directory, double-click the **\\Hands-on lab\\WebApp\\InsuranceAPI\\InsuranceAPI.sln** solution file, and Visual Studio will open.
 
 2.  In the **Solution Explorer**, navigate to and double-click the **web.config** file to open it.
 
@@ -283,7 +284,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
     ![Line 72 of the Insurance database is highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image29.png "Update the server name in Web.config")
 
-4.  Run the **InsuranceAPI** solution and press **F5**.
+4.  Press **F5** to run the **InsuranceAPI** solution.
 
 > **Note** If you get an error, right-click the project, select **Clean**, then right-click the project and select **Rebuild**
 
@@ -313,7 +314,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
     ![Add is highlighted at the top of the SSN column, and the User table and SSN column are highlighted below.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image32.png "Select Add")
 
-8.  Select **Save**.
+8.  Select **Save**, then select **OK**
 
 9.  Switch back to your InsuranceAPI solution, press **F5** to refresh the page. You should see the SSN column is now masked with **xxxx**.
 
@@ -325,9 +326,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 1.  Switch to **SQL Management Studio**.
 
-2.  In the extracted directory, navigate to the **Database** directory.
-
-3.  Open the **02\_PermissionSetup.sql** file, copy and paste the TSQL to the Query Window.
+2.  Click **File->Open->File**, then open the **02\_PermissionSetup.sql** file
 
 4.  Switch to the **Insurance** database, and execute the SQL statement.
 
@@ -517,11 +516,11 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
     ![Access policies is selected and highlighted under Settings on the left side of your Azure Key Vault, and is +Add New is highlighted on the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image51.png "Add a new access policy")
 
-4.  Select **Select principal**, type **AzureKeyVaultTest**.
-
-5.  Select the **Secret permissions** drop-down, check the **Get** and **List** permissions.
+4.  Select the **Secret permissions** drop-down, check the **Get** and **List** permissions.
 
     ![The information above is entered in the Select principal dialog box.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image52.png "Configure Select prinicipal settings")
+
+5.  Select **Select principal**, type **AzureKeyVaultTest**.
 
 6.  Select the application service principal, select **Select**.
 
@@ -569,7 +568,7 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 > **Note**: This code makes a call to get an accessToken as the application you set up above, then make a call to the Azure Key Vault using that accessToken.
 
-3.  Run the solution, and press **F5**.
+3.  Press **F5** to run the solution.
 
     You should see that you execute a call to Azure Key Vault and get back the secret (which in this case is the connection string to the Azure Database).
 
@@ -580,7 +579,8 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 5.  Navigate to [http://localhost:portno/api/Users](http://localhost:portno/api/Users), you should get an error. Because you encrypted the column in the previous exercise, EntityFramework is not able to retrieve the value. You would need to:
 
     a.  Run the **\\Hands-on lab\\Database\\02\_PermissionSetup.sql** script
-    b.  Add the [AzureKeyVaultProvider for Entity Framework](https://blogs.msdn.microsoft.com/sqlsecurity/2015/11/10/using-the-azure-key-vault-key-store-provider-for-always-encrypted/) reference to the project and then register the provider code in order for .NET to handle the encrypted column and add the "Column Encryption Setting=Enabled" to the connection string.
+
+    b.  Add the [AzureKeyVaultProvider for Entity Framework](https://blogs.msdn.microsoft.com/sqlsecurity/2015/11/10/using-the-azure-key-vault-key-store-provider-for-always-encrypted/) reference to the project and then register the provider code in order for .NET to handle the encrypted column and add the `Column Encryption Setting=Enabled` to the connection string.
 
 ## Exercise 4: Securing the network
 
@@ -592,11 +592,13 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
 1.  In the Azure Portal, select **Virtual Machines**.
 
-2.  Select **paw-1**, then select **Connect**.  In the dialog, select **Download RDP file Anyway**.  Open the downloaded RDP file and connect to the Virtual Machine.
+1.  Select **paw-1**, then select **Connect**.  
+
+1.  In the dialog, select **Download RDP file Anyway**.  Open the downloaded RDP file and connect to the Virtual Machine.
 
     > **Note**: Default username is **wsadmin** with **p\@ssword1rocks** as password and you may need to request JIT Access if you have taken a break between exercises.
 
-3.  In the **PAW-1** virtual machine, open **Windows PowerShell ISE** as **administrator**.
+1.  In the **PAW-1** virtual machine, open **Windows PowerShell ISE** as **administrator**.
 
     -   Select the **Windows** icon
 
@@ -678,7 +680,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
     d.  Select **+Add**.
 
-    e.  For the **Destination port range**, enter **80,443**.
+    e.  For the **Destination port ranges**, enter **80,443**.
 
     f.  For the **Priority**, enter **100**.
 
@@ -834,25 +836,29 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 3.  In the blade, select **+Add**, select the Log Analytics resource for your resource group, then choose **Add Azure Sentinel**
 
-4.  In the blade, under **Threat Management**, select **Dashboards**
+4.  In the blade, under **Threat Management**, select **Workbooks**
 
-5.  In the list of dashboards, select **Azure AD Audit logs**, select **Install**
+5.  In the list of workbooks, select **Azure AD Audit logs**, select **Save**
 
-![In this screenshot, Dashboards has been selected and the Azure AD Audit Logs dashboard has also been selected.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image95.png "Adding a dashboard")
+6.  Select the region, click **OK**
 
-6.  In the list of dashboards, select **Azure Network Watcher**, select **Install**
+![In this screenshot, Dashboards has been selected and the Azure AD Audit Logs dashboard has also been selected.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image95.png "Adding a workbooks")
 
-7.  Select **View Dashboard**, take a moment to review your new dashboards
+7.  In the list of dashboards, select **Azure Network Watcher**, select **Save**
+
+8.  Select the region, click **OK**
+
+9.  Select **View saved workbook**, take a moment to review your new workbook.
 
 ### Task 2: Create an Analytics alert
 
-1.  Navigate back to the **Azure Sentinel** workspace, in the **Configuration** blade section, select **Analytics** then select **+Add**.
+1.  Navigate back to the **Azure Sentinel** workspace, in the **Configuration** blade section, select **Analytics** then select **+Create** then **Scheduled query rule**.
 
 ![In this screenshot, Analytics is highlighted and so is the Add button.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image96.png "Adding a analytics alert")
 
-2.  For the name, enter **PortScans**.
+2.  On the **General** tab, enter **PortScans** for the name.
 
-3.  For the description, enter **A custom rule to detect port scans**.
+3.  For the description, enter **A custom rule to detect port scans**, click **Next: Set rule logic**
 
 4.  In the **Set alert query** text box, type:
 
@@ -864,17 +870,21 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 > **Note**: If you were quick going through the labs, then you may not have log data in the Log Analytics workspace just yet that corresponds to "AzureMetric". You may need to wait 15-30 minutes before a query will execute.
 
-5.  For the operator value, enter **50**.
+5.  Under **Query scheduling**, for the **Run query every** setting, type **30** minutes
 
-6.  For the frequency, select **30** and **Minutes**.
+6.  For the **Lookup data from the last**, type **1** hours
 
-7.  For the period, select **30** and **Minutes**.
+7.  Under **Alert threshold**, for the **Generate alert when number of query results**, enter **50**.
 
 > **Note:** This is so that our lab will run quickly and may not be appropriate for real world.
 
 8. For the suppress alerts for, enter **30** and **Minutes**.
 
     ![The above information is entered in the dialog box for the new custom analytics rule.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image98.png "Enter the information in the dialog box")
+
+9. Select **Next: Automated response**.
+
+9. Select **Next: Review**.
 
 9. Select **Create**.
 
@@ -884,7 +894,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 1.  In the main menu, select **Azure Sentinel**.
 
-2.  Select **Cases**.
+2.  Select **Incidents**.
 
 3.  Select the new **PortScans** case.
 
@@ -974,7 +984,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 1.  Navigate back to your **Azure Sentinel** browser window.  Select **Logs**.
 
-2.  Expand the **LogManagement** node, notice the various options available.
+2.  In the **Schema** tab under **Active**, expand the **LogManagement** node, notice the various options available.
 
 3.  In the schema window, select **AzureDiagnostics**, then choose the **eye** icon.
 

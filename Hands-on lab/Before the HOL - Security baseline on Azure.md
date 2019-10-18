@@ -9,7 +9,7 @@ Before the hands-on lab setup guide
 </div>
 
 <div class="MCWHeader3">
-August 2019
+October 2019
 </div>
 
 
@@ -46,7 +46,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 2. A machine with the following software installed:
 
     - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
-    - [SQL Management Studio 2017](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
+    - [SQL Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
     - [Power BI Desktop](https://powerbi.microsoft.com/en-us/downloads/)
 
 3. An Office 365 email account or other email-based account
@@ -107,6 +107,8 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
     -  The **userObjectId** can be retrieved by navigating to Azure Active Directory blade and searching for your user account.  On the user account page, you will find your object id which you can copy and paste into the field.
 
+    ![The Object Id for your Azure user account is highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image0.png "Your Azure Object Id")
+
     -  Check the **I agree to the terms and conditions stated above** checkbox.
 
     -  Select **Purchase**.
@@ -119,19 +121,21 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
     -  As part of the deployment, you will see the following items created:
 
-       -  One storage account.
+       -  Storage account
 
        -  Three virtual networks (dbVNet, webVnet, mainVnet).
 
        -  Three network security groups. 
 
-       -  Three virtual machines (db-1, web-1, paw-1).
+       -  Three virtual machines with associated network resources (db-1, web-1, paw-1).
 
             -   IIS is installed on web-1 via a DSC script from the GitHub repository.
 
-       -  One SQL Azure Server with sample database.
+       -  SQL Azure Server with sample database.
 
-       -  One Azure Key Vault.
+       -  Azure Key Vault.
+
+       -  Log Analytics Workspace
 
     ![Created items list This screenshot is a list of the items that were created, including the items listed above. ](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image8.png)
 
