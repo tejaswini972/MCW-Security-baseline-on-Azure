@@ -216,69 +216,69 @@ Jack Tradewinds, the CIO of Contoso Ltd, has heard a great deal of positive news
 
 1.  Assure data privacy and protection across all aspects of the system; in transit and at rest.
 
-1.  Address issues of data sovereignty with respect to the location of sensitive data.
+2.  Address issues of data sovereignty with respect to the location of sensitive data.
 
-1.  Ability to scale as the company grows and system load increases.
+3.  Ability to scale as the company grows and system load increases.
 
-1.  Contain hosting and operational costs associated with running the system.
+4.  Contain hosting and operational costs associated with running the system.
 
-1.  Enable method to continually review and assign legal compliance tasks to the appropriate individuals and provide a compliance reporting ability for Azure resources.
+5.  Enable method to continually review and assign legal compliance tasks to the appropriate individuals and provide a compliance reporting ability for Azure resources.
 
-1.  Enforce subscription owners to configure Azure resources with compliance and security while disallowing the creation of specific resources.
+6.  Enforce subscription owners to configure Azure resources with compliance and security while disallowing the creation of specific resources.
 
-1.  Ensure that any cloud-based identities utilize the same on-premises username and passwords and limit any help desk interactions.
+7.  Ensure that any cloud-based identities utilize the same on-premises username and passwords and limit any help desk interactions.
 
-1.  Limit access to the corporate site to users on the Contoso domain, and continue to support VPN access.
+8.  Limit access to the corporate site to users on the Contoso domain, and continue to support VPN access.
 
-1.  Extract all web applications that have configuration or embedded connection strings to a more secure implementation.
+9.  Extract all web applications that have configuration or embedded connection strings to a more secure implementation.
 
-1.  Migrate current database applications to Azure PaaS solution with the appropriate data backup features implemented to prevent catastrophic data loss due to intentional or unintentional acts.
+10.  Migrate current database applications to Azure PaaS solution with the appropriate data backup features implemented to prevent catastrophic data loss due to intentional or unintentional acts.
 
-1.  Implement all security best practices on the migrated databases such as encryption at rest and during transport as well as ensure that sensitive data is not exposed to non-admin database users and applications.
+11.  Implement all security best practices on the migrated databases such as encryption at rest and during transport as well as ensure that sensitive data is not exposed to non-admin database users and applications.
 
-1. Ensure network segregation between Azure admin and the lift and shifted web and database tiers.
+12. Ensure network segregation between Azure admin and the lift and shifted web and database tiers.
 
-1. Enable logging across all components (identity, virtual network, virtual machine, web, and database) to support an all-encompassing monitoring solution.
+13. Enable logging across all components (identity, virtual network, virtual machine, web, and database) to support an all-encompassing monitoring solution.
 
-1. Ensure that Azure admins utilize best practices when accessing the Azure virtual machine resources and that all logins are logged for identity theft analysis activities.
+14. Ensure that Azure admins utilize best practices when accessing the Azure virtual machine resources and that all logins are logged for identity theft analysis activities.
 
-1. Ensure ease of use by syncing appropriate admin username and passwords for on-premises and cloud resources.
+15. Ensure ease of use by syncing appropriate admin username and passwords for on-premises and cloud resources.
 
-1. Ensure that only authorized users can access specific Azure resources when logged into the Azure Portal.
+16. Ensure that only authorized users can access specific Azure resources when logged into the Azure Portal.
 
-1. Setup auditing such that software installs are monitored across Azure virtual machine resources.
+17. Setup auditing such that software installs are monitored across Azure virtual machine resources.
 
-1. When specific security events are detected (such as a port scan), allow for the execution of actions to remediate, start the investigative process or prevent further information leakage or damage.
+18. When specific security events are detected (such as a port scan), allow for the execution of actions to remediate, start the investigative process or prevent further information leakage or damage.
 
 ### Customer objections 
 
 1.  Can Azure support the lift and shift of their web and database applications?
 
-1.  Is Azure SQL secure enough to host their application databases?
+2.  Is Azure SQL secure enough to host their application databases?
 
-1.  Admins are worried that they won't have the bandwidth to perform deployments of the corporate website and other supporting web applications.
+3.  Admins are worried that they won't have the bandwidth to perform deployments of the corporate website and other supporting web applications.
 
-1.  Can Azure help contain costs for minimally used costly production and development resources?
+4.  Can Azure help contain costs for minimally used costly production and development resources?
 
-1.  Does Azure support the ability to allow VPN connections to specific resources?
+5.  Does Azure support the ability to allow VPN connections to specific resources?
 
-1.  Can Microsoft employees or government entities access our data?
+6.  Can Microsoft employees or government entities access our data?
 
-1.  How does Azure protect against threats?
+7.  How does Azure protect against threats?
 
-1.  Does Azure allow enough granular RBAC controls to meet our least privilege needs?
+8.  Does Azure allow enough granular RBAC controls to meet our least privilege needs?
 
-1.  Is Azure virtual networking flexible enough to meet our requirements?
+9.  Is Azure virtual networking flexible enough to meet our requirements?
 
-1.  Can Azure supplement on-premises and 3^rd^ party SIEM systems for auditing and compliance tasks?
+10.  Can Azure supplement on-premises and 3^rd^ party SIEM systems for auditing and compliance tasks?
 
-1. What certifications does Azure have and can Azure hosted applications meet the US and European compliance goals?
+11. What certifications does Azure have and can Azure hosted applications meet the US and European compliance goals?
 
-1. Is Azure flexible enough to support data sovereignty needs and issues like those referenced in GDPR articles?
+12. Is Azure flexible enough to support data sovereignty needs and issues like those referenced in GDPR articles?
 
-1. How can we ensure continued SOC 1 and SOC 2 compliance?
+13. How can we ensure continued SOC 1 and SOC 2 compliance?
 
-1. Does Azure permit penetration testing as a part of a security assessment?
+14. Does Azure permit penetration testing as a part of a security assessment?
 
 ### Infographic for common scenarios
 
