@@ -717,25 +717,25 @@ Describe how you would secure each Azure resource from internal and external att
 
 10.  Can Azure supplement on-premises and 3rd party SIEM systems for auditing and compliance tasks?
 
-    Yes, Azure has a robust set of integration scenarios for customers including:
+     Yes, Azure has a robust set of integration scenarios for customers including:
 
-    -   Command Line Interface (CLI), PowerShell and a [REST API](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-rest-api-walkthrough).
+     -   Command Line Interface (CLI), PowerShell and a [REST API](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-rest-api-walkthrough).
 
-    -   Email and webhooks based on triggers.
+     -   Email and webhooks based on triggers.
 
-    -   Events streamed to Event Hub.
+     -   Events streamed to Event Hub.
 
-    -   Power BI integration.
+     -   Power BI integration.
 
-    -   Events saved to a Storage Account for analysis later.
+     -   Events saved to a Storage Account for analysis later.
 
-    -   Export data using Log Profiles with Log Analytics.
+     -   Export data using Log Profiles with Log Analytics.
 
-    Diagnostic logs can be enabled on almost every Azure resource. These logs include Windows event system logs, Storage logs, Key Vault audit logs, and Application Gateway access and firewall logs. Diagnostic logs can be written to a centralized and encrypted Azure storage account for archival or to event hubs or stream analytics for further processing. Users can configure the retention period, up to 730 days, to meet their specific requirements.
+     Diagnostic logs can be enabled on almost every Azure resource. These logs include Windows event system logs, Storage logs, Key Vault audit logs, and Application Gateway access and firewall logs. Diagnostic logs can be written to a centralized and encrypted Azure storage account for archival or to event hubs or stream analytics for further processing. Users can configure the retention period, up to 730 days, to meet their specific requirements.
     
-    Azure Sentinel can ultimately be a replacement for on-premises SIEM systems with built in support for Azure resources through Log Analytics workspaces. 
+     Azure Sentinel can ultimately be a replacement for on-premises SIEM systems with built in support for Azure resources through Log Analytics workspaces. 
 
-    Azure Security center can be utilized to enforce policies and compliance against Azure resources.
+     Azure Security center can be utilized to enforce policies and compliance against Azure resources.
 
 11.  What certifications does Azure have and can Azure hosted applications meet the US and European compliance goals?
 
