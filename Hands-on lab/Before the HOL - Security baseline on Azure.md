@@ -105,7 +105,7 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
     -  Fill in the remaining parameters, but if you change anything, be sure to note it for future reference throughout the lab.
 
-    -  The **userObjectId** can be retrieved by navigating to Azure Active Directory blade and searching for your user account.  On the user account page, you will find your object id which you can copy and paste into the field.
+    -  The **userObjectId** can be retrieved by navigating to Azure Active Directory blade and searching for your user account.  On the user account page, you will find your Object ID which you can copy and paste into the field.
 
     ![The Object Id for your Azure user account is highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image0.png "Your Azure Object Id")
 
@@ -133,7 +133,7 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
        -  SQL Azure Server with sample database.
 
-       -  Azure Key Vault.
+       -  Azure Key Vault
 
        -  Log Analytics Workspace
 
