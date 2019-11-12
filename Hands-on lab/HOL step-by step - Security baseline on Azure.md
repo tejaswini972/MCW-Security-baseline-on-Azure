@@ -68,13 +68,6 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
         - [Task 1: Delete resource group](#task-1-delete-resource-group)
         - [Task 2: Remove Standard Tier Pricing](#task-2-remove-standard-tier-pricing)
         - [Task 3: Delete lab environment (optional)](#task-3-delete-lab-environment-optional)
-    - [Appendix A](#appendix-a)
-        - [Task 1: Create storage account](#task-1-create-storage-account)
-        - [Task 2: Create virtual networks](#task-2-create-virtual-networks)
-        - [Task 3: Create virtual machines](#task-3-create-virtual-machines)
-        - [Task 4: Create network security groups](#task-4-create-network-security-groups)
-        - [Task 5: Azure SQL server](#task-5-azure-sql-server)
-        - [Task 6: Create an Azure key vault](#task-6-create-an-azure-key-vault)
 
 <!-- /TOC -->
 
@@ -130,7 +123,7 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
    a.  In the **Security Center** blade, select **Pricing & settings**.
 
-   b.  Select your subscription
+   b.  Select your subscription.
 
    c.  Select **Pricing Tier**
 
@@ -142,7 +135,7 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
 3.  Select the **Configured** tab, and verify the lab vms (db-1, paw-1 and web-1) are displayed.  If not, select the **Recommended** tab, and then check the checkbox to select the lab vms (db-1, paw-1 and web-1), and then select the **Enable JIT on 3 VMs** link.
 
-> **Note**: It could take up to 10 minutes for new VMs to show up if you upgraded to standard tier security.  Also note that it is possible new VMs display in the **No recommendation** tab until a backend process moves them to the **Recommended** tab.  In you find the VMs do not show up after 10 minutes, you can manually enable JIT by clicking the **Configuration** tab in the VMs configuration blade and then clicking **Enable JIT Access**
+> **Note**: It could take up to 10 minutes for new VMs to show up if you upgraded to standard tier security.  Also note that it is possible new VMs display in the **No recommendation** tab until a backend process moves them to the **Recommended** tab.  In you find the VMs do not show up after 10 minutes, you can manually enable JIT by choosing the **Configuration** tab in the VMs configuration blade and then **Enable JIT Access**.
 
 ![Configuration and Enable JIT Access is highlighted in the Azure portal.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image119.png "Enable JIT")
 
@@ -286,7 +279,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 4.  Press **F5** to run the **InsuranceAPI** solution.
 
-> **Note** If you get an error, right-click the project, select **Clean**, then right-click the project and select **Rebuild**
+> **Note** If you get an error, right-click the project, select **Clean**, then right-click the project and select **Rebuild**.
 
 5.  In the browser window that opens, browse to [http://localhost:portno/api/Users/E91019DA-26C8-B201-1385-0011F6C365E9](http://localhost:portno/api/Users/E91019DA-26C8-B201-1385-0011F6C365E9) you should see a json response that shows an unmasked SSN column.
 
@@ -314,7 +307,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
     ![Add is highlighted at the top of the SSN column, and the User table and SSN column are highlighted below.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image32.png "Select Add")
 
-8.  Select **Save**, then select **OK**
+8.  Select **Save**, then select **OK**.
 
 9.  Switch back to your InsuranceAPI solution, press **F5** to refresh the page. You should see the SSN column is now masked with **xxxx**.
 
@@ -326,7 +319,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 1.  Switch to **SQL Management Studio**.
 
-2.  Click **File->Open->File**, then open the **02\_PermissionSetup.sql** file
+2.  Select **File->Open->File**, then open the **02\_PermissionSetup.sql** file.
 
 4.  Switch to the **Insurance** database, and execute the SQL statement.
 
@@ -398,13 +391,13 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
     e.  For the principal, select your account.
 
-    f.  Select **Key permissions**, and select **Select all**.
+    f.  Select **Key permissions**, and choose **Select all**.
 
     ![Select all is selected and highlighted under Key permissions, and below that, Decrypt, Encrypt, Unwrap Key, Wrap Key, Verify, and Sign are selected and highlighted under Cryptographic Operations amid the other selected options.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image40.png "Select all")
 
-    g.  Select **Secret permissions**, and select **Select all**.
+    g.  Select **Secret permissions**, and choose **Select all**.
 
-    h.  Select **Certificate permissions**, and select **Select all**.
+    h.  Select **Certificate permissions**, and choose **Select all**.
 
     i.  Select **OK**.
 
@@ -418,7 +411,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 26. Select **Close**.
 
-27. Right-click the **User** table, and select **Select top 1000 rows**.
+27. Right-click the **User** table, and choose **Select top 1000 rows**.
 
     ![The User table is selected, and Select Top 1000 Rows is selected in the shortcut menu.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image42.png "Select the top 1000 rows")
 
@@ -520,9 +513,9 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
     ![The information above is entered in the Select principal dialog box.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image52.png "Configure Select prinicipal settings")
 
-5.  Select **Select principal**, type **AzureKeyVaultTest**.
+5.  Choose **Select principal**, type **AzureKeyVaultTest**.
 
-6.  Select the application service principal, select **Select**.
+6.  Select the application service principal, choose **Select**.
 
 7.  Select **Add**.
 
@@ -574,11 +567,11 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
     ![The connection string to the Azure Database is visible.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image54.png "View the connection string")
 
-4.  Press **F5** to continue the program
+4.  Press **F5** to continue the program.
 
 5.  Navigate to [http://localhost:portno/api/Users](http://localhost:portno/api/Users), you should get an error. Because you encrypted the column in the previous exercise, EntityFramework is not able to retrieve the value. You would need to:
 
-    a.  Run the **\\Hands-on lab\\Database\\02\_PermissionSetup.sql** script
+    a.  Run the **\\Hands-on lab\\Database\\02\_PermissionSetup.sql** script.
 
     b.  Add the [AzureKeyVaultProvider for Entity Framework](https://blogs.msdn.microsoft.com/sqlsecurity/2015/11/10/using-the-azure-key-vault-key-store-provider-for-always-encrypted/) reference to the project and then register the provider code in order for .NET to handle the encrypted column and add the `Column Encryption Setting=Enabled` to the connection string.
 
@@ -600,9 +593,9 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
 1.  In the **PAW-1** virtual machine, open **Windows PowerShell ISE** as **administrator**.
 
-    -   Select the **Windows** icon
+    -   Select the **Windows** icon.
 
-    -   Right-click **Windows PowerShell ISE**, choose **More** then select **Run as Administrator**
+    -   Right-click **Windows PowerShell ISE**, choose **More** then select **Run as Administrator**.
 
 4.  Copy and run the following command:
 
@@ -610,7 +603,7 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 ```
 
-5.  In the dialog, select **Yes**
+5.  In the dialog, select **Yes**.
 
 6.  Select **File-\>Open**, browse to the extracted GitHub directory and open the **\\Hands-on lab\\Scripts \\PortScanner.ps1**.
 
@@ -642,7 +635,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
     ![The information above for port 80 (HTTP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image57.png)
 
-> **Note**  The ARM template deploys a Deny All rule.  If you were to simply create a Network Security Group from the UI, you would not experience this behavior.
+> **Note**:  The ARM template deploys a Deny All rule.  If you were to simply create a Network Security Group from the UI, you would not experience this behavior.
 
 ### Task 2: Configure network security groups
 
@@ -668,7 +661,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
     i.  For the **Name**, enter **Port_1433**.
 
-    g.  Select **Add**.
+    j.  Select **Add**.
 
 3.  Configure the web server to allow all HTTP and HTTPS connections:
 
@@ -730,7 +723,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
        ![Save is highlighted at the top, and two log items are selected and highlighted below.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image60.png "Save the logs")
 
-       -  Repeat for all remaining Network Security Groups
+       -  Repeat for all remaining Network Security Groups.
 
 ### Task 3: Test network security group rules \#2
 
@@ -744,13 +737,13 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
     b.  Port scan for port 1433 (SQL) to **DB-1** is successful, and **WEB-1** is unsuccessful from the **PAW-1** machine.
 
-> **Note**: You may need to disable the windows firewall on the DB-1 server to achieve this result.
+    > **Note**: You may need to disable the windows firewall on the DB-1 server to achieve this result.
 
-   ![The information above for port 1433 (SQL) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image62.png "View the information")
+    ![The information above for port 1433 (SQL) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image62.png "View the information")
 
-   c.  If IIS has been setup on WEB-1, the port scan for port 80 (HTTP) to **DB-1** is unsuccessful and **WEB-1** is successful from the **PAW-1** machine
+    c.  If IIS has been setup on WEB-1, the port scan for port 80 (HTTP) to **DB-1** is unsuccessful and **WEB-1** is successful from the **PAW-1** machine
 
-   ![The information above for port 80 (HTTP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image63.png "View the information")
+    ![The information above for port 80 (HTTP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image63.png "View the information")
 
 ### Task 4: Install network watcher VM extension
 
@@ -830,23 +823,23 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 1.  Open the Azure Portal.
 
-2.  Select **All services**, then type **Sentinel**, select **Azure Sentinel**
+2.  Select **All services**, then type **Sentinel**, select **Azure Sentinel**.
 
 ![In this screenshot, All Services is selected, and then a search for Sentinel is displayed.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image94.png "Searching for Sentinel")
 
-3.  In the blade, select **+Add**, select the Log Analytics resource for your resource group, then choose **Add Azure Sentinel**
+3.  In the blade, select **+Add**, select the Log Analytics resource for your resource group, then choose **Add Azure Sentinel**.
 
-4.  In the blade, under **Threat Management**, select **Workbooks**
+4.  In the blade, under **Threat Management**, select **Workbooks**.
 
-5.  In the list of workbooks, select **Azure AD Audit logs**, select **Save**
+5.  In the list of workbooks, select **Azure AD Audit logs**, select **Save**.
 
-6.  Select the region, click **OK**
+6.  Select the region and select **OK**.
 
 ![In this screenshot, Dashboards has been selected and the Azure AD Audit Logs dashboard has also been selected.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image95.png "Adding a workbooks")
 
-7.  In the list of dashboards, select **Azure Network Watcher**, select **Save**
+7.  In the list of dashboards, select **Azure Network Watcher**, choose **Save**.
 
-8.  Select the region, click **OK**
+8.  Select the region and choose **OK**.
 
 9.  Select **View saved workbook**, take a moment to review your new workbook.
 
@@ -858,7 +851,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 2.  On the **General** tab, enter **PortScans** for the name.
 
-3.  For the description, enter **A custom rule to detect port scans**, click **Next: Set rule logic**
+3.  For the description, enter **A custom rule to detect port scans**, select **Next: Set rule logic**.
 
 4.  In the **Set alert query** text box, type:
 
@@ -870,11 +863,11 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 > **Note**: If you were quick going through the labs, then you may not have log data in the Log Analytics workspace just yet that corresponds to "AzureMetric". You may need to wait 15-30 minutes before a query will execute.
 
-5.  Under **Map entities**, for the **IP address**, select **conditions_sourceIP_s**
+5.  Under **Map entities**, for the **IP address**, select **conditions_sourceIP_s**.
 
-6.  Under **Query scheduling**, for the **Run query every** setting, type **10** minutes
+6.  Under **Query scheduling**, for the **Run query every** setting, type **10** minutes.
 
-7.  For the **Lookup data from the last**, type **2** hours
+7.  For the **Lookup data from the last**, type **2** hours.
 
 8.  Under **Alert threshold**, for the **Generate alert when number of query results**, enter **50**.
 
@@ -904,7 +897,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 > **Note**: It may take 15-20 minutes for the alert to fire. You can continue to execute the port scan script to cause log events or you can lower the threshold for the custom alert.
 
-4.  In the dialog, choose **Investigate**
+4.  In the dialog, choose **Investigate**.
 
     ![This is a screenshot of the incident dialog, with the button Investigate highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image76.png "Investigate an incident")
 
@@ -944,7 +937,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
     ![The Sign in button is highlighted next to Office 365 Outlook under This logic app will connect to.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image83.png "Sign in to Office 365 Outlook")
 
-> **Note**: This would need to be a valid Office 365 account, if you do not have a valid Office 365 account, then utilize a basic email template for Outlook.com
+> **Note**: This would need to be a valid Office 365 account, if you do not have a valid Office 365 account, then utilize a basic email template for Outlook.com.
 
 8. Select **Continue**.
 
@@ -962,11 +955,11 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 2.  Scroll to the bottom of the page and select **Clone Azure Sentinel Notebooks**.
 
-![Notebooks and Clone Azure Sentinel Notebooks is highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image99.png "Close Azure Sentinel Notebooks")
+![Notebooks and Clone Azure Sentinel Notebooks is highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image99.png "Close Azure Sentinel Notebooks")
 
 3.  The Azure Notebooks page will open, if prompted, login, then select **Import**.  
 
-![Import button is highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image100.png "Import Azure Sentinel notebooks")
+![The Import button is highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image100.png "Import Azure Sentinel notebooks")
 
 4.  In your notebook, browse to **/Azure Sentinel/Notebooks**, then select **Get Started.ipynb**.
 
@@ -976,7 +969,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 6.  In the menu, select **Kernel->Change kernel**, then select **Python 3.6**.
 
-![The page menu is expanded to the Kernel menu item and the change kernel with Python 3.6 is selected](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image102.png "Set the Kernel to Python 3.6")
+![The page menu is expanded to the Kernel menu item and the change kernel with Python 3.6 is selected.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image102.png "Set the Kernel to Python 3.6")
 
 7.  Choose the **Run** button until you execute the entire Notebook, note that some steps will required your input.
 
@@ -1018,7 +1011,7 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
     ![The links above are all highlighted to get to the Azure Policy blade.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image105.png "Open the Azure Policy blade")
 
-3.  For the scope, ensure the proper subscription is selected, then select **ASC Default (subscription...**.
+3.  For the scope, ensure the proper subscription is selected, then select **ASC Default (subscription:**.
 
 4.  In the **Initiative compliance** blade, review your compliance metrics.  Select the row that has the **ASC Default** policy.
 
@@ -1030,11 +1023,11 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
 7.  With the **Policies** tab selected, review the policies that the resource is non-complying against.  
 
-    ![The Resource compliance blade for PAW-1 is displayed with the non-compliant items highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image107.png "Review the non-compliant items")
+    ![The Resource compliance blade for PAW-1 is displayed with the non-compliant items highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image107.png "Review the non-compliant items")
 
 8.  Choose one of the policies.  Review the Definition JSON of the policy definition, notice how it is based on ARM Template format and is looking for specific properties to be set of the non-compliant resources.
 
-    ![The policy definition is displayed](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image108.png "Review the policy definition")
+    ![The policy definition is displayed.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image108.png "Review the policy definition")
 
 > **Note**: You can use these out of box templates to build your own policies and apply them as blueprints.
 
@@ -1050,11 +1043,11 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
 4.  Select **+Create blueprint**.
 
-    ![All the buttons above are highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image110.png "Create a new blueprint")
+    ![All the buttons above are highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image110.png "Create a new blueprint")
 
 5.  Review some of the sample blueprints, then select **Start with blank blueprint**.
 
-    ![Page displayed with the blueprint templates and the Start with a blank blueprint highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image111.png "Create a blank blueprint")
+    ![Page displayed with the blueprint templates and the Start with a blank blueprint highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image111.png "Create a blank blueprint")
 
 6.  For the name, type **gdprblueprint**.
 
@@ -1062,7 +1055,7 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
 8.  Choose **Select**.
 
-    ![New blue print dialog with name and location filled in](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image112.png "Set blueprint fields")
+    ![New blue print dialog with name and location filled in.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image112.png "Set blueprint fields")
 
 9.  Select **Next: Artifacts**.
 
@@ -1072,15 +1065,15 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
 12. In the search box, type **unrestricted**, browse for the **Audit unrestricted network access to storage accounts**.
 
-    ![Screen shot showing steps 9-12 highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image113.png "Add an artifact")
+    ![Screen shot showing steps 9-12 highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image113.png "Add an artifact")
 
 13. Select **Add**.
 
 14. Select **Save Draft**.
 
-15. For the new blueprint, select the ellipses, then select **Publish Blueprint**
+15. For the new blueprint, select the ellipses, then select **Publish Blueprint**.
 
-    ![Screen shot showing the Publish blueprint dialog](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image114.png "Publish blueprint dialog")
+    ![Screen shot showing the Publish blueprint dialog.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image114.png "Publish blueprint dialog")
 
 16. For the version type **1.0.0**.
 
@@ -1088,7 +1081,7 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
 18. For the new blueprint, select the ellipses, then select **Assign Blueprint**.
 
-    ![Screen shot showing the Assign blueprint dialog](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image114.png "Assign blueprint dialog")
+    ![Screen shot showing the Assign blueprint dialog.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image114.png "Assign blueprint dialog")
 
 19. Review the page, then choose **Assign**.  This policy will now be audited across all your storage accounts in the specific subscription.
 
@@ -1100,13 +1093,13 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
 3.  Review your overall secure score values and then notice the category values.
 
-    ![Screen shot showing Secure score blade and the score and categories highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image115.png "Review Secure Score score and categories")
+    ![Screen shot showing Secure score blade and the score and categories highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image115.png "Review Secure Score score and categories")
 
 4.  Select your subscription, you will be presented with the items that have failed resource validation sorted by the score value that is assigned to that particular recommendation item.
 
 5.  Select the **An Azure Active Directory administrator should be provisioned for SQL Servers**, on the recommendation blade, you will be presented with information about how to remediate the recommendation to gain the impact value to your score.
 
-    ![Screen shot with the Probision an Azure AD Administrator for SQL Server highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image116.png "Review a security recommendation")
+    ![Screen shot with the Probision an Azure AD Administrator for SQL Server highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image116.png "Review a security recommendation")
 
 ### Task 4: Use Compliance Manager for Azure
 
@@ -1134,7 +1127,7 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
 9.  Select **Add to Dashboard.** You will now see a new assessment for Azure and GDPR in progress:
 
-    ![Azure GDPR assessment status that shows in progress](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image91.png)
+    ![Azure GDPR assessment status that shows in progress.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image91.png)
 
 10.  Select **Azure GDPR**.
 
@@ -1142,7 +1135,7 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
 ![Several categories of controls are listed on the page.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image91.1.png)
 
-12. On the top menu, choose **Trust Documents**, then select **Audit Reports**
+12. On the top menu, choose **Trust Documents**, then select **Audit Reports**.
 
 13. Notice the various tabs that you can select from, select **FedRAMP Reports**.
 
