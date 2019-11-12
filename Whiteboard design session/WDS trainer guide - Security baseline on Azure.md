@@ -270,7 +270,7 @@ Jack Tradewinds, the CIO of Contoso Ltd, has heard a great deal of positive news
 
 9.  Is Azure virtual networking flexible enough to meet our requirements?
 
-10.  Can Azure supplement on-premises and 3^rd^ party SIEM systems for auditing and compliance tasks?
+10.  Can Azure supplement on-premises and third-party SIEM systems for auditing and compliance tasks?
 
 11. What certifications does Azure have and can Azure hosted applications meet the US and European compliance goals?
 
@@ -284,7 +284,7 @@ Jack Tradewinds, the CIO of Contoso Ltd, has heard a great deal of positive news
 
 This Infographic shows an example of a generic implementation of various security Azure technologies in action that can be used as a reference in your design:
 
-![Security and Compliance infographic This is an example of a generic implementation of various Azure security technologies.](images/Whiteboarddesignsessiontrainerguide-Azuresecurityprivacyandcomplianceimages/media/image2.png)
+![Security and Compliance infographic. This is an example of a generic implementation of various Azure security technologies.](images/Whiteboarddesignsessiontrainerguide-Azuresecurityprivacyandcomplianceimages/media/image2.png)
 
 ## Step 2: Design a proof of concept solution
 
@@ -511,7 +511,7 @@ Without getting into the details (the following sections will address the detail
 
 1.  Network:
 
-    ![High-level network architecture On the left, an Admin icon and an Agent icon point at an internet icon, which points at a box in the middle. In this box are three smaller boxes (WEB-1, PAW-1, and DB-1) that are interconnected with icons for Azure SQL, a DNS server, and an icon of a key on a green circle. The big box in the middle points to four different sites labeled Site 1--4.](images/Whiteboarddesignsessiontrainerguide-Azuresecurityprivacyandcomplianceimages/media/image3.png)
+    ![High-level network architecture On the left, an Admin icon and an Agent icon point at an internet icon, which points at a box in the middle. In this box are three smaller boxes (WEB-1, PAW-1, and DB-1) that are interconnected with icons for Azure SQL, a DNS server, and an icon of a key on a green circle. The big box in the middle points to four different sites labeled Site 1-4.](images/Whiteboarddesignsessiontrainerguide-Azuresecurityprivacyandcomplianceimages/media/image3.png)
 
 2.  Auditing and compliance:
 
@@ -523,7 +523,7 @@ On your diagram, indicate how you would secure any sensitive data at rest and in
 
 1.  Web Tier
 
-    a.  The topology deploys independent Azure VMs for their corporate website and their external data collection website. Alternately, an Azure Web App could be used to host the data collection web site, but not the corporate website (because Azure Web Apps does not offer any configuration that provides private, virtual network only endpoints---at least until App Service Environments leave preview). Cloud Services were ruled out so that Contoso could avoid changes to their development and deployment experience, making the migration more direct via a lift and shift effort.
+    a.  The topology deploys independent Azure VMs for their corporate website and their external data collection website. Alternately, an Azure Web App could be used to host the data collection web site, but not the corporate website (because Azure Web Apps does not offer any configuration that provides private, virtual network only endpoints, at least until App Service Environments leave preview). Cloud Services were ruled out so that Contoso could avoid changes to their development and deployment experience, making the migration more direct via a lift and shift effort.
 
     b.  Access to the corporate website is restricted to within the virtual network, as no public endpoint is exposed. Access to the public website is possible, as a public endpoint listening for TLS connection on port 443 is exposed via the Azure load balancer, and similarly, the VM itself has a firewall rule allowing TCP connections on port 443. TLS needs to be properly configured, with the appropriate certificates installed and setup with IIS on each VM.
 
@@ -545,7 +545,7 @@ On your diagram, indicate how you would secure any sensitive data at rest and in
 
     a.  With the websites hosted in Azure VM\'s, the Azure VMs are joined to an isolated virtual network with VPN access enabled from the corporate site (via Site-to-Site configuration).
 
-    b.  The application tiers are separated by virtual networks and subnets\-- the website VM\'s are placed within a \"front-end\" subnet within the Virtual Network, and the SQL Database VMs are placed in a \"back-end\" subnet. This separation helps to create a security boundary that can be leveraged by firewalls and intrusion detection systems to more easily detect suspicious traffic, and to quickly quarantine traffic from the websites front-end to the back-end database should a breach be detected.
+    b.  The application tiers are separated by virtual networks and subnets, the website VM\'s are placed within a \"front-end\" subnet within the Virtual Network, and the SQL Database VMs are placed in a \"back-end\" subnet. This separation helps to create a security boundary that can be leveraged by firewalls and intrusion detection systems to more easily detect suspicious traffic, and to quickly quarantine traffic from the websites front-end to the back-end database should a breach be detected.
 
     c.  In the case where the data collection website is hosted in Azure, the Virtual Network must be enabled for point-to-site connectivity, which requires the creation of an address space to be used in assigning IP addresses to member Web Apps as well as a Gateway. By doing so, a similar isolation to that provided by the \"front-end\" VM subnet is enabled.
 
@@ -569,27 +569,27 @@ Describe how you will use Azure features to ensure the following:
 
     c.  Azure Monitor and Log Analytics can be leveraged to create queries across Azure event logging event data that will feed into Power BI reports.
 
-    d.  Azure Sentinel can be used to create alerts and cases for auto-assignment and investigation activities
+    d.  Azure Sentinel can be used to create alerts and cases for auto-assignment and investigation activities.
 
 3.  How will you monitor and audit Azure SQL?
 
     a.  Auditing and Threat detection was enabled on all SQL Azure databases.
 
-    b.  Azure Diagnostics was enabled, and all logs are being forwarded to Log Analytics and Azure Sentinel
+    b.  Azure Diagnostics was enabled, and all logs are being forwarded to Log Analytics and Azure Sentinel.
 
 4.  Create custom alerts and execute remediation and investigation activities on detection?
 
-    a.  Azure Sentinel can be used to hunt down specific events and create alerts based on event data
+    a.  Azure Sentinel can be used to hunt down specific events and create alerts based on event data.
     
     b.  Azure Runbooks can be setup to execute on alerts.
 
 5.  What tools would you setup to surface audit and for compliance reporting to IT Executives?
 
-    a.  Azure Policy can be used to determine if resource group owners have been following best practice organizational policies
+    a.  Azure Policy can be used to determine if resource group owners have been following best practice organizational policies.
 
-    b.  Compliance Manager can be used to implement compliance activities and task assignments as it related to legislative requirements
+    b.  Compliance Manager can be used to implement compliance activities and task assignments as it related to legislative requirements.
 
-    c.  Secure score can also be used to determine what activities can be performed to further secure the Azure subscription and its resources
+    c.  Secure score can also be used to determine what activities can be performed to further secure the Azure subscription and its resources.
 
 *Ensuring availability and business continuity*
 
@@ -597,7 +597,7 @@ Describe how you would ensure that the following resources would be available in
 
 1.  Virtual Machines
 
-    a.  Azure Recovery Service Vault **configured to use GRS** was utilized to make backups of virtual machines
+    a.  Azure Recovery Service Vault **configured to use GRS** was utilized to make backups of virtual machines.
 
 2.  Azure SQL
 
@@ -645,7 +645,7 @@ Describe how you would secure each Azure resource from internal and external att
 
     -   [Azure Migrate](https://azure.microsoft.com/en-us/blog/announcing-azure-migrate/)
 
-1.  Is Azure SQL secure enough to host their application databases?
+2.  Is Azure SQL secure enough to host their application databases?
 
     Transparent data encryption performs real-time encryption and decryption of the database, associated backups, and transaction log files to protect information at rest. Transparent data encryption provides assurance that stored data hasn't been subject to unauthorized access.
 
@@ -655,19 +655,19 @@ Describe how you would secure each Azure resource from internal and external att
 
     Dynamic data masking limits sensitive data exposure by masking the data to nonprivileged users or applications. It can automatically discover potentially sensitive data and suggest the appropriate masks to be applied. Dynamic data masking helps to reduce access so that sensitive data doesn't exit the database via unauthorized access. Customers are responsible for adjusting settings to adhere to their database schema.
 
-1.  Admins are worried that they won't have the bandwidth to perform deployments of the corporate website and other supporting web applications.
+3.  Admins are worried that they won't have the bandwidth to perform deployments of the corporate website and other supporting web applications.
 
     Azure ExpressRoute can be used to create private connections between Azure datacenters and infrastructure on your premises or in a colocation environment. ExpressRoute connections don\'t go over the public Internet, and they offer more reliability, faster speeds, and lower latencies than typical Internet connections. In some cases, using ExpressRoute connections to transfer data between on-premises systems and Azure can give you significant cost benefits.
 
-3.  Can Azure help contain costs for minimally used costly production and development resources?
+4.  Can Azure help contain costs for minimally used costly production and development resources?
 
     Yes, Azure Cost Management + Billing has free features that allows you to monitor your cloud spend, drive organizational accountability and optimize your cloud efficiency.
 
-4.  Does Azure support the ability to allow VPN connections to specific resources?
+5.  Does Azure support the ability to allow VPN connections to specific resources?
 
     Yes, Azure provides the ability to do site-to-site IPSec VPNs and the ability to create point-to-site VPNs. By utilizing a site-to-site VPN Gateway, you can connect your on-premises networks with Azure utilizing IPSec and IKE. Point-to-site will allow individual client computers to connect to your Azure virtual network(s) via SSTP or IKE.
 
-5.  Can Microsoft employees or government entities access our data?
+6.  Can Microsoft employees or government entities access our data?
 
     Access to customer data by Microsoft operations and support personnel is denied by default. When granted, access is carefully managed and logged. Data center access to the systems that store customer data is strictly controlled via lock box processes.
 
@@ -681,7 +681,7 @@ Describe how you would secure each Azure resource from internal and external att
 
     Azure Support can access your VMs utilizing the audited Azure Lockbox feature when needed in the resolution of difficult issues.
 
-6.  How does Azure protect against threats?
+7.  How does Azure protect against threats?
 
     Azure Active Directory Privileged Identity Management can be used by customers to minimize the number of users who have access to certain resources. Administrators can use Azure AD Privileged Identity Management to discover, restrict, and monitor privileged identities and their access to resources. This functionality also can be used to enforce on-demand, just-in-time administrative access when needed.
 
@@ -695,17 +695,17 @@ Describe how you would secure each Azure resource from internal and external att
 
     If the customer has a healthy security budget, they could migrate their web applications to Application Service Environments (ASE) with Web Application Gateway (WAG) to implement an even more segregated and secured environment.
 
-7.  Does Azure allow enough granular RBAC controls to meet our least privileged needs?
+8.  Does Azure allow enough granular RBAC controls to meet our least privileged needs?
 
     **Azure RBAC** can be used by administrators to define fine-grained access permissions to grant only the amount of access that users need to perform their jobs. Instead of giving every user unrestricted permissions for Azure resources, administrators can allow only certain actions for accessing data. Subscription access is limited to the subscription administrator.
 
-    Azure comes with several pre-built built-in roles - <https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles> and allows you to create custom roles - <https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-custom-roles>
+    Azure comes with several pre-built built-in roles - <https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles> and allows you to create custom roles - <https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-custom-roles>.
 
     Additionally, you can assign individual users and groups to just about any Azure resource.
 
     Azure Monitoring and Log Analytics can be used to monitor user and application security activity (such as RBAC changes). Organizations can use it to audit, create alerts, and archive data. They also can track API calls in their Azure resources. The activity logs provide insight into operations performed on resources in a subscription. Activity logs can help determine an operation's initiator, time of occurrence, and status.
 
-8.  Is Azure virtual networking flexible enough to meet our requirements?
+9.  Is Azure virtual networking flexible enough to meet our requirements?
 
     Azure Virtual Network gives you an isolated and highly-secure environment to run your virtual machines and applications. Use your private IP addresses and define subnets, access control policies, and more. Use Virtual Network to treat Azure the same as you would your own datacenter.
 
@@ -715,21 +715,21 @@ Describe how you would secure each Azure resource from internal and external att
 
     Use Virtual Network to build your hybrid cloud applications that securely connect to your on-premises datacenter---so an Azure web application can access an on-premises SQL Server database, or authenticate customers against an on-premises Azure Active Directory service.
 
-9.  Can Azure supplement on-premises and 3rd party SIEM systems for auditing and compliance tasks?
+10.  Can Azure supplement on-premises and 3rd party SIEM systems for auditing and compliance tasks?
 
     Yes, Azure has a robust set of integration scenarios for customers including:
 
-    -   Command Line Interface (CLI), PowerShell and a [REST API](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-rest-api-walkthrough)
+    -   Command Line Interface (CLI), PowerShell and a [REST API](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-rest-api-walkthrough).
 
-    -   Email and webhooks based on triggers
+    -   Email and webhooks based on triggers.
 
-    -   Events streamed to Event Hub
+    -   Events streamed to Event Hub.
 
-    -   Power BI integration
+    -   Power BI integration.
 
-    -   Events saved to a Storage Account for analysis later
+    -   Events saved to a Storage Account for analysis later.
 
-    -   Export data using Log Profiles with Log Analytics
+    -   Export data using Log Profiles with Log Analytics.
 
     Diagnostic logs can be enabled on almost every Azure resource. These logs include Windows event system logs, Storage logs, Key Vault audit logs, and Application Gateway access and firewall logs. Diagnostic logs can be written to a centralized and encrypted Azure storage account for archival or to event hubs or stream analytics for further processing. Users can configure the retention period, up to 730 days, to meet their specific requirements.
     
@@ -737,7 +737,7 @@ Describe how you would secure each Azure resource from internal and external att
 
     Azure Security center can be utilized to enforce policies and compliance against Azure resources.
 
-10.  What certifications does Azure have and can Azure hosted applications meet the US and European compliance goals?
+11.  What certifications does Azure have and can Azure hosted applications meet the US and European compliance goals?
 
 -   Certifications
 
@@ -781,13 +781,13 @@ Describe how you would secure each Azure resource from internal and external att
 
     Azure hosted applications can meet compliance goals is designed and maintained properly.
 
-11.  Is Azure flexible enough to support data sovereignty needs and issues like those referenced in GDPR articles?
+12.  Is Azure flexible enough to support data sovereignty needs and issues like those referenced in GDPR articles?
 
      Microsoft was among the first cloud providers to sign a set of EU "model clauses," which are standard contractual clauses that govern the international transfer of personal data. When included in service agreements with data processors, the model clauses assure customers that appropriate steps have been taken to help safeguard personal data, even if data is stored in a cloud-based service center located outside the EEA. In affirming these, a data processor is affirming that they are meeting the data protection standards set forth by the EU Directive on Data Protection.
 
      Microsoft has UK Government IL2 certification. UK Government Departments require products and services to be accredited to IL2 or IL3. These terms, Business Impact Levels 2 or 3, essentially require the telecoms operator or service provider to pass an audit based on ISO 27k as additionally extended by the *NGN Good Practice Guide*.
 
-12.  How can we ensure continued SOC 1 and SOC 2 compliance?
+13.  How can we ensure continued SOC 1 and SOC 2 compliance?
 
      To maintain SOC 1 and SOC 2 compliance, there are auditing requirements for the customer. To address this need, Microsoft makes certificates and audit reports available in support of the customer\'s reports and certifications.
 
@@ -797,7 +797,7 @@ Describe how you would secure each Azure resource from internal and external att
 
      Customers cannot audit the data center. However independent audits and certifications are shared instead of individual customer audits. These certifications and attestations accurately represent how Microsoft obtains and meets security and compliance objectives, and serve as a practical mechanism to validate Microsoft promises for all customers.?? Allowing potentially thousands of customers to audit Microsoft services would not be a scalable practice and might compromise security and privacy.?? The independent third-party validation program includes audits that are conducted on an annual basis to verify Azure security controls.
 
-13.  Does Azure permit penetration testing as a part of a security assessment?
+14.  Does Azure permit penetration testing as a part of a security assessment?
 
      Yes, and as of mid-2017, you no longer need to get approval to execute these tests, but you can still notify Microsoft if you are planning to do so.
 
