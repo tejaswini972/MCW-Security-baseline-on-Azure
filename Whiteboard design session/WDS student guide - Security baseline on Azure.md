@@ -155,7 +155,7 @@ Jack Tradewinds, the CIO of Contoso Ltd, has heard a great deal of positive news
 
 This Infographic shows an example of a generic implementation of various security Azure technologies in action that can be used as a reference in your design:
 
-![Security and Compliance infographic This is an example of a generic implementation of various Azure security technologies.](images/Whiteboarddesignsessionstudentguide-Azuresecurityprivacyandcomplianceimages/media/image2.png)
+![Security and Compliance infographic. This is an example of a generic implementation of various Azure security technologies.](images/Whiteboarddesignsessionstudentguide-Azuresecurityprivacyandcomplianceimages/media/image2.png)
 
 ## Step 2: Design a proof of concept solution 
 
@@ -237,11 +237,11 @@ Describe how you would ensure that the following resources would be available in
 
 Describe how you would secure each Azure resource from internal and external attacks:
 
-1.  Ensure that admin credentials are sufficiently protected and monitored
+1.  Ensure that admin credentials are sufficiently protected and monitored.
 
-2.  Prevent admins from causing intended and unintended harm to the environment such as unapproved software installs
+2.  Prevent admins from causing intended and unintended harm to the environment such as unapproved software installs.
 
-3.  Admins access Azure resources from secured and/or compliant corporate assets and do not directly access any production Virtual Machines from the internet
+3.  Admins access Azure resources from secured and/or compliant corporate assets and do not directly access any production Virtual Machines from the internet.
 
 **Prepare**
 
