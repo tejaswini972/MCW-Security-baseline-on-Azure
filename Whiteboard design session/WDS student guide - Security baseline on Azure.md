@@ -141,7 +141,7 @@ Jack Tradewinds, the CIO of Contoso Ltd, has heard a great deal of positive news
 
 9.  Is Azure virtual networking flexible enough to meet our requirements?
 
-10.  Can Azure supplement on-premises and 3^rd^ party SIEM systems for auditing and compliance tasks?
+10.  Can Azure supplement on-premises and third-party SIEM systems for auditing and compliance tasks?
 
 11. What certifications does Azure have and can Azure hosted applications meet the US and European compliance goals?
 
