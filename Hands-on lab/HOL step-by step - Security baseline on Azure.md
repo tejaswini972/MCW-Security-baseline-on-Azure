@@ -992,7 +992,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 4.  In the top right, select **Export**, then select the **Export to Power BI (M Query)** link.
 
-    ![All the above button clicks are displayed with red highlighting.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image103.png "Export a Power BI report query")
+    ![All the above button select areas are displayed with red highlighting.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image103.png "Export a Power BI report query")
 
 5.  Select **Open**, a text document with the Power Query M Language will be displayed.
 
@@ -1078,7 +1078,7 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
 14. Select **Save Draft**.
 
-15. For the new blueprint, click the ellipses, then select **Publish Blueprint**
+15. For the new blueprint, select the ellipses, then select **Publish Blueprint**
 
     ![Screen shot showing the Publish blueprint dialog](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image114.png "Publish blueprint dialog")
 
@@ -1086,7 +1086,7 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
 17. Select **Publish**.
 
-18. For the new blueprint, click the ellipses, then select **Assign Blueprint**.
+18. For the new blueprint, select the ellipses, then select **Assign Blueprint**.
 
     ![Screen shot showing the Assign blueprint dialog](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image114.png "Assign blueprint dialog")
 

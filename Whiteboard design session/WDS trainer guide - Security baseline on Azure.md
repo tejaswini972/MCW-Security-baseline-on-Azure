@@ -222,59 +222,63 @@ Jack Tradewinds, the CIO of Contoso Ltd, has heard a great deal of positive news
 
 4.  Contain hosting and operational costs associated with running the system.
 
-5.  Enable method to continually review and assign legal compliance tasks to the appropriate individuals and provide a compliance reporting ability for Azure resources.  
+5.  Enable method to continually review and assign legal compliance tasks to the appropriate individuals and provide a compliance reporting ability for Azure resources.
 
 6.  Enforce subscription owners to configure Azure resources with compliance and security while disallowing the creation of specific resources.
 
-7.  Limit access to the corporate site to users on the Contoso domain, and continue to support VPN access.
+7.  Ensure that any cloud-based identities utilize the same on-premises username and passwords and limit any help desk interactions.
 
-8.  Extract all web applications that have configuration or embedded connection strings to a more secure implementation.
+8.  Limit access to the corporate site to users on the Contoso domain, and continue to support VPN access.
 
-9.  Migrate current database applications to Azure PaaS solution with the appropriate data backup features implemented to prevent catastrophic data loss due to intentional or unintentional acts.
+9.  Extract all web applications that have configuration or embedded connection strings to a more secure implementation.
 
-10.  Implement all security best practices on the migrated databases such as encryption at rest and during transport as well as ensure that sensitive data is not exposed to non-admin database users and applications.
+10.  Migrate current database applications to Azure PaaS solution with the appropriate data backup features implemented to prevent catastrophic data loss due to intentional or unintentional acts.
 
-11. Ensure network segregation between Azure admin and the lift and shifted web and database tiers.
+11.  Implement all security best practices on the migrated databases such as encryption at rest and during transport as well as ensure that sensitive data is not exposed to non-admin database users and applications.
 
-12. Enable logging across all components (identity, virtual network, virtual machine, web, and database) to support an all-encompassing monitoring solution.
+12. Ensure network segregation between Azure admin and the lift and shifted web and database tiers.
 
-13. Ensure that Azure admins utilize best practices when accessing the Azure virtual machine resources and that all logins are logged for identity theft analysis activities.
+13. Enable logging across all components (identity, virtual network, virtual machine, web, and database) to support an all-encompassing monitoring solution.
 
-14. Ensure ease of use by syncing appropriate admin username and passwords for on-premises and cloud resources.
+14. Ensure that Azure admins utilize best practices when accessing the Azure virtual machine resources and that all logins are logged for identity theft analysis activities.
 
-15. Ensure that only authorized users can access specific Azure resources when logged into the Azure Portal.
+15. Ensure ease of use by syncing appropriate admin username and passwords for on-premises and cloud resources.
 
-16. Setup auditing such that software installs are monitored across Azure virtual machine resources.
+16. Ensure that only authorized users can access specific Azure resources when logged into the Azure Portal.
 
-17. When specific security events are detected (such as a port scan), allow for the execution of actions to remediate, start the investigative process or prevent further information leakage or damage.
+17. Setup auditing such that software installs are monitored across Azure virtual machine resources.
+
+18. When specific security events are detected (such as a port scan), allow for the execution of actions to remediate, start the investigative process or prevent further information leakage or damage.
 
 ### Customer objections 
 
 1.  Can Azure support the lift and shift of their web and database applications?
 
-2.  Admins are worried that they won't have the bandwidth to perform deployments of the corporate website and other supporting web applications.
+2.  Is Azure SQL secure enough to host their application databases?
 
-3.  Can Azure help contain costs for minimally used costly production and development resources?
+3.  Admins are worried that they won't have the bandwidth to perform deployments of the corporate website and other supporting web applications.
 
-4.  Does Azure support the ability to allow VPN connections to specific resources?
+4.  Can Azure help contain costs for minimally used costly production and development resources?
 
-5.  Can Microsoft employees or government entities access our data?
+5.  Does Azure support the ability to allow VPN connections to specific resources?
 
-6.  How does Azure protect against threats?
+6.  Can Microsoft employees or government entities access our data?
 
-7.  Does Azure allow enough granular RBAC controls to meet our least privilege needs?
+7.  How does Azure protect against threats?
 
-8.  Is Azure virtual networking flexible enough to meet our requirements?
+8.  Does Azure allow enough granular RBAC controls to meet our least privilege needs?
 
-9.  Can Azure supplement on-premises and 3^rd^ party SIEM systems for auditing and compliance tasks?
+9.  Is Azure virtual networking flexible enough to meet our requirements?
 
-10. What certifications does Azure have and can Azure hosted applications meet the US and European compliance goals?
+10.  Can Azure supplement on-premises and 3^rd^ party SIEM systems for auditing and compliance tasks?
 
-11. Is Azure flexible enough to support data sovereignty needs and issues like those referenced in GDPR articles?
+11. What certifications does Azure have and can Azure hosted applications meet the US and European compliance goals?
 
-12. How can we ensure continued SOC 1 and SOC 2 compliance?
+12. Is Azure flexible enough to support data sovereignty needs and issues like those referenced in GDPR articles?
 
-13. Does Azure permit penetration testing as a part of a security assessment?
+13. How can we ensure continued SOC 1 and SOC 2 compliance?
+
+14. Does Azure permit penetration testing as a part of a security assessment?
 
 ### Infographic for common scenarios
 
@@ -641,7 +645,17 @@ Describe how you would secure each Azure resource from internal and external att
 
     -   [Azure Migrate](https://azure.microsoft.com/en-us/blog/announcing-azure-migrate/)
 
-2.  Admins are worried that they won't have the bandwidth to perform deployments of the corporate website and other supporting web applications.
+1.  Is Azure SQL secure enough to host their application databases?
+
+    Transparent data encryption performs real-time encryption and decryption of the database, associated backups, and transaction log files to protect information at rest. Transparent data encryption provides assurance that stored data hasn't been subject to unauthorized access.
+
+    Firewall rules prevent all access to database servers until proper permissions are granted. The firewall grants access to databases based on the originating IP address of each request.
+
+    Encrypted columns ensure that sensitive data never appears as plain text inside the database system. After data encryption is enabled, only client applications or application servers with access to the keys can access plain-text data.
+
+    Dynamic data masking limits sensitive data exposure by masking the data to nonprivileged users or applications. It can automatically discover potentially sensitive data and suggest the appropriate masks to be applied. Dynamic data masking helps to reduce access so that sensitive data doesn't exit the database via unauthorized access. Customers are responsible for adjusting settings to adhere to their database schema.
+
+1.  Admins are worried that they won't have the bandwidth to perform deployments of the corporate website and other supporting web applications.
 
     Azure ExpressRoute can be used to create private connections between Azure datacenters and infrastructure on your premises or in a colocation environment. ExpressRoute connections don\'t go over the public Internet, and they offer more reliability, faster speeds, and lower latencies than typical Internet connections. In some cases, using ExpressRoute connections to transfer data between on-premises systems and Azure can give you significant cost benefits.
 
@@ -669,23 +683,27 @@ Describe how you would secure each Azure resource from internal and external att
 
 6.  How does Azure protect against threats?
 
-    Intrusion detection and prevention systems, denial of service attack prevention, regular penetration testing, and forensic tools help identify and mitigate threats from both outside and inside of Azure.
+    Azure Active Directory Privileged Identity Management can be used by customers to minimize the number of users who have access to certain resources. Administrators can use Azure AD Privileged Identity Management to discover, restrict, and monitor privileged identities and their access to resources. This functionality also can be used to enforce on-demand, just-in-time administrative access when needed.
+
+    Intrusion detection and prevention systems, denial of service attack prevention, regular penetration testing, and forensic tools help identify and mitigate threats from both outside and inside of Azure. Azure Active Directory Identity Protection detects potential vulnerabilities that affect an organization’s identities. It configures automated responses to detected suspicious actions related to an organization’s identities. It also investigates suspicious incidents to take appropriate action to resolve them.
 
     Microsoft Antimalware is built-in to Cloud Services and can be enabled for Virtual Machines to help identify and remove viruses, spyware and other malicious software and provide real-time protection. Customers can also run antimalware solutions from partners on their Virtual Machines.
 
     Microsoft has decades of operating system security experience running its applications and services and latest developments allow the Microsoft Security Graph to analyze events to determine if and when an attack is occurring.
 
-    Azure Firewall can provide DDoS and Threat Intelligence services to ensure bad actors are not being allowed access to the web applications.
+    Azure Application Gateway and Azure Firewall can be combined with Azure DDoS and Threat Intelligence services to ensure bad actors are not being allowed access to the web applications.
 
     If the customer has a healthy security budget, they could migrate their web applications to Application Service Environments (ASE) with Web Application Gateway (WAG) to implement an even more segregated and secured environment.
 
 7.  Does Azure allow enough granular RBAC controls to meet our least privileged needs?
 
-    Azure resource groups can be set up with users, groups, and applications with varying levels of role assignments to meet any customer requirements.
+    **Azure RBAC** can be used by administrators to define fine-grained access permissions to grant only the amount of access that users need to perform their jobs. Instead of giving every user unrestricted permissions for Azure resources, administrators can allow only certain actions for accessing data. Subscription access is limited to the subscription administrator.
 
     Azure comes with several pre-built built-in roles - <https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles> and allows you to create custom roles - <https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-control-custom-roles>
 
     Additionally, you can assign individual users and groups to just about any Azure resource.
+
+    Azure Monitoring and Log Analytics can be used to monitor user and application security activity (such as RBAC changes). Organizations can use it to audit, create alerts, and archive data. They also can track API calls in their Azure resources. The activity logs provide insight into operations performed on resources in a subscription. Activity logs can help determine an operation's initiator, time of occurrence, and status.
 
 8.  Is Azure virtual networking flexible enough to meet our requirements?
 
@@ -713,7 +731,11 @@ Describe how you would secure each Azure resource from internal and external att
 
     -   Export data using Log Profiles with Log Analytics
 
-    Ultimately, you will want to encourage them to use the new Azure Sentinel offering (currently in preview as of 4/2019).
+    Diagnostic logs can be enabled on almost every Azure resource. These logs include Windows event system logs, Storage logs, Key Vault audit logs, and Application Gateway access and firewall logs. Diagnostic logs can be written to a centralized and encrypted Azure storage account for archival or to event hubs or stream analytics for further processing. Users can configure the retention period, up to 730 days, to meet their specific requirements.
+    
+    Azure Sentinel can ultimately be a replacement for on-premises SIEM systems with built in support for Azure resources through Log Analytics workspaces. 
+
+    Azure Security center can be utilized to enforce policies and compliance against Azure resources.
 
 10.  What certifications does Azure have and can Azure hosted applications meet the US and European compliance goals?
 
