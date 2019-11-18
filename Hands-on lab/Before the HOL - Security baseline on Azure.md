@@ -27,11 +27,11 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 <!-- TOC -->
 
-- [Security baseline on Azure before the hands-on lab setup guide](#Security-baseline-on-Azure-before-the-hands--on-lab-setup-guide)
-    - [Requirements](#requirements)
-    - [Before the hands-on lab](#before-the-hands-on-lab)
-      - [Task 1: Download GitHub resources](#task-1-download-github-resources)
-      - [Task 2: Deploy resources to Azure](#task-2-deploy-resources-to-azure)
+- [Security baseline on Azure before the hands-on lab setup guide](#security-baseline-on-azure-before-the-hands-on-lab-setup-guide)
+  - [Requirements](#requirements)
+  - [Before the hands-on lab](#before-the-hands-on-lab)
+    - [Task 1: Download GitHub resources](#task-1-download-github-resources)
+    - [Task 2: Deploy resources to Azure](#task-2-deploy-resources-to-azure)
 
 <!-- /TOC -->
 
@@ -138,7 +138,5 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
        -  Log Analytics Workspace
 
     ![Created items list This screenshot is a list of the items that were created, including the items listed above. ](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image8.png)
-
-13. See Appendix A for detailed steps on creating these components without using an ARM template.
 
 You should follow all steps provided *before* attending the hands-on lab.
