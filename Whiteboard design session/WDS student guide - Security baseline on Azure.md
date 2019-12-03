@@ -27,16 +27,16 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 <!-- TOC -->
 
 - [Security baseline on Azure whiteboard design session student guide](#security-baseline-on-azure-whiteboard-design-session-student-guide)
-    - [Abstract and learning objectives](#abstract-and-learning-objectives)
-    - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
-        - [Customer situation](#customer-situation)
-        - [Customer needs](#customer-needs)
-        - [Customer objections](#customer-objections)
-        - [Infographic for common scenarios](#infographic-for-common-scenarios)
-    - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
-    - [Step 3: Present the solution](#step-3-present-the-solution)
-    - [Wrap-up](#wrap-up)
-    - [Additional References](#additional-references)
+  - [Abstract and learning objectives](#abstract-and-learning-objectives)
+  - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
+    - [Customer situation](#customer-situation)
+    - [Customer needs](#customer-needs)
+    - [Customer objections](#customer-objections)
+    - [Infographic for common scenarios](#infographic-for-common-scenarios)
+  - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
+  - [Step 3: Present the solution](#step-3-present-the-solution)
+  - [Wrap-up](#wrap-up)
+  - [Additional References](#additional-references)
 
 <!-- /TOC -->
 
@@ -83,29 +83,29 @@ Contoso has been using their on-premises SIEM to do most of their auditing and l
 
 Jack Tradewinds, the CIO of Contoso Ltd, has heard a great deal of positive news about Azure and its progress in terms of security and compliance. He would like to learn more about the security features and if they can move some of their data and applications away from their on-premises datacenter. Given his long-standing relationship with Microsoft, he would like to see if Azure can meet his needs.
 
-### Customer needs 
+### Customer needs
 
-1.  Assure data privacy and protection across all aspects of the system; in transit and at rest.
+1. Assure data privacy and protection across all aspects of the system; in transit and at rest.
 
-2.  Address issues of data sovereignty with respect to the location of sensitive data.
+2. Address issues of data sovereignty with respect to the location of sensitive data.
 
-3.  Ability to scale as the company grows and system load increases.
+3. Ability to scale as the company grows and system load increases.
 
-4.  Contain hosting and operational costs associated with running the system.
+4. Contain hosting and operational costs associated with running the system.
 
-5.  Enable method to continually review and assign legal compliance tasks to the appropriate individuals and provide a compliance reporting ability for Azure resources.
+5. Enable method to continually review and assign legal compliance tasks to the appropriate individuals and provide a compliance reporting ability for Azure resources.
 
-6.  Enforce subscription owners to configure Azure resources with compliance and security while disallowing the creation of specific resources.
+6. Enforce subscription owners to configure Azure resources with compliance and security while disallowing the creation of specific resources.
 
-7.  Ensure that any cloud-based identities utilize the same on-premises username and passwords and limit any help desk interactions.
+7. Ensure that any cloud-based identities utilize the same on-premises username and passwords and limit any help desk interactions.
 
-8.  Limit access to the corporate site to users on the Contoso domain, and continue to support VPN access.
+8. Limit access to the corporate site to users on the Contoso domain, and continue to support VPN access.
 
-9.  Extract all web applications that have configuration or embedded connection strings to a more secure implementation.
+9. Extract all web applications that have configuration or embedded connection strings to a more secure implementation.
 
-10.  Migrate current database applications to Azure PaaS solution with the appropriate data backup features implemented to prevent catastrophic data loss due to intentional or unintentional acts.
+10. Migrate current database applications to Azure PaaS solution with the appropriate data backup features implemented to prevent catastrophic data loss due to intentional or unintentional acts.
 
-11.  Implement all security best practices on the migrated databases such as encryption at rest and during transport as well as ensure that sensitive data is not exposed to non-admin database users and applications.
+11. Implement all security best practices on the migrated databases such as encryption at rest and during transport as well as ensure that sensitive data is not exposed to non-admin database users and applications.
 
 12. Ensure network segregation between Azure admin and the lift and shifted web and database tiers.
 
