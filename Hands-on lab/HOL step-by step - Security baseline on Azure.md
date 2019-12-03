@@ -120,18 +120,12 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
     ![Security Center is highlighted on the left side of the Azure portal, and Just in time VM access (Preview) is highlighted to the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image9.png)
 
 > **Note**: Your subscription may not be set up with the **Standard** tier; if that is the case then do the following:
-
-   a.  In the **Security Center** blade, select **Pricing & settings**.
-
-   b.  Select your subscription.
-
-   c.  Select **Pricing Tier**
-
-   d.  Select **Standard**
-
-   e.  Select **Save**
-
-   f.  Navigate back to Security Center, select **Just in time VM access**.
+    a.  In the **Security Center** blade, select **Pricing & settings**.
+    b.  Select your subscription.
+    c.  Select **Pricing Tier**
+    d.  Select **Standard**
+    e.  Select **Save**
+    f.  Navigate back to Security Center, select **Just in time VM access**.
 
 3.  Select the **Configured** tab, and verify the lab vms (db-1, paw-1 and web-1) are displayed.  If not, select the **Recommended** tab, and then check the checkbox to select the lab vms (db-1, paw-1 and web-1), and then select the **Enable JIT on 3 VMs** link.
 
