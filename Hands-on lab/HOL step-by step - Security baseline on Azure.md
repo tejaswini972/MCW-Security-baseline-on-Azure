@@ -121,7 +121,7 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
 > **Note**: Your subscription may not be set up with the **Standard** tier; if that is the case then do the following:
 
-    a.  In the **Security Center** blade, select **Pricing & settings**.
+   a.  In the **Security Center** blade, select **Pricing & settings**.
     b.  Select your subscription.
     c.  Select **Pricing Tier**
     d.  Select **Standard**
