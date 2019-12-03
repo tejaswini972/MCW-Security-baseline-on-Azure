@@ -120,6 +120,7 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
     ![Security Center is highlighted on the left side of the Azure portal, and Just in time VM access (Preview) is highlighted to the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image9.png)
 
 > **Note**: Your subscription may not be set up with the **Standard** tier; if that is the case then do the following:
+
     a.  In the **Security Center** blade, select **Pricing & settings**.
     b.  Select your subscription.
     c.  Select **Pricing Tier**
