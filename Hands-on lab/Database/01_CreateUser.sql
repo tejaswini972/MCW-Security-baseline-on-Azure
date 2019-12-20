@@ -1,3 +1,6 @@
+USE Insurance
+GO
+
 create user agent from login [agent]
 GO
 
