@@ -128,7 +128,7 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
    - Select **Save**.
    - Navigate back to Security Center, select **Just in time VM access**.
 
-3. Select the **Configured** tab, and verify the lab vms (db-1, paw-1 and web-1) are displayed.  If not, select the **Recommended** tab, and then check the checkbox to select the lab vms (db-1, paw-1 and web-1), and then select the **Enable JIT on 3 VMs** link.
+3. Select the **Configured** tab, and verify the lab VMs (db-1, paw-1 and web-1) are displayed.  If not, select the **Recommended** tab, and then check the checkbox to select the lab VMs (db-1, paw-1 and web-1), and then select the **Enable JIT on 3 VMs** link.
 
     ![The screenshot shows the virtual machines selected for Just-in-time access.](media/2019-12-18-16-08-30.png "Virtual Machines Selected")
 
@@ -368,7 +368,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
     ![Azure Key Vault is selected and highlighted under Select the key store provider.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image38.png "Select Azure Key Vault")
 
-19. Select **SignIn**.
+19. Select **Sign In**.
 
 20. Sign in with your Azure Portal credentials.
 
@@ -524,7 +524,7 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 5. Choose **Select principal** field value. In the right-hand pane, type **AzureKeyVaultTest**. Select the item.
 
-6. Select **Select** button at the bottom.
+6. Choose the **Select** button at the bottom.
 
 7. Select **Add** button.
 
@@ -650,7 +650,7 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
     ![The information above for port 1433 (SQL) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image56.png "View the information")
 
-    d.  Port scan for port 80 (HTTP) to **DB-1** and **WEB-1** is unsuccessful from the **PAW-1** machine, if traffic was allowed, it would always fail to **DB-1** because it is not running IIS or any other web server.
+    - Port scan for port 80 (HTTP) to **DB-1** and **WEB-1** is unsuccessful from the **PAW-1** machine, if traffic was allowed, it would always fail to **DB-1** because it is not running IIS or any other web server.
 
     ![The information above for port 80 (HTTP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image57.png)
 
@@ -756,17 +756,17 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
 2. Press **F5** to run the **PortScan** script. You should see the following:
 
-    a.  Port scan for port 3389 (RDP) to **DB-1** and **WEB-1** is successful from the **PAW-1** machine.
+    - Port scan for port 3389 (RDP) to **DB-1** and **WEB-1** is successful from the **PAW-1** machine.
 
     ![The information above for port 3389 (RDP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image61.png "View the information")
 
-    b.  Port scan for port 1433 (SQL) to **DB-1** is successful, and **WEB-1** is unsuccessful from the **PAW-1** machine.
+    - Port scan for port 1433 (SQL) to **DB-1** is successful, and **WEB-1** is unsuccessful from the **PAW-1** machine.
 
     > **Note**: You may need to disable the windows firewall on the DB-1 server to achieve this result.
 
     ![The information above for port 1433 (SQL) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image62.png "View the information")
 
-    c.  If IIS has been setup on WEB-1, the port scan for port 80 (HTTP) to **DB-1** is unsuccessful and **WEB-1** is successful from the **PAW-1** machine
+    - If IIS has been setup on WEB-1, the port scan for port 80 (HTTP) to **DB-1** is unsuccessful and **WEB-1** is successful from the **PAW-1** machine
 
     ![The information above for port 80 (HTTP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image63.png "View the information")
 
@@ -950,11 +950,11 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 3. The **Create logic app** blade will display:
 
-    a.  For the name, enter **Email**.
+    - For the name, enter **Email**.
 
-    b.  Select your existing resource group.
+    - Select your existing resource group.
 
-    c.  Toggle the **Log Analytics** to **On** and then select your **azuresecurity** Log Analytics workspace.
+    - Toggle the **Log Analytics** to **On** and then select your **azuresecurity** Log Analytics workspace.
 
    ![The information above is entered in the Create logic app dialog box.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image80.png "Enter Create logic app information")
 
