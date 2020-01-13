@@ -168,7 +168,7 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
     ![Activity Log is highlighted in the shortcut menu for the last user.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image15.png "View the Activity Log")
 
-6. In the Azure Portal main menu, select **All Services**, then type **Network**, then select **Network Security Group**:
+6. In the Azure Portal main menu, select **All Services**, then type **Network**, then select **Network security groups**.
 
     ![Network security groups is highlighted on the left side of the Azure portal, and paw-1-nsg is highlighted to the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image16.png "Select paw-1-nsg")
 
@@ -186,13 +186,13 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 ### Task 1: Setup the database
 
-1. Switch to your Azure portal, select **All Services** then search for **SQL Servers**.  Select **SQL Servers**:
+1. Switch to your Azure portal, select **All Services** then search for **SQL Servers**.  Select **SQL Servers**.
 
     ![More services is highlighted on the left side of the Azure portal, and SQL servers is highlighted to the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image18.png "Select SQL Servers")
 
 2. Select the **Azure SQL** database server you created using the Azure Manager template (Ex:  AzureSecurity-INIT).
 
-3. Select **SQL Databases**, then select the **SampleDB** database.
+3. Select **SQL databases**, then select the **SampleDB** database.
 
     ![SQL databases is selected under Settings on the left, and at right, Insurance is selected.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image19.png "Select the SampleDB database")
 
@@ -452,7 +452,7 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 5. For the **Name**, enter **InsuranceAPI**.
 
-6. For the **Value,** copy the connection string information from the InsuranceAPI solution Web.config file in Exercise 2.
+6. For the **Value,** copy the connection string information from the **InsuranceAPI** solution Web.config file in Exercise 2.
 
 7. Select **Create**.
 
@@ -619,6 +619,8 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
     ```PowerShell
     Set-ExecutionPolicy -ExecutionPolicy Unrestricted
     ```
+
+    ![The screenshot displays the PAW VM and Powershell execute dialog.](media/2020-01-12-12-39-24.png "PowerShell")
 
 6. In the dialog, select **Yes**.
 
@@ -792,41 +794,39 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
 ### Task 5: Setup network packet capture
 
-1. In the main Azure Portal menu, select **Monitor**.
+1. In the main Azure Portal menu, search **All services** for **Network Watcher**.
 
-2. In the context menu, under **Insights** select **Network**.
+2. In the context menu, select **Network Watcher**.
 
-    ![Monitor is selected on the left side of the Azure portal, and Network watcher is highlighted on the right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image67.png "Select Network watcher")
+    ![Network watcher is listed in the search box. Network watcher search result is circled.](media/2020-01-12-12-06-30.png "Network watcher search result")
 
-3. Select the **Overview** link.
+3. Expand the subscription regions item you are running your labs in.
 
-4. Expand the subscription item you are running your labs in.
-
-5. For the **East US** region (or whatever region you deployed your VMs too), select the ellipses, then select **Enable Network Watcher**.
+4. For the **East US** region (or whatever region you deployed your VMs too), select the ellipses, then select **Enable Network Watcher**.
 
     ![The East US row is highlighted under Region, and Enable network watcher is selected in the submenu.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image68.png "Enable Network Watcher")
 
-6. In the new context menu, select **Packet capture**.
+5. In the new context menu, select **Packet capture**.
 
-7. Select **+Add**.
+6. Select **+Add**.
 
     ![Packet capture is selected and highlighted on the left under Network Diagnostic Tools, and + Add is highlighted at the top right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image69.png "Add a packet capture")
 
-8. For the target virtual machine, ensure that **db-1** is selected.
+7. For the target virtual machine, ensure that **db-1** is selected.
 
-9. For the capture name, enter **databasetraffic**.
+8. For the capture name, enter **databasetraffic**.
 
-10. Notice the ability to save the capture file to the local machine or an Azure storage account. Ensure that the resource group storage account is selected.
+9. Notice the ability to save the capture file to the local machine or an Azure storage account. Ensure that the resource group storage account is selected.  If you check your resource group, the storage account is prefixed with **"diagstor"**.
 
-    ![In this screenshot, databasetraffic is entered in the Packet capture name box, and the Storage account check box is selected.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image70.png "Dialog box screenshot")
+    ![In this screenshot, databasetraffic is entered in the Packet capture name box, and the Storage account check box is selected.](media/2020-01-12-12-24-05.png "Dialog box screenshot")
 
-11. For the values, enter the following:
+10. For the values, enter the following:
 
     - Maximum bytes per packet: 0
     - Maximum bytes per session: 1073741824
     - Time limit: 600
 
-12. Select **OK**.
+11. Select **OK**.
 
 ### Task 6: Execute a port scan
 
@@ -834,7 +834,9 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
 2. Uncomment the last line of the script, and press **F5**.
 
-> **Note**: You should see the basic ports scanned, and then a port scan from 80 to 443. This will generate many security center logs for the Network Security Group which will be used in the Custom Alert in the next exercise.
+   ![The screenshot shows the PAW VM and the uncommented PowerShell script port scan command.](media/2020-01-12-12-49-13.png "Running the uncommented PowerShell script")
+
+    > **Note**: You should see the basic ports scanned, and then a port scan from 80 to 443. This will generate many security center logs for the Network Security Group which will be used in the Custom Alert in the next exercise.
 
 ## Exercise 5: Azure Sentinel Logging and Reporting
 
@@ -850,7 +852,9 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
     ![In this screenshot, All Services is selected, and then a search for Sentinel is displayed.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image94.png "Searching for Sentinel")
 
-3. In the blade, select **+Add**, select the Log Analytics resource for your resource group, then choose **Add Azure Sentinel**.
+3. In the blade, select **+Add**, select the **Log Analytics** resource for your resource group, then choose **Add Azure Sentinel**.
+
+   ![The screenshot displays the Azure workspace found in the resource group.](media/2020-01-12-12-54-25.png "Azure Workspace")
 
 4. In the blade, under **Threat Management**, select **Workbooks**.
 
@@ -864,7 +868,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 8. Select the region and choose **OK**.
 
-9. Select **View saved workbook**, take a moment to review your new workbook.
+9.  Select **View saved workbook**, take a moment to review your new workbook.
 
 ### Task 2: Create an Analytics alert
 
@@ -886,19 +890,25 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
     > **Note**: If you were quick going through the labs, then you may not have log data in the Log Analytics workspace just yet that corresponds to "AzureMetric". You may need to wait 15-30 minutes before a query will execute.
 
-5. Under **Map entities**, for the **IP address**, select **conditions_sourceIP_s**.
+5. Under **Map entities**, for the **IP address**, select **conditions_sourceIP_s** and then select **Add**.
 
-6. Under **Query scheduling**, for the **Run query every** setting, type **10** minutes.
+6. Under **Query scheduling**, for the **Run query every** setting, type **5** minutes.
 
-7. For the **Lookup data from the last**, type **2** hours.
+    >**Note**:  This is a lab and you want to see the results as quickly as possible. In a production environment, you may want to choose a different time threshold.
 
-8. Under **Alert threshold**, for the **Generate alert when number of query results**, enter **50**.
+7. For the **Lookup data from the last**, type **1** hours.
 
-    > **Note:** This is so that our lab will run quickly and may not be appropriate for real world.
+8. Under **Alert threshold**, for the **Generate alert when number of query results**, enter **15**.
 
-9. For the suppress alerts for, enter **30** and **Minutes**.
+    > **Note:** We want to hit the threshold quickly for lab purposes.  This value may not be appropriate for production.
 
-    ![The above information is entered in the dialog box for the new custom analytics rule.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image98.png "Enter the information in the dialog box")
+    Review the current data to determine what would trigger the alert.  Notice the red threshold line intersects the blue event data line.
+
+    ![Displaying the current log data and the alert threshold.](media/2020-01-12-13-26-17.png "Results Preview")
+
+9. For the suppress alerts for, enter **5** and **Minutes**.
+
+    ![The above information is entered in the dialog box for the new custom analytics rule.](media/2020-01-12-13-18-04.png "Rule dialog box")
 
 10. Select **Next: Automated response**.
 
@@ -908,6 +918,8 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
     > **Note**:  It may take a few minutes for the alert to fire.  You may need to run the PortScan script a few times from **paw-1**
 
+    ![The screenshot displays the new PortScan alert configured.](media/2020-01-12-13-03-56.png "PortScan configured")
+
 ### Task 3: Investigate a custom alert incident
 
 1. In the main menu, select **Azure Sentinel**.
@@ -916,7 +928,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 3. Select the new **PortScans** incident.
 
-    ![This is a screenshot of the new PortScans security alert, which has a Medium Severity of 1.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image75.png "View the new PortScans alert")
+    ![This is a screenshot of the new PortScans security alert, which has a Medium Severity of 1.](media/2020-01-12-13-30-12.png "View the new PortScans alert")
 
     > **Note**: It may take 15-20 minutes for the alert to fire. You can continue to execute the port scan script to cause log events or you can lower the threshold for the custom alert.
 
@@ -946,11 +958,13 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
    ![The information above is entered in the Create logic app dialog box.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image80.png "Enter Create logic app information")
 
-4. Select **Create**, after a few moments, the **Logic Apps Designer** will load.
+4. Select **Create**, after a few moments, the **Logic Apps Designer** will load. If the designer does not load, wait a few minutes and refresh the Playbook list. Select the **Email** playbook.
+
+    ![The playbooks list is displayed and the Email playbook is circled.](media/2020-01-12-14-40-13.png "Playbook List")
 
 5. Select the **Send notification email** template.
 
-    ![Send notification email is selected on the right side under Choose a template below to create your Logic App.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image81.png "Select the Send notification email template")
+    ![The Use this template button is selected under Send notification email with alert details from Azure Security Center.](media/2020-01-12-14-44-52.png "Select Use this template")
 
 6. Select **Use this template**.
 
@@ -958,17 +972,19 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 7. Select **Sign In**, and then type your Azure/O365 credentials.
 
-    ![The Sign in button is highlighted next to Office 365 Outlook under This logic app will connect to.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image83.png "Sign in to Office 365 Outlook")
+    ![The Sign in button is highlighted next to Office 365 Outlook under This logic app will connect to.](media/2020-01-12-14-48-03.png "Sign in to Office 365 Outlook")
 
     > **Note**: This would need to be a valid Office 365 account, if you do not have a valid Office 365 account, then utilize a basic email template for Outlook.com.
 
 8. Select **Continue**.
 
+    ![The Logic app connection blade is displayed.  Outlook and Azure Security Center validation are displayed.](media/2020-01-12-14-51-29.png "Logic App Connection Information")
+
 9. For the email address, enter your email.
 
 10. Select **Save**. You now have an email alert action based on LogicApps for your custom security alert to use.
 
-    ![Save is highlighted in Logic Apps Designer, and information about the custom security alert appears below.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image84.png "Save the email alert action")
+    ![Save is highlighted in Logic Apps Designer, and information about the custom security alert appears below.](media/2020-01-12-14-54-20.png "Save the email alert action")
 
 11. Lastly, after you have created the new Playbook, ensure that the status is **Enabled**.  If not, then select **Enable** in the menu.
 
@@ -976,31 +992,50 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 1. In the **Azure Sentinel** blade, select **Notebooks**.
 
-2. Scroll to the bottom of the page and select **Clone Azure Sentinel Notebooks**.
+2. Scroll to the bottom of the page and select **Clone Notebooks**.
 
-    ![Notebooks and Clone Azure Sentinel Notebooks is highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image99.png "Close Azure Sentinel Notebooks")
+    ![Azure Sentinel Notebooks blade shows Clone Notebooks is highlighted.](media/2020-01-12-18-02-39.png "Close Azure Sentinel Notebooks")
 
-3. The Azure Notebooks page will open, if prompted, login, then select **Import**.  
+    You will see the GitHub progress meter.
 
-    ![The Import button is highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image100.png "Import Azure Sentinel notebooks")
+    ![The GitHub progress meter is displayed.](media/2020-01-12-18-06-26.png "GitHub Progress Meter")
 
-4. In your notebook, browse to **/Azure Sentinel/Notebooks**, then select **Get Started.ipynb**.
+3. Navigate to **My Projects** and select the **Run on Free Compute**.
 
-5. On the page, select **Run on Free Azure**.
+4. Find **Get Started.ipynb**.  You may have to page through the results to find the **Get Started.ipynb** notebook. Select it. In this example, it was located on the second page.
 
-    ![The Run on Free Azure is button is highlighted](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image101.png "Set the run notebook host")
+    ![My Project is displayed. The Get Started notebook is selected.](media/2020-01-12-18-08-26.png "My Projects Notebook List")
 
-6. In the menu, select **Kernel->Change kernel**, then select **Python 3.6**.
+5. In the menu, select **Kernel->Change kernel**, then select **Python 3.6**.
 
     ![The page menu is expanded to the Kernel menu item and the change kernel with Python 3.6 is selected.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image102.png "Set the Kernel to Python 3.6")
 
-7. Choose the **Run** button until you execute the entire Notebook, note that some steps will required your input.
+6. Choose the **Run** button until you execute the entire Notebook, note that some steps will required your input.
+
+    When the cell has an asterisk, it is still processing. Wait for a number to appear.
+
+    ![The cell is still processing.](media/2020-01-12-18-42-35.png "Processing Cell")
+
+    This cell has completed processing. You should see a number.
+
+    ![This cell has completed processing. A number appears in the brackets.](media/2020-01-12-18-44-30.png "Cell has completed processing")
 
     > **Note**: You can find the open source GitHub notebooks at [https://github.com/Azure/Azure-Sentinel](https://github.com/Azure/Azure-Sentinel/tree/master/Notebooks).
+
+    At this point, you may have to enter the code.
+
+    ![Enter the notebook code into the Azure dialog.](media/2020-01-12-18-37-23.png "Azure Code Dialog")
+
+    Your final cell processing should provide an output.
+
+    ![Your final notebook cell processing.](media/2020-01-12-19-29-35.png "Final Cell Processing")
 
 ### Task 6: Creating Reports with Power BI
 
 1. Navigate back to your **Azure Sentinel** browser window.  Select **Logs**.
+
+    >**Note**: You may see a **Welcome to Log Analytics** splash page in the blade.  Select **Get Started**.
+    ![The screenshot displays the Welcome to Log Analytics blade.](media/2020-01-12-19-14-49.png "Welcome to Log Analytics")
 
 2. In the **Schema** tab under **Active**, expand the **LogManagement** node, notice the various options available.
 
@@ -1009,6 +1044,8 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 4. In the top right, select **Export**, then select the **Export to Power BI (M Query)** link.
 
     ![All the above button select areas are displayed with red highlighting.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image103.png "Export a Power BI report query")
+
+    ![Select the correct export.  Export to PowerBI is circled.](media/2020-01-12-19-17-28.png "Export to PowerBI")
 
 5. Select **Open**, a text document with the Power Query M Language will be displayed.
 
@@ -1036,7 +1073,7 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
 3. For the scope, ensure the proper subscription is selected, then select **ASC Default (subscription:**.
 
-4. In the **Initiative compliance** blade, review your compliance metrics.  Select the row that has the **ASC Default** policy.
+4. In the **Initiative compliance** blade, review your compliance metrics.
 
 5. Scroll to the results area and select the **Non-compliant resources** tab.
 
@@ -1044,7 +1081,9 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
 6. In the filter search box, type **PAW-1** and select it when displayed.
 
-7. With the **Policies** tab selected, review the policies that the resource is non-complying against.  
+7. With the **Policies** tab selected, review the policies that the resource is non-complying against.
+
+    >**Note**: New policies are being created and your number may be different from the image below.
 
     ![The Resource compliance blade for PAW-1 is displayed with the non-compliant items highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image107.png "Review the non-compliant items")
 
@@ -1092,15 +1131,15 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
 13. Select **Add**.
 
-14. Select **Save Draft**.
+14. Select **Save Draft**. It may take a few minutes.  The blade will automatically change when the save operation finishes.
 
 15. For the new blueprint, select the ellipses, then select **Publish Blueprint**.
 
     ![Screen shot showing the Publish blueprint dialog.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image114.png "Publish blueprint dialog")
 
-16. For the version type **1.0.0**.
+16. Select **Publish**.
 
-17. Select **Publish**.
+17. For the version type **1.0.0**.
 
 18. For the new blueprint, select the ellipses, then select **Assign Blueprint**.
 
@@ -1125,6 +1164,8 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
     ![Screen shot with the Probision an Azure AD Administrator for SQL Server highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image116.png "Review a security recommendation")
 
 ### Task 4: Use Compliance Manager for Azure
+
+>**Note**: You may need to additional permissions to run this portion of the lab. Contact your Global Administrator.
 
 1. In a browser, go to the Service Trust/Compliance Manager portal (<https://servicetrust.microsoft.com>).
 
