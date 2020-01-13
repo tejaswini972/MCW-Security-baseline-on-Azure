@@ -42,7 +42,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 1. Microsoft Azure subscription must be pay-as-you-go or MSDN.
 
     - Trial subscriptions will not work.
-    
+
 2. A machine with the following software installed:
 
     - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
@@ -59,59 +59,61 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
 ### Task 1: Download GitHub resources
 
-1.  Open a browser window to the cloud workshop GitHub repository (<https://github.com/microsoft/MCW-Security-baseline-on-Azure>).
+1. Open a browser window to the cloud workshop GitHub repository (<https://github.com/microsoft/MCW-Security-baseline-on-Azure>).
 
-2.  Select **Clone or download**, then select **Download Zip**.
+2. Select **Clone or download**, then select **Download Zip**.
 
-    ![Clone or download and Download ZIP are highlighted in this screenshot of the cloud workshop GitHub repository.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image3.png)
+    ![Clone or download and Download ZIP are highlighted in this screenshot of the cloud workshop GitHub repository.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image3.png "Clone or Download Zip")
 
-3.  Extract the zip file to your local machine, be sure to keep note of where you have extracted the files. You should now see a set of folders:
+3. Extract the zip file to your local machine, be sure to keep note of where you have extracted the files. You should now see a set of folders:
 
     ![A set of extracted folders and files are visible in File Explorer: .vs, AzureTemplate, Database, Scripts, WebApp, README.md.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image4.png "Extract the zip file")
 
 ### Task 2: Deploy resources to Azure
 
-1.  Open your Azure Portal.
+1. Open your Azure Portal.
 
-2.  Select **Resource groups**.
+2. Select **Resource groups**.
 
-3.  Select **+Add**.
+3. Select **+Add**.
 
-4.  Type a resource group name, such as **azsecurity-\[your initials or first name\]**.
+4. Type a resource group name, such as **azsecurity-\[your initials or first name\]**.
 
-5.  Select **Review + Create**, then select **Create**.
+5. Select **Review + Create**, then select **Create**.
 
-6.  Select **Refresh** to see your new resource group displayed and select it.
+6. Select **Refresh** to see your new resource group displayed and select it. It may take a few minutes.
 
-7.  Select **Export template**, and then select **Deploy**.
+7. Select **Export template**, and then select **Deploy**.
 
     ![Automation script is highlighted under Settings on the left side of the Azure portal, and Deploy is highlighted on the top-right side.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image5.png "Select Deploy")
 
-8.  Select **Build your own template in the editor**.
+8. Select **Build your own template in the editor**.
 
-9.  In the extracted folder, open the **\\Hands-on lab\\Scripts\\template.json**.
+9. In the extracted folder, open the **\\Hands-on lab\\Scripts\\template.json**.
 
 10. Copy and paste it into the window.
 
 11. Select **Save**, you will see the dialog with the input parameters. Fill out the form:
 
-    -  Subscription: Select your **subscription**.
+    - Subscription: Select your **subscription**.
 
-    -  Resource group: Use an existing Resource group, or create a new one by entering a unique name, such as **azsecurity-\[your initials or first name\]**.
+    - Resource group: Use an existing Resource group, or create a new one by entering a unique name, such as **azsecurity-\[your initials or first name\]**.
 
-    -  Location: Select a **location** for the Resource group. Recommend using East US, East US 2, West Central US, or West US 2.
+    - Location: Select a **location** for the Resource group. 
 
-    -  Modify the **sqlservername** to be something unique such as "azsecurity-\[your initials or first name\]".
+        >**Note**: You may receive an error if you pick a region that does not support this lab. We recommend using East US, East US 2, West Central US, or West US 2.
 
-    -  Fill in the remaining parameters, but if you change anything, be sure to note it for future reference throughout the lab.
+    - Modify the **sqlservername** to be something unique such as "azsecurity-\[your initials or first name\]".
 
-    -  The **userObjectId** can be retrieved by navigating to Azure Active Directory blade and searching for your user account.  On the user account page, you will find your Object ID which you can copy and paste into the field.
+    - Fill in the remaining parameters, but if you change anything, be sure to note it for future reference throughout the lab.
+
+    - The **userObjectId** can be retrieved by navigating to Azure Active Directory blade and searching for your user account.  On the user account page, you will find your Object ID which you can copy and paste into the field.
 
     ![The Object Id for your Azure user account is highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image0.png "Your Azure Object Id")
 
-    -  Check the **I agree to the terms and conditions stated above** checkbox.
+    - Check the **I agree to the terms and conditions stated above** checkbox.
 
-    -  Select **Purchase**.
+    - Select **Purchase**.
 
     ![The above information is entered in the form, and I agree to the terms and conditions stated above and Purchase are selected and highlighted at the bottom.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image6.png "Fill out the form")
 
@@ -119,23 +121,23 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
     ![Deployments is highlighted under Settings on the left side of the Azure portal, and Microsoft.Template is highlighted under Deployment Name on the right side.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image7.png "Select the Deployments link")
 
-    -  As part of the deployment, you will see the following items created:
+    - As part of the deployment, you will see the following items created:
 
-       -  Storage account
+       - Storage account
 
-       -  Three virtual networks (dbVNet, webVnet, mainVnet).
+       - Three virtual networks (dbVNet, webVnet, mainVnet).
 
-       -  Three network security groups. 
+       - Three network security groups.
 
-       -  Three virtual machines with associated network resources (db-1, web-1, paw-1).
+       - Three virtual machines with associated network resources (db-1, web-1, paw-1).
 
-            -   IIS is installed on web-1 via a DSC script from the GitHub repository.
+            - IIS is installed on web-1 via a DSC script from the GitHub repository.
 
-       -  SQL Azure Server with sample database.
+       - SQL Azure Server with sample database.
 
-       -  Azure Key Vault
+       - Azure Key Vault
 
-       -  Log Analytics Workspace
+       - Log Analytics Workspace
 
     ![Created items list This screenshot is a list of the items that were created, including the items listed above. ](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image8.png)
 
