@@ -9,7 +9,7 @@ Before the hands-on lab setup guide
 </div>
 
 <div class="MCWHeader3">
-October 2019
+February 2020
 </div>
 
 
@@ -19,7 +19,7 @@ Microsoft may have patents, patent applications, trademarks, copyrights, or othe
 
 The names of manufacturers, products, or URLs are provided for informational purposes only and Microsoft makes no representations and warranties, either expressed, implied, or statutory, regarding these manufacturers or the use of the products with any Microsoft technologies. The inclusion of a manufacturer or product does not imply endorsement of Microsoft of the manufacturer or product. Links may be provided to third party sites. Such sites are not under the control of Microsoft and Microsoft is not responsible for the contents of any linked site or any link contained in a linked site, or any changes or updates to such sites. Microsoft is not responsible for webcasting or any other form of transmission received from any linked site. Microsoft is providing these links to you only as a convenience, and the inclusion of any link does not imply endorsement of Microsoft of the site or the products contained therein.
 
-© 2019 Microsoft Corporation. All rights reserved.
+© 2020 Microsoft Corporation. All rights reserved.
 
 Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx> are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
 
@@ -30,8 +30,10 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 - [Security baseline on Azure before the hands-on lab setup guide](#security-baseline-on-azure-before-the-hands-on-lab-setup-guide)
   - [Requirements](#requirements)
   - [Before the hands-on lab](#before-the-hands-on-lab)
-    - [Task 1: Download GitHub resources](#task-1-download-github-resources)
-    - [Task 2: Deploy resources to Azure](#task-2-deploy-resources-to-azure)
+    - [Task 1: Deploy resources to Azure](#task-1-deploy-resources-to-azure)
+    - [Task 2: Download Google Chrome](#task-2-download-google-chrome)
+    - [Task 3: Download SQL Server Management Studio](#task-3-download-sql-server-management-studio)
+    - [Task 4: Download GitHub resources](#task-4-download-github-resources)
 
 <!-- /TOC -->
 
@@ -43,7 +45,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
     - Trial subscriptions will not work.
 
-2. A machine with the following software installed:
+2. A machine with the following software installed (a Virtual Machine is created via the ARM template with most of this):
 
     - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     - [SQL Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
@@ -57,19 +59,7 @@ Duration: 30 minutes
 
 Synopsis: In this exercise, you will set up your environment for use in the rest of the hands-on lab. You should follow all the steps provided in the Before the Hands-on Lab section to prepare your environment *before* attending the workshop.
 
-### Task 1: Download GitHub resources
-
-1. Open a browser window to the cloud workshop GitHub repository (<https://github.com/microsoft/MCW-Security-baseline-on-Azure>).
-
-2. Select **Clone or download**, then select **Download Zip**.
-
-    ![Clone or download and Download ZIP are highlighted in this screenshot of the cloud workshop GitHub repository.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image3.png "Clone or Download Zip")
-
-3. Extract the zip file to your local machine, be sure to keep note of where you have extracted the files. You should now see a set of folders:
-
-    ![A set of extracted folders and files are visible in File Explorer: .vs, AzureTemplate, Database, Scripts, WebApp, README.md.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image4.png "Extract the zip file")
-
-### Task 2: Deploy resources to Azure
+### Task 1: Deploy resources to Azure
 
 1. Open your Azure Portal.
 
@@ -83,15 +73,15 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
 6. Select **Refresh** to see your new resource group displayed and select it. It may take a few minutes.
 
-7. Select **Export template**, and then select **Deploy**.
+7. Under **Settings**, select **Export template**, and then select **Deploy**.
 
     ![Automation script is highlighted under Settings on the left side of the Azure portal, and Deploy is highlighted on the top-right side.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image5.png "Select Deploy")
 
 8. Select **Build your own template in the editor**.
 
-9. In the extracted folder, open the **\\Hands-on lab\\Scripts\\template.json**.
+9. Copy the contents of the [ARM template](https://raw.githubusercontent.com/microsoft/MCW-Security-baseline-on-Azure/master/Hands-on%20lab/Scripts/template.json) from the repo.
 
-10. Copy and paste it into the window.
+10. Paste the ARM template into the window.
 
 11. Select **Save**, you will see the dialog with the input parameters. Fill out the form:
 
@@ -117,7 +107,7 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
     ![The above information is entered in the form, and I agree to the terms and conditions stated above and Purchase are selected and highlighted at the bottom.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image6.png "Fill out the form")
 
-12. The deployment will take 15-30 minutes to complete. To view the progress, select the **Deployments** link, then select the **Microsoft.Template** deployment.
+12. The deployment will take 20-40 minutes to complete. To view the progress, select the **Deployments** link, then select the **Microsoft.Template** deployment.
 
     ![Deployments is highlighted under Settings on the left side of the Azure portal, and Microsoft.Template is highlighted under Deployment Name on the right side.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image7.png "Select the Deployments link")
 
@@ -128,10 +118,12 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
        - Three virtual networks (dbVNet, webVnet, mainVnet).
 
        - Three network security groups.
-
-       - Three virtual machines with associated network resources (db-1, web-1, paw-1).
+      
+       - Three lab supporting virtual machines with associated network resources (db-1, web-1, paw-1).
 
             - IIS is installed on web-1 via a DSC script from the GitHub repository.
+  
+            - paw-1 is used as a development machine for the labs to save on resources.  A Paw workstation would not be used as a development machine in production with Visual Studio and SQL Management Studio.  This was done to save on resource costs / setup complexity.
 
        - SQL Azure Server with sample database.
 
@@ -141,4 +133,30 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
     ![Created items list This screenshot is a list of the items that were created, including the items listed above. ](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image8.png)
 
-You should follow all steps provided *before* attending the hands-on lab.
+### Task 2: Download Google Chrome
+
+1. Login to the Virtual Machine created via the ARM template called **paw-1**
+
+2. Open Internet Explorer and browse to <https://www.google.com/chrome/>.
+
+3. Select **Download Chrome** on the webpage and follow the prompts.
+
+### Task 3: Download SQL Server Management Studio
+
+1. From the **paw-1** Virtual Machine, open Google Chrome and browse to <https://aka.ms/ssmsfullsetup>.
+
+2. After the installer has completed downloading, run it and follow the prompts to install SQL Server Management Studio.
+
+### Task 4: Download GitHub resources
+
+1. Open a browser window to the cloud workshop GitHub repository (<https://github.com/microsoft/MCW-Security-baseline-on-Azure>).
+
+2. Select **Clone or download**, then select **Download Zip**.
+
+    ![Clone or download and Download ZIP are highlighted in this screenshot of the cloud workshop GitHub repository.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image3.png "Clone or Download Zip")
+
+3. Extract the zip file to your local machine, be sure to keep note of where you have extracted the files (such as `c:\temp`). You should now see a set of folders:
+
+    ![A set of extracted folders and files are visible in File Explorer: .vs, AzureTemplate, Database, Scripts, WebApp, README.md.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image4.png "Extract the zip file")
+
+**NOTE** You should follow all steps provided *before* attending the hands-on lab.
