@@ -523,7 +523,7 @@ On your diagram, indicate how you would secure any sensitive data at rest and in
 
 1.  Web Tier
 
-    a.  The topology deploys independent Azure VMs for their corporate website and their external data collection website. Cloud Services were ruled out so that Contoso could avoid changes to their development and deployment experience, making the migration more direct via a lift and shift effort.
+    a.  The topology deploys independent Azure VMs for their corporate website and their external data collection website. Cloud Services were ruled out so that Contoso could avoid changes to their development and deployment experience, making the migration more direct via a lift and shift effort.  However, in the future they are open to deploying to App Services and use  [Azure Virtual Networks](https://docs.microsoft.com/en-us/azure/app-service/web-sites-integrate-with-vnet) to limit traffic.
 
     b.  Access to the corporate website is restricted to within the virtual network, as no public endpoint is exposed. Access to the public website is possible, as a public endpoint listening for TLS connection on port 443 is exposed via the Azure load balancer, and similarly, the VM itself has a firewall rule allowing TCP connections on port 443. TLS needs to be properly configured, with the appropriate certificates installed and setup with IIS on each VM.
 
