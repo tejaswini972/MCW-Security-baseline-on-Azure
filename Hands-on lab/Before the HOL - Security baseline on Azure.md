@@ -89,7 +89,7 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
     - Resource group: Use an existing Resource group, or create a new one by entering a unique name, such as **azsecurity-\[your initials or first name\]**.
 
-    - Location: Select a **location** for the Resource group. 
+    - Location: Select a **location** for the Resource group.
 
         >**Note**: You may receive an error if you pick a region that does not support this lab. We recommend using East US, East US 2, West Central US, or West US 2.
 

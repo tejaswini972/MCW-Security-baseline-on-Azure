@@ -753,7 +753,7 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
        - Select **Add**.
 
-5. Configure all NSGs to have Diagnostic logs enabled.
+5. Configure all Network Security Groups to have Diagnostic logs enabled.
 
     - Select **Network security groups.** For each NSG (DBTrafficOnly and WebTrafficOnly), do the following:
 
@@ -843,7 +843,7 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
 9. For the target virtual machine, ensure that **db-1** is selected.
 
-10.  For the capture name, enter **databasetraffic**.
+10. For the capture name, enter **databasetraffic**.
 
 11. Notice the ability to save the capture file to the local machine or an Azure storage account. Ensure that the resource group storage account is selected.  If you check your resource group, the storage account is prefixed with **"diagstor"**.
 
@@ -897,7 +897,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
     ![In this screenshot, Dashboards has been selected and the Azure AD Audit Logs dashboard has also been selected.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image95.png "Adding a workbooks")
 
-9.  Select **View saved workbook**, take a moment to review your new workbook.
+9. Select **View saved workbook**, take a moment to review your new workbook.
 
 > **NOTE** You may not have data in the log analytics workspace.  Wait for 10-15 minutes.
 
@@ -944,9 +944,9 @@ AzureDiagnostics
 
 9. Select **Next: Automated response**, notice you have no playbooks to select yet.
 
-10.   Select **Next: Review**.
+10. Select **Next: Review**.
 
-11.   Select **Create**.
+11. Select **Create**.
 
     > **Note**:  It may take a few minutes for the alert to fire.  You may need to run the PortScan script a few times from **paw-1**
 
