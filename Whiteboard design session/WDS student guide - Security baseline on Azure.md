@@ -42,24 +42,25 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 # Security baseline on Azure whiteboard design session student guide
 
-## Abstract and learning objectives 
+## Abstract and learning objectives
 
 In this whiteboard design session, you will work with a group to design an end-to-end solution that leverages many of Microsoft Azure’s security features.
 
 At the end of this session, you will be better able to design and recommend solutions that help organizations properly secure their cloud-based applications while protecting their sensitive data.
 
-## Step 1: Review the customer case study 
+## Step 1: Review the customer case study
 
 **Outcome** 
 
 Analyze your customer’s needs.
 
-Timeframe: 15 minutes 
+Timeframe: 15 minutes
 
-Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
-1.  Meet your table participants and trainer.
-2.  Read all of the directions for steps 1–3 in the student guide.
-3.  As a table team, review the following customer case study.
+Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
+
+1. Meet your table participants and trainer.
+2. Read all of the directions for steps 1–3 in the student guide.
+3. As a table team, review the following customer case study.
 
 ### Customer situation
 
@@ -67,13 +68,13 @@ Contoso Ltd. is a multinational corporation, headquartered in the United States 
 
 The fundamental workflow for Contoso is as follows:
 
-1.  Contoso support staff process the incoming claims (which sometimes requires scrubbing) through the *corporate website*, and create a work order assigned to a mobile agent in the region of the insured.
+1. Contoso support staff process the incoming claims (which sometimes requires scrubbing) through the *corporate website*, and create a work order assigned to a mobile agent in the region of the insured.
 
-2.  Mobile agents log in daily to the *data collection website* and retrieve the list of insured customers they are responsible for visiting. They communicate directly with the insured, schedule a time for a home visit, and ultimately during that visit collect information and input it into the data collection website. The sensitive information collected always includes Personally Identifiable Information (PII) and may include Protected Health Information (PHI) about the insured customer. This data is sent over the public Internet securely over TLS (SSL).
+2. Mobile agents log in daily to the *data collection website* and retrieve the list of insured customers they are responsible for visiting. They communicate directly with the insured, schedule a time for a home visit, and ultimately during that visit collect information and input it into the data collection website. The sensitive information collected always includes Personally Identifiable Information (PII) and may include Protected Health Information (PHI) about the insured customer. This data is sent over the public Internet securely over TLS (SSL).
 
-3.  When the data collection for an insured is completed, the mobile agent marks the task completed so that the corporate system can process those results.
+3. When the data collection for an insured is completed, the mobile agent marks the task completed so that the corporate system can process those results.
 
-4.  Support staff processes complete work orders and submits results through the corporate website requiring another transfer of sensitive data. They also tend to utilize Microsoft Support when tough issues arise and want to know what options they have to engage and log support activities with VMs and other Azure resources.
+4. Support staff processes complete work orders and submits results through the corporate website requiring another transfer of sensitive data. They also tend to utilize Microsoft Support when tough issues arise and want to know what options they have to engage and log support activities with VMs and other Azure resources.
 
 Contoso currently hosts their systems at co-locations facilities within each geopolitical region and manages all IT operations for the systems. In the United States, they have achieved SOC 1 and SOC 2 compliance and follow required HIPAA regulations to protect PHI. Because of the new European GDPR laws, Contoso must evaluate their computing environments for compliance gaps. Contoso has concerns about maintaining their SOC 2 certification and HIPAA compliance with respect to moving to Azure. They would like to specifically address concerns about regional issues of data sovereignty for sensitive data within the context of the GDPR and want to ensure that if they move to Azure, they will be able to continue to have isolation between components.
 
@@ -121,27 +122,27 @@ Jack Tradewinds, the CIO of Contoso Ltd, has heard a great deal of positive news
 
 18. When specific security events are detected (such as a port scan), allow for the execution of actions to remediate, start the investigative process or prevent further information leakage or damage.
 
-### Customer objections 
+### Customer objections
 
-1.  Can Azure support the lift and shift of their web and database applications?
+1. Can Azure support the lift and shift of their web and database applications?
 
-2.  Is Azure SQL secure enough to host their application databases?
+2. Is Azure SQL secure enough to host their application databases?
 
-3.  Admins are worried that they won't have the bandwidth to perform deployments of the corporate website and other supporting web applications.
+3. Admins are worried that they won't have the bandwidth to perform deployments of the corporate website and other supporting web applications.
 
-4.  Can Azure help contain costs for minimally used costly production and development resources?
+4. Can Azure help contain costs for minimally used costly production and development resources?
 
-5.  Does Azure support the ability to allow VPN connections to specific resources?
+5. Does Azure support the ability to allow VPN connections to specific resources?
 
-6.  Can Microsoft employees or government entities access our data?
+6. Can Microsoft employees or government entities access our data?
 
-7.  How does Azure protect against threats?
+7. How does Azure protect against threats?
 
-8.  Does Azure allow enough granular RBAC controls to meet our least privilege needs?
+8. Does Azure allow enough granular RBAC controls to meet our least privilege needs?
 
-9.  Is Azure virtual networking flexible enough to meet our requirements?
+9. Is Azure virtual networking flexible enough to meet our requirements?
 
-10.  Can Azure supplement on-premises and third-party SIEM systems for auditing and compliance tasks?
+10. Can Azure supplement on-premises and third-party SIEM systems for auditing and compliance tasks?
 
 11. What certifications does Azure have and can Azure hosted applications meet the US and European compliance goals?
 
@@ -157,7 +158,7 @@ This Infographic shows an example of a generic implementation of various securit
 
 ![Security and Compliance infographic. This is an example of a generic implementation of various Azure security technologies.](images/Whiteboarddesignsessionstudentguide-Azuresecurityprivacyandcomplianceimages/media/image2.png)
 
-## Step 2: Design a proof of concept solution 
+## Step 2: Design a proof of concept solution
 
 **Outcome**
 
@@ -169,9 +170,9 @@ Timeframe: 60 minutes
 
 Directions: With all participants at your table, answer the following questions and list the answers on a flip chart:
 
-1.  To whom should you present this solution? Who is your target customer audience? Who are the decision makers?
+1. To whom should you present this solution? Who is your target customer audience? Who are the decision makers?
 
-2.  What customer business needs do you need to address with your solution?
+2. What customer business needs do you need to address with your solution?
 
 **Design**
 
@@ -181,84 +182,84 @@ Directions: With all participants at your table, respond to the following questi
 
 Briefly sketch-out and propose a high-level solution that meets the customer's business and technical needs and mitigates their objections. For this workshop, you may choose from the following technologies (you may not need all of them in the correct solution):
 
-1.  Azure Virtual Machines and Networks, Network Security Groups
+1. Azure Virtual Machines and Networks, Network Security Groups.
 
-2.  Virtual Private Networks (Point to Point, Site to Site) and Express Route
+2. Virtual Private Networks (Point to Point, Site to Site) and Express Route.
 
-3.  Azure Web Apps
+3. Azure Web Apps.
 
-4.  Azure SQL DB Security Features (Threat Detection, TDE, Column Level Encryption, etc.)
+4. Azure SQL DB Security Features (Threat Detection, TDE, Column Level Encryption, etc.).
 
-5.  Azure Storage Encryption
+5. Azure Storage Encryption.
 
-6.  SQL Server 2017 in a VM
+6. SQL Server 2017 in a VM.
 
-7.  Azure Security Center, Azure Monitor and Log Analytics
+7. Azure Security Center, Azure Monitor and Log Analytics.
 
-8.  Azure Key Vault
+8. Azure Key Vault.
 
-9.  Microsoft Azure Active Directory (Connect, IAM, etc.)
+9. Microsoft Azure Active Directory (Connect, IAM, etc.).
 
-10. Microsoft Intune
+10. Microsoft Intune.
 
 *Securing Sensitive Data*
 
 On your diagram, indicate how you would secure any sensitive data at rest and in transit with respect to the following:
 
-1.  Web Tier (corporate vs. data collection)
+1. Web Tier (corporate vs. data collection).
 
-2.  Database Tier
+2. Database Tier.
 
-3.  Network, Internal, and External Communications
+3. Network, Internal, and External Communications.
 
 *Ensuring auditing and compliance*
 
 Describe how you will use Azure features to ensure the following:
 
-1.  How will you monitor and audit VM access?
+1. How will you monitor and audit VM access?
 
-2.  How will you monitor and audit network traffic across Virtual Networks?
+2. How will you monitor and audit network traffic across Virtual Networks?
 
-3.  How will you monitor and audit Azure SQL?
+3. How will you monitor and audit Azure SQL?
 
-4.  Create custom alerts and execute remediation and investigation activities on detection?
+4. Create custom alerts and execute remediation and investigation activities on detection?
 
-5.  What tools would you setup to surface audit and for compliance reporting to IT Executives?
+5. What tools would you setup to surface audit and for compliance reporting to IT Executives?
 
 *Ensuring availability and business continuity*
 
 Describe how you would ensure that the following resources would be available in the unlikely event of an attack or intentional or unintentional data loss?
 
-1.  Virtual Machines
+1. Virtual Machines.
 
-2.  Azure SQL
+2. Azure SQL.
 
 *Ensuring protection*
 
 Describe how you would secure each Azure resource from internal and external attacks:
 
-1.  Ensure that admin credentials are sufficiently protected and monitored.
+1. Ensure that admin credentials are sufficiently protected and monitored.
 
-2.  Prevent admins from causing intended and unintended harm to the environment such as unapproved software installs.
+2. Prevent admins from causing intended and unintended harm to the environment such as unapproved software installs.
 
-3.  Admins access Azure resources from secured and/or compliant corporate assets and do not directly access any production Virtual Machines from the internet.
+3. Admins access Azure resources from secured and/or compliant corporate assets and do not directly access any production Virtual Machines from the internet.
 
 **Prepare**
 
 Directions: With all participants at your table:
 
-1.  Identify any customer needs that are not addressed with the proposed solution.
+1. Identify any customer needs that are not addressed with the proposed solution.
 
-2.  Identify the benefits of your solution.
+2. Identify the benefits of your solution.
 
-3.  Determine how you will respond to the customer's objections.
+3. Determine how you will respond to the customer's objections.
 
 Prepare a 15-minute chalk-talk style presentation to the customer.
 
 ## Step 3: Present the solution
 
 **Outcome**
- 
+
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 30 minutes
@@ -266,21 +267,22 @@ Timeframe: 30 minutes
 **Presentation** 
 
 Directions:
-1.  Pair with another table.
 
-2.  One table is the Microsoft team and the other table is the customer.
+1. Pair with another table.
 
-3.  The Microsoft team presents their proposed solution to the customer.
+2. One table is the Microsoft team and the other table is the customer.
 
-4.  The customer makes one of the objections from the list of objections.
+3. The Microsoft team presents their proposed solution to the customer.
 
-5.  The Microsoft team responds to the objection.
+4. The customer makes one of the objections from the list of objections.
 
-6.  The customer team gives feedback to the Microsoft team.
+5. The Microsoft team responds to the objection.
 
-7.  Tables switch roles and repeat Steps 2–6.
+6. The customer team gives feedback to the Microsoft team.
 
-##  Wrap-up 
+7. Tables switch roles and repeat Steps 2–6.
+
+## Wrap-up
 
 Timeframe: 15 minutes
 
