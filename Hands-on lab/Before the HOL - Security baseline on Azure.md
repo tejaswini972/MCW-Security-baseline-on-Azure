@@ -158,4 +158,4 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
     ![A set of extracted folders and files are visible in File Explorer: .vs, AzureTemplate, Database, Scripts, WebApp, README.md.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image4.png "Extract the zip file")
 
-**NOTE**: You should follow all steps provided *before* attending the hands-on lab.
+**Note**: You should follow all steps provided *before* attending the hands-on lab.
