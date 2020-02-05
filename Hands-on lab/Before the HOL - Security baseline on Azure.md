@@ -50,7 +50,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [SQL Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
     - [Power BI Desktop](https://powerbi.microsoft.com/en-us/downloads/)
 
-3. An Office 365 email account or other email-based account
+3. An Office 365 email account or other email-based account.
 
 ## Before the hands-on lab
 
@@ -122,7 +122,7 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
             - IIS is installed on web-1 via a DSC script from the GitHub repository.
   
-            - paw-1 is used as a development machine for the labs to save on resources.  A Paw workstation would not be used as a development machine in production with Visual Studio and SQL Management Studio.  This was done to save on resource costs / setup complexity.
+            - paw-1 is used as a development machine for the labs to save on resources.  A Paw workstation would not be used as a development machine in production with Visual Studio and SQL Management Studio.  This was done to save on resource costs and setup complexity.
 
        - SQL Azure Server with sample database.
 
@@ -130,11 +130,11 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
        - Log Analytics Workspace
 
-    ![Created items list This screenshot is a list of the items that were created, including the items listed above. ](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image8.png)
+    ![Created items list. This screenshot is a list of the items that were created, including the items listed above. ](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image8.png)
 
 ### Task 2: Download Google Chrome
 
-1. Login to the Virtual Machine created via the ARM template called **paw-1**
+1. Log in to the Virtual Machine created via the ARM template called **paw-1**.
 
 2. Open Internet Explorer and browse to <https://www.google.com/chrome/>.
 
@@ -158,4 +158,4 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
     ![A set of extracted folders and files are visible in File Explorer: .vs, AzureTemplate, Database, Scripts, WebApp, README.md.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image4.png "Extract the zip file")
 
-**NOTE** You should follow all steps provided *before* attending the hands-on lab.
+**NOTE**: You should follow all steps provided *before* attending the hands-on lab.
