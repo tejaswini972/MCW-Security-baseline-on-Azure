@@ -105,11 +105,11 @@ The solution begins by creating a jump machine. This jump machine is used to acc
     - SQL Management Studio
     - Power BI Desktop
 
-## Exercise 1: Implementing Just-In-Time (JIT) access
+## Exercise 1: Implementing Just-in-Time (JIT) access
 
 Duration: 15 minutes
 
-Synopsis: In this exercise, attendees will secure a Privileged Access Workstation (PAW) workstation using the Azure Security Center Just In Time Access feature.
+Synopsis: In this exercise, attendees will secure a Privileged Access Workstation (PAW) workstation using the Azure Security Center Just-in-Time Access feature.
 
 ### Task 1: Setup virtual machine with JIT
 
@@ -166,7 +166,7 @@ Synopsis: In this exercise, attendees will secure a Privileged Access Workstatio
 
     ![Activity Log is highlighted in the shortcut menu for the last user.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image15.png "View the Activity Log")
 
-    > **NOTE** These entries will persist after you have deleted the VMs. You will need to manually remove them after VM deletion.
+    > **Note**: These entries will persist after you have deleted the VMs. You will need to manually remove them after VM deletion.
 
 6. In the Azure Portal main menu, select **All Services**, then type **Network**, then select **Network security groups**.
 
@@ -216,11 +216,11 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 9. Depending on how you connected to the Azure SQL environment (inside or outside your vnet), you may be prompted to add a firewall rule. If this occurs, perform the following actions:
 
-    a. Select **Connect**, in the **New Firewall Rule** dialog, select **Sign In**.
+    - Select **Connect**, in the **New Firewall Rule** dialog, select **Sign In**.
 
-    b. Sign in with your resource group owner credentials.
+    - Sign in with your resource group owner credentials.
 
-    c. In the dialog, select **OK**, notice how your incoming public IP address will be added for connection.
+    - In the dialog, select **OK**, notice how your incoming public IP address will be added for connection.
 
     ![The New Firewall Rule Dialog is displayed identifying your Internet IP Address.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image23.png)
 
@@ -270,19 +270,19 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 1. In the extracted directory, double-click the **\\Hands-on lab\\WebApp\\InsuranceAPI\\InsuranceAPI.sln** solution file, and Visual Studio will open.
 
-    > **NOTE** If prompted, login using your Azure / MSDN account.
+    > **Note**: If prompted, login using your Azure / MSDN account.
 
 2. In the **Solution Explorer**, navigate to and double-click the **Web.config** file to open it.
 
     ![Web.config is highlighted under the InsuranceAPI project in Solution Explorer.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image28.png "Open Web.config")
 
-3. Update the web.config (line 77) to point to the **Insurance** database created in Task 2. You should only need to update the server name to point to your Azure SQL Server.
+3. Update the web.config (line 72) to point to the **Insurance** database created in Task 2. You should only need to update the server name to point to your Azure SQL Server.
 
     ![Line 72 of the Insurance database is highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image29.png "Update the server name in Web.config")
 
 4. Press **F5** to run the **InsuranceAPI** solution.
 
-    > **Note** If you get an CSC error, right-click the project, select **Clean**.  Next, right-click the project and select **Rebuild**.
+    > **Note**: If you get an CSC error, right-click the project, select **Clean**.  Next, right-click the project and select **Rebuild**.
 
 5. Test the API for a response by browsing to `http://localhost:24448/api/Users`. Your port number may be different from _24448_. You should see several records returned to the browser. Copy a `UserId` value for the next instruction.
 
@@ -348,7 +348,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 9. Select **Cancel**.
 
-10. Switch back to the Azure Portal, and select the User.SSN data masking.
+10. Switch back to the Azure Portal, and select the User_SSN data masking.
 
 11. Select **Delete**.
 
@@ -388,7 +388,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 24. Select **Finish**, and the configured will start.
 
-    > **Note**: You may receive a "wrapKey" error. If so, ensure that your account has been assigned that permission in the Azure Key Vault.
+    > **Note**: You may receive a "Wrap Key" error. If so, ensure that your account has been assigned that permission in the Azure Key Vault.
 
     ![Generate new column master key CMK\_Auto1 in Azure Key Vault is highlighted with a green check mark at the top of the Task Summary list.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image39.png "View the task summary")
 
@@ -584,7 +584,7 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
 8. Save the Web.config file in Visual Studio.
 
-    > **NOTE**  You can take this lab a step further and publish the Web App to an Azure App Service  and enable [System-assigned Managed Identities](https://docs.microsoft.com/en-us/azure/app-service/overview-managed-identity?tabs=dotnet).  This will allow you to completely remove any authentication from your configurations and utilize [Key Vault references](https://docs.microsoft.com/en-us/azure/app-service/app-service-key-vault-references).
+    > **Note**:  You can take this lab a step further and publish the Web App to an Azure App Service  and enable [System-assigned Managed Identities](https://docs.microsoft.com/en-us/azure/app-service/overview-managed-identity?tabs=dotnet).  This will allow you to completely remove any authentication from your configurations and utilize [Key Vault references](https://docs.microsoft.com/en-us/azure/app-service/app-service-key-vault-references).
 
 ### Task 5: Test the solution
 
@@ -620,11 +620,11 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
   
       - Simply update the web.config file with your client id and secret after adding the required Key Vault permissions above.
   
-      - Update the Key Vault connection string to have the `Column Encryption Setting=Enabled`
+      - Update the Key Vault connection string to have the `Column Encryption Setting=Enabled`.
 
       - Review the code added to the global.asax.cs file.
 
-      - Run the project and navigate to the above page
+      - Run the project and navigate to the above page.
 
 ## Exercise 4: Securing the network
 
@@ -646,7 +646,7 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
     - Select the **Windows** icon.
 
-    - Right-click **Windows PowerShell ISE**, choose **More** then select **Run as Administrator**.
+    - Right-click **Windows PowerShell ISE**, choose **More**, then select **Run as Administrator**.
 
 5. Copy and run the following command:
 
@@ -708,7 +708,7 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
     - For the **Source IP address**, enter **10.2.0.4**.
   
-    - For the **Destination**, keep **Any**
+    - For the **Destination**, keep **Any**.
 
     - For the **Destination port range**, enter **1433**.
 
@@ -728,9 +728,9 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
     - Select **+Add**.
 
-    - For the **Source**, keep **Any**
+    - For the **Source**, keep **Any**.
 
-    - For the **Destination**, keep **Any**
+    - For the **Destination**, keep **Any**.
 
     - For the **Destination port ranges**, enter **80,443**.
 
@@ -795,7 +795,7 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
     ![The information above for port 3389 (RDP) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image61.png "View the information")
 
     - Port scan for port 1433 (SQL) to **DB-1** is successful, and **WEB-1** is unsuccessful from the **PAW-1** machine.
-
+    
     > **Note**: You may need to disable the windows firewall on the DB-1 server to achieve this result.
 
     ![The information above for port 1433 (SQL) is visible after running the script and pressing F5.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image62.png "View the information")
@@ -846,9 +846,9 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
     ![Packet capture is selected and highlighted on the left under Network Diagnostic Tools, and + Add is highlighted at the top right.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image69.png "Add a packet capture")
 
-7. Select your subscription
+7. Select your subscription.
 
-8. Select your resource group
+8. Select your resource group.
 
 9. For the target virtual machine, ensure that **db-1** is selected.
 
@@ -908,7 +908,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 9. Select **View saved workbook**, take a moment to review your new workbook.
 
-    > **NOTE** You may not have data in the log analytics workspace.  Wait for 10-15 minutes.
+    > **Note**: You may not have data in the log analytics workspace.  Wait for 10-15 minutes.
 
 ### Task 2: Create an Analytics alert
 
@@ -933,7 +933,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
     > **Note**: If you were quick going through the labs, then you may not have log data in the Log Analytics workspace just yet that corresponds to "AzureMetric". You may need to wait 15-30 minutes before a query will execute.
 
-    > **Note**: Since the introduction of Azure Security Center and Sentinel, the backend logging has changed a few times as well as the way the calculations are done in the rule query (timespan in query vs outside query, etc). The ultimate goal of this query is to find when a series of failed connection attempts have been made against a network security group and a specific deny rule. If for some reason the UI/backend has been modified since the last published lab, modify the query to accomplish this goal.
+    > **Note**: Since the introduction of Azure Security Center and Sentinel, the backend logging has changed a few times as well as the way the calculations are done in the rule query (timespan in query vs outside query, etc.). The ultimate goal of this query is to find when a series of failed connection attempts have been made against a network security group and a specific deny rule. If for some reason the UI/backend has been modified since the last published lab, modify the query to accomplish this goal.
 
 5. Under **Map entities**, for the **IP**, select the **primaryIPv4Address_s** column.
 
@@ -1017,7 +1017,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
     > **Note**: This would need to be a valid Office 365 account, if you do not have a valid Office 365 account, then utilize a basic email template for Outlook.com.
 
-8. For the **Security Center Alert** connection, select the **+** link
+8. For the **Security Center Alert** connection, select the **+** link.
 
 9. Select **Continue**.
 
@@ -1080,6 +1080,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 1. Navigate back to your **Azure Sentinel** browser window.  Select **Logs**.
 
     >**Note**: You may see a **Welcome to Log Analytics** splash page in the blade.  Select **Get Started**.
+    
     ![The screenshot displays the Welcome to Log Analytics blade.](media/2020-01-12-19-14-49.png "Welcome to Log Analytics")
 
 2. In the **Schema** tab under **Active**, expand the **LogManagement** node, notice the various options available.
@@ -1090,7 +1091,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
     ![The Azure Sentinel Logs screen is displayed. The logs item is selected in the left menu. LogManagement and AzureDiagnostics are selected from the active schema list. The Azure Diagnostics item has an eye icon. A new query tab is shown with the Export item highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image103.png "Export a Power BI report query")
 
-    ![The Export item is expanded with the Export to PowerBI (M Query) item highlighted](media/2020-01-12-19-17-28.png "Export to PowerBI")
+    ![The Export item is expanded with the Export to PowerBI (M Query) item highlighted.](media/2020-01-12-19-17-28.png "Export to PowerBI")
 
 5. Select **Open**, a text document with the Power Query M Language will be displayed.
 
@@ -1126,7 +1127,7 @@ Synopsis: In this exercise, attendees will learn to navigate the Azure Policy an
 
 6. In the filter search box, type **PAW-1** and select it when displayed.
 
-    > **NOTE** You may not see resources display right away.  If this is the case, then scroll through some other non-compliant resources.
+    > **Note**: You may not see resources display right away.  If this is the case, then scroll through some other non-compliant resources.
 
 7. With the **Policies** tab selected, review the policies that the resource is non-complying against.
 
