@@ -118,11 +118,11 @@ Design a solution and prepare to present the solution to the target customer aud
 
 Present solution to your customer:
 
-- Present solution.
+- Present solution
 
-- Respond to customer objections.
+- Respond to customer objections
 
-- Receive feedback.
+- Receive feedback
 
 **Wrap-up (15 minutes)**
 
@@ -185,9 +185,7 @@ Timeframe: 15 minutes.
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
 
 1. Meet your table participants and trainer.
-
 2. Read all of the directions for steps 1–3 in the student guide.
-
 3. As a table team, review the following customer case study.
 
 ### Customer situation
@@ -196,7 +194,7 @@ Contoso Ltd. is a multinational corporation, headquartered in the United States 
 
 The fundamental workflow for Contoso is as follows:
 
-1. Contoso support staff process the incoming claims (which sometimes requires scrubbing) through the *corporate website*, and create a work order assigned to a mobile agent in the region of the insured.
+1. Contoso support staff process the incoming claims, which sometimes requires scrubbing, through the *corporate website*, and create a work order assigned to a mobile agent in the region of the insured.
 
 2. Mobile agents log in daily to the *data collection website* and retrieve the list of insured customers they are responsible for visiting. They communicate directly with the insured, schedule a time for a home visit, and ultimately during that visit collect information and input it into the data collection website. The sensitive information collected always includes Personally Identifiable Information (PII) and may include Protected Health Information (PHI) about the insured customer. This data is sent over the public Internet securely over TLS (SSL).
 
@@ -204,13 +202,13 @@ The fundamental workflow for Contoso is as follows:
 
 4. Support staff processes complete work orders and submits results through the corporate website requiring another transfer of sensitive data. They also tend to utilize Microsoft Support when tough issues arise and want to know what options they have to engage and log support activities with VMs and other Azure resources.
 
-Contoso currently hosts their systems at co-locations facilities within each geopolitical region and manages all IT operations for the systems. In the United States, they have achieved SOC 1 and SOC 2 compliance and follow required HIPAA regulations to protect PHI. Because of the new European GDPR laws, Contoso must evaluate their computing environments for compliance gaps. Contoso has concerns about maintaining their SOC 2 certification and HIPAA compliance with respect to moving to Azure. They would like to specifically address concerns about regional issues of data sovereignty for sensitive data within the context of the GDPR and want to ensure that if they move to Azure, they will be able to continue to have isolation between components.
+Contoso currently hosts their systems at co-location facilities within each geopolitical region and manages all IT operations for the systems. In the United States, they have achieved SOC 1 and SOC 2 compliance and follow required HIPAA regulations to protect PHI. Because of the new European GDPR laws, Contoso must evaluate their computing environments for compliance gaps. Contoso has concerns about maintaining their SOC 2 certification and HIPAA compliance with respect to moving to Azure. They would like to specifically address concerns about regional issues of data sovereignty for sensitive data within the context of the GDPR and want to ensure that if they move to Azure, they will be able to continue to have isolation between components.
 
-In addition to the GDPR compliance requirements, they are expecting significant growth within the United States and abroad. They foresee the need to scale their system and are exploring moving their web applications (corporate and data collection web apps) to Microsoft Azure via lift and shift and other applicable methods to simplify some of the operations management overhead and associated costs, beginning with their U.S. data center and then those in Europe. They would also like to ensure that the corporate website and external facing web apps are sufficiently isolated.  Lastly, they want to ensure that resources are created using best practices and that those practices are followed during the resource provisioning process.
+In addition to the GDPR compliance requirements, they are expecting significant growth within the United States and abroad. They foresee the need to scale their system and are exploring moving their web applications, corporate and data collection web apps, to Microsoft Azure via lift and shift and other applicable methods to simplify some of the operations management overhead and associated costs, beginning with their U.S. data center and then those in Europe. They would also like to ensure that the corporate website and external facing web apps are sufficiently isolated. Lastly, they want to ensure that resources are created using best practices and that those practices are followed during the resource provisioning process.
 
 Contoso has been using their on-premises SIEM to do most of their auditing and log reporting. They are wondering what options they have to monitor their on-premises and future cloud-based resources.  They have thoughtfully tuned their on-premises SIEM to reduce false positives and normalize the metadata across different log types. They are worried about the amount of logs and potential for unnecessary work when they move workloads to Azure.
 
-Jack Tradewinds, the CIO of Contoso Ltd, has heard a great deal of positive news about Azure and its progress in terms of security and compliance. He would like to learn more about the security features and if they can move some of their data and applications away from their on-premises datacenter. Given his long-standing relationship with Microsoft, he would like to see if Azure can meet his needs.
+Jack Tradewinds, the CIO of Contoso Ltd, has heard a great deal of positive news about Azure and its progress in terms of security and compliance. He would like to learn more about the security features and if they can move some of their data and applications away from their on-premises data center. Given his long-standing relationship with Microsoft, he would like to see if Azure can meet his needs.
 
 ### Customer needs
 
@@ -294,7 +292,7 @@ Design a solution and prepare to present the solution to the target customer aud
 
 Timeframe: 60 minutes.
 
-**Business needs*
+**Business needs**
 
 Directions: With all participants at your table, answer the following questions and list the answers on a flip chart:
 
@@ -310,37 +308,35 @@ Directions: With all participants at your table, respond to the following questi
 
 Briefly sketch-out and propose a high-level solution that meets the customer's business and technical needs and mitigates their objections. For this workshop, you may choose from the following technologies (you may not need all of them in the correct solution):
 
-1. Azure Virtual Machines and Networks, Network Security Groups.
+1. Azure Virtual Machines and Networks, Network Security Groups
 
-2. Virtual Private Networks (Point to Point, Site to Site) and Express Route.
+2. Virtual Private Networks (Point to Point, Site to Site) and Express Route
 
-3. Azure Web Apps.
+3. Azure Web Apps
 
-4. Azure SQL DB Security Features (Threat Detection, TDE, Column Level Encryption, etc.).
+4. Azure SQL DB Security Features (Threat Detection, TDE, Column Level Encryption, etc.)
 
-5. Azure Storage Encryption.
+5. Azure Storage Encryption
 
-6. SQL Server 2017 in a VM.
+6. SQL Server 2017 in a VM
 
-7. Azure Security Center.
+7. Azure Security Center, Azure Monitor and Log Analytics
 
-8. Azure Sentinel and Azure Policy.
+8. Azure Key Vault
 
-9. Azure Key Vault.
+9. Microsoft Azure Active Directory (Connect, IAM, etc.)
 
-10. Microsoft Azure Active Directory (Connect, IAM, etc.).
-
-11. Microsoft Intune.
+10. Microsoft Intune
 
 *Securing Sensitive Data*
 
 On your diagram, indicate how you would secure any sensitive data at rest and in transit with respect to the following:
 
-1. Web Tier (corporate vs. data collection).
+1. Web Tier (corporate vs. data collection)
 
-2. Database Tier.
+2. Database Tier
 
-3. Network, Internal, and External Communications.
+3. Network, Internal, and External Communications
 
 *Ensuring auditing and compliance*
 
@@ -364,9 +360,15 @@ Describe how you would ensure that the following resources would be available in
 
 2. Azure SQL
 
+Describe how you would ensure that the following resources would be available in the unlikely event of an attack or intentional or unintentional data loss:
+
+1. Virtual Machines
+
+2. Azure SQL
+
 *Ensuring protection*
 
-Describe how you would secure each Azure resource from internal and external attacks.
+Describe how you would secure each Azure resource from internal and external attacks:
 
 1. Ensure that admin credentials are sufficiently protected and monitored.
 
@@ -508,11 +510,11 @@ Without getting into the details (the following sections will address the detail
 
 1. Network:
 
-    ![High-level network architecture On the left, an Admin icon and an Agent icon point at an internet icon, which points at a box in the middle. In this box are three smaller boxes (WEB-1, PAW-1, and DB-1) that are interconnected with icons for Azure SQL, a DNS server, and an icon of a key on a green circle. The big box in the middle points to four different sites labeled Site 1-4.](images/Whiteboarddesignsessiontrainerguide-Azuresecurityprivacyandcomplianceimages/media/image3.png)
+    ![High-level network architecture on the left, an Admin icon and an Agent icon point at an internet icon, which points at a box in the middle. In this box are three smaller boxes (WEB-1, PAW-1, and DB-1) that are interconnected with icons for Azure SQL, a DNS server, and an icon of a key on a green circle. The big box in the middle points to four different sites labeled Site 1-4.](images/Whiteboarddesignsessiontrainerguide-Azuresecurityprivacyandcomplianceimages/media/image3.png)
 
 2. Auditing and compliance:
 
-    ![High-level auditing and compliance On the left, Admin, DPO, and SIEM icons point at other icons and icons inside another large box. Inside the box are various icons and three smaller boxes with similarly clustered icons: WEB, DB, and Main; DB, Web, and PAW; and DB, Web, and Main.](images/Whiteboarddesignsessiontrainerguide-Azuresecurityprivacyandcomplianceimages/media/image4.png)
+    ![High-level auditing and compliance on the left, Admin, DPO, and SIEM icons point at other icons and icons inside another large box. Inside the box are various icons and three smaller boxes with similarly clustered icons: WEB, DB, and Main; DB, Web, and PAW; and DB, Web, and Main.](images/Whiteboarddesignsessiontrainerguide-Azuresecurityprivacyandcomplianceimages/media/image4.png)
 
 *Securing sensitive data*
 
@@ -536,11 +538,11 @@ On your diagram, indicate how you would secure any sensitive data at rest and in
 
     d.  For other reporting users, data masking was implemented to allow partial viewing of sensitive data.
 
-    e.  The SQL Azure server\'s virtual network was configured only to allow SQL traffic from the web and reporting applications with logging enabled.
+    e.  The SQL Azure server's virtual network was configured only to allow SQL traffic from the web and reporting applications with logging enabled.
 
 3. Network, Internal and External Communications
 
-    a.  With the websites hosted in Azure VM\'s, the Azure VMs are joined to an isolated virtual network with VPN access enabled from the corporate site (via Site-to-Site configuration).
+    a.  With the websites hosted in Azure VM's, the Azure VMs are joined to an isolated virtual network with VPN access enabled from the corporate site (via Site-to-Site configuration).
 
     b.  The application tiers are separated by virtual networks and subnets, the website VM\'s are placed within a \"front-end\" subnet within the Virtual Network, and the SQL Database VMs are placed in a \"back-end\" subnet. This separation helps to create a security boundary that can be leveraged by firewalls and intrusion detection systems to more easily detect suspicious traffic, and to quickly quarantine traffic from the websites front-end to the back-end database should a breach be detected.
 
@@ -554,7 +556,7 @@ Describe how you will use Azure features to ensure the following:
 
 1. How will you monitor and audit VM Access?
 
-    a.  Azure Security Center can be used to implement Just in Time (JIT) virtual machine access. You can also lock down VM modification using Azure IAM settings using specific users or groups with specific Azure roles assigned.
+    a.  Azure Security Center can be used to implement Just-in-Time (JIT) virtual machine access. You can also lock down VM modification using Azure IAM settings using specific users or groups with specific Azure roles assigned.
 
     b.  Ensure that admins are included in the appropriate resource administrative groups with appropriate IAM roles assigned and using Privileged Identity Management (PIM).
 
@@ -590,7 +592,7 @@ Describe how you will use Azure features to ensure the following:
 
 *Ensuring availability and business continuity*
 
-Describe how you would ensure that the following resources would be available in the unlikely event of an attack or intentional or unintentional data loss?
+Describe how you would ensure that the following resources would be available in the unlikely event of an attack or intentional or unintentional data loss.
 
 1. Virtual Machines
 
@@ -606,7 +608,7 @@ Describe how you would ensure that the following resources would be available in
 
 Describe how you would secure each Azure resource from internal and external attacks.
 
-1. Ensure that admin credentials are sufficiently protected and monitored?
+1. Ensure that admin credentials are sufficiently protected and monitored.
 
     a.  Azure Premium features should be enabled to configure admin credentials to have Multi-factor Authentication.
 
@@ -634,7 +636,7 @@ Describe how you would secure each Azure resource from internal and external att
 
     Yes, and it is the next logical step for many organizations in their cloud journey: 
 
-    ![An arrow labeled Existing .NET application modernization: Maturity models spans four boxes labeled Existing apps (On-premises), Cloud Infrastructure-Ready (Azure), Cloud DevOps-Ready (Azure), and Cloud-Optimized (Azure). The Cloud Infrastructure-Ready box is highlighted in yellow. Below the Cloud Infrastructure-Ready and Cloud DevOps-Ready boxes is an arrow labeled LIFT and SHIFT: No re-architect, no coded changes. Below the Cloud-Optimized box is an arrow labeled Architect for the cloud (might need new code).](images/Whiteboarddesignsessiontrainerguide-Azuresecurityprivacyandcomplianceimages/media/image5.png "Existing .NET application modernization: Maturity models ")
+    ![An arrow labeled Existing .NET application modernization: Maturity models spans four boxes labeled Existing apps (on-premises), Cloud Infrastructure-Ready (Azure), Cloud DevOps-Ready (Azure), and Cloud-Optimized (Azure). The Cloud Infrastructure-Ready box is highlighted in yellow. Below the Cloud Infrastructure-Ready and Cloud DevOps-Ready boxes is an arrow labeled LIFT and SHIFT: No re-architect, no coded changes. Below the Cloud-Optimized box is an arrow labeled Architect for the cloud (might need new code).](images/Whiteboarddesignsessiontrainerguide-Azuresecurityprivacyandcomplianceimages/media/image5.png "Existing .NET application modernization: Maturity models ")
 
     There are many programs that customers can take advantage of to help with the move Azure including:
 
@@ -740,41 +742,41 @@ Describe how you would secure each Azure resource from internal and external att
 
         a. U.S. Specific Certifications
 
-            -   Cloud Security Alliance CCM
+         -   Cloud Security Alliance CCM
 
-            -   HIPAA BAA
+         -   HIPAA BAA
 
-            -   FedRAMP
+         -   FedRAMP
 
-            -   FISMA
+         -   FISMA
 
-            -   FBI CJIS
+         -   FBI CJIS
 
-            -   FERPA
+         -   FERPA
 
-            -   FIPS 140-2
+         -   FIPS 140-2
 
-            -   FDA 21 CFR Part 11
+         -   FDA 21 CFR Part 11
 
         b. International Certifications
 
-            -   PCI DSS Level 1
+         -   PCI DSS Level 1
 
-            -   ISO 27001 / 27002
+         -   ISO 27001 / 27002
 
-            -   SOC 1 / SSAE 16 / ISAE 3402 and SOC 2
+         -   SOC 1 / SSAE 16 / ISAE 3402 and SOC 2
 
-            -   EU Model Clauses
+         -   EU Model Clauses
 
-            -   United Kingdom G-Cloud / IL2
+         -   United Kingdom G-Cloud / IL2
 
-            -   Australian Government IRAP
+         -   Australian Government IRAP
 
-            -   Singapore MTCS Standard
+         -   Singapore MTCS Standard
 
-            -   China Cloud Computing and Policy Forum (CCCPPF)
+         -   China Cloud Computing and Policy Forum (CCCPPF)
 
-            -   MLPS (China)
+         -   MLPS (China)
 
     Azure hosted applications can meet compliance goals is designed and maintained properly.
 
