@@ -68,7 +68,7 @@ Contoso Ltd. is a multinational corporation, headquartered in the United States 
 
 The fundamental workflow for Contoso is as follows:
 
-1. Contoso support staff process the incoming claims (which sometimes requires scrubbing) through the *corporate website*, and create a work order assigned to a mobile agent in the region of the insured.
+1. Contoso support staff process the incoming claims, which sometimes requires scrubbing, through the *corporate website*, and create a work order assigned to a mobile agent in the region of the insured.
 
 2. Mobile agents log in daily to the *data collection website* and retrieve the list of insured customers they are responsible for visiting. They communicate directly with the insured, schedule a time for a home visit, and ultimately during that visit collect information and input it into the data collection website. The sensitive information collected always includes Personally Identifiable Information (PII) and may include Protected Health Information (PHI) about the insured customer. This data is sent over the public Internet securely over TLS (SSL).
 
@@ -76,9 +76,9 @@ The fundamental workflow for Contoso is as follows:
 
 4. Support staff processes complete work orders and submits results through the corporate website requiring another transfer of sensitive data. They also tend to utilize Microsoft Support when tough issues arise and want to know what options they have to engage and log support activities with VMs and other Azure resources.
 
-Contoso currently hosts their systems at co-locations facilities within each geopolitical region and manages all IT operations for the systems. In the United States, they have achieved SOC 1 and SOC 2 compliance and follow required HIPAA regulations to protect PHI. Because of the new European GDPR laws, Contoso must evaluate their computing environments for compliance gaps. Contoso has concerns about maintaining their SOC 2 certification and HIPAA compliance with respect to moving to Azure. They would like to specifically address concerns about regional issues of data sovereignty for sensitive data within the context of the GDPR and want to ensure that if they move to Azure, they will be able to continue to have isolation between components.
+Contoso currently hosts their systems at co-location facilities within each geopolitical region and manages all IT operations for the systems. In the United States, they have achieved SOC 1 and SOC 2 compliance and follow required HIPAA regulations to protect PHI. Because of the new European GDPR laws, Contoso must evaluate their computing environments for compliance gaps. Contoso has concerns about maintaining their SOC 2 certification and HIPAA compliance with respect to moving to Azure. They would like to specifically address concerns about regional issues of data sovereignty for sensitive data within the context of the GDPR and want to ensure that if they move to Azure, they will be able to continue to have isolation between components.
 
-In addition to the GDPR compliance requirements, they are expecting significant growth within the United States and abroad. They foresee the need to scale their system and are exploring moving their web applications (corporate and data collection web apps) to Microsoft Azure via lift and shift and other applicable methods to simplify some of the operations management overhead and associated costs, beginning with their U.S. data center and then those in Europe. They would also like to ensure that the corporate website and external facing web apps are sufficiently isolated.  Lastly, they want to ensure that resources are created using best practices and that those practices are followed during the resource provisioning process.
+In addition to the GDPR compliance requirements, they are expecting significant growth within the United States and abroad. They foresee the need to scale their system and are exploring moving their web applications, corporate and data collection web apps, to Microsoft Azure via lift and shift and other applicable methods to simplify some of the operations management overhead and associated costs, beginning with their U.S. data center and then those in Europe. They would also like to ensure that the corporate website and external facing web apps are sufficiently isolated. Lastly, they want to ensure that resources are created using best practices and that those practices are followed during the resource provisioning process.
 
 Contoso has been using their on-premises SIEM to do most of their auditing and log reporting. They are wondering what options they have to monitor their on-premises and future cloud-based resources.  They have thoughtfully tuned their on-premises SIEM to reduce false positives and normalize the metadata across different log types. They are worried about the amount of logs and potential for unnecessary work when they move workloads to Azure.
 
@@ -182,35 +182,35 @@ Directions: With all participants at your table, respond to the following questi
 
 Briefly sketch-out and propose a high-level solution that meets the customer's business and technical needs and mitigates their objections. For this workshop, you may choose from the following technologies (you may not need all of them in the correct solution):
 
-1. Azure Virtual Machines and Networks, Network Security Groups.
+1. Azure Virtual Machines and Networks, Network Security Groups
 
-2. Virtual Private Networks (Point to Point, Site to Site) and Express Route.
+2. Virtual Private Networks (Point to Point, Site to Site) and Express Route
 
-3. Azure Web Apps.
+3. Azure Web Apps
 
-4. Azure SQL DB Security Features (Threat Detection, TDE, Column Level Encryption, etc.).
+4. Azure SQL DB Security Features (Threat Detection, TDE, Column Level Encryption, etc.)
 
-5. Azure Storage Encryption.
+5. Azure Storage Encryption
 
-6. SQL Server 2017 in a VM.
+6. SQL Server 2017 in a VM
 
-7. Azure Security Center, Azure Monitor and Log Analytics.
+7. Azure Security Center, Azure Monitor and Log Analytics
 
-8. Azure Key Vault.
+8. Azure Key Vault
 
-9. Microsoft Azure Active Directory (Connect, IAM, etc.).
+9. Microsoft Azure Active Directory (Connect, IAM, etc.)
 
-10. Microsoft Intune.
+10. Microsoft Intune
 
 *Securing Sensitive Data*
 
 On your diagram, indicate how you would secure any sensitive data at rest and in transit with respect to the following:
 
-1. Web Tier (corporate vs. data collection).
+1. Web Tier (corporate vs. data collection)
 
-2. Database Tier.
+2. Database Tier
 
-3. Network, Internal, and External Communications.
+3. Network, Internal, and External Communications
 
 *Ensuring auditing and compliance*
 
@@ -228,11 +228,11 @@ Describe how you will use Azure features to ensure the following:
 
 *Ensuring availability and business continuity*
 
-Describe how you would ensure that the following resources would be available in the unlikely event of an attack or intentional or unintentional data loss?
+Describe how you would ensure that the following resources would be available in the unlikely event of an attack or intentional or unintentional data loss:
 
-1. Virtual Machines.
+1. Virtual Machines
 
-2. Azure SQL.
+2. Azure SQL
 
 *Ensuring protection*
 
