@@ -31,7 +31,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
   - [Overview](#overview)
   - [Solution architecture](#solution-architecture)
   - [Requirements](#requirements)
-  - [Exercise 1: Implementing Just-In-Time (JIT) access](#exercise-1-implementing-just-in-time-jit-access)
+  - [Exercise 1: Implementing Just-in-Time (JIT) access](#exercise-1-implementing-just-in-time-jit-access)
     - [Task 1: Setup virtual machine with JIT](#task-1-setup-virtual-machine-with-jit)
     - [Task 2: Perform a JIT request](#task-2-perform-a-jit-request)
   - [Exercise 2: Securing the Web Application and database](#exercise-2-securing-the-web-application-and-database)
@@ -276,7 +276,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
     ![Web.config is highlighted under the InsuranceAPI project in Solution Explorer.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image28.png "Open Web.config")
 
-3. Update the web.config (line 72) to point to the **Insurance** database created in Task 2. You should only need to update the server name to point to your Azure SQL Server.
+3. Update the web.config (line 77) to point to the **Insurance** database created in Task 2. You should only need to update the server name to point to your Azure SQL Server.
 
     ![Line 72 of the Insurance database is highlighted.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image29.png "Update the server name in Web.config")
 
@@ -388,7 +388,7 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
 24. Select **Finish**, and the configured will start.
 
-    > **Note**: You may receive a "Wrap Key" error. If so, ensure that your account has been assigned that permission in the Azure Key Vault.
+    > **Note**: You may receive a "Wrap Key" error. If so, ensure that your account has been assigned the **wrapKey** permission in the Azure Key Vault.
 
     ![Generate new column master key CMK\_Auto1 in Azure Key Vault is highlighted with a green check mark at the top of the Task Summary list.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image39.png "View the task summary")
 
