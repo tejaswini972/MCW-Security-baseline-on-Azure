@@ -156,6 +156,6 @@ Synopsis: In this exercise, you will set up your environment for use in the rest
 
 3. Extract the zip file to your local machine, be sure to keep note of where you have extracted the files (such as `c:\temp`). You should now see a set of folders:
 
-    ![A set of extracted folders and files are visible in File Explorer: .vs, AzureTemplate, Database, Scripts, WebApp, README.md.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image4.png "Extract the zip file")
+    ![A set of extracted folders and files are visible in File Explorer: Hands-on lab, Whiteboard design session, HTMLLINKS.md, LICENSE, and README.md.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image4.png "Extract the zip file")
 
 **Note**: You should follow all steps provided *before* attending the hands-on lab.
