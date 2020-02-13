@@ -507,13 +507,13 @@
         },
         "storageProfile": {
           "imageReference": {
-            "publisher": "MicrosoftWindowsServer",
-            "offer": "WindowsServer",
-            "sku": "2016-Datacenter",
+            "publisher": "microsoftvisualstudio",
+            "offer": "visualstudio2019latest",
+            "sku": "vs-2019-comm-latest-ws2019",
             "version": "latest"
-          },
+        },
           "osDisk": {
-            "createOption": "fromImage",
+            "createOption": "FromImage",
             "managedDisk": {
               "storageAccountType": "Standard_LRS"
             }
@@ -567,12 +567,12 @@
     },
     {
       "name": "paw-1-ip",
-      "type": "Microsoft.Network/publicIpAddresses",
+      "type": "Microsoft.Network/publicIPAddresses",
       "apiVersion": "2017-08-01",
       "location": "[resourceGroup().location]",
       "properties": {
         "publicIPAddressVersion": "IPv4",
-        "publicIpAllocationMethod": "Dynamic"
+        "publicIPAllocationMethod": "Dynamic"
       }
     },
     {
@@ -604,7 +604,7 @@
             "version": "latest"
           },
           "osDisk": {
-            "createOption": "fromImage",
+            "createOption": "FromImage",
             "managedDisk": {
               "storageAccountType": "Standard_LRS"
             }
@@ -681,7 +681,7 @@
             "version": "latest"
           },
           "osDisk": {
-            "createOption": "fromImage",
+            "createOption": "FromImage",
             "managedDisk": {
               "storageAccountType": "Standard_LRS"
             }

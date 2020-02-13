@@ -507,11 +507,11 @@
         },
         "storageProfile": {
           "imageReference": {
-            "publisher": "MicrosoftWindowsServer",
-            "offer": "WindowsServer",
-            "sku": "2016-Datacenter",
+            "publisher": "microsoftvisualstudio",
+            "offer": "visualstudio2019latest",
+            "sku": "vs-2019-comm-latest-ws2019",
             "version": "latest"
-          },
+        },
           "osDisk": {
             "createOption": "fromImage",
             "managedDisk": {
