@@ -1,5 +1,5 @@
 ﻿{
-  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
     "adminUsername": {
@@ -18,6 +18,10 @@
       "type": "string"
     },
     "userObjectId": {
+      "type": "string"
+    },
+    "vmSize": {
+      "defaultValue": "Standard_E2s_v3",
       "type": "string"
     }
   },
@@ -44,7 +48,7 @@
       "scale": null,
       "properties": {
           "sku": {
-              "name": "standalone"
+              "name": "Standalone"
           },
           "retentionInDays": 31
       },
@@ -68,7 +72,7 @@
           }
         },
         "hardwareProfile": {
-          "vmSize": "[variables('virtualMachineSize')]"
+          "vmSize": "[parameters('vmSize')]"
         },
         "storageProfile": {
           "imageReference": {
@@ -78,7 +82,7 @@
             "version": "latest"
           },
           "osDisk": {
-            "createOption": "fromImage",
+            "createOption": "FromImage",
             "managedDisk": {
               "storageAccountType": "Standard_LRS"
             }
@@ -503,7 +507,7 @@
           }
         },
         "hardwareProfile": {
-          "vmSize": "Standard_DS1_v2"
+          "vmSize": "[parameters('vmSize')]"
         },
         "storageProfile": {
           "imageReference": {
@@ -594,7 +598,7 @@
           }
         },
         "hardwareProfile": {
-          "vmSize": "Standard_DS2_v2"
+          "vmSize": "[parameters('vmSize')]"
         },
         "storageProfile": {
           "imageReference": {
@@ -671,7 +675,7 @@
           }
         },
         "hardwareProfile": {
-          "vmSize": "Standard_DS1_v2"
+          "vmSize": "[parameters('vmSize')]"
         },
         "storageProfile": {
           "imageReference": {
