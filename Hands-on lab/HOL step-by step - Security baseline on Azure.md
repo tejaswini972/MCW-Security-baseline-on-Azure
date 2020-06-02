@@ -1047,33 +1047,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 4. Navigate to **My Projects** and select the **Run on Free Compute**.
 
-5. Search for the **Get Started.ipynb** notebook.  You may have to page through the results to find the **Get Started.ipynb** notebook. Select it. In this example, it was located on the second page.
-
-    ![The Azure Sentinel Notebooks list is displayed with the Get Started.ipynb item highlighted in the list. Page 2 is also selected.](media/2020-01-12-18-08-26.png "Azure Sentinel Notebook List")
-
-6. In the menu, select **Kernel->Change kernel**, then select **Python 3.6**.
-
-    ![The Kernel menu is expanded and the change kernel with Python 3.6 is selected.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image102.png "Set the Kernel to Python 3.6")
-
-7. Choose the **Run** button until you execute the entire Notebook, note that some steps will required your input.
-
-    When the cell has an asterisk, it is still processing. Wait for a number to appear.
-
-    ![The cell is still processing. It has an asterisk showing in the brackets.](media/2020-01-12-18-42-35.png "Processing Cell")
-
-    This cell has completed processing. You should see a number.
-
-    ![This cell has completed processing. A number appears in the brackets.](media/2020-01-12-18-44-30.png "Cell has completed processing")
-
-    > **Note**: You can find the open source GitHub notebooks at [https://github.com/Azure/Azure-Sentinel](https://github.com/Azure/Azure-Sentinel/tree/master/Notebooks).
-
-    At this point, you may have to enter the code.
-
-    ![A web browser based dialog is displayed with a field to enter a code. Enter the notebook code into the Azure dialog.](media/2020-01-12-18-37-23.png "Azure Code Dialog")
-
-    Your final cell processing should provide an output.
-
-    ![Your final notebook cell has processed and displays an output.](media/2020-01-12-19-29-35.png "Final Cell Processing")
+5. Review the various notebooks that are available to you. You can choose to execute some of them, if you do, note that they are continually evolving and being modified so your results may vary.
 
 ### Task 6: Creating Reports with Power BI
 
