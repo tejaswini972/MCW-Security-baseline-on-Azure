@@ -864,7 +864,7 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
     - Maximum bytes per session: 1073741824.
     - Time limit: 600.
 
-13. Select **OK**.
+13. Select **Save**.
 
 ### Task 6: Execute a port scan
 
@@ -951,11 +951,13 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
     ![A chart is displayed showing the current log data and the alert threshold. The red and blue line intersect in the chart.](media/2020-01-12-13-26-17.png "Results Preview")
 
-9. Select **Next: Automated response**, notice you have no playbooks to select yet.
+9. Select **Next: Incident settings(Preview)**.
 
-10. Select **Next: Review**.
+10. Select **Next: Automated response**, notice you have no playbooks to select yet.
 
-11. Select **Create**.
+11. Select **Next: Review**.
+
+12. Select **Create**.
 
     > **Note**:  It may take a few minutes for the alert to fire.  You may need to run the PortScan script a few times from **paw-1**
 
@@ -1059,7 +1061,7 @@ Synopsis: In this exercise, you will setup Azure Sentinel to point to a logging 
 
 2. In the **Schema** tab under **Active**, expand the **LogManagement** node, notice the various options available.
 
-3. In the schema window, select **AzureDiagnostics**, then choose the **eye** icon.
+3. In the schema window, select **AzureDiagnostics**, then choose the **eye** icon and then select **see in query editor**.
 
 4. In the top right, select **Export**, then select the **Export to Power BI (M Query)** link.
 
