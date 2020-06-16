@@ -409,8 +409,12 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
     - Select **Certificate permissions**, and choose **Select all**.
     
     - To select your service principal account, click on **None selected**.
-      (images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image1.png)
-
+    
+       <img src="images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image1.png"/>
+       <br/>
+       
+    - In **Select a principal** pane select your account and then click on **select**.
+   
     - Select **OK**.
 
     - Select **Save**.
@@ -533,7 +537,7 @@ Synopsis: In this exercise, attendees will learn how to migrate web application 
 
     Your selection summary should look like this.
 
-    ![The AzureKeyVaultTest principal is selected and the secret permissions drop down list states there are two selected values.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image52.png "Configure Select principal settings")
+    ![The AzureKeyVaultTest principal is selected and the secret permissions drop down list states there are two selected values.]         <img src="images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image121.png"/> <br/>
 
 7. Select **Add** button.
 
