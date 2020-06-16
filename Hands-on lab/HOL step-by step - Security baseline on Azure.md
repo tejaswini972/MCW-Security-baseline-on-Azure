@@ -413,9 +413,9 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
        <img src="images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image1.png"/>
        <br/>
        
-    - In **Select a principal** pane select your account and then click on **select**.
+    - In **Select a principal** pane, select your account and then click on **select**.
    
-    - Select **OK**.
+    - Select **Add**.
 
     - Select **Save**.
 
@@ -785,7 +785,7 @@ Synopsis: In this exercise, attendees will utilize Network Security Groups to en
 
       - Select **Save**.
 
-       ![Save is highlighted at the top, and two log items are selected below.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image60.png "Save the logs")
+       ![Save is highlighted at the top, and two log items are selected below.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image122.png "Save the logs")
 
        - Repeat for all remaining Network Security Groups.
 
