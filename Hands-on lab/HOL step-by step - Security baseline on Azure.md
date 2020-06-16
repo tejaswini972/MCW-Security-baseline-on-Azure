@@ -399,6 +399,8 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
     - Select **Access policies**.
 
     - Select **Add New**.
+    
+    - Leave **Configure from template** value as default.
 
     - Select **Key permissions**, and choose **Select all**.
 
