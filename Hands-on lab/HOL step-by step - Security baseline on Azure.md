@@ -400,8 +400,6 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
 
     - Select **Add New**.
 
-    - For the principal, select your account.
-
     - Select **Key permissions**, and choose **Select all**.
 
         ![Select all is selected and highlighted under Key permissions, and below that, Decrypt, Encrypt, Unwrap Key, Wrap Key, Verify, and Sign are selected and highlighted under Cryptographic Operations amid the other selected options.](images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image40.png "Select all")
@@ -409,6 +407,9 @@ Synopsis: In this exercise, attendees will utilize Azure SQL features to data ma
     - Select **Secret permissions**, and choose **Select all**.
 
     - Select **Certificate permissions**, and choose **Select all**.
+    
+    - To select your service principal account, click on **None selected**.
+      (images/Hands-onlabstep-bystep-Azuresecurityprivacyandcomplianceimages/media/image1.png)
 
     - Select **OK**.
 
